@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { X, Copy, Check, ExternalLink, ChevronLeft, ChevronRight, Info, Type } from 'lucide-react';
-import ReactMarkdown from 'react-markdown'; // 引入 Markdown 渲染器
+import ReactMarkdown from 'react-markdown';
 
 export default function Gallery({ images }: { images: any[] }) {
   const [selectedId, setSelectedId] = useState<number | null>(null);
@@ -11,7 +11,7 @@ export default function Gallery({ images }: { images: any[] }) {
   const selectedIndex = images.findIndex(img => img.id === selectedId);
   const selectedImage = images[selectedIndex];
 
-  // 键盘监听 (左右切换、ESC关闭)
+  // 键盘监听
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (selectedId === null) return;
@@ -55,7 +55,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 loading="lazy"
               />
               
-              {/* 首页卡片底部：固定显示标题 */}
+              {/* 首页标题 */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent pt-10 pb-4 px-4">
                  <h3 className="font-bold text-white text-sm line-clamp-1 tracking-wide">
                     {image.title || "Untitled"}
@@ -69,7 +69,6 @@ export default function Gallery({ images }: { images: any[] }) {
       {/* --- 全屏弹窗 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-0 sm:p-4 md:p-8">
-          {/* 背景遮罩 */}
           <div className="absolute inset-0 bg-black/95 backdrop-blur-xl transition-opacity" onClick={() => setSelectedId(null)} />
           
           <div className="relative flex h-full w-full max-w-[1400px] flex-col overflow-hidden bg-[#121212] shadow-2xl ring-1 ring-white/10 sm:rounded-xl md:h-[85vh] md:flex-row animate-in fade-in zoom-in duration-200">
@@ -94,7 +93,7 @@ export default function Gallery({ images }: { images: any[] }) {
             {/* 右侧信息栏 */}
             <div className="flex w-full flex-col border-t border-white/10 bg-[#121212] md:h-full md:w-[400px] md:flex-none md:border-l md:border-t-0 z-20">
               
-              {/* 头部：显示标题 */}
+              {/* 头部标题 */}
               <div className="flex items-center justify-between border-b border-white/5 p-6 h-16 shrink-0 bg-[#151515]">
                 <div className="flex items-center gap-2 overflow-hidden">
                     <div className="h-5 w-5 shrink-0 rounded bg-gradient-to-tr from-indigo-500 to-purple-600" />
@@ -109,7 +108,7 @@ export default function Gallery({ images }: { images: any[] }) {
               </div>
 
               <div className="flex-1 overflow-y-auto p-6 space-y-8">
-                {/* 提示词区域 (支持 Markdown) */}
+                {/* 提示词区域 */}
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
@@ -126,16 +125,18 @@ export default function Gallery({ images }: { images: any[] }) {
                   <div className="rounded-xl bg-[#080808] border border-white/5 p-4 min-h-[140px] shadow-inner">
                       {selectedImage.prompt ? (
                         <div className="text-xs leading-6 text-gray-400 font-mono select-text break-words">
-                            {/* 使用 ReactMarkdown 渲染，支持换行和基本格式 */}
                             <ReactMarkdown
                                 components={{
-                                    p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} />,
-                                    strong: ({node, ...props}) => <span className="text-indigo-400 font-bold" {...props} />,
-                                    ul: ({node, ...props}) => <ul className="list-disc ml-4 mb-4" {...props} />,
-                                    li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                                    // 样式微调：给每一行段落加一点间距，看起来不那么挤
+                                    p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
                                 }}
                             >
-                                {selectedImage.prompt}
+                                {/* 🔴 终极解决方案：
+                                    将所有 "单个换行符" (\n) 替换为 "两个空格+换行" (  \n)。
+                                    这是 Markdown 标准中表示“强制换行”的语法。
+                                    这样你直接复制粘贴的文本，换行格式会被完美保留。
+                                */}
+                                {selectedImage.prompt.replace(/\n/g, '  \n')}
                             </ReactMarkdown>
                         </div>
                       ) : (
