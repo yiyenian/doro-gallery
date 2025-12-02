@@ -13,8 +13,13 @@ export async function getImages() {
       .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
       .sort_by('public_id', 'desc')
       .max_results(400)
-      .with_field('context')
+      .with_field('context') // 告诉 Cloudinary 把元数据也带回来
       .execute();
+
+    // 打印日志，方便在 Vercel 后台看数据结构（调试用）
+    if (results.resources.length > 0) {
+      console.log("First Image Context:", results.resources[0].context);
+    }
 
     return results.resources.map((resource: any, index: number) => ({
       id: index,
@@ -22,7 +27,9 @@ export async function getImages() {
       format: resource.format,
       width: resource.width,
       height: resource.height,
-      prompt: resource.context?.custom?.alt || "", 
+      // 🔴 核心修复：移除 .custom，直接从 context 读取 alt
+      // 为了保险，我们同时尝试读取 caption 和 description
+      prompt: resource.context?.alt || resource.context?.description || resource.context?.caption || "No prompt available", 
       url: resource.secure_url,
     }));
   } catch (error) {
