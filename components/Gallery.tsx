@@ -54,16 +54,15 @@ export default function Gallery({ images }: { images: any[] }) {
                 loading="lazy"
               />
               
-              {/* 悬停遮罩：OpenNana 风格 */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-4">
-                 {/* 1. 标题 (Case 670) */}
-                 <h3 className="font-bold text-white text-sm mb-1 line-clamp-1">
-                    {image.title}
+              {/* 🔴 核心修改：首页卡片底部固定显示标题
+                  1. 移除了 opacity-0 (现在一直显示)
+                  2. 移除了 hover 效果
+                  3. 只显示 image.title，不显示 prompt
+              */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent pt-10 pb-4 px-4">
+                 <h3 className="font-bold text-white text-sm line-clamp-1 tracking-wide">
+                    {image.title || "Untitled"}
                  </h3>
-                 {/* 2. 提示词摘要 */}
-                 <p className="line-clamp-2 text-[10px] text-gray-300 font-normal leading-relaxed opacity-90">
-                    {image.prompt}
-                 </p>
               </div>
             </div>
           ))}
@@ -101,9 +100,8 @@ export default function Gallery({ images }: { images: any[] }) {
               <div className="flex items-center justify-between border-b border-white/5 p-6 h-16 shrink-0 bg-[#151515]">
                 <div className="flex items-center gap-2 overflow-hidden">
                     <div className="h-5 w-5 shrink-0 rounded bg-gradient-to-tr from-indigo-500 to-purple-600" />
-                    {/* 这里显示标题 */}
                     <span className="font-bold tracking-wide text-sm text-white truncate">
-                        {selectedImage.title}
+                        {selectedImage.title || "Untitled"}
                     </span>
                 </div>
                 <div className="flex gap-2 shrink-0">
@@ -135,7 +133,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 <div>
                    <h3 className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-3 border-t border-white/5 pt-6">Details</h3>
                    <div className="grid grid-cols-2 gap-3">
-                      <div className="rounded-lg bg-white/5 p-3 border border-white/5"><p className="text-[10px] uppercase text-gray-500 mb-1">Title</p><p className="text-sm font-medium text-gray-200 truncate">{selectedImage.title}</p></div>
+                      <div className="rounded-lg bg-white/5 p-3 border border-white/5"><p className="text-[10px] uppercase text-gray-500 mb-1">Dimensions</p><p className="text-sm font-medium text-gray-200 font-mono">{selectedImage.width} × {selectedImage.height}</p></div>
                       <div className="rounded-lg bg-white/5 p-3 border border-white/5"><p className="text-[10px] uppercase text-gray-500 mb-1">Format</p><p className="text-sm font-medium text-gray-200 uppercase font-mono">{selectedImage.format}</p></div>
                    </div>
                 </div>
