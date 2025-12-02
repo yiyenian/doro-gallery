@@ -13,13 +13,8 @@ export async function getImages() {
       .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
       .sort_by('public_id', 'desc')
       .max_results(400)
-      .with_field('context') // 告诉 Cloudinary 把元数据也带回来
+      .with_field('context') // 这一行非常重要，告诉 Cloudinary 把标题和描述都带回来
       .execute();
-
-    // 打印日志，方便在 Vercel 后台看数据结构（调试用）
-    if (results.resources.length > 0) {
-      console.log("First Image Context:", results.resources[0].context);
-    }
 
     return results.resources.map((resource: any, index: number) => ({
       id: index,
@@ -27,9 +22,14 @@ export async function getImages() {
       format: resource.format,
       width: resource.width,
       height: resource.height,
-      // 🔴 核心修复：移除 .custom，直接从 context 读取 alt
-      // 为了保险，我们同时尝试读取 caption 和 description
-      prompt: resource.context?.alt || resource.context?.description || resource.context?.caption || "No prompt available", 
+      
+      // 🔴 核心修改：这里决定了从哪里读取标题和提示词
+      // 1. 读取 Title (caption) 输入框的内容作为标题
+      title: resource.context?.caption || resource.context?.custom?.caption || "Untitled Case",
+      
+      // 2. 读取 Description (alt) 输入框的内容作为提示词
+      prompt: resource.context?.alt || resource.context?.description || "No prompt available",
+      
       url: resource.secure_url,
     }));
   } catch (error) {
