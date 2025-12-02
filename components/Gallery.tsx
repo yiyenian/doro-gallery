@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, Copy, Check, ExternalLink, ChevronLeft, ChevronRight, Hash, Terminal } from 'lucide-react';
+import { X, Copy, Check, ExternalLink, ChevronLeft, ChevronRight, Info, Type, Hash, Terminal } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 export default function Gallery({ images }: { images: any[] }) {
   const [selectedId, setSelectedId] = useState<number | null>(null);
@@ -45,7 +46,8 @@ export default function Gallery({ images }: { images: any[] }) {
             <div 
               key={image.id}
               onClick={() => setSelectedId(image.id)}
-              className="group relative mb-4 block w-full cursor-zoom-in overflow-hidden rounded-xl bg-[#121212] border border-white/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-purple-900/10 hover:border-white/10"
+              // 卡片背景色微调 #1e1e20，与页面背景 #121212 区分开
+              className="group relative mb-4 block w-full cursor-zoom-in overflow-hidden rounded-xl bg-[#1e1e20] border border-white/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-purple-900/10 hover:border-white/10"
             >
               <img 
                 src={image.url} 
@@ -54,7 +56,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 loading="lazy"
               />
               
-              {/* 首页卡片底部标题 */}
+              {/* 首页底部：固定显示标题 */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent pt-12 pb-4 px-4">
                  <h3 className="font-bold text-gray-100 text-sm line-clamp-1 tracking-wide">
                     {image.title || "Untitled"}
@@ -65,11 +67,11 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      {/* --- 全屏弹窗 (OpenNana 风格复刻) --- */}
+      {/* --- 全屏弹窗 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-0 sm:p-4 md:p-6 lg:p-8">
           
-          {/* 1. 背景毛玻璃遮罩 */}
+          {/* 背景毛玻璃遮罩 */}
           <div 
             className="absolute inset-0 bg-black/80 backdrop-blur-xl transition-opacity animate-in fade-in duration-200" 
             onClick={() => setSelectedId(null)} 
@@ -77,7 +79,7 @@ export default function Gallery({ images }: { images: any[] }) {
           
           <div className="relative flex h-full w-full max-w-[1500px] flex-col overflow-hidden bg-[#18181b] shadow-2xl ring-1 ring-white/10 sm:rounded-xl md:h-[90vh] md:flex-row animate-in zoom-in-95 duration-200">
             
-            {/* 左侧：沉浸式大图 */}
+            {/* 左侧：大图展示 */}
             <div className="relative flex-1 bg-[#09090b] flex items-center justify-center p-4 md:p-8 group/nav">
               <img 
                 src={selectedImage.url} 
@@ -85,7 +87,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 alt="Detail" 
               />
               
-              {/* 左右悬浮按钮 */}
+              {/* 左右按钮 */}
               {selectedIndex > 0 && (
                 <button 
                     onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} 
@@ -107,9 +109,8 @@ export default function Gallery({ images }: { images: any[] }) {
             {/* 右侧：信息面板 */}
             <div className="flex w-full flex-col border-t border-white/10 bg-[#18181b] md:h-full md:w-[420px] md:flex-none md:border-l md:border-t-0 z-20">
               
-              {/* 操作栏 */}
+              {/* 头部操作栏 */}
               <div className="flex items-center justify-between p-6 pb-2">
-                {/* 装饰性标签 */}
                 <div className="flex gap-2">
                     <span className="px-2 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-1">
                         <Terminal size={10} /> AI Generated
@@ -129,7 +130,6 @@ export default function Gallery({ images }: { images: any[] }) {
                     <h2 className="text-2xl font-bold text-white leading-tight mb-3">
                         {selectedImage.title || "Untitled Artwork"}
                     </h2>
-                    {/* 模拟标签展示 */}
                     <div className="flex flex-wrap gap-2">
                         {['Midjourney', 'High Quality', 'Portrait'].map(tag => (
                             <span key={tag} className="flex items-center gap-1 text-[10px] text-gray-400 bg-white/5 px-2 py-1 rounded-full border border-white/5 hover:border-white/10 transition cursor-default">
@@ -139,7 +139,7 @@ export default function Gallery({ images }: { images: any[] }) {
                     </div>
                 </div>
 
-                {/* 2. 提示词区域 (终端风格) */}
+                {/* 2. 提示词区域 */}
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-[11px] font-bold uppercase tracking-widest text-gray-500">Prompt</h3>
@@ -156,10 +156,21 @@ export default function Gallery({ images }: { images: any[] }) {
                   
                   {/* 黑底代码块样式 */}
                   <div className="relative group">
-                    <div className="rounded-xl bg-[#000000] border border-white/10 p-5 min-h-[160px] shadow-inner">
-                        <p className="text-xs leading-6 text-gray-300 font-mono select-text whitespace-pre-wrap break-words">
-                            {selectedImage.prompt || "No prompt available."}
-                        </p>
+                    {/* 背景色 #09090b，增加层次感 */}
+                    <div className="rounded-xl bg-[#09090b] border border-white/10 p-5 min-h-[160px] shadow-inner">
+                        <div className="text-xs leading-6 text-gray-300 font-mono select-text whitespace-pre-wrap break-words">
+                            {/* Markdown 渲染：自动处理普通换行 */}
+                            <ReactMarkdown
+                                components={{
+                                    p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} />,
+                                    strong: ({node, ...props}) => <span className="text-indigo-400 font-bold" {...props} />,
+                                    ul: ({node, ...props}) => <ul className="list-disc ml-4 mb-4" {...props} />,
+                                    li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                                }}
+                            >
+                                {selectedImage.prompt.replace(/\n/g, '  \n')}
+                            </ReactMarkdown>
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -180,7 +191,6 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
               </div>
               
-              {/* 底部 ID 标识 */}
               <div className="border-t border-white/5 p-4 bg-[#18181b]">
                  <p className="text-[10px] text-gray-600 font-mono text-center">ID: {selectedImage.public_id}</p>
               </div>
