@@ -72,7 +72,8 @@ export default function Gallery({ images }: { images: any[] }) {
       {/* --- 全屏弹窗 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-0 sm:p-4 md:p-8">
-          <div className="absolute inset-0 bg-black/95 backdrop-blur-xl transition-opacity" onClick={() => setSelectedId(null)} />
+          {/* 背景遮罩 - 毛玻璃效果 */}
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-2xl transition-opacity" onClick={() => setSelectedId(null)} />
           
           <div className="relative flex h-full w-full max-w-[1400px] flex-col overflow-hidden bg-[#121212] shadow-2xl ring-1 ring-white/10 sm:rounded-xl md:h-[85vh] md:flex-row animate-in fade-in zoom-in duration-200">
             
