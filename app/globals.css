@@ -6,10 +6,9 @@
 body {
   background-color: #000000;
   color: #ffffff;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* 隐藏所有滚动条但保留滚动功能（Webkit内核） */
+/* 隐藏滚动条但保留滚动功能 */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -25,7 +24,6 @@ body {
   background: #555;
 }
 
-/* 移除图片的默认边距 */
 img {
   display: block;
   max-width: 100%;
