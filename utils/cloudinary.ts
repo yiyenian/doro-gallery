@@ -22,7 +22,6 @@ export async function getImages() {
       format: resource.format,
       width: resource.width,
       height: resource.height,
-      // 如果没有提示词，显示默认占位符
       prompt: resource.context?.custom?.alt || "", 
       url: resource.secure_url,
     }));
