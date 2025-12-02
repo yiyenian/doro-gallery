@@ -2,22 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 强制全站深色模式，还原 OpenNana 的黑底 */
 body {
-  background: #000;
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* 隐藏滚动条但保留功能 (可选) */
+/* 隐藏所有滚动条但保留滚动功能（Webkit内核） */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #333;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* 移除图片的默认边距 */
+img {
+  display: block;
+  max-width: 100%;
 }
