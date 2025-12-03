@@ -10,7 +10,7 @@ cloudinary.v2.config({
 
 export async function getImages() {
   try {
-    // 1. 强制获取最新数据，不使用缓存的 context
+    // 强制不使用缓存，保证重命名后立刻生效
     const results = await cloudinary.v2.search
       .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
       .sort_by('public_id', 'desc')
@@ -19,36 +19,22 @@ export async function getImages() {
       .execute();
 
     return results.resources.map((resource: any, index: number) => {
-      const publicId = resource.public_id; // 原样 ID，例如 "gallery/case-670"
-      
-      // --- 核心修复：三重匹配机制 ---
-      // 1. 尝试全名匹配 ("gallery/case-670")
-      // 2. 尝试文件名匹配 ("case-670")
-      // 3. 尝试去除后缀匹配 (防止万一带有 .jpg)
-      const fileName = publicId.split('/').pop(); // 拿到 "case-670"
-      const fileNameNoExt = fileName.split('.')[0]; // 拿到 "case-670" (去后缀)
+      const publicId = resource.public_id;
+      const cleanId = publicId.split('/').pop(); // 去掉文件夹
+      const noExtId = cleanId.split('.')[0];     // 去掉后缀
 
-      // 在 data.ts 里狂找，只要有一个对上就行
-      const localInfo = localData[publicId] || 
-                        localData[fileName] || 
-                        localData[fileNameNoExt] || 
-                        {};
+      // 三重匹配：全名 > 文件名 > 去后缀名
+      const localInfo = localData[publicId] || localData[cleanId] || localData[noExtId] || {};
 
-      // 标题逻辑：本地 > Cloudinary > 自动生成
-      let title = localInfo.title || 
-                  resource.context?.caption || 
-                  resource.context?.custom?.caption;
-
+      // 标题逻辑
+      let title = localInfo.title || resource.context?.caption;
       if (!title) {
-        // 如果没标题，就把文件名 "case-670" 变成 "Case 670"
-        title = fileNameNoExt.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        // 默认用文件名做标题，把 - 变成空格
+        title = noExtId.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
       }
 
-      // 提示词逻辑：本地 > Cloudinary > 默认
-      const prompt = localInfo.prompt || 
-                     resource.context?.alt || 
-                     resource.context?.description || 
-                     "No prompt available.";
+      // 提示词逻辑
+      const prompt = localInfo.prompt || resource.context?.alt || "No prompt available";
 
       return {
         id: index,
