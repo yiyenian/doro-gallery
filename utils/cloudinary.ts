@@ -1,5 +1,5 @@
 import cloudinary from 'cloudinary';
-import { localData } from './data'; // 👈 必须引入这个文件！
+import { localData } from './data';
 
 cloudinary.v2.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
@@ -14,18 +14,31 @@ export async function getImages() {
       .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
       .sort_by('public_id', 'desc')
       .max_results(400)
+      .with_field('context')
       .execute();
 
-    // 映射数据
     return results.resources.map((resource: any, index: number) => {
-      const publicId = resource.public_id; // 例如 "gallery/case-670"
+      const publicId = resource.public_id; // 例如 "gallery/abc"
+      const cleanId = publicId.split('/').pop(); // 例如 "abc" (去掉文件夹)
       
-      // 🔴 核心逻辑：直接去本地账本查
-      const localInfo = localData[publicId];
+      // 🔴 核心修复：双重匹配机制
+      // 不管你在 data.ts 里写的是 "gallery/abc" 还是 "abc"，都能找到！
+      const localInfo = localData[publicId] || localData[cleanId] || {};
 
-      // 如果本地有数据，就用本地的；否则显示默认提示
-      const title = localInfo?.title || "Untitled (Check data.ts)";
-      const prompt = localInfo?.prompt || `ID: ${publicId}\n(No data found in utils/data.ts)`;
+      // 标题：本地 > Cloudinary > 文件名
+      let title = localInfo.title || 
+                  resource.context?.caption || 
+                  resource.context?.custom?.caption;
+
+      if (!title) {
+        title = cleanId.replace(/[-_]/g, ' '); // 如果没标题，用文件名代替
+      }
+
+      // 提示词：本地 > Cloudinary > 默认文案
+      const prompt = localInfo.prompt || 
+                     resource.context?.alt || 
+                     resource.context?.description || 
+                     "No prompt available";
 
       return {
         id: index,
