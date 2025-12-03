@@ -9,7 +9,7 @@ export default function Gallery({ images }: { images: any[] }) {
   const [copied, setCopied] = useState(false);
   const [search, setSearch] = useState("");
 
-  // 1. 自动从所有图片中提取所有用过的标签，并去重
+  // 1. 自动提取标签
   const allTags = useMemo(() => {
     const tags = new Set<string>();
     images.forEach(img => {
@@ -32,7 +32,7 @@ export default function Gallery({ images }: { images: any[] }) {
   const selectedIndex = images.findIndex(img => img.id === selectedId);
   const selectedImage = images[selectedIndex];
 
-  // 键盘监听
+  // 键盘及锁屏监听
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (selectedId === null) return;
@@ -44,7 +44,6 @@ export default function Gallery({ images }: { images: any[] }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [selectedId, selectedIndex, images]);
 
-  // 锁定背景滚动
   useEffect(() => {
     if (selectedId !== null) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'unset';
@@ -58,42 +57,49 @@ export default function Gallery({ images }: { images: any[] }) {
     }
   };
 
-  // 默认热门标签（如果数据里没标签时显示这些）
+  // 默认热门标签（汉化）
   const defaultTags = ['人像摄影', '赛博朋克', '二次元', '3D渲染', 'Logo设计', '中国风', '建筑设计', '科幻'];
   const displayTags = allTags.length > 0 ? allTags : defaultTags;
 
   return (
     <>
-      {/* --- Hero & Search 区域 (视觉升级版) --- */}
-      <div className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 text-center px-4 w-full overflow-hidden border-b border-white/5 bg-[#0a0a0a]">
+      {/* --- Hero & Search 区域 (视觉增强版) --- */}
+      <div className="relative pt-32 pb-16 sm:pt-40 sm:pb-24 text-center px-4 w-full overflow-hidden bg-[#050505] border-b border-white/5">
         
-        {/* 1. 背景装饰：科技感网格 (新增) */}
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        {/* ✨ 流动光效背景 ✨ */}
+        <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+            {/* 顶部中间：主光晕 */}
+            <div className="absolute top-[-30%] left-1/2 -translate-x-1/2 w-[80%] h-[80%] rounded-full bg-gradient-to-b from-indigo-900/30 via-purple-900/10 to-transparent blur-[120px] opacity-60"></div>
+            {/* 叠加网格纹理 */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        </div>
 
-        <div className="max-w-4xl mx-auto">
-            {/* 2. 顶部小徽章 (新增) */}
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-6 shadow-[0_0_10px_-3px_rgba(99,102,241,0.4)] animate-in fade-in slide-in-from-bottom-2 duration-500">
+        <div className="max-w-4xl mx-auto relative z-10">
+            {/* 顶部小徽章 */}
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-8 shadow-[0_0_15px_-3px_rgba(99,102,241,0.3)] backdrop-blur-md">
                 <Sparkles size={10} className="text-indigo-400" />
                 AI Prompt Library
             </div>
 
-            <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white md:text-6xl lg:text-7xl leading-tight">
+            {/* 大标题 */}
+            <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white md:text-6xl lg:text-7xl leading-tight drop-shadow-2xl">
               探索
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 animate-pulse px-3">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 animate-pulse px-3 font-black">
                 无限想象
               </span>
             </h1>
             
-            <p className="text-gray-400 max-w-xl mx-auto text-base sm:text-lg mb-10 leading-relaxed font-light">
-              Doro Gallery 收录全网高质量 AI 生成图像与提示词。
+            <p className="text-gray-400 max-w-xl mx-auto text-base sm:text-lg mb-12 leading-relaxed font-light">
+              收录全网高质量 AI 生成图像与提示词。<br/>
               复制 Prompt，激发灵感，创造属于你的杰作。
             </p>
 
-            {/* 🔍 搜索框 (增强光晕效果) */}
+            {/* 🔍 搜索框 (增强质感) */}
             <div className="max-w-2xl mx-auto relative group z-10">
-                {/* 光晕背景加强 */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-20 group-hover:opacity-40 blur-lg transition duration-1000"></div>
-                <div className="relative flex items-center bg-[#121212] rounded-full p-2 ring-1 ring-white/10 focus-within:ring-indigo-500/50 transition-all shadow-2xl">
+                {/* 光晕背景 */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-40 blur-lg transition duration-1000"></div>
+                
+                <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-full p-2 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-2xl">
                     <div className="pl-4 text-gray-500"><Search className="w-5 h-5" /></div>
                     <input 
                         type="text" 
@@ -107,11 +113,10 @@ export default function Gallery({ images }: { images: any[] }) {
                             <X size={16} />
                         </button>
                     )}
-                    
                     {/* 统计 */}
                     <div className="hidden sm:flex items-center pr-4 pl-4 border-l border-white/10 h-6">
-                        <span className="text-xs font-mono text-gray-400 whitespace-nowrap">
-                            <span className="text-indigo-400 font-bold mr-1">{images.length}</span> 
+                        <span className="text-xs font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors">
+                            <span className="font-bold mr-1">{images.length}</span> 
                             CASES
                         </span>
                     </div>
@@ -119,15 +124,15 @@ export default function Gallery({ images }: { images: any[] }) {
             </div>
 
             {/* 🏷️ 标签列表 */}
-            <div className="mt-8 flex flex-wrap justify-center gap-2">
+            <div className="mt-10 flex flex-wrap justify-center gap-2">
                 {displayTags.map((tag) => (
                     <button 
                         key={tag} 
                         onClick={() => setSearch(tag === search ? "" : tag)} 
-                        className={`px-3 py-1.5 rounded-full border text-xs font-medium transition-all duration-300
+                        className={`px-3 py-1.5 rounded-full border text-xs font-medium transition-all duration-300 backdrop-blur-md
                             ${search === tag
-                                ? 'bg-white text-black border-white shadow-lg shadow-white/20 scale-105' 
-                                : 'bg-white/5 border-white/5 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/20 hover:-translate-y-0.5'
+                                ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.4)] scale-105' 
+                                : 'bg-white/5 border-white/10 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5'
                             }`}
                     >
                         {tag}
@@ -154,7 +159,7 @@ export default function Gallery({ images }: { images: any[] }) {
                     loading="lazy"
                 />
                 
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent pt-12 pb-4 px-4">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent pt-12 pb-4 px-4">
                     <h3 className="font-bold text-gray-100 text-sm line-clamp-1 tracking-wide">
                         {image.title}
                     </h3>
@@ -171,7 +176,7 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 全屏弹窗 (保持 OpenNana 风格) --- */}
+      {/* --- 全屏弹窗 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-0 sm:p-4 md:p-6 lg:p-8">
           <div className="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity animate-in fade-in duration-200" onClick={() => setSelectedId(null)} />
@@ -180,9 +185,17 @@ export default function Gallery({ images }: { images: any[] }) {
             {/* 左侧大图 */}
             <div className="relative flex-1 bg-[#09090b] flex items-center justify-center p-4 md:p-8 group/nav">
               <img src={selectedImage.url} className="max-h-full max-w-full object-contain shadow-2xl drop-shadow-2xl" alt="Detail" />
-              {/* 左右按钮 */}
-              <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[(selectedIndex - 1 + images.length) % images.length].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition backdrop-blur-md opacity-0 group-hover/nav:opacity-100"><ChevronLeft size={24} /></button>
-              <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[(selectedIndex + 1) % images.length].id); }} className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition opacity-0 group-hover/nav:opacity-100"><ChevronRight size={24} /></button>
+              
+              {selectedIndex > 0 && (
+                <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition backdrop-blur-md opacity-0 group-hover/nav:opacity-100">
+                  <ChevronLeft size={24} />
+                </button>
+              )}
+              {selectedIndex < images.length - 1 && (
+                <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition opacity-0 group-hover/nav:opacity-100">
+                  <ChevronRight size={24} />
+                </button>
+              )}
             </div>
 
             {/* 右侧信息栏 */}
@@ -194,8 +207,8 @@ export default function Gallery({ images }: { images: any[] }) {
                     </span>
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="查看原图"><ExternalLink size={18}/></button>
-                  <button onClick={() => setSelectedId(null)} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="关闭"><X size={18}/></button>
+                  <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="View Original"><ExternalLink size={18}/></button>
+                  <button onClick={() => setSelectedId(null)} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="Close"><X size={18}/></button>
                 </div>
               </div>
 
@@ -237,7 +250,7 @@ export default function Gallery({ images }: { images: any[] }) {
                   </div>
                 </div>
 
-                {/* 参数详情 */}
+                {/* 详情 */}
                 <div className="border-t border-white/5 pt-6">
                    <h3 className="text-[11px] font-bold uppercase tracking-widest text-gray-500 mb-4">Details</h3>
                    <div className="grid grid-cols-2 gap-3">
