@@ -1,18 +1,23 @@
 import { getImages } from '../utils/cloudinary';
 import Gallery from '../components/Gallery';
 
-export const revalidate = 0; 
+// 🔴 强制动态渲染：这是解决“改了没反应”的终极杀手锏
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function Page() {
   const images = await getImages();
 
   return (
     <main className="min-h-screen bg-[#121212] selection:bg-indigo-500/30">
+      
+      {/* 背景光效 */}
       <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-purple-900/10 blur-[120px] opacity-30" />
         <div className="absolute top-[20%] right-[-5%] h-[500px] w-[500px] rounded-full bg-blue-900/10 blur-[100px] opacity-30" />
       </div>
 
+      {/* 导航栏 */}
       <header className="fixed top-0 left-0 z-40 w-full border-b border-white/5 bg-[#121212]/80 backdrop-blur-md transition-all">
         <div className="mx-auto flex h-16 max-w-[1960px] items-center justify-between px-6">
           <div className="flex items-center gap-3">
@@ -29,6 +34,7 @@ export default async function Page() {
         </div>
       </header>
 
+      {/* Hero */}
       <div className="relative pt-32 pb-12 sm:pt-40 sm:pb-16 text-center px-4 max-w-5xl mx-auto">
         <h1 className="mb-8 text-5xl font-extrabold tracking-tight text-white md:text-7xl lg:text-8xl">
           Discover the Art of <br />
