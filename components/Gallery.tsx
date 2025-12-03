@@ -37,7 +37,6 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 首页瀑布流 --- */}
       <div className="max-w-[1960px] mx-auto px-4 pb-20">
         <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
           {images.map((image) => (
@@ -46,9 +45,9 @@ export default function Gallery({ images }: { images: any[] }) {
               onClick={() => setSelectedId(image.id)}
               className="group relative mb-4 block w-full cursor-zoom-in overflow-hidden rounded-xl bg-[#1e1e20] border border-white/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:border-white/20"
             >
-              {/* 🔴 调试专用：显示真实 Public ID */}
-              <div className="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-mono px-2 py-1 rounded z-50 opacity-80 pointer-events-none">
-                ID: {image.public_id}
+              {/* 🔴 调试专用：显示真实 ID (修复完记得删掉这几行) */}
+              <div className="absolute top-2 left-2 bg-red-600/90 text-white text-[10px] font-mono px-2 py-1 rounded z-20 pointer-events-none border border-red-400 select-text">
+                {image.public_id}
               </div>
 
               <img 
@@ -82,22 +81,26 @@ export default function Gallery({ images }: { images: any[] }) {
 
             <div className="flex w-full flex-col border-t border-white/10 bg-[#18181b] md:h-full md:w-[420px] md:flex-none md:border-l md:border-t-0 z-20">
               <div className="flex items-center justify-between p-6 pb-2 border-b border-white/5 bg-[#18181b]">
-                <div className="flex gap-2">
-                    {/* 🔴 调试显示 */}
-                    <span className="text-[10px] text-red-500 font-mono">Current ID: {selectedImage.public_id}</span>
+                <div className="flex items-center gap-2">
+                    <span className="px-2 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-1">
+                        <Terminal size={10} /> AI Generated
+                    </span>
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition"><ExternalLink size={18}/></button>
-                  <button onClick={() => setSelectedId(null)} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition"><X size={18}/></button>
+                  <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="View Original"><ExternalLink size={18}/></button>
+                  <button onClick={() => setSelectedId(null)} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="Close"><X size={18}/></button>
                 </div>
               </div>
 
               <div className="flex-1 overflow-y-auto p-6 pt-2 space-y-8 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
                 <div>
                     <h2 className="text-2xl font-bold text-white leading-tight mb-3">
+                        {/* 这里应该显示标题，如果没对上号，就会显示 Untitled */}
                         {selectedImage.title || "Untitled Artwork"}
                     </h2>
+                    <p className="text-xs text-red-500 font-mono mb-2">调试信息: ID = {selectedImage.public_id}</p>
                 </div>
+
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-[11px] font-bold uppercase tracking-widest text-gray-500">Prompt</h3>
@@ -112,6 +115,14 @@ export default function Gallery({ images }: { images: any[] }) {
                         </div>
                     </div>
                   </div>
+                </div>
+                
+                <div className="border-t border-white/5 pt-6">
+                   <h3 className="text-[11px] font-bold uppercase tracking-widest text-gray-500 mb-4">Details</h3>
+                   <div className="grid grid-cols-2 gap-3">
+                      <div className="rounded-lg bg-white/5 p-3 border border-white/5 hover:bg-white/10 transition"><p className="text-[10px] uppercase text-gray-500 mb-1">ID</p><p className="text-xs font-medium text-gray-200 font-mono truncate">{selectedImage.public_id}</p></div>
+                      <div className="rounded-lg bg-white/5 p-3 border border-white/5 hover:bg-white/10 transition"><p className="text-[10px] uppercase text-gray-500 mb-1">Format</p><p className="text-sm font-medium text-gray-200 uppercase font-mono">{selectedImage.format}</p></div>
+                   </div>
                 </div>
               </div>
             </div>
