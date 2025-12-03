@@ -46,8 +46,7 @@ export default function Gallery({ images }: { images: any[] }) {
             <div 
               key={image.id}
               onClick={() => setSelectedId(image.id)}
-              // 卡片背景色微调 #1e1e20，与页面背景 #121212 区分开
-              className="group relative mb-4 block w-full cursor-zoom-in overflow-hidden rounded-xl bg-[#1e1e20] border border-white/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-purple-900/10 hover:border-white/10"
+              className="group relative mb-4 block w-full cursor-zoom-in overflow-hidden rounded-xl bg-[#1e1e20] border border-white/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:border-white/20"
             >
               <img 
                 src={image.url} 
@@ -99,7 +98,7 @@ export default function Gallery({ images }: { images: any[] }) {
               {selectedIndex < images.length - 1 && (
                 <button 
                     onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} 
-                    className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition opacity-0 group-hover/nav:opacity-100"
                 >
                   <ChevronRight size={24} />
                 </button>
@@ -110,8 +109,8 @@ export default function Gallery({ images }: { images: any[] }) {
             <div className="flex w-full flex-col border-t border-white/10 bg-[#18181b] md:h-full md:w-[420px] md:flex-none md:border-l md:border-t-0 z-20">
               
               {/* 头部操作栏 */}
-              <div className="flex items-center justify-between p-6 pb-2">
-                <div className="flex gap-2">
+              <div className="flex items-center justify-between p-6 pb-2 border-b border-white/5 bg-[#18181b]">
+                <div className="flex items-center gap-2">
                     <span className="px-2 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-1">
                         <Terminal size={10} /> AI Generated
                     </span>
@@ -131,7 +130,7 @@ export default function Gallery({ images }: { images: any[] }) {
                         {selectedImage.title || "Untitled Artwork"}
                     </h2>
                     <div className="flex flex-wrap gap-2">
-                        {['Midjourney', 'High Quality', 'Portrait'].map(tag => (
+                        {['Midjourney', 'High Quality', 'Prompt'].map(tag => (
                             <span key={tag} className="flex items-center gap-1 text-[10px] text-gray-400 bg-white/5 px-2 py-1 rounded-full border border-white/5 hover:border-white/10 transition cursor-default">
                                 <Hash size={10} className="opacity-50"/> {tag}
                             </span>
@@ -154,12 +153,10 @@ export default function Gallery({ images }: { images: any[] }) {
                     )}
                   </div>
                   
-                  {/* 黑底代码块样式 */}
+                  {/* 黑底代码块样式 + 自动换行处理 */}
                   <div className="relative group">
-                    {/* 背景色 #09090b，增加层次感 */}
                     <div className="rounded-xl bg-[#09090b] border border-white/10 p-5 min-h-[160px] shadow-inner">
                         <div className="text-xs leading-6 text-gray-300 font-mono select-text whitespace-pre-wrap break-words">
-                            {/* Markdown 渲染：自动处理普通换行 */}
                             <ReactMarkdown
                                 components={{
                                     p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} />,
@@ -168,6 +165,7 @@ export default function Gallery({ images }: { images: any[] }) {
                                     li: ({node, ...props}) => <li className="mb-1" {...props} />,
                                 }}
                             >
+                                {/* 核心：自动把普通换行符替换为 Markdown 强制换行 */}
                                 {selectedImage.prompt.replace(/\n/g, '  \n')}
                             </ReactMarkdown>
                         </div>
