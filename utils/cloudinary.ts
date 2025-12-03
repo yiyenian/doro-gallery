@@ -15,26 +15,34 @@ export async function getImages() {
       .sort_by('public_id', 'desc')
       .max_results(400)
       .with_field('context')
-      .with_field('tags') // 获取 Cloudinary 自带标签(作为备选)
+      .with_field('tags')
       .execute();
 
     return results.resources.map((resource: any, index: number) => {
       const publicId = resource.public_id;
-      const localInfo = localData[publicId] || {};
+      
+      // 🔴 核心修复：去掉 || {}，允许它是 undefined
+      const localInfo = localData[publicId];
 
-      // 标题逻辑
-      let title = localInfo.title || resource.context?.caption || resource.context?.custom?.caption;
+      // 🔴 核心修复：使用 ?. (问号点) 来安全访问属性
+      // 如果 localInfo 是 undefined，它会自动停下，不会报错
+      let title = localInfo?.title || 
+                  resource.context?.caption || 
+                  resource.context?.custom?.caption;
+
       if (!title) {
         const fileName = publicId.split('/').pop() || "";
         title = fileName.replace(/[-_]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
       }
 
-      // 提示词逻辑
-      let prompt = localInfo.prompt;
+      // 🔴 核心修复：同上，使用 ?.
+      let prompt = localInfo?.prompt;
+
       if (!prompt) {
         const p1 = resource.context?.p1 || resource.context?.custom?.p1;
         const p2 = resource.context?.p2 || resource.context?.custom?.p2;
         const p3 = resource.context?.p3 || resource.context?.custom?.p3;
+        
         if (p1 || p2) {
           prompt = [p1, p2, p3].filter(Boolean).join("\n\n");
         } else {
@@ -42,9 +50,7 @@ export async function getImages() {
         }
       }
 
-      // 🔴 核心修复：获取标签
-      // 优先用 data.ts 里的 tags，如果没有，就用 Cloudinary 后台打的 tags
-      const tags = localInfo.tags || resource.tags || [];
+      const tags = localInfo?.tags || resource.tags || [];
 
       return {
         id: index,
@@ -54,7 +60,7 @@ export async function getImages() {
         height: resource.height,
         title: title,
         prompt: prompt,
-        tags: tags, // 传递标签数组
+        tags: tags,
         url: resource.secure_url,
       };
     });
