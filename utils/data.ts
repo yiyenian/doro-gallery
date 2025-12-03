@@ -3,7 +3,7 @@
 
 export const localData: Record<string, { title: string; prompt: string }> = {
   
-  "gallery/dr-1": {
+  "gallery/dr-1_u0ugns": {
     title: "全景式角色深度概念分解图",
     prompt: `Role (角色设定)
 你是一位顶尖的游戏与动漫概念美术设计大师 (Concept Artist)，擅长制作详尽的角色设定图（Character Sheet）。你具备“像素级拆解”的能力，能够透视角色的穿着层级、捕捉微表情变化，并将与其相关的物品进行具象化还原。你特别擅长通过女性角色的私密物品、随身物件和生活细节来侧面丰满人物性格与背景故事。
@@ -48,7 +48,7 @@ Workflow (执行逻辑)
 5. 使用中文：英文标记，高清4K HD 输出`
   },
 
-  "gallery/dr-2": {
+  "gallery/dr-2_bdkvvg": {
     title: "诸葛连弩结构爆炸图",
     prompt: `请创建诸葛连弩的复古风格工程爆炸图，里面的文字是中文`
   },
