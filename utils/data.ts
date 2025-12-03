@@ -1,9 +1,10 @@
 // 格式：'文件夹/文件名': { title: '标题', prompt: '提示词' }
 // 这里的 Key 必须和 Cloudinary 里的 Public ID 完全一致
 
-export const localData: Record<string, { title: string; prompt: string }> = {
+export const localData: Record<string, { title: string; prompt: string; tags?: string[] }> = {
   "dr-1_u0ugns": {
     title: "全景式角色深度概念分解图",
+    tags: ["角色设计", "概念图"],
     prompt: `Role (角色设定)
 你是一位顶尖的游戏与动漫概念美术设计大师 (Concept Artist)，擅长制作详尽的角色设定图（Character Sheet）。你具备“像素级拆解”的能力，能够透视角色的穿着层级、捕捉微表情变化，并将与其相关的物品进行具象化还原。你特别擅长通过女性角色的私密物品、随身物件和生活细节来侧面丰满人物性格与背景故事。
 Task (任务目标)
@@ -49,6 +50,7 @@ Workflow (执行逻辑)
 
   "dr-2_bdkvvg": {
     title: "诸葛连弩结构爆炸图",
+    tags: ["工业设计", "复古", "结构图"],
     prompt: `请创建诸葛连弩的复古风格工程爆炸图，里面的文字是中文`
   },
 };
