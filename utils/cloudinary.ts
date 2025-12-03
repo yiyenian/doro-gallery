@@ -1,4 +1,5 @@
 import cloudinary from 'cloudinary';
+import { localData } from './data'; // 引入本地账本
 
 cloudinary.v2.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
@@ -17,40 +18,31 @@ export async function getImages() {
       .execute();
 
     return results.resources.map((resource: any, index: number) => {
-      const context = resource.context || {};
+      const publicId = resource.public_id;
       
-      // --- 1. 获取标题 (兼容多种写法) ---
-      const title = context.caption || context.Caption || context.title || context.Title || "Untitled Case";
+      // 1. 查本地账本
+      const localInfo = localData[publicId];
 
-      // --- 2. 暴力获取提示词 (p1-p6, P1-P6) ---
-      // 我们构建一个数组，把所有可能的分段都抓出来
-      let parts = [];
-      
-      // 尝试读取 p1, p2, p3... p6 (不区分大小写)
-      for (let i = 1; i <= 6; i++) {
-        const val = context[`p${i}`] || context[`P${i}`] || context[`part${i}`] || context[`Part${i}`];
-        if (val) parts.push(val);
-      }
+      // 2. 决定标题 (本地 > Cloudinary > 默认)
+      const title = localInfo?.title || 
+                    resource.context?.caption || 
+                    resource.context?.custom?.caption || 
+                    "Untitled";
 
-      let finalPrompt = "";
-
-      if (parts.length > 0) {
-        // 如果找到了分段，就用双换行符拼起来
-        finalPrompt = parts.join("\n\n");
-      } else {
-        // 如果没找到分段，就读标准的 Description (alt)
-        // 这里的逻辑是：只要有字，就拿来用，绝不留白
-        finalPrompt = context.alt || context.Alt || context.description || context.Description || "No prompt available. Please check Cloudinary metadata.";
-      }
+      // 3. 决定提示词 (本地 > Cloudinary > 默认)
+      const prompt = localInfo?.prompt || 
+                     resource.context?.alt || 
+                     resource.context?.description || 
+                     "No prompt available";
 
       return {
         id: index,
-        public_id: resource.public_id,
+        public_id: publicId,
         format: resource.format,
         width: resource.width,
         height: resource.height,
         title: title,
-        prompt: finalPrompt,
+        prompt: prompt,
         url: resource.secure_url,
       };
     });
