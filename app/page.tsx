@@ -1,24 +1,18 @@
 import { getImages } from '../utils/cloudinary';
 import Gallery from '../components/Gallery';
 
-// 强制动态渲染
 export const revalidate = 0; 
 
 export default async function Page() {
   const images = await getImages();
 
   return (
-    <main className="min-h-screen bg-[#121212] selection:bg-indigo-500/30">
+    // 使用极深的炭灰色背景，比纯黑更护眼，更有质感
+    <main className="min-h-screen bg-[#050505] selection:bg-indigo-500/30 text-white">
       
-      {/* 背景光效 */}
-      <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-purple-900/10 blur-[120px] opacity-30" />
-        <div className="absolute top-[20%] right-[-5%] h-[500px] w-[500px] rounded-full bg-blue-900/10 blur-[100px] opacity-30" />
-      </div>
-
-      {/* 顶部导航栏 - 已移除右上角内容 */}
-      <header className="fixed top-0 left-0 z-40 w-full border-b border-white/5 bg-[#121212]/80 backdrop-blur-md transition-all">
-        <div className="mx-auto flex h-16 max-w-[1960px] items-center px-6">
+      {/* 固定在顶部的导航栏 */}
+      <header className="fixed top-0 left-0 z-50 w-full border-b border-white/5 bg-[#050505]/70 backdrop-blur-xl transition-all">
+        <div className="mx-auto flex h-16 max-w-[1960px] items-center justify-between px-6">
           <div className="flex items-center gap-3">
             {/* Logo */}
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20">
@@ -28,30 +22,32 @@ export default async function Page() {
             </div>
             <span className="text-lg font-bold tracking-tight text-white/90 font-sans">Doro Gallery</span>
           </div>
+          
+          {/* 右侧状态 */}
+          <div className="flex items-center gap-4">
+             <span className="text-[10px] font-bold text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 px-3 py-1 rounded-full tracking-wider">BETA 2.0</span>
+          </div>
         </div>
       </header>
 
-      {/* 核心交互区域 */}
+      {/* 核心交互区域 (包含 Hero, 搜索, 列表, 弹窗) */}
       <Gallery images={images} />
       
-      {/* 底部版权 - 2025 & 去除 Vercel */}
-      <footer className="mt-20 border-t border-white/5 bg-[#121212] p-12">
+      {/* 底部版权 */}
+      <footer className="mt-20 border-t border-white/5 bg-[#050505] p-12">
         <div className="max-w-[1960px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
             <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-center md:justify-start gap-2">
-                    <div className="h-5 w-5 rounded bg-gradient-to-tr from-indigo-600 to-purple-600" />
-                    <span className="font-bold text-white/80">Doro Gallery</span>
+                    <div className="h-4 w-4 rounded bg-gradient-to-tr from-indigo-600 to-purple-600" />
+                    <span className="font-bold text-white/60 text-sm">Doro Gallery</span>
                 </div>
-                <p className="text-gray-500 text-xs max-w-xs">
+                <p className="text-gray-600 text-xs max-w-xs">
                     汇聚全网高质量 AI 绘画提示词，激发无限创作灵感。
                 </p>
             </div>
             <div className="flex flex-col items-center md:items-end gap-1">
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-xs">
                     &copy; 2025 Doro Gallery. All rights reserved.
-                </p>
-                <p className="text-gray-700 text-xs font-mono">
-                    Designed for Creators
                 </p>
             </div>
         </div>
