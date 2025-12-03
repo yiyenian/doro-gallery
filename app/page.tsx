@@ -1,7 +1,8 @@
 import { getImages } from '../utils/cloudinary';
 import Gallery from '../components/Gallery';
 
-// 🔴 强制动态渲染：这是解决“改了没反应”的终极杀手锏
+// 🔴 终极杀招：强制动态渲染，禁止 Vercel 缓存页面
+// 这样你只要改了 data.ts 或 Cloudinary，刷新网页立马生效
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
@@ -10,7 +11,6 @@ export default async function Page() {
 
   return (
     <main className="min-h-screen bg-[#121212] selection:bg-indigo-500/30">
-      
       {/* 背景光效 */}
       <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-purple-900/10 blur-[120px] opacity-30" />
@@ -47,6 +47,7 @@ export default async function Page() {
         </p>
       </div>
 
+      {/* 瀑布流 */}
       <Gallery images={images} />
       
       <footer className="mt-20 border-t border-white/5 bg-[#121212] p-12 text-center text-gray-600 text-sm">
