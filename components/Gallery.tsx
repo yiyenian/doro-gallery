@@ -57,26 +57,28 @@ export default function Gallery({ images }: { images: any[] }) {
     }
   };
 
-  // 默认热门标签（汉化）
   const defaultTags = ['人像摄影', '赛博朋克', '二次元', '3D渲染', 'Logo设计', '中国风', '建筑设计', '科幻'];
   const displayTags = allTags.length > 0 ? allTags : defaultTags;
 
   return (
     <>
-      {/* --- Hero & Search 区域 (视觉增强版) --- */}
-      <div className="relative pt-32 pb-16 sm:pt-40 sm:pb-24 text-center px-4 w-full overflow-hidden bg-[#050505] border-b border-white/5">
+      {/* --- Hero & Search 区域 (流光溢彩版) --- */}
+      <div className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 text-center px-4 w-full overflow-hidden bg-[#050505] border-b border-white/5">
         
-        {/* ✨ 流动光效背景 ✨ */}
+        {/* ✨✨✨ 流动光效背景 (核心特效) ✨✨✨ */}
         <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
-            {/* 顶部中间：主光晕 */}
-            <div className="absolute top-[-30%] left-1/2 -translate-x-1/2 w-[80%] h-[80%] rounded-full bg-gradient-to-b from-indigo-900/30 via-purple-900/10 to-transparent blur-[120px] opacity-60"></div>
-            {/* 叠加网格纹理 */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+            {/* 左上光斑：缓慢呼吸 */}
+            <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] rounded-full bg-gradient-to-br from-indigo-600/20 via-purple-600/20 to-pink-600/20 blur-[120px] animate-pulse duration-[8000ms]"></div>
+            {/* 右下光斑：延迟呼吸，形成流动感 */}
+            <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-gradient-to-tl from-blue-600/20 via-cyan-600/20 to-emerald-600/20 blur-[100px] animate-pulse duration-[10000ms] delay-1000"></div>
+            
+            {/* 网格纹理 */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10">
             {/* 顶部小徽章 */}
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-8 shadow-[0_0_15px_-3px_rgba(99,102,241,0.3)] backdrop-blur-md">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-8 shadow-[0_0_15px_-3px_rgba(99,102,241,0.4)] backdrop-blur-md animate-in fade-in slide-in-from-bottom-2 duration-700">
                 <Sparkles size={10} className="text-indigo-400" />
                 AI Prompt Library
             </div>
@@ -90,14 +92,14 @@ export default function Gallery({ images }: { images: any[] }) {
             </h1>
             
             <p className="text-gray-400 max-w-xl mx-auto text-base sm:text-lg mb-12 leading-relaxed font-light">
-              收录全网高质量 AI 生成图像与提示词。<br/>
+              Doro Gallery 收录全网高质量 AI 生成图像与提示词。<br/>
               复制 Prompt，激发灵感，创造属于你的杰作。
             </p>
 
-            {/* 🔍 搜索框 (增强质感) */}
+            {/* 🔍 搜索框 */}
             <div className="max-w-2xl mx-auto relative group z-10">
-                {/* 光晕背景 */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-40 blur-lg transition duration-1000"></div>
+                {/* 搜索框底部光晕 */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-30 group-hover:opacity-60 blur-lg transition duration-1000 animate-pulse"></div>
                 
                 <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-full p-2 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-2xl">
                     <div className="pl-4 text-gray-500"><Search className="w-5 h-5" /></div>
@@ -132,7 +134,7 @@ export default function Gallery({ images }: { images: any[] }) {
                         className={`px-3 py-1.5 rounded-full border text-xs font-medium transition-all duration-300 backdrop-blur-md
                             ${search === tag
                                 ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.4)] scale-105' 
-                                : 'bg-white/5 border-white/10 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5'
+                                : 'bg-white/5 border-white/5 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5'
                             }`}
                     >
                         {tag}
@@ -143,7 +145,7 @@ export default function Gallery({ images }: { images: any[] }) {
       </div>
 
       {/* --- 首页瀑布流列表 --- */}
-      <div className="max-w-[1960px] mx-auto px-4 py-12 min-h-[400px]">
+      <div className="max-w-[1960px] mx-auto px-4 pb-20 min-h-[400px]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
             {filteredImages.map((image) => (
@@ -159,7 +161,8 @@ export default function Gallery({ images }: { images: any[] }) {
                     loading="lazy"
                 />
                 
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent pt-12 pb-4 px-4">
+                {/* 首页底部：固定显示标题 */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent pt-12 pb-4 px-4">
                     <h3 className="font-bold text-gray-100 text-sm line-clamp-1 tracking-wide">
                         {image.title}
                     </h3>
@@ -179,23 +182,16 @@ export default function Gallery({ images }: { images: any[] }) {
       {/* --- 全屏弹窗 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-0 sm:p-4 md:p-6 lg:p-8">
+          {/* 背景遮罩 */}
           <div className="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity animate-in fade-in duration-200" onClick={() => setSelectedId(null)} />
           
           <div className="relative flex h-full w-full max-w-[1500px] flex-col overflow-hidden bg-[#18181b] shadow-2xl ring-1 ring-white/10 sm:rounded-xl md:h-[90vh] md:flex-row animate-in zoom-in-95 duration-200">
+            
             {/* 左侧大图 */}
             <div className="relative flex-1 bg-[#09090b] flex items-center justify-center p-4 md:p-8 group/nav">
               <img src={selectedImage.url} className="max-h-full max-w-full object-contain shadow-2xl drop-shadow-2xl" alt="Detail" />
-              
-              {selectedIndex > 0 && (
-                <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition backdrop-blur-md opacity-0 group-hover/nav:opacity-100">
-                  <ChevronLeft size={24} />
-                </button>
-              )}
-              {selectedIndex < images.length - 1 && (
-                <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition opacity-0 group-hover/nav:opacity-100">
-                  <ChevronRight size={24} />
-                </button>
-              )}
+              {selectedIndex > 0 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition backdrop-blur-md opacity-0 group-hover/nav:opacity-100"><ChevronLeft size={24} /></button>}
+              {selectedIndex < images.length - 1 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition opacity-0 group-hover/nav:opacity-100"><ChevronRight size={24} /></button>}
             </div>
 
             {/* 右侧信息栏 */}
@@ -213,7 +209,7 @@ export default function Gallery({ images }: { images: any[] }) {
               </div>
 
               <div className="flex-1 overflow-y-auto p-6 pt-4 space-y-8 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
-                {/* 标题 & 标签 */}
+                {/* 标题 */}
                 <div>
                     <h2 className="text-2xl font-bold text-white leading-tight mb-3">
                         {selectedImage.title}
