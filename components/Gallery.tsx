@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { X, Copy, Check, ExternalLink, ChevronLeft, ChevronRight, Info, Type, Hash, Terminal, Search, Sparkles } from 'lucide-react';
+import { X, Copy, Check, ExternalLink, ChevronLeft, ChevronRight, Info, Type, Hash, Terminal, Search, Sparkles, Layers } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
 export default function Gallery({ images }: { images: any[] }) {
@@ -50,15 +50,21 @@ export default function Gallery({ images }: { images: any[] }) {
     else document.body.style.overflow = 'unset';
   }, [selectedId]);
 
-  const copyPrompt = () => {
-    if (selectedImage?.prompt) {
-      navigator.clipboard.writeText(selectedImage.prompt);
+  const copyPrompt = (text: string) => {
+    if (text) {
+      navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
   };
 
-  // 默认标签
+  // 快捷复制 (卡片上的按钮)
+  const handleQuickCopy = (e: React.MouseEvent, text: string) => {
+    e.stopPropagation(); // 防止触发弹窗
+    navigator.clipboard.writeText(text);
+    // 这里可以加一个 Toast 提示，简化版直接变色反馈留给弹窗里的按钮
+  };
+
   const defaultTags = ['人像摄影', '赛博朋克', '二次元', '3D渲染', 'Logo设计', '中国风', '建筑设计', '科幻'];
   const displayTags = allTags.length > 0 ? allTags : defaultTags;
 
@@ -67,8 +73,8 @@ export default function Gallery({ images }: { images: any[] }) {
       {/* --- Hero & Search 区域 --- */}
       <div className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
         
-        {/* 动效背景 */}
-        <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden">
+        {/* 背景光效 */}
+        <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-2000"></div>
             <div className="absolute -bottom-32 left-[20%] w-96 h-96 bg-pink-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-4000"></div>
@@ -94,7 +100,7 @@ export default function Gallery({ images }: { images: any[] }) {
             </p>
 
             <div className="max-w-2xl mx-auto relative group z-10">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-60 blur-lg transition duration-1000"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-50 blur-lg transition duration-1000"></div>
                 <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-full p-2 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-2xl">
                     <div className="pl-4 text-gray-500"><Search className="w-5 h-5" /></div>
                     <input 
@@ -104,9 +110,16 @@ export default function Gallery({ images }: { images: any[] }) {
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
-                    {search && <button onClick={() => setSearch("")} className="p-1 rounded-full hover:bg-white/10 text-gray-400 transition mr-2"><X size={16} /></button>}
+                    {search && (
+                        <button onClick={() => setSearch("")} className="p-1 rounded-full hover:bg-white/10 text-gray-400 transition mr-2">
+                            <X size={16} />
+                        </button>
+                    )}
                     <div className="hidden sm:flex items-center pr-4 pl-4 border-l border-white/10 h-6">
-                        <span className="text-xs font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors"><span className="font-bold mr-1">{images.length}</span> CASES</span>
+                        <span className="text-xs font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors">
+                            <span className="font-bold mr-1">{images.length}</span> 
+                            CASES
+                        </span>
                     </div>
                 </div>
             </div>
@@ -116,7 +129,11 @@ export default function Gallery({ images }: { images: any[] }) {
                     <button 
                         key={tag} 
                         onClick={() => setSearch(tag === search ? "" : tag)} 
-                        className={`px-3 py-1.5 rounded-full border text-xs font-medium transition-all duration-300 backdrop-blur-md ${search === tag ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.4)] scale-105' : 'bg-white/10 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5'}`}
+                        className={`px-3 py-1.5 rounded-full border text-xs font-medium transition-all duration-300 backdrop-blur-md
+                            ${search === tag
+                                ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.4)] scale-105' 
+                                : 'bg-white/10 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5'
+                            }`}
                     >
                         {tag}
                     </button>
@@ -125,55 +142,60 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      {/* --- 瀑布流列表 --- */}
+      {/* --- 首页瀑布流列表 (OpenNana 风格卡片) --- */}
       <div className="max-w-[1960px] mx-auto px-4 pb-20 min-h-[400px]">
-        {filteredImages.length > 0 ? (
-            <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
-            {filteredImages.map((image) => (
-                <div 
-                key={image.id}
-                onClick={() => setSelectedId(image.id)}
-                className="group relative mb-4 block w-full cursor-zoom-in overflow-hidden rounded-xl bg-[#1e1e20] border border-white/5 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-purple-900/10 hover:border-white/20"
-                >
-                <img 
-                    src={image.url} 
-                    alt={image.title || "AI Art"} 
-                    className="w-full h-auto object-cover transform transition will-change-auto"
-                    loading="lazy"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent pt-12 pb-4 px-4">
-                    <h3 className="font-bold text-gray-100 text-sm line-clamp-1 tracking-wide">
-                        {image.title}
-                    </h3>
-                </div>
-                </div>
-            ))}
+        <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
+          {filteredImages.map((image) => (
+            <div 
+              key={image.id}
+              onClick={() => setSelectedId(image.id)}
+              // 🟢 卡片容器：圆角、边框、背景色、悬停上浮
+              className="group relative mb-5 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-[#18181b] border border-white/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/10 hover:border-white/20 break-inside-avoid"
+            >
+              <img 
+                src={image.url} 
+                alt={image.title || "AI Art"} 
+                className="w-full h-auto object-cover transition-transform duration-700 will-change-transform group-hover:scale-105"
+                loading="lazy"
+              />
+              
+              {/* 🟢 悬停功能区：右上角复制按钮 */}
+              <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
+                  <button 
+                    onClick={(e) => handleQuickCopy(e, image.prompt)}
+                    className="p-2 rounded-lg bg-black/60 text-white hover:bg-indigo-600 border border-white/10 backdrop-blur-md transition-all shadow-lg"
+                    title="Copy Prompt"
+                  >
+                    <Copy size={14} />
+                  </button>
+              </div>
+
+              {/* 🟢 底部信息区：渐变遮罩 + 标题 + 摘要 */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent pt-16 pb-4 px-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                 <h3 className="font-bold text-white text-sm line-clamp-1 tracking-wide drop-shadow-md mb-1">
+                    {image.title}
+                 </h3>
+                 {/* 悬停时显示一行提示词摘要 */}
+                 <p className="text-[10px] text-gray-400 font-mono line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+                    {image.prompt}
+                 </p>
+              </div>
             </div>
-        ) : (
-            <div className="flex flex-col items-center justify-center h-64 text-gray-500 border border-dashed border-white/10 rounded-xl bg-white/5">
-                <Search size={48} className="mb-4 opacity-20" />
-                <p>未找到与 "{search}" 相关的提示词</p>
-                <button onClick={() => setSearch("")} className="mt-4 text-indigo-400 hover:text-indigo-300 text-sm font-medium underline decoration-indigo-400/30 underline-offset-4">清空搜索条件</button>
-            </div>
-        )}
+          ))}
+        </div>
       </div>
 
-      {/* --- 全屏弹窗 (OpenNana 悬浮效果) --- */}
+      {/* --- 全屏弹窗 (保持之前的 OpenNana 风格) --- */}
       {selectedId !== null && selectedImage && (
-        // 🟢 修改点：z-[100] 保证最高层级，fixed 保证覆盖全屏
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4 md:p-6 lg:p-8 animate-in fade-in duration-200">
-          
-          {/* 🟢 修改点：bg-black/75 (半透明) + backdrop-blur-md (适度模糊)，透出首页背景 */}
-          <div 
-            className="absolute inset-0 bg-black/75 backdrop-blur-md transition-opacity" 
-            onClick={() => setSelectedId(null)} 
-          />
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-0 sm:p-4 md:p-6 lg:p-8">
+          <div className="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity animate-in fade-in duration-200" onClick={() => setSelectedId(null)} />
           
           <div className="relative flex h-full w-full max-w-[1500px] flex-col overflow-hidden bg-[#18181b] shadow-2xl ring-1 ring-white/10 sm:rounded-xl md:h-[90vh] md:flex-row animate-in zoom-in-95 duration-200">
             
             {/* 左侧大图 */}
             <div className="relative flex-1 bg-[#09090b] flex items-center justify-center p-4 md:p-8 group/nav">
               <img src={selectedImage.url} className="max-h-full max-w-full object-contain shadow-2xl drop-shadow-2xl" alt="Detail" />
+              
               {selectedIndex > 0 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition backdrop-blur-md opacity-0 group-hover/nav:opacity-100"><ChevronLeft size={24} /></button>}
               {selectedIndex < images.length - 1 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/5 transition opacity-0 group-hover/nav:opacity-100"><ChevronRight size={24} /></button>}
             </div>
@@ -187,8 +209,8 @@ export default function Gallery({ images }: { images: any[] }) {
                     </span>
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="View Original"><ExternalLink size={18}/></button>
-                  <button onClick={() => setSelectedId(null)} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="Close"><X size={18}/></button>
+                  <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="查看原图"><ExternalLink size={18}/></button>
+                  <button onClick={() => setSelectedId(null)} className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition" title="关闭"><X size={18}/></button>
                 </div>
               </div>
 
@@ -211,12 +233,16 @@ export default function Gallery({ images }: { images: any[] }) {
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-[11px] font-bold uppercase tracking-widest text-gray-500">Prompt</h3>
-                    {selectedImage.prompt && <button onClick={copyPrompt} className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[11px] font-bold transition-all border ${copied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'}`}>{copied ? <Check size={14}/> : <Copy size={14}/>} {copied ? "已复制" : "复制"}</button>}
+                    {selectedImage.prompt && (
+                      <button onClick={() => copyPrompt(selectedImage.prompt)} className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[11px] font-bold transition-all border ${copied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'}`}>
+                        {copied ? <Check size={14}/> : <Copy size={14}/>} {copied ? "已复制" : "复制"}
+                      </button>
+                    )}
                   </div>
                   <div className="relative group">
                     <div className="rounded-xl bg-[#09090b] border border-white/10 p-5 min-h-[160px] shadow-inner">
                         <div className="text-xs leading-6 text-gray-300 font-mono select-text whitespace-pre-wrap break-words">
-                            <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
+                            <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} />, strong: ({node, ...props}) => <span className="text-indigo-400 font-bold" {...props} />, ul: ({node, ...props}) => <ul className="list-disc ml-4 mb-4" {...props} />, li: ({node, ...props}) => <li className="mb-1" {...props} /> }}>
                                 {selectedImage.prompt.replace(/\n/g, '  \n')}
                             </ReactMarkdown>
                         </div>
