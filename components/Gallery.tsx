@@ -89,7 +89,6 @@ export default function Gallery({ images }: { images: any[] }) {
   return (
     <>
       {/* --- 首页 Hero 区域 (紧贴顶部版) --- */}
-      {/* 🔴 修改：pt-20 (80px)，紧贴 64px 的导航栏，只留极小缝隙 */}
       <div className="relative pt-20 pb-8 sm:pt-24 sm:pb-12 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob"></div>
@@ -180,16 +179,18 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 全屏弹窗 (通栏布局) --- */}
+      {/* --- 全屏弹窗 (通栏布局 - 更透的毛玻璃) --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           
-          <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
+          {/* 🔴 修改：背景遮罩更透 (bg-black/70) */}
+          <div className="fixed inset-0 bg-black/70 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
           
-          <div className="relative w-full max-w-4xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
+          {/* 🔴 修改：弹窗主体更透 (bg-[#18181b]/80) 并增加强毛玻璃 (backdrop-blur-xl) */}
+          <div className="relative w-full max-w-4xl bg-[#18181b]/80 backdrop-blur-xl shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
-            {/* 顶部固定栏 */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#18181b]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
+            {/* 顶部固定栏 - 🔴 修改：匹配主体的透明度 */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#18181b]/80 backdrop-blur-md shrink-0 z-20 sticky top-0">
                 <div className="flex items-center gap-2 text-sm font-bold text-gray-400">
                     <span className="text-indigo-400">Doro Gallery</span> / 详情预览
                 </div>
