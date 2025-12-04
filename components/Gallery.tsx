@@ -1,12 +1,14 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { X, Copy, Check, Search, Sparkles, Image as ImageIcon, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash } from 'lucide-react';
+import { X, Copy, Check, Search, Sparkles, Image as ImageIcon, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash, Languages } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
 export default function Gallery({ images }: { images: any[] }) {
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const [copied, setCopied] = useState(false);
+  const [copiedCn, setCopiedCn] = useState(false);
+  const [copiedEn, setCopiedEn] = useState(false);
+  const [copiedDefault, setCopiedDefault] = useState(false);
   const [search, setSearch] = useState("");
 
   const allTags = useMemo(() => {
@@ -23,8 +25,10 @@ export default function Gallery({ images }: { images: any[] }) {
     const term = search.toLowerCase();
     const title = (image.title || "").toLowerCase();
     const prompt = (image.prompt || "").toLowerCase();
+    const promptCn = (image.promptCn || "").toLowerCase();
+    const promptEn = (image.promptEn || "").toLowerCase();
     const tags = (image.tags || []).join(" ").toLowerCase();
-    return title.includes(term) || prompt.includes(term) || tags.includes(term);
+    return title.includes(term) || prompt.includes(term) || promptCn.includes(term) || promptEn.includes(term) || tags.includes(term);
   });
 
   const selectedIndex = images.findIndex(img => img.id === selectedId);
@@ -34,32 +38,60 @@ export default function Gallery({ images }: { images: any[] }) {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (selectedId === null) return;
       if (e.key === 'Escape') setSelectedId(null);
+      if (e.key === 'ArrowLeft' && selectedIndex > 0) setSelectedId(images[selectedIndex - 1].id);
+      if (e.key === 'ArrowRight' && selectedIndex < images.length - 1) setSelectedId(images[selectedIndex + 1].id);
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedId]);
+  }, [selectedId, selectedIndex, images]);
 
   useEffect(() => {
     if (selectedId !== null) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'unset';
   }, [selectedId]);
 
-  const copyPrompt = () => {
-    if (selectedImage?.prompt) {
-      navigator.clipboard.writeText(selectedImage.prompt);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
+  const copyToClipboard = (text: string, type: 'cn' | 'en' | 'default') => {
+    navigator.clipboard.writeText(text);
+    if (type === 'cn') { setCopiedCn(true); setTimeout(() => setCopiedCn(false), 2000); }
+    if (type === 'en') { setCopiedEn(true); setTimeout(() => setCopiedEn(false), 2000); }
+    if (type === 'default') { setCopiedDefault(true); setTimeout(() => setCopiedDefault(false), 2000); }
   };
+
+  // 提示词组件
+  const PromptBox = ({ title, content, isCopied, onCopy, icon: Icon }: any) => (
+    <div className="mb-6 last:mb-0">
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center gap-2">
+            <Icon size={14} className="text-indigo-400" />
+            <h3 className="text-[11px] font-bold uppercase tracking-widest text-gray-400">{title}</h3>
+        </div>
+        <button 
+          onClick={() => onCopy(content)} 
+          className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[11px] font-bold transition-all border ${isCopied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'}`}
+        >
+          {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "已复制" : "复制"}
+        </button>
+      </div>
+      <div className="relative group">
+        <div className="rounded-xl bg-[#0a0a0a] border border-white/10 p-4 shadow-inner">
+            {/* 这里设置了 max-h-[200px] 和 overflow-y-auto 实现固定高度滚动 */}
+            <div className="text-xs leading-6 text-gray-300 font-mono select-text whitespace-pre-wrap break-words max-h-[200px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent pr-2">
+                <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
+                    {content.replace(/\n/g, '  \n')}
+                </ReactMarkdown>
+            </div>
+        </div>
+      </div>
+    </div>
+  );
 
   const defaultTags = ['人像摄影', '赛博朋克', '二次元', '3D渲染', 'Logo设计', '中国风', '建筑设计', '科幻'];
   const displayTags = allTags.length > 0 ? allTags : defaultTags;
 
   return (
     <>
-      {/* --- 首页瀑布流 --- */}
+      {/* --- 首页瀑布流 (保持不变) --- */}
       <div className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
-         {/* 背景动效 */}
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-2000"></div>
@@ -149,88 +181,90 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 全屏弹窗 --- */}
+      {/* --- 全屏弹窗 (垂直布局) --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+          
+          {/* 背景遮罩 */}
           <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
           
-          <div className="relative w-full max-w-5xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50">
+          {/* 弹窗容器：垂直结构 */}
+          <div className="relative w-full max-w-4xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50">
             
-            {/* 1. 顶部标题栏 */}
-            <div className="flex items-start justify-between p-6 pb-4 border-b border-white/5 bg-[#18181b]">
-                <div>
-                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                        <h2 className="text-2xl font-bold text-white leading-tight tracking-tight mr-2">{selectedImage.title}</h2>
+            {/* 1. 顶部信息栏 (Title & Tags) */}
+            <div className="flex items-start justify-between p-6 border-b border-white/5 bg-[#18181b]">
+                <div className="flex-1 mr-4">
+                    <h2 className="text-2xl font-bold text-white leading-tight tracking-tight mb-3">{selectedImage.title}</h2>
+                    <div className="flex flex-wrap gap-2">
                         <span className="px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider">
                             AI Generated
                         </span>
+                        {selectedImage.tags?.map((tag: string) => (
+                            <span key={tag} className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-400">#{tag}</span>
+                        ))}
                     </div>
-                    {selectedImage.tags && (
-                      <div className="flex flex-wrap gap-2">
-                          {selectedImage.tags.map((tag: string) => (
-                              <span key={tag} className="px-2 py-1 rounded bg-white/5 text-gray-400 text-[10px] border border-white/10">{tag}</span>
-                          ))}
-                      </div>
-                    )}
                 </div>
-                <div className="flex gap-2">
+                <div className="flex gap-2 shrink-0">
                    <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 text-gray-400 hover:text-white transition bg-white/5 hover:bg-white/10 rounded-lg" title="原图"><ExternalLink size={18}/></button>
                    <button onClick={() => setSelectedId(null)} className="p-2 text-gray-400 hover:text-white transition bg-white/5 hover:bg-white/10 rounded-lg" title="关闭"><X size={18}/></button>
                 </div>
             </div>
 
-            {/* 2. 滚动内容区域 */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-8 scrollbar-thin scrollbar-thumb-gray-800">
+            {/* 2. 滚动区域：图片 + 提示词 */}
+            <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-800">
                 
-                {/* 图片展示区 */}
-                <div className="flex justify-center">
-                    <div className="relative group/nav">
-                        <img 
-                            src={selectedImage.url} 
-                            className="max-h-[600px] w-auto object-contain shadow-2xl rounded-lg border border-white/5 bg-[#09090b]" 
-                            alt="Detail" 
-                        />
-                        {selectedIndex > 0 && (
-                            <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>
-                        )}
-                        {selectedIndex < images.length - 1 && (
-                            <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronRight size={24} /></button>
-                        )}
-                    </div>
+                {/* 示例图片区域 */}
+                <div className="relative w-full bg-[#09090b] flex items-center justify-center min-h-[400px] p-6 group/nav border-b border-white/5">
+                    <img 
+                        src={selectedImage.url} 
+                        className="w-auto h-auto max-h-[60vh] max-w-full object-contain shadow-2xl rounded-lg" 
+                        alt="Detail" 
+                    />
+                    {/* 左右导航 */}
+                    {selectedIndex > 0 && (
+                        <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>
+                    )}
+                    {selectedIndex < images.length - 1 && (
+                        <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronRight size={24} /></button>
+                    )}
                 </div>
 
                 {/* 提示词区域 */}
-                <div className="max-w-4xl mx-auto w-full">
-                    <div className="flex items-center justify-between mb-3">
-                        <h3 className="text-[12px] font-bold text-gray-400 uppercase tracking-wider flex items-center gap-2">
-                            <Terminal size={14} className="text-indigo-400"/> 提示词
-                        </h3>
-                        {selectedImage.prompt && (
-                            <button 
-                                onClick={copyPrompt} 
-                                className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[11px] font-bold transition-all border ${copied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'}`}
-                            >
-                                {copied ? <Check size={14}/> : <Copy size={14}/>} 
-                                {copied ? "复制 PROMPT" : "复制 PROMPT"}
-                            </button>
-                        )}
-                    </div>
-                    
-                    {/* 🔴 核心修改：提示词框背景 -> 毛玻璃特效 */}
-                    <div className="relative group">
-                        <div className="rounded-xl bg-black/30 backdrop-blur-md border border-white/10 p-5 shadow-inner overflow-hidden transition-colors hover:bg-black/40">
-                            <div className="text-sm leading-7 text-gray-300 font-mono select-text whitespace-pre-wrap break-words max-h-[200px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
-                                <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
-                                    {selectedImage.prompt.replace(/\n/g, '  \n')}
-                                </ReactMarkdown>
-                            </div>
-                        </div>
-                    </div>
+                <div className="p-6 sm:p-8 bg-[#18181b]">
+                     {/* 中文提示词 */}
+                    {selectedImage.promptCn && (
+                        <PromptBox 
+                          title="中文提示词" 
+                          content={selectedImage.promptCn} 
+                          isCopied={copiedCn} 
+                          onCopy={(t: string) => copyToClipboard(t, 'cn')}
+                          icon={Languages}
+                        />
+                    )}
+
+                    {/* 英文提示词 */}
+                    {selectedImage.promptEn && (
+                        <PromptBox 
+                          title="英文提示词" 
+                          content={selectedImage.promptEn} 
+                          isCopied={copiedEn} 
+                          onCopy={(t: string) => copyToClipboard(t, 'en')}
+                          icon={Terminal}
+                        />
+                    )}
+
+                    {/* 默认提示词 (如果没填中英文) */}
+                    {!selectedImage.promptCn && !selectedImage.promptEn && (
+                        <PromptBox 
+                          title="提示词 / Prompt" 
+                          content={selectedImage.prompt || "No prompt available."} 
+                          isCopied={copiedDefault} 
+                          onCopy={(t: string) => copyToClipboard(t, 'default')}
+                          icon={Terminal}
+                        />
+                    )}
                 </div>
             </div>
-            
-            {/* 底部留空 */}
-            <div className="h-6 shrink-0"></div>
           </div>
         </div>
       )}
