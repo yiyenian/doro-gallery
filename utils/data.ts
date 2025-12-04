@@ -1,6 +1,3 @@
-// 格式：'文件夹/文件名': { title: '标题', prompt: '提示词' }
-// 这里的 Key 必须和 Cloudinary 里的 Public ID 完全一致
-
 export interface DataRecord {
   title: string;
   prompt: string;
@@ -9,19 +6,22 @@ export interface DataRecord {
   promptEn?: string;
 }
 
-export const localData: Record<string, { title: string; prompt: string; tags?: string[] }> = {
+export const localData: Record<string, DataRecord> = {
   "dr-1_u0ugns": {
     title: "全景式角色深度概念分解图",
-    tags: ["角色设计", "概念图"],
-    prompt: `Role (角色设定)
+    tags: ["角色设计", "概念图", "游戏美术", "2.5D"],
+    promptCn: `Role (角色设定)
 你是一位顶尖的游戏与动漫概念美术设计大师 (Concept Artist)，擅长制作详尽的角色设定图（Character Sheet）。你具备“像素级拆解”的能力，能够透视角色的穿着层级、捕捉微表情变化，并将与其相关的物品进行具象化还原。你特别擅长通过女性角色的私密物品、随身物件和生活细节来侧面丰满人物性格与背景故事。
+
 Task (任务目标)
 根据用户上传的主体形象（若没有具体着装（包括但不限于上衣、裤装、外套及鞋履），系统必须主动接管设计：请依据角色人设，为其强制搭配一套完整的、极具时尚感且细节丰富的全身穿搭。）生成一张**“全景式角色深度概念分解图”**。该图片必须包含中心人物全身立绘，并在其周围环绕展示该人物的服装分层、不同表情、核心道具、材质特写，以及极具生活气息的私密与随身物品展示。
+
 Visual Guidelines (视觉规范)
 1. 构图布局 (Layout):
 • 中心位 (Center): 放置角色的全身立绘或主要动态姿势，作为视觉锚点。
 • 环绕位 (Surroundings): 在中心人物四周空白处，有序排列拆解后的元素。
 • 视觉引导 (Connectors): 使用手绘箭头或引导线，将周边的拆解物品与中心人物的对应部位或所属区域（如包包连接手部）连接起来。
+
 2. 拆解内容 (Deconstruction Details) —— 核心迭代区域:
 • 服装分层 (Clothing Layers) [增强与颠覆性设计]:
 • 将角色的服装拆分为单品展示。如果是多层穿搭，需展示脱下外套后的内层状态。
@@ -43,22 +43,187 @@ Visual Guidelines (视觉规范)
 •私密日记本、常用药物/补剂盒、电子烟。
 •高度精细的私密用品展示2-3种（例如：瑞典声波吸吮或德国空气脉冲、法式宫廷风加热震动或双马达混合动力、不锈钢纯爱权杖、真丝眼罩、环形口枷、麋鹿皮散鞭等相关用品）。
 重点描绘物品本身的美学、工艺，以及材质（如：硅胶、皮革、金属）和设计特点。
+
 3. 风格与注释 (Style & Annotations):
 • 画风: 保持高质量的 2D 插画风格或概念设计草图风格，线条干净利落。
 • 背景: 使用米黄色、羊皮纸或浅灰色纹理背景，营造设计手稿的氛围。
 • 文字说明: 在每个拆解元素旁模拟手写注释，简要说明材质（如“柔软蕾丝”、“磨砂皮革”）或品牌/型号暗示（如“常用色号#520”、“定制款”）。
+
 Workflow (执行逻辑)
 当用户提供一张图片或描述时：
 1. 分析主体的核心特征、穿着风格及潜在性格。
 2. 提取可拆解的一级元素（外套、鞋子、大表情）。
 3. 脑补并设计二级深度元素（她内衣穿什么风格？她包里会装什么口红？她独处时会用什么物品？）。
 4. 生成一张包含所有这些元素的组合图，确保透视准确，光影统一，注释清晰。
-5. 使用中文：英文标记，高清4K HD 输出`
+5. 使用中文：英文标记，高清4K HD 输出`,
+    promptEn: `A panoramic character concept breakdown sheet, concept art style.
+Center: Full body standing pose of a stylish female character.
+Surrounding details: Deconstructed clothing layers, 4 facial expressions (shy, focused, cold, seductive), close-up of fabric textures and hands.
+Items: Open handbag with scattered cosmetics (lipstick, powder), personal diary, daily accessories.
+Connectors: Hand-drawn arrows connecting items to the character.
+Style: High quality 2D illustration, 2.5D thick painting, clean lines.
+Background: Beige parchment paper texture.
+Text: Handwritten notes in Chinese and English.
+--ar 16:9 --v 6.0 --stylize 250`,
+    prompt: "A panoramic character concept breakdown sheet, concept art style..."
   },
 
   "dr-2_bdkvvg": {
     title: "诸葛连弩结构爆炸图",
-    tags: ["工业设计", "复古", "结构图"],
-    prompt: `请创建诸葛连弩的复古风格工程爆炸图，里面的文字是中文`
+    tags: ["工业设计", "复古", "结构图", "达芬奇风格"],
+    promptCn: `请创建诸葛连弩的复古风格工程爆炸图。
+    
+**细节要求：**
+- 包含详细的零件拆解（机括、箭匣、弓臂）。
+- 标注文字为中文。
+- 风格：复古工程图，类似达芬奇手稿。`,
+    promptEn: `Vintage engineering explosion diagram of a Zhuge Nu (Chinese Repeating Crossbow).
+Detailed mechanical parts deconstruction, wooden texture, gears and levers.
+Annotations: Traditional Chinese text labels.
+Style: Leonardo da Vinci sketch style, technical drawing.
+Background: Aged yellow parchment paper.
+--ar 16:9 --v 6.0`,
+    prompt: "Vintage engineering explosion diagram of a Zhuge Nu..."
   },
+
+  "dr-3_popmart": {
+    title: "泡泡玛特风格宇航员",
+    tags: ["3D渲染", "IP设计", "盲盒", "可爱", "C4D"],
+    promptCn: `**角色描述:**
+一个可爱的Q版宇航员，大大的头，圆润的身体。
+穿着带有光泽感的白色宇航服，头盔是透明的玻璃材质，里面有一张萌萌的脸。
+
+**材质与光影:**
+- 材质：PVC 塑料质感，类似泡泡玛特 (Pop Mart) 玩具，表面光滑。
+- 灯光：柔和的影棚光，边缘光 (Rim light) 勾勒轮廓。
+
+**背景:**
+纯色背景或简单的星球装饰，保持画面干净。`,
+    promptEn: `A cute chibi astronaut character, Pop Mart blind box style.
+Big head, round body, wearing glossy white space suit.
+Transparent glass helmet revealing a cute face.
+
+**Material & Lighting:**
+- PVC plastic texture, smooth surface, clay render style.
+- Soft studio lighting, rim light, high quality 3D render.
+- C4D, Octane render.
+
+**Background:**
+Clean pastel color background, simple planet props.
+--ar 3:4 --niji 6 --style cute`,
+    prompt: "A cute chibi astronaut character, Pop Mart blind box style. PVC plastic texture..."
+  },
+
+  "dr-4_logo": {
+    title: "极简科技 Logo",
+    tags: ["Logo设计", "平面设计", "极简主义", "矢量"],
+    promptCn: `**设计主题:**
+一个代表“量子计算”的科技公司 Logo。
+图形主体是一个抽象的字母 "Q"，由发光的线条和点阵组成。
+
+**风格:**
+- 极简主义 (Minimalism)
+- 扁平化设计 (Flat design)
+- 矢量风格 (Vector)
+
+**配色:**
+深蓝色背景，青色和白色的线条，带有科技感的渐变。`,
+    promptEn: `A minimalist tech company logo representing "Quantum Computing".
+Abstract letter "Q" formed by glowing connecting dots and lines.
+
+**Style:**
+- Flat vector art
+- Minimalist, clean lines
+- Dribbble style
+
+**Colors:**
+Deep blue background, cyan and white gradients.
+--no realistic, 3d, text, shadow --ar 1:1 --v 6.0`,
+    prompt: "A minimalist tech company logo representing Quantum Computing..."
+  },
+
+  "dr-5_micro": {
+    title: "微缩森林瓶中界",
+    tags: ["微距摄影", "静物", "奇幻", "自然"],
+    promptCn: `**画面主体:**
+一个透明的玻璃瓶，瓶子里装有一个微缩的魔法森林。
+微小的发光蘑菇，还有一条流动的微型河流。
+
+**摄影风格:**
+- 微距镜头 (Macro lens)
+- 景深效果 (Bokeh)
+- 移轴摄影 (Tilt-shift)
+
+**光照:**
+瓶子内部发出神奇的微光，照亮了周围昏暗的木桌。`,
+    promptEn: `Macro photography of a glass jar containing a miniature magical forest inside.
+Tiny glowing mushrooms, moss, and a micro river flowing.
+
+**Camera:**
+- Macro lens, 100mm
+- Shallow depth of field, strong bokeh
+- Tilt-shift effect
+
+**Lighting:**
+Bioluminescent glow from inside the jar, illuminating a dark wooden table.
+--ar 4:5 --stylize 250 --v 6.0`,
+    prompt: "Macro photography of a glass jar containing a miniature magical forest inside..."
+  },
+
+  "dr-6_arch": {
+    title: "流体未来博物馆",
+    tags: ["建筑设计", "未来主义", "扎哈·哈迪德", "参数化设计"],
+    promptCn: `**建筑描述:**
+一座白色的未来主义博物馆，坐落在海边。
+建筑线条流畅，呈现出有机的流体形状，风格类似扎哈·哈迪德 (Zaha Hadid)。
+
+**环境与时间:**
+黄昏时刻，金色的阳光洒在白色的建筑表面，海面波光粼粼。
+
+**渲染:**
+- 超广角镜头
+- 建筑可视化 (ArchViz)
+- 8K 分辨率`,
+    promptEn: `Architectural photography of a futuristic white museum located by the sea.
+Organic fluid shapes, parametric design, Zaha Hadid style.
+Smooth curves, concrete and glass materials.
+
+**Environment:**
+Golden hour, warm sunlight hitting the white curves, reflection on the water.
+
+**Tech:**
+- Ultra wide angle shot
+- Unreal Engine 5 architectural visualization
+- 8k, hyper-realistic
+--ar 16:9 --v 6.0`,
+    prompt: "Architectural photography of a futuristic white museum located by the sea..."
+  },
+
+  "dr-7_guochao": {
+    title: "新中式赛博龙女",
+    tags: ["国潮", "插画", "中国风", "赛博朋克"],
+    promptCn: `**角色:**
+一位穿着改良汉服的龙族少女，头上长着晶莹剔透的龙角。
+衣服上有金色的刺绣，混合了现代的机械装备。
+
+**风格:**
+- 国潮插画风格
+- 矢量线条，色彩鲜艳（红、金、青）
+- 敦煌壁画配色
+
+**背景:**
+祥云缭绕，背后有一个巨大的全息投影月亮。`,
+    promptEn: `Illustration of a dragon girl wearing modified Hanfu (Chinese traditional clothing).
+Translucent dragon horns, golden embroidery mixed with cyberpunk mechanical gear.
+
+**Style:**
+- Guochao art style (Modern Chinese Trend)
+- Vector lines, vibrant colors (Red, Gold, Cyan)
+- Dunhuang mural color palette
+
+**Background:**
+Surrounded by auspicious clouds, huge holographic moon in the background.
+--ar 3:4 --niji 6`,
+    prompt: "Illustration of a dragon girl wearing modified Hanfu..."
+  }
 };
