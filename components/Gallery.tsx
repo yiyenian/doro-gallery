@@ -73,7 +73,7 @@ export default function Gallery({ images }: { images: any[] }) {
       </div>
       <div className="relative group w-full">
         <div className="w-full rounded-xl bg-white/5 backdrop-blur-md border border-white/10 p-5 shadow-inner transition-colors hover:bg-white/[0.07]">
-            <div className="text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
+            <div className="text-xs leading-7 text-gray-300 font-mono select-text whitespace-pre-wrap break-words max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
                 <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
                     {content.replace(/\n/g, '  \n')}
                 </ReactMarkdown>
@@ -88,8 +88,8 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 首页瀑布流 --- */}
-      <div className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
+      {/* --- Hero & Search 区域 --- */}
+      <div className="relative pt-20 pb-16 sm:pt-24 sm:pb-20 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-2000"></div>
@@ -98,6 +98,18 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10">
+            
+            {/* 🟢 新增：融合在 Hero 区域的 Logo */}
+            <div className="flex items-center justify-center gap-3 mb-8 animate-in fade-in slide-in-from-top-4 duration-700">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-md">
+                        <path d="M15 12H9V16H15C17.2091 16 19 14.2091 19 12C19 9.79086 17.2091 8 15 8H9V12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M6 4V20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </div>
+                <span className="text-2xl font-bold tracking-tight text-white font-sans">Doro Gallery</span>
+            </div>
+
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-8 shadow-[0_0_15px_-3px_rgba(99,102,241,0.4)] backdrop-blur-md">
                 <Sparkles size={10} className="text-indigo-400" />
                 AI Prompt Library
@@ -147,6 +159,7 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
+      {/* ... 后面的列表和弹窗代码保持不变 ... */}
       <div className="max-w-[1960px] mx-auto px-4 pb-20 min-h-[400px]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4">
@@ -179,61 +192,39 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 全屏弹窗 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity" onClick={() => setSelectedId(null)} />
+          <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
           
-          <div className="relative w-full max-w-5xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[90vh]">
+          <div className="relative w-full max-w-5xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
-            {/* 🔴 核心修改 1：顶部只放 Logo 和操作按钮 */}
-            <div className="flex items-center justify-between p-5 border-b border-white/5 bg-[#18181b]/95 backdrop-blur-md shrink-0 z-10 sticky top-0">
-                {/* 品牌 Logo */}
-                <div className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-                            <path d="M15 12H9V16H15C17.2091 16 19 14.2091 19 12C19 9.79086 17.2091 8 15 8H9V12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M6 4V20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+            <div className="flex items-start justify-between p-6 pb-4 border-b border-white/5 bg-[#18181b]/95 backdrop-blur-md shrink-0 z-10 sticky top-0">
+                <div className="flex-1 mr-4">
+                    <h2 className="text-xl md:text-2xl font-bold text-white leading-tight tracking-tight mb-2">{selectedImage.title}</h2>
+                    <div className="flex flex-wrap gap-2">
+                        <span className="px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider">
+                            AI Generated
+                        </span>
+                        {selectedImage.tags?.map((tag: string) => (
+                            <span key={tag} className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-400">#{tag}</span>
+                        ))}
                     </div>
-                    <span className="text-lg font-bold text-white tracking-tight">Doro Gallery</span>
                 </div>
-                
-                {/* 按钮 */}
-                <div className="flex gap-2">
+                <div className="flex gap-2 shrink-0">
                    <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 text-gray-400 hover:text-white transition bg-white/5 hover:bg-white/10 rounded-lg" title="原图"><ExternalLink size={18}/></button>
                    <button onClick={() => setSelectedId(null)} className="p-2 text-gray-400 hover:text-white transition bg-white/5 hover:bg-white/10 rounded-lg" title="关闭"><X size={18}/></button>
                 </div>
             </div>
 
-            {/* 2. 滚动内容区域 */}
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                 
-                {/* 🔴 核心修改 2：内容区第一行是 标题 和 标签 */}
-                <div className="px-8 pt-8 pb-4 bg-[#18181b]">
-                    <h2 className="text-3xl font-bold text-white leading-tight tracking-tight mb-4">{selectedImage.title}</h2>
-                    <div className="flex flex-wrap gap-2">
-                        <span className="px-2.5 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[11px] font-bold text-indigo-300 uppercase tracking-wider">
-                            AI Generated
-                        </span>
-                        {selectedImage.tags?.map((tag: string) => (
-                            <span key={tag} className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] text-gray-400 flex items-center gap-1">
-                                <Hash size={10} className="opacity-50"/> {tag}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-
-                {/* 🔴 核心修改 3：示例图片 (居中，大图) */}
-                <div className="relative w-full bg-[#050505] flex items-center justify-center min-h-[400px] p-8 group/nav border-y border-white/5">
+                <div className="relative w-full bg-[#050505] flex items-center justify-center min-h-[400px] p-8 group/nav border-b border-white/5">
                     <img 
                         src={selectedImage.url} 
                         className="w-auto h-auto max-h-[70vh] max-w-full object-contain shadow-2xl rounded-lg" 
                         alt="Detail" 
                     />
-                    
-                    {/* 左右导航 */}
                     {selectedIndex > 0 && (
                         <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>
                     )}
@@ -242,35 +233,16 @@ export default function Gallery({ images }: { images: any[] }) {
                     )}
                 </div>
 
-                {/* 🔴 核心修改 4：提示词 (底部通栏) */}
-                <div className="p-8 bg-[#18181b]">
-                    <div className="max-w-full space-y-8">
+                <div className="px-4 pb-12 sm:px-8 w-full bg-[#18181b]">
+                    <div className="w-full pt-8 space-y-6">
                         {selectedImage.promptCn && (
-                            <PromptBox 
-                            title="中文提示词" 
-                            content={selectedImage.promptCn} 
-                            isCopied={copiedCn} 
-                            onCopy={(t: string) => copyToClipboard(t, 'cn')}
-                            icon={Languages}
-                            />
+                            <PromptBox title="中文提示词" content={selectedImage.promptCn} isCopied={copiedCn} onCopy={(t: string) => copyToClipboard(t, 'cn')} icon={Languages} />
                         )}
                         {selectedImage.promptEn && (
-                            <PromptBox 
-                            title="英文提示词" 
-                            content={selectedImage.promptEn} 
-                            isCopied={copiedEn} 
-                            onCopy={(t: string) => copyToClipboard(t, 'en')}
-                            icon={Terminal}
-                            />
+                            <PromptBox title="英文提示词" content={selectedImage.promptEn} isCopied={copiedEn} onCopy={(t: string) => copyToClipboard(t, 'en')} icon={Terminal} />
                         )}
                         {!selectedImage.promptCn && !selectedImage.promptEn && (
-                            <PromptBox 
-                            title="提示词" 
-                            content={selectedImage.prompt || "No prompt available."} 
-                            isCopied={copiedDefault} 
-                            onCopy={(t: string) => copyToClipboard(t, 'default')}
-                            icon={Terminal}
-                            />
+                            <PromptBox title="提示词" content={selectedImage.prompt || "No prompt available."} isCopied={copiedDefault} onCopy={(t: string) => copyToClipboard(t, 'default')} icon={Terminal} />
                         )}
                     </div>
                 </div>
