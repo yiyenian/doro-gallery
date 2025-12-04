@@ -1,5 +1,5 @@
 import cloudinary from 'cloudinary';
-import { localData } from './data'; 
+import { localData } from './data';
 
 cloudinary.v2.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
@@ -15,16 +15,14 @@ export async function getImages() {
       .sort_by('public_id', 'desc')
       .max_results(400)
       .with_field('context')
-      .with_field('tags')
       .execute();
 
     return results.resources.map((resource: any, index: number) => {
       const publicId = resource.public_id;
-      const cleanId = publicId.split('/').pop();
+      const cleanId = publicId.split('/').pop(); 
       const noExtId = cleanId?.split('.')[0];
 
       // 尝试匹配本地数据
-      // 使用类型断言，防止 TS 报错
       const localInfo = (localData[publicId] || 
                          localData[cleanId] || 
                          localData[noExtId] || 
@@ -39,7 +37,7 @@ export async function getImages() {
         title = noExtId ? noExtId.replace(/[-_]/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()) : "Untitled";
       }
 
-      // 默认提示词 (兜底)
+      // 默认提示词
       const prompt = localInfo.prompt || 
                      resource.context?.alt || 
                      resource.context?.description || 
@@ -56,8 +54,8 @@ export async function getImages() {
         height: resource.height,
         title: title,
         prompt: prompt,
-        // 🔴 核心修复：显式传递双语提示词
-        promptCn: localInfo.promptCn || null,
+        // 🔴 关键修复：必须把这两个字段传出去！
+        promptCn: localInfo.promptCn || null, 
         promptEn: localInfo.promptEn || null,
         tags: tags,
         url: resource.secure_url,
