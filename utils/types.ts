@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 export interface ImageProps {
   id: number;
   height: number;
@@ -7,17 +6,9 @@ export interface ImageProps {
   format: string;
   blurDataUrl?: string;
   title?: string;
-  prompt?: string;
+  prompt?: string;     // 默认/兜底提示词
+  promptCn?: string;   // 中文提示词
+  promptEn?: string;   // 英文提示词
   url?: string;
-  tags?: string[]; // 新增：标签数组
-}
-
-export interface SharedModalProps {
-  index: number;
-  images?: ImageProps[];
-  currentPhoto?: ImageProps;
-  changePhotoId: (newVal: number) => void;
-  closeModal: () => void;
-  navigation: boolean;
-  direction?: number;
+  tags?: string[];
 }
