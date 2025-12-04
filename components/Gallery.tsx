@@ -1,8 +1,74 @@
 'use client';
 
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { X, Copy, Check, Search, Sparkles, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash, Languages, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+
+// --- 独立的提示词组件 (带展开/收起功能) ---
+const PromptBox = ({ title, content, icon: Icon }: { title: string, content: string, icon: any }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(content);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  };
+
+  return (
+    <div className="mb-8 last:mb-0 w-full">
+      <div className="flex items-center justify-between mb-3 px-1">
+        <div className="flex items-center gap-2">
+            <Icon size={16} className="text-indigo-400" />
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">{title}</h3>
+        </div>
+        <button 
+          onClick={handleCopy} 
+          className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[11px] font-bold transition-all border ${isCopied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white hover:border-white/20'}`}
+        >
+          {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
+        </button>
+      </div>
+
+      <div 
+        className={`relative group w-full rounded-2xl border transition-all duration-300 overflow-hidden ${
+            isExpanded 
+            ? 'bg-black/40 border-white/20' 
+            : 'bg-white/5 border-white/10 hover:bg-white/[0.08] cursor-pointer'
+        }`}
+        onClick={() => !isExpanded && setIsExpanded(true)}
+      >
+        <div className={`px-6 pt-5 pb-2 text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words transition-all duration-500 ease-in-out ${
+            isExpanded ? 'max-h-[2000px]' : 'max-h-[100px] overflow-hidden'
+        }`}>
+            <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
+                {content.replace(/\n/g, '  \n')}
+            </ReactMarkdown>
+        </div>
+
+        {!isExpanded && (
+            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#121212] to-transparent flex items-end justify-center pb-3 pointer-events-none">
+                <div className="flex items-center gap-1 text-[10px] font-bold text-gray-400 bg-black/80 px-3 py-1.5 rounded-full border border-white/10 shadow-lg backdrop-blur-md pointer-events-auto transition-transform group-hover:scale-105 hover:text-white">
+                    <ChevronDown size={12} /> Expand
+                </div>
+            </div>
+        )}
+
+        {isExpanded && (
+            <div className="flex justify-center pb-4 pt-2">
+                 <button 
+                    onClick={(e) => { e.stopPropagation(); setIsExpanded(false); }}
+                    className="flex items-center gap-1 text-[10px] font-bold text-gray-500 hover:text-white px-4 py-1.5 rounded-full hover:bg-white/10 transition-colors"
+                 >
+                    <ChevronUp size={12} /> Collapse
+                 </button>
+            </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default function Gallery({ images }: { images: any[] }) {
   const [selectedId, setSelectedId] = useState<number | null>(null);
@@ -10,9 +76,6 @@ export default function Gallery({ images }: { images: any[] }) {
   const [copiedEn, setCopiedEn] = useState(false);
   const [copiedDefault, setCopiedDefault] = useState(false);
   const [search, setSearch] = useState("");
-  
-  // 标签折叠状态
-  const [isTagsExpanded, setIsTagsExpanded] = useState(false);
 
   const allTags = useMemo(() => {
     const tags = new Set<string>();
@@ -60,43 +123,13 @@ export default function Gallery({ images }: { images: any[] }) {
     if (type === 'default') { setCopiedDefault(true); setTimeout(() => setCopiedDefault(false), 2000); }
   };
 
-  // --- 提示词组件 (还原为直接显示，带滚动) ---
-  const PromptBox = ({ title, content, isCopied, onCopy, icon: Icon }: any) => (
-    <div className="mb-8 last:mb-0 w-full">
-      <div className="flex items-center justify-between mb-3 px-1">
-        <div className="flex items-center gap-2">
-            <Icon size={16} className="text-indigo-400" />
-            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">{title}</h3>
-        </div>
-        <button 
-          onClick={() => onCopy(content)} 
-          className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[11px] font-bold transition-all border ${isCopied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white hover:border-white/20'}`}
-        >
-          {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
-        </button>
-      </div>
-      <div className="relative group w-full">
-        {/* 毛玻璃背景框 */}
-        <div className="w-full rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-6 shadow-xl transition-colors hover:bg-white/[0.08]">
-            {/* 直接显示内容，设置最大高度和滚动 */}
-            <div className="text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
-                <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
-                    {content.replace(/\n/g, '  \n')}
-                </ReactMarkdown>
-            </div>
-        </div>
-      </div>
-    </div>
-  );
-
-  const defaultTags = ['Portrait', 'Cyberpunk', 'Anime', '3D Render', 'Logo Design', 'Chinese Style', 'Architecture', 'Sci-Fi', 'Game Art', 'Minimalist', 'Nature', 'Photography'];
+  const defaultTags = ['Portrait', 'Cyberpunk', 'Anime', '3D Render', 'Logo Design', 'Chinese Style', 'Architecture', 'Sci-Fi'];
   const displayTags = allTags.length > 0 ? allTags : defaultTags;
 
   return (
     <>
-      {/* --- 首页 Hero 区域 --- */}
-      <div className="relative pt-24 pb-8 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
-         {/* 背景光效 */}
+      {/* --- 首页 Hero 区域 (横向宽屏版) --- */}
+      <div className="relative pt-20 pb-6 text-center px-4 w-full bg-transparent border-b border-white/5">
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-2000"></div>
@@ -104,72 +137,61 @@ export default function Gallery({ images }: { images: any[] }) {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
-        <div className="max-w-4xl mx-auto relative z-10">
-            {/* 🔴 修改：去掉了顶部的 AI Prompt Library 徽章 */}
+        {/* 🔴 核心修改：使用 max-w-[1960px] 匹配瀑布流宽度 */}
+        <div className="max-w-[1960px] mx-auto relative z-10">
+            
+            {/* 第一行：标题 + 描述 + 搜索框 (Flex Row) */}
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 mb-8 text-left">
+                
+                {/* 左侧：标题和描述组合 */}
+                <div className="flex flex-col gap-2 shrink-0 max-w-2xl">
+                    <h1 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl leading-tight drop-shadow-2xl flex items-center gap-3">
+                      <Sparkles size={24} className="text-indigo-400 animate-pulse hidden sm:block" />
+                      <span>Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">Infinite Imagination</span></span>
+                    </h1>
+                    <p className="text-gray-400 text-xs sm:text-sm font-light opacity-80">
+                      Doro Gallery - A curated collection of high-quality AI generated imagery.
+                    </p>
+                </div>
 
-            {/* 🔴 修改：大标题和描述优化布局 (垂直居中，间距紧凑) */}
-            <div className="mb-10">
-                <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-6xl mb-4 drop-shadow-2xl">
-                  Discover <br className="md:hidden" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 animate-pulse">
-                    Infinite Imagination
-                  </span>
-                </h1>
-                <p className="text-gray-400 text-sm sm:text-base font-light max-w-2xl mx-auto">
-                  A curated collection of high-quality AI generated imagery and prompts. <br className="hidden sm:block"/> 
-                  Copy prompts, remix styles, and create your own masterpiece.
-                </p>
-            </div>
-
-            {/* 搜索框 */}
-            <div className="max-w-2xl mx-auto relative group z-10 mb-6">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-40 blur-md transition duration-1000"></div>
-                <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-full p-1.5 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-lg">
-                    <div className="pl-3 text-gray-500"><Search className="w-5 h-5" /></div>
-                    <input 
-                        type="text" 
-                        placeholder="Search prompts..." 
-                        className="w-full bg-transparent px-4 py-3 text-white placeholder-gray-500 focus:outline-none text-base"
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                    />
-                    {search && <button onClick={() => setSearch("")} className="p-1 rounded-full hover:bg-white/10 text-gray-400 transition mr-2"><X size={16} /></button>}
-                    <div className="hidden sm:flex items-center pr-4 pl-2 border-l border-white/10 h-6">
-                        <span className="text-xs font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors"><span className="font-bold mr-1">{images.length}</span> CASES</span>
+                {/* 右侧：搜索框 (自动拉伸填满剩余空间或固定宽度) */}
+                <div className="w-full lg:max-w-lg relative group z-10">
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-40 blur-md transition duration-1000"></div>
+                    <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-full p-1.5 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-lg">
+                        <div className="pl-3 text-gray-500"><Search className="w-4 h-4" /></div>
+                        <input 
+                            type="text" 
+                            placeholder="Search prompts..." 
+                            className="w-full bg-transparent px-3 py-2 text-white placeholder-gray-500 focus:outline-none text-sm"
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
+                        {search && <button onClick={() => setSearch("")} className="p-1 rounded-full hover:bg-white/10 text-gray-400 transition mr-2"><X size={14} /></button>}
+                        <div className="hidden sm:flex items-center pr-3 pl-2 border-l border-white/10 h-5">
+                            <span className="text-[10px] font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors"><span className="font-bold mr-0.5">{images.length}</span> CASES</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* 🔴 核心修改：标签折叠逻辑 */}
-            <div className="flex justify-center items-start gap-2 w-full">
-                <div className={`flex flex-wrap justify-center gap-2 transition-all duration-300 overflow-hidden ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[36px]'}`}>
-                    {displayTags.map((tag) => (
-                        <button 
-                            key={tag} 
-                            onClick={() => setSearch(tag === search ? "" : tag)} 
-                            className={`px-3 py-1.5 rounded-full border text-xs font-medium transition-all duration-300 backdrop-blur-md whitespace-nowrap
-                                ${search === tag ? 'bg-white text-black border-white' : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/30'}
-                            `}
-                        >
-                            {tag}
-                        </button>
-                    ))}
-                </div>
-                
-                {/* 展开/收起按钮 */}
-                <button 
-                    onClick={() => setIsTagsExpanded(!isTagsExpanded)}
-                    className="p-1.5 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-colors shrink-0 mt-0.5"
-                    title={isTagsExpanded ? "Collapse tags" : "Show all tags"}
-                >
-                    {isTagsExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                </button>
+            {/* 第二行：Tags (全宽排列，左对齐) */}
+            {/* 🔴 核心修改：justify-start 左对齐，更符合工具栏的感觉 */}
+            <div className="flex flex-wrap justify-start gap-2 w-full border-t border-white/5 pt-6">
+                {displayTags.map((tag) => (
+                    <button 
+                        key={tag} 
+                        onClick={() => setSearch(tag === search ? "" : tag)} 
+                        className={`px-3 py-1.5 rounded-full border text-[11px] font-medium transition-all duration-300 backdrop-blur-md ${search === tag ? 'bg-white text-black border-white' : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/30'}`}
+                    >
+                        {tag}
+                    </button>
+                ))}
             </div>
         </div>
       </div>
 
       {/* --- 瀑布流列表 --- */}
-      <div className="max-w-[1960px] mx-auto px-4 py-12 min-h-[400px]">
+      <div className="max-w-[1960px] mx-auto px-4 pb-20 pt-8 min-h-[400px]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4">
             {filteredImages.map((image) => (
@@ -201,7 +223,7 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 全屏弹窗 (保持上下结构) --- */}
+      {/* --- 全屏弹窗 (垂直通栏 + 折叠提示词) --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
@@ -221,6 +243,7 @@ export default function Gallery({ images }: { images: any[] }) {
 
             {/* 2. 滚动区域 */}
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
                 <div className="max-w-3xl mx-auto w-full pb-12">
                     
                     {/* 标题与标签 */}
@@ -242,7 +265,6 @@ export default function Gallery({ images }: { images: any[] }) {
                             alt="Detail" 
                         />
                         
-                        {/* 导航箭头 */}
                         {selectedIndex > 0 && (
                             <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>
                         )}
@@ -251,12 +273,12 @@ export default function Gallery({ images }: { images: any[] }) {
                         )}
                     </div>
 
-                    {/* 提示词区域 (不再折叠，直接显示) */}
+                    {/* 🔴 提示词区域 (可折叠组件) */}
                     <div className="px-6 w-full">
                         <div className="w-full space-y-6">
-                            {selectedImage.promptCn && <PromptBox title="Chinese Prompt" content={selectedImage.promptCn} isCopied={copiedCn} onCopy={(t: string) => copyToClipboard(t, 'cn')} icon={Languages} />}
-                            {selectedImage.promptEn && <PromptBox title="English Prompt" content={selectedImage.promptEn} isCopied={copiedEn} onCopy={(t: string) => copyToClipboard(t, 'en')} icon={Terminal} />}
-                            {!selectedImage.promptCn && !selectedImage.promptEn && <PromptBox title="Prompt" content={selectedImage.prompt || "No prompt available."} isCopied={copiedDefault} onCopy={(t: string) => copyToClipboard(t, 'default')} icon={Terminal} />}
+                            {selectedImage.promptCn && <PromptBox title="Chinese Prompt" content={selectedImage.promptCn} icon={Languages} />}
+                            {selectedImage.promptEn && <PromptBox title="English Prompt" content={selectedImage.promptEn} icon={Terminal} />}
+                            {!selectedImage.promptCn && !selectedImage.promptEn && <PromptBox title="Prompt" content={selectedImage.prompt || "No prompt available."} icon={Terminal} />}
                         </div>
                     </div>
                 </div>
