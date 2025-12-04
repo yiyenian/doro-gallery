@@ -1,6 +1,6 @@
 export interface DataRecord {
   title: string;
-  prompt: string;
+  prompt?: string;
   tags?: string[];
   promptCn?: string;
   promptEn?: string;
