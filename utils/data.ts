@@ -202,7 +202,7 @@ Surrounded by auspicious clouds, huge holographic moon in the background.
     At the top-center, place a souvenir magnet displaying the city name written in Chinese characters, 
     and a handwritten post-it note also written in Chinese characters showing the current temperature and weather conditions.
     Incorporate realistic miniature items necessary for today's weather into the knolling arrangement. 
-    No repeats of any object. Aspect ratio 1:1.
+    No repeats of any object. Aspect ratio 1:1.`,
  },
   
 };
