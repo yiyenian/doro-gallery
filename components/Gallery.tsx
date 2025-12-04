@@ -60,7 +60,7 @@ export default function Gallery({ images }: { images: any[] }) {
   // 提示词组件
   const PromptBox = ({ title, content, isCopied, onCopy, icon: Icon }: any) => (
     <div className="mb-6 last:mb-0">
-      <div className="flex items-center justify-between mb-2">
+      <div className="flex items-center justify-between mb-2 px-1">
         <div className="flex items-center gap-2">
             <Icon size={14} className="text-indigo-400" />
             <h3 className="text-[11px] font-bold uppercase tracking-widest text-gray-400">{title}</h3>
@@ -73,9 +73,9 @@ export default function Gallery({ images }: { images: any[] }) {
         </button>
       </div>
       <div className="relative group">
-        {/* 毛玻璃背景框 */}
-        <div className="rounded-xl bg-white/5 backdrop-blur-md border border-white/10 p-4 shadow-inner transition-colors hover:bg-white/[0.07]">
-            <div className="text-xs leading-6 text-gray-300 font-mono select-text whitespace-pre-wrap break-words max-h-[200px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
+        <div className="rounded-xl bg-[#0a0a0a] border border-white/10 p-4 shadow-inner">
+            {/* 🔴 核心修改：max-h 增加到 500px，显示更多内容 */}
+            <div className="text-xs leading-6 text-gray-300 font-mono select-text whitespace-pre-wrap break-words max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent pr-2">
                 <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
                     {content.replace(/\n/g, '  \n')}
                 </ReactMarkdown>
@@ -90,8 +90,9 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 首页瀑布流 (保持不变) --- */}
+      {/* --- 首页瀑布流 --- */}
       <div className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
+         {/* 背景动效 */}
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-2000"></div>
@@ -183,18 +184,15 @@ export default function Gallery({ images }: { images: any[] }) {
 
       {/* --- 全屏弹窗 --- */}
       {selectedId !== null && selectedImage && (
-        // 🟢 核心优化：flex 布局 + overflow-hidden 防止双滚动条
-        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6">
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+          <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
           
-          <div className="absolute inset-0 bg-black/90 backdrop-blur-md transition-opacity" onClick={() => setSelectedId(null)} />
-          
-          {/* 🟢 核心优化：h-auto + max-h-[90vh]，内容少就短，内容多就滚动 */}
-          <div className="relative w-full max-w-4xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col animate-in zoom-in-95 duration-200 max-h-[90vh]">
+          <div className="relative w-full max-w-4xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50">
             
-            {/* 1. 顶部标题栏 (固定在弹窗顶部) */}
-            <div className="flex items-start justify-between p-5 border-b border-white/5 bg-[#18181b] shrink-0 z-10 rounded-t-2xl">
+            {/* 1. 顶部信息栏 */}
+            <div className="flex items-start justify-between p-6 border-b border-white/5 bg-[#18181b]">
                 <div className="flex-1 mr-4">
-                    <h2 className="text-xl md:text-2xl font-bold text-white leading-tight tracking-tight mb-2">{selectedImage.title}</h2>
+                    <h2 className="text-2xl font-bold text-white leading-tight tracking-tight mb-3">{selectedImage.title}</h2>
                     <div className="flex flex-wrap gap-2">
                         <span className="px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider">
                             AI Generated
@@ -210,19 +208,16 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
-            {/* 2. 可滚动区域 (图片 + 提示词) */}
-            <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+            {/* 2. 滚动区域 */}
+            <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-800">
                 
-                {/* 图片展示区 (背景深一点) */}
-                <div className="relative w-full bg-[#050505] flex items-center justify-center min-h-[300px] p-6 group/nav border-b border-white/5">
+                {/* 图片展示区 */}
+                <div className="relative w-full bg-[#09090b] flex items-center justify-center min-h-[400px] p-8 group/nav border-b border-white/5">
                     <img 
                         src={selectedImage.url} 
-                        // max-h 设置为 60vh，保证即使图片很高，下面也能露出一点提示词
-                        className="w-auto h-auto max-h-[60vh] max-w-full object-contain shadow-2xl rounded-lg" 
+                        className="w-auto h-auto max-h-[65vh] max-w-full object-contain shadow-2xl rounded-lg" 
                         alt="Detail" 
                     />
-                    
-                    {/* 左右导航 */}
                     {selectedIndex > 0 && (
                         <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>
                     )}
@@ -232,43 +227,40 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
 
                 {/* 提示词区域 */}
-                <div className="p-6 sm:p-8 bg-[#18181b]">
-                    <div className="max-w-3xl mx-auto">
-                        {/* 中文提示词 */}
+                <div className="p-8 bg-[#18181b]">
+                    <div className="max-w-3xl mx-auto space-y-6">
+                        {/* 双语提示词或默认提示词 */}
                         {selectedImage.promptCn && (
                             <PromptBox 
-                            title="中文提示词" 
-                            content={selectedImage.promptCn} 
-                            isCopied={copiedCn} 
-                            onCopy={(t: string) => copyToClipboard(t, 'cn')}
-                            icon={Languages}
+                              title="中文提示词" 
+                              content={selectedImage.promptCn} 
+                              isCopied={copiedCn} 
+                              onCopy={(t: string) => copyToClipboard(t, 'cn')}
+                              icon={Languages}
                             />
                         )}
-
-                        {/* 英文提示词 */}
                         {selectedImage.promptEn && (
                             <PromptBox 
-                            title="英文提示词" 
-                            content={selectedImage.promptEn} 
-                            isCopied={copiedEn} 
-                            onCopy={(t: string) => copyToClipboard(t, 'en')}
-                            icon={Terminal}
+                              title="英文提示词" 
+                              content={selectedImage.promptEn} 
+                              isCopied={copiedEn} 
+                              onCopy={(t: string) => copyToClipboard(t, 'en')}
+                              icon={Terminal}
                             />
                         )}
-
-                        {/* 默认提示词 */}
                         {!selectedImage.promptCn && !selectedImage.promptEn && (
                             <PromptBox 
-                            title="提示词 / Prompt" 
-                            content={selectedImage.prompt || "No prompt available."} 
-                            isCopied={copiedDefault} 
-                            onCopy={(t: string) => copyToClipboard(t, 'default')}
-                            icon={Terminal}
+                              title="提示词" 
+                              content={selectedImage.prompt || "No prompt available."} 
+                              isCopied={copiedDefault} 
+                              onCopy={(t: string) => copyToClipboard(t, 'default')}
+                              icon={Terminal}
                             />
                         )}
                     </div>
                 </div>
-            </div>
+                
+             </div>
           </div>
         </div>
       )}
