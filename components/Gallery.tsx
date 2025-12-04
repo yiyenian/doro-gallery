@@ -57,24 +57,26 @@ export default function Gallery({ images }: { images: any[] }) {
     if (type === 'default') { setCopiedDefault(true); setTimeout(() => setCopiedDefault(false), 2000); }
   };
 
+  // 提示词组件
   const PromptBox = ({ title, content, isCopied, onCopy, icon: Icon }: any) => (
-    <div className="mb-6 last:mb-0 w-full">
-      <div className="flex items-center justify-between mb-2 px-1">
+    <div className="mb-8 last:mb-0 w-full">
+      <div className="flex items-center justify-between mb-3 px-1">
         <div className="flex items-center gap-2">
-            <Icon size={14} className="text-indigo-400" />
-            <h3 className="text-[11px] font-bold uppercase tracking-widest text-gray-400">{title}</h3>
+            <Icon size={16} className="text-indigo-400" />
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">{title}</h3>
         </div>
         <button 
           onClick={() => onCopy(content)} 
-          className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[11px] font-bold transition-all border ${isCopied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white hover:border-white/20'}`}
+          className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[11px] font-bold transition-all border ${isCopied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white hover:border-white/20'}`}
         >
           {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "已复制" : "复制"}
         </button>
       </div>
       <div className="relative group w-full">
-        <div className="w-full rounded-xl bg-white/5 backdrop-blur-md border border-white/10 p-5 shadow-inner transition-colors hover:bg-white/[0.07]">
+        <div className="w-full rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-6 shadow-xl transition-colors hover:bg-white/[0.08]">
+            {/* max-h-64 (256px) 或 max-h-[500px] 控制高度，超出滚动 */}
             <div className="text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
-                <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
+                 <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
                     {content.replace(/\n/g, '  \n')}
                 </ReactMarkdown>
             </div>
@@ -88,8 +90,8 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 首页 Hero 区域 (紧贴顶部版) --- */}
-      <div className="relative pt-20 pb-8 sm:pt-24 sm:pb-12 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
+      {/* --- 首页 Hero 区域 --- */}
+      <div className="relative pt-24 pb-8 sm:pt-28 sm:pb-12 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-2000"></div>
@@ -98,7 +100,7 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-4 shadow-[0_0_15px_-3px_rgba(99,102,241,0.4)] backdrop-blur-md">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-6 shadow-[0_0_15px_-3px_rgba(99,102,241,0.4)] backdrop-blur-md">
                 <Sparkles size={10} className="text-indigo-400" />
                 AI Prompt Library
             </div>
@@ -110,7 +112,7 @@ export default function Gallery({ images }: { images: any[] }) {
               </span>
             </h1>
             
-            <p className="text-gray-400 max-w-xl mx-auto text-base sm:text-lg mb-8 leading-relaxed font-light">
+            <p className="text-gray-400 max-w-xl mx-auto text-sm sm:text-base mb-8 leading-relaxed font-light">
               Doro Gallery 收录全网高质量 AI 生成图像与提示词。<br/>
               复制 Prompt，激发灵感，创造属于你的杰作。
             </p>
@@ -147,7 +149,8 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      <div className="max-w-[1960px] mx-auto px-4 pb-20 min-h-[400px]">
+      {/* --- 瀑布流列表 --- */}
+      <div className="max-w-[1960px] mx-auto px-4 py-12 min-h-[400px]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4">
             {filteredImages.map((image) => (
@@ -179,18 +182,16 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 全屏弹窗 (通栏布局 - 更透的毛玻璃) --- */}
+      {/* --- 弹窗 (通栏垂直布局) --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           
-          {/* 🔴 修改：背景遮罩更透 (bg-black/70) */}
-          <div className="fixed inset-0 bg-black/70 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
+          <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
           
-          {/* 🔴 修改：弹窗主体更透 (bg-[#18181b]/80) 并增加强毛玻璃 (backdrop-blur-xl) */}
-          <div className="relative w-full max-w-4xl bg-[#18181b]/80 backdrop-blur-xl shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
+          <div className="relative w-full max-w-4xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
-            {/* 顶部固定栏 - 🔴 修改：匹配主体的透明度 */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#18181b]/80 backdrop-blur-md shrink-0 z-20 sticky top-0">
+            {/* 1. 顶部固定栏 */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#18181b]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
                 <div className="flex items-center gap-2 text-sm font-bold text-gray-400">
                     <span className="text-indigo-400">Doro Gallery</span> / 详情预览
                 </div>
@@ -200,7 +201,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
-            {/* 滚动内容区域 */}
+            {/* 2. 滚动内容区域 */}
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                 
                 <div className="max-w-3xl mx-auto w-full pb-12">
@@ -235,9 +236,10 @@ export default function Gallery({ images }: { images: any[] }) {
                         )}
                     </div>
 
-                    {/* 提示词区域 */}
+                    {/* 提示词区域 (通栏) */}
                     <div className="px-6 w-full">
                         <div className="w-full space-y-6">
+                            {/* 双语提示词 */}
                             {selectedImage.promptCn && (
                                 <PromptBox 
                                 title="中文提示词" 
@@ -256,6 +258,7 @@ export default function Gallery({ images }: { images: any[] }) {
                                 icon={Terminal}
                                 />
                             )}
+                            {/* 兜底提示词 */}
                             {!selectedImage.promptCn && !selectedImage.promptEn && (
                                 <PromptBox 
                                 title="提示词" 
