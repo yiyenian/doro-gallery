@@ -193,5 +193,16 @@ Surrounded by auspicious clouds, huge holographic moon in the background.
     封面底部角落包含期号“ISSUE 2025”、今天的日期、一个逼真的条形码和价格“$25.00”。
     背景是干净、中性的高级摄影棚渐变背景。电影级影棚布光，极高清晰度，8k分辨率，质感丰富。`,
  },
-    
+
+  "dr-9_xaidyz": {
+    title: "城市冰箱贴",
+    tags: ["character", "photography"],
+    promptEn: `A clear, directly top-down photograph of shanghai landmarks as realistic miniature 3D magnets, 
+    arranged neatly in parallel lines and right angles, knolling on a neutral surface. 
+    At the top-center, place a souvenir magnet displaying the city name written in Chinese characters, 
+    and a handwritten post-it note also written in Chinese characters showing the current temperature and weather conditions.
+    Incorporate realistic miniature items necessary for today's weather into the knolling arrangement. 
+    No repeats of any object. Aspect ratio 1:1.
+ },
+  
 };
