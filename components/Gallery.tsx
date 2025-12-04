@@ -88,8 +88,8 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- Hero & Search 区域 --- */}
-      <div className="relative pt-20 pb-16 sm:pt-24 sm:pb-20 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
+      {/* --- Hero & Search 区域 (极致紧凑版) --- */}
+      <div className="relative pt-20 pb-8 sm:pt-24 sm:pb-10 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-2000"></div>
@@ -98,59 +98,51 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10">
-            
-            {/* 🟢 新增：融合在 Hero 区域的 Logo */}
-            <div className="flex items-center justify-center gap-3 mb-8 animate-in fade-in slide-in-from-top-4 duration-700">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-md">
-                        <path d="M15 12H9V16H15C17.2091 16 19 14.2091 19 12C19 9.79086 17.2091 8 15 8H9V12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M6 4V20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                </div>
-                <span className="text-2xl font-bold tracking-tight text-white font-sans">Doro Gallery</span>
-            </div>
-
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-8 shadow-[0_0_15px_-3px_rgba(99,102,241,0.4)] backdrop-blur-md">
+            {/* 1. 徽章：更小间距 */}
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-4 shadow-[0_0_15px_-3px_rgba(99,102,241,0.4)] backdrop-blur-md">
                 <Sparkles size={10} className="text-indigo-400" />
                 AI Prompt Library
             </div>
 
-            <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white md:text-6xl lg:text-7xl leading-tight drop-shadow-2xl">
+            {/* 2. 标题：缩小字号 (4xl -> 3xl / 7xl -> 5xl) */}
+            <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl leading-tight drop-shadow-2xl">
               探索
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 px-3 font-black animate-pulse">
                 无限想象
               </span>
             </h1>
             
-            <p className="text-gray-400 max-w-xl mx-auto text-base sm:text-lg mb-12 leading-relaxed font-light">
-              Doro Gallery 收录全网高质量 AI 生成图像与提示词。<br/>
-              复制 Prompt，激发灵感，创造属于你的杰作。
+            {/* 3. 描述：减小字号和下间距 */}
+            <p className="text-gray-400 max-w-xl mx-auto text-sm sm:text-base mb-8 leading-relaxed font-light">
+              收录全网高质量 AI 生成图像与提示词。复制 Prompt，激发灵感。
             </p>
 
+            {/* 4. 搜索框：更紧凑 */}
             <div className="max-w-2xl mx-auto relative group z-10">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-60 blur-lg transition duration-1000"></div>
-                <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-full p-2 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-2xl">
-                    <div className="pl-4 text-gray-500"><Search className="w-5 h-5" /></div>
+                <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-full p-1.5 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-2xl">
+                    <div className="pl-3 text-gray-500"><Search className="w-4 h-4" /></div>
                     <input 
                         type="text" 
                         placeholder="搜索关键词..." 
-                        className="w-full bg-transparent px-4 py-3 text-white placeholder-gray-500 focus:outline-none text-base"
+                        className="w-full bg-transparent px-3 py-2 text-white placeholder-gray-500 focus:outline-none text-sm"
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
-                    {search && <button onClick={() => setSearch("")} className="p-1 rounded-full hover:bg-white/10 text-gray-400 transition mr-2"><X size={16} /></button>}
-                    <div className="hidden sm:flex items-center pr-4 pl-4 border-l border-white/10 h-6">
-                        <span className="text-xs font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors"><span className="font-bold mr-1">{images.length}</span> 案例</span>
+                    {search && <button onClick={() => setSearch("")} className="p-1 rounded-full hover:bg-white/10 text-gray-400 transition mr-2"><X size={14} /></button>}
+                    <div className="hidden sm:flex items-center pr-3 pl-3 border-l border-white/10 h-5">
+                        <span className="text-[10px] font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors"><span className="font-bold mr-1">{images.length}</span> 案例</span>
                     </div>
                 </div>
             </div>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-2">
+            {/* 5. 标签：减小上间距 */}
+            <div className="mt-6 flex flex-wrap justify-center gap-2">
                 {displayTags.map((tag) => (
                     <button 
                         key={tag} 
                         onClick={() => setSearch(tag === search ? "" : tag)} 
-                        className={`px-3 py-1.5 rounded-full border text-xs font-medium transition-all duration-300 backdrop-blur-md ${search === tag ? 'bg-white text-black border-white' : 'bg-white/10 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/30'}`}
+                        className={`px-2.5 py-1 rounded-full border text-[10px] font-medium transition-all duration-300 backdrop-blur-md ${search === tag ? 'bg-white text-black border-white' : 'bg-white/10 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/30'}`}
                     >
                         {tag}
                     </button>
@@ -159,8 +151,7 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      {/* ... 后面的列表和弹窗代码保持不变 ... */}
-      <div className="max-w-[1960px] mx-auto px-4 pb-20 min-h-[400px]">
+      <div className="max-w-[1960px] mx-auto px-4 py-12 min-h-[400px]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4">
             {filteredImages.map((image) => (
@@ -192,9 +183,9 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
+      {/* --- 全屏弹窗 (保持上下结构) --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-          
           <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
           
           <div className="relative w-full max-w-5xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
@@ -222,7 +213,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 <div className="relative w-full bg-[#050505] flex items-center justify-center min-h-[400px] p-8 group/nav border-b border-white/5">
                     <img 
                         src={selectedImage.url} 
-                        className="w-auto h-auto max-h-[70vh] max-w-full object-contain shadow-2xl rounded-lg" 
+                        className="w-auto h-auto max-h-[65vh] max-w-full object-contain shadow-2xl rounded-lg" 
                         alt="Detail" 
                     />
                     {selectedIndex > 0 && (
