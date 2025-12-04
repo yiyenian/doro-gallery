@@ -73,7 +73,7 @@ export default function Gallery({ images }: { images: any[] }) {
       </div>
       <div className="relative group w-full">
         <div className="w-full rounded-xl bg-white/5 backdrop-blur-md border border-white/10 p-5 shadow-inner transition-colors hover:bg-white/[0.07]">
-            <div className="text-xs leading-7 text-gray-300 font-mono select-text whitespace-pre-wrap break-words max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
+            <div className="text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
                 <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
                     {content.replace(/\n/g, '  \n')}
                 </ReactMarkdown>
@@ -88,8 +88,9 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- Hero & Search 区域 (极致紧凑版) --- */}
-      <div className="relative pt-20 pb-8 sm:pt-24 sm:pb-10 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
+      {/* --- 极致紧凑版 Hero 区域 --- */}
+      {/* 修改：pt-20 (紧贴导航栏), pb-2 (几乎没下边距) */}
+      <div className="relative pt-20 pb-6 sm:pt-24 sm:pb-8 text-center px-4 w-full overflow-hidden bg-[#121212] border-b border-white/5">
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-2000"></div>
@@ -97,30 +98,29 @@ export default function Gallery({ images }: { images: any[] }) {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
-        <div className="max-w-4xl mx-auto relative z-10">
-            {/* 1. 徽章：更小间距 */}
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-4 shadow-[0_0_15px_-3px_rgba(99,102,241,0.4)] backdrop-blur-md">
+        <div className="max-w-3xl mx-auto relative z-10">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-3 shadow-md backdrop-blur-md">
                 <Sparkles size={10} className="text-indigo-400" />
                 AI Prompt Library
             </div>
 
-            {/* 2. 标题：缩小字号 (4xl -> 3xl / 7xl -> 5xl) */}
-            <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl leading-tight drop-shadow-2xl">
+            {/* 修改：字号减小 (3xl/5xl)，更精致 */}
+            <h1 className="mb-3 text-3xl font-extrabold tracking-tight text-white md:text-5xl leading-tight drop-shadow-xl">
               探索
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 px-3 font-black animate-pulse">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 px-2 font-black animate-pulse">
                 无限想象
               </span>
             </h1>
             
-            {/* 3. 描述：减小字号和下间距 */}
-            <p className="text-gray-400 max-w-xl mx-auto text-sm sm:text-base mb-8 leading-relaxed font-light">
+            {/* 修改：描述文字变小，间距变小 */}
+            <p className="text-gray-400 max-w-lg mx-auto text-xs sm:text-sm mb-6 leading-relaxed font-light opacity-80">
               收录全网高质量 AI 生成图像与提示词。复制 Prompt，激发灵感。
             </p>
 
-            {/* 4. 搜索框：更紧凑 */}
-            <div className="max-w-2xl mx-auto relative group z-10">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-60 blur-lg transition duration-1000"></div>
-                <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-full p-1.5 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-2xl">
+            {/* 修改：搜索框更扁平 */}
+            <div className="max-w-xl mx-auto relative group z-10">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-60 blur-md transition duration-1000"></div>
+                <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-full p-1.5 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-lg">
                     <div className="pl-3 text-gray-500"><Search className="w-4 h-4" /></div>
                     <input 
                         type="text" 
@@ -136,13 +136,13 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
-            {/* 5. 标签：减小上间距 */}
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
+            {/* 修改：标签上间距减小 */}
+            <div className="mt-4 flex flex-wrap justify-center gap-1.5">
                 {displayTags.map((tag) => (
                     <button 
                         key={tag} 
                         onClick={() => setSearch(tag === search ? "" : tag)} 
-                        className={`px-2.5 py-1 rounded-full border text-[10px] font-medium transition-all duration-300 backdrop-blur-md ${search === tag ? 'bg-white text-black border-white' : 'bg-white/10 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/30'}`}
+                        className={`px-2.5 py-1 rounded-full border text-[10px] font-medium transition-all duration-300 backdrop-blur-md ${search === tag ? 'bg-white text-black border-white' : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/30'}`}
                     >
                         {tag}
                     </button>
@@ -151,7 +151,9 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      <div className="max-w-[1960px] mx-auto px-4 py-12 min-h-[400px]">
+      {/* --- 瀑布流列表 (紧贴 Hero) --- */}
+      {/* 修改：pt-8，间距适中 */}
+      <div className="max-w-[1960px] mx-auto px-4 py-8 min-h-[400px]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4">
             {filteredImages.map((image) => (
@@ -175,21 +177,23 @@ export default function Gallery({ images }: { images: any[] }) {
             ))}
             </div>
         ) : (
-            <div className="flex flex-col items-center justify-center h-64 text-gray-500 border border-dashed border-white/10 rounded-xl bg-white/5">
-                <Search size={48} className="mb-4 opacity-20" />
+            <div className="flex flex-col items-center justify-center h-48 text-gray-500 border border-dashed border-white/10 rounded-xl bg-white/5">
+                <Search size={32} className="mb-2 opacity-20" />
                 <p>未找到内容</p>
-                <button onClick={() => setSearch("")} className="mt-4 text-indigo-400 text-sm underline">清空搜索</button>
+                <button onClick={() => setSearch("")} className="mt-2 text-indigo-400 text-xs underline">清空搜索</button>
             </div>
         )}
       </div>
 
-      {/* --- 全屏弹窗 (保持上下结构) --- */}
+      {/* --- 弹窗 (上下结构 + 毛玻璃 + 宽屏) --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-          <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
+          
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity" onClick={() => setSelectedId(null)} />
           
           <div className="relative w-full max-w-5xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
+            {/* 顶部信息 */}
             <div className="flex items-start justify-between p-6 pb-4 border-b border-white/5 bg-[#18181b]/95 backdrop-blur-md shrink-0 z-10 sticky top-0">
                 <div className="flex-1 mr-4">
                     <h2 className="text-xl md:text-2xl font-bold text-white leading-tight tracking-tight mb-2">{selectedImage.title}</h2>
@@ -208,14 +212,17 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
+            {/* 内容滚动区 */}
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                 
+                {/* 图片 */}
                 <div className="relative w-full bg-[#050505] flex items-center justify-center min-h-[400px] p-8 group/nav border-b border-white/5">
                     <img 
                         src={selectedImage.url} 
-                        className="w-auto h-auto max-h-[65vh] max-w-full object-contain shadow-2xl rounded-lg" 
+                        className="w-auto h-auto max-h-[70vh] max-w-full object-contain shadow-2xl rounded-lg" 
                         alt="Detail" 
                     />
+                    {/* 导航 */}
                     {selectedIndex > 0 && (
                         <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>
                     )}
@@ -224,6 +231,7 @@ export default function Gallery({ images }: { images: any[] }) {
                     )}
                 </div>
 
+                {/* 提示词 */}
                 <div className="px-4 pb-12 sm:px-8 w-full bg-[#18181b]">
                     <div className="w-full pt-8 space-y-6">
                         {selectedImage.promptCn && (
@@ -237,7 +245,6 @@ export default function Gallery({ images }: { images: any[] }) {
                         )}
                     </div>
                 </div>
-            
             </div>
           </div>
         </div>
