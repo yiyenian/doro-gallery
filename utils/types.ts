@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export interface ImageProps {
   id: number;
   height: number;
@@ -6,9 +7,9 @@ export interface ImageProps {
   format: string;
   blurDataUrl?: string;
   title?: string;
-  prompt?: string;     // 默认/兜底提示词
-  promptCn?: string;   // 中文提示词
-  promptEn?: string;   // 英文提示词
+  prompt?: string;
+  promptCn?: string; // 预留给未来可能的双语功能
+  promptEn?: string;
   url?: string;
   tags?: string[];
 }
