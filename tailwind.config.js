@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // 1. 定义动画关键帧
+      animation: {
+        blob: "blob 7s infinite", // 注册 blob 动画
+      },
       keyframes: {
         blob: {
           "0%": {
@@ -24,10 +26,6 @@ const config: Config = {
             transform: "translate(0px, 0px) scale(1)",
           },
         },
-      },
-      // 2. 定义动画类名 animate-blob
-      animation: {
-        blob: "blob 7s infinite",
       },
     },
   },
