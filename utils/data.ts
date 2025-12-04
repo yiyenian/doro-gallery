@@ -86,7 +86,7 @@ Background: Aged yellow parchment paper.
     prompt: "Vintage engineering explosion diagram of a Zhuge Nu..."
   },
 
-  "dr-3_popmart": {
+  "dr-3_eghzd5": {
     title: "泡泡玛特风格宇航员",
     tags: ["3D渲染", "IP设计", "盲盒", "可爱", "C4D"],
     promptCn: `**角色描述:**
@@ -114,7 +114,7 @@ Clean pastel color background, simple planet props.
     prompt: "A cute chibi astronaut character, Pop Mart blind box style. PVC plastic texture..."
   },
 
-  "dr-4_logo": {
+  "dr-4_cscuhq": {
     title: "极简科技 Logo",
     tags: ["Logo设计", "平面设计", "极简主义", "矢量"],
     promptCn: `**设计主题:**
@@ -142,7 +142,7 @@ Deep blue background, cyan and white gradients.
     prompt: "A minimalist tech company logo representing Quantum Computing..."
   },
 
-  "dr-5_micro": {
+  "dr-5_tiubjj": {
     title: "微缩森林瓶中界",
     tags: ["微距摄影", "静物", "奇幻", "自然"],
     promptCn: `**画面主体:**
@@ -170,7 +170,7 @@ Bioluminescent glow from inside the jar, illuminating a dark wooden table.
     prompt: "Macro photography of a glass jar containing a miniature magical forest inside..."
   },
 
-  "dr-6_arch": {
+  "dr-6_xwhvt1": {
     title: "流体未来博物馆",
     tags: ["建筑设计", "未来主义", "扎哈·哈迪德", "参数化设计"],
     promptCn: `**建筑描述:**
@@ -199,7 +199,7 @@ Golden hour, warm sunlight hitting the white curves, reflection on the water.
     prompt: "Architectural photography of a futuristic white museum located by the sea..."
   },
 
-  "dr-7_guochao": {
+  "dr-7_phzi2h": {
     title: "新中式赛博龙女",
     tags: ["国潮", "插画", "中国风", "赛博朋克"],
     promptCn: `**角色:**
