@@ -8,10 +8,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* 🟢 核心修改：不再是纯黑，而是深邃的蓝紫渐变底色 */
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+  /* 🟢 修改：使用深蓝黑渐变，不再是死黑 */
+  background: linear-gradient(to bottom, #020617, #0f172a);
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 img {
@@ -19,32 +18,33 @@ img {
   max-width: 100%;
 }
 
-/* --- 强制手写动画 --- */
+/* 动画定义 */
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.2); }
-  66% { transform: translate(-20px, 20px) scale(0.8); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
   100% { transform: translate(0px, 0px) scale(1); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
 }
 
 .animate-blob {
   animation: blob 10s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
 .animation-delay-2000 { animation-delay: 2s; }
 .animation-delay-4000 { animation-delay: 4s; }
 
-/* 滚动条美化 */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); }
+/* 滚动条美化 - 稍微调亮一点 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
