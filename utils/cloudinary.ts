@@ -15,22 +15,36 @@ export async function getImages() {
       .sort_by('public_id', 'desc')
       .max_results(400)
       .with_field('context')
-      .with_field('tags')
       .execute();
 
     return results.resources.map((resource: any, index: number) => {
       const publicId = resource.public_id;
-      const localInfo = localData[publicId] || {};
+      const cleanId = publicId.split('/').pop(); 
+      const noExtId = cleanId?.split('.')[0];
 
-      // 标题
-      let title = localInfo.title || resource.context?.caption || resource.context?.custom?.caption;
+      // 🔴 修复：不再使用 || {}，而是允许它是 undefined
+      // 尝试三种匹配方式
+      const localInfo = localData[publicId] || localData[cleanId] || localData[noExtId];
+
+      // 🔴 修复：使用 ?. 安全访问
+      // 如果 localInfo 是 undefined，这行代码会返回 undefined，而不会报错
+      let title = localInfo?.title || 
+                  resource.context?.caption || 
+                  resource.context?.custom?.caption;
+
       if (!title) {
-        const fileName = publicId.split('/').pop() || "";
-        title = fileName.replace(/[-_]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
+        // 兜底：如果没标题，用文件名自动生成
+        title = noExtId ? noExtId.replace(/[-_]/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()) : "Untitled";
       }
 
-      // 默认兜底提示词
-      const defaultPrompt = localInfo.prompt || resource.context?.alt || "No prompt available.";
+      // 提示词
+      const prompt = localInfo?.prompt || 
+                     resource.context?.alt || 
+                     resource.context?.description || 
+                     "No prompt available";
+
+      // 标签 (如果有的话)
+      const tags = localInfo?.tags || resource.tags || [];
 
       return {
         id: index,
@@ -39,11 +53,8 @@ export async function getImages() {
         width: resource.width,
         height: resource.height,
         title: title,
-        // 传递多语言提示词
-        prompt: defaultPrompt, 
-        promptCn: localInfo.promptCn,
-        promptEn: localInfo.promptEn,
-        tags: localInfo.tags || resource.tags || [],
+        prompt: prompt,
+        tags: tags,
         url: resource.secure_url,
       };
     });
