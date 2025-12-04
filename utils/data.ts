@@ -1,6 +1,14 @@
 // 格式：'文件夹/文件名': { title: '标题', prompt: '提示词' }
 // 这里的 Key 必须和 Cloudinary 里的 Public ID 完全一致
 
+export interface DataRecord {
+  title: string;
+  prompt: string;
+  tags?: string[];
+  promptCn?: string;
+  promptEn?: string;
+}
+
 export const localData: Record<string, { title: string; prompt: string; tags?: string[] }> = {
   "dr-1_u0ugns": {
     title: "全景式角色深度概念分解图",
