@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { X, Copy, Check, Search, Sparkles, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash, Languages, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
-// --- 提示词组件 (固定高度 + 内部滚动) ---
+// --- 提示词组件 ---
 const PromptBox = ({ title, content, icon: Icon }: { title: string, content: string, icon: any }) => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -20,17 +20,17 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
       <div className="flex items-center justify-between mb-2 px-1">
         <div className="flex items-center gap-2">
             <Icon size={16} className="text-indigo-400" />
-            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">{title}</h3>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">{title}</h3>
         </div>
         <button 
           onClick={handleCopy} 
-          className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[11px] font-bold transition-all border ${isCopied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-slate-300 hover:bg-white/10 hover:text-white hover:border-white/20'}`}
+          className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[11px] font-bold transition-all border ${isCopied ? 'bg-green-500/10 border-green-500/20 text-green-400' : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white hover:border-white/20'}`}
         >
           {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
         </button>
       </div>
       <div className="relative group w-full rounded-xl border border-white/10 bg-black/20 overflow-hidden hover:border-white/20 transition-colors">
-        <div className="px-4 py-4 text-sm leading-7 text-slate-300 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-transparent">
+        <div className="px-4 py-4 text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
             <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
                 {content.replace(/\n/g, '  \n')}
             </ReactMarkdown>
@@ -99,76 +99,72 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* 🔴 核心容器：吸顶区域 (Hero + Tags) */}
-      <div className="sticky top-0 z-40 w-full bg-slate-950/80 backdrop-blur-xl border-b border-white/10 shadow-lg transition-all">
+      {/* --- 🔴 吸顶 Hero 区域 (控制台风格) --- */}
+      <div className="sticky top-0 z-40 w-full bg-[#121212]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
          
-         {/* 背景光效 */}
-         <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-40">
-            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] animate-pulse"></div>
-            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-600/20 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
-        </div>
-
-        <div className="max-w-[1960px] mx-auto px-4 sm:px-6 pt-6 pb-4">
+        <div className="max-w-[1960px] mx-auto px-4 sm:px-6 pt-4 pb-3">
             
-            {/* --- 第一行：Logo + 标题 + 搜索 (修复排版) --- */}
-            {/* 🟢 修复：增加 lg:gap-8 拉开间距，确保一行显示 */}
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 lg:gap-8 mb-4">
+            {/* 第一行：Logo | 标题 | 描述 ........ 搜索 (Flex Row 强对齐) */}
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
                 
-                {/* 左侧组合 */}
-                {/* 🟢 修复：增加 lg:flex-1 min-w-0，让左侧在大屏下占据主导空间并允许截断 */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-left lg:flex-1 lg:min-w-0">
-                    <div className="flex items-center gap-2 shrink-0 select-none">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-500 shadow-lg shadow-indigo-500/20">
+                {/* 左侧大组：Logo + 标题 + 描述 */}
+                <div className="flex items-center gap-4 flex-1 min-w-0">
+                    
+                    {/* Logo */}
+                    <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-md">
                              <path d="M15 12H9V16H15C17.2091 16 19 14.2091 19 12C19 9.79086 17.2091 8 15 8H9V12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                              <path d="M6 4V20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                            </svg>
                         </div>
-                        <span className="text-xl font-bold tracking-tight text-slate-100 font-sans">Doro Gallery</span>
+                        <span className="text-lg font-bold tracking-tight text-white font-sans hidden sm:block">Doro Gallery</span>
                     </div>
-                    <div className="hidden sm:block w-px h-6 bg-white/15 mx-1 shrink-0"></div>
-                    <div className="flex flex-col justify-center min-w-0">
-                        <div className="flex items-baseline gap-2">
-                            <h1 className="text-sm sm:text-base font-bold tracking-tight text-slate-100 whitespace-nowrap truncate">
-                              Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">Imagination</span>
-                            </h1>
-                        </div>
-                        <p className="text-[10px] text-slate-400 font-light max-w-lg leading-tight hidden sm:block mt-0.5 truncate">
-                           High-quality AI generated imagery & prompts database.
+
+                    {/* 竖线 */}
+                    <div className="hidden sm:block w-px h-6 bg-white/15 shrink-0"></div>
+
+                    {/* 标题 & 描述 (允许描述文字省略) */}
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 overflow-hidden">
+                         <h1 className="text-sm sm:text-base font-extrabold tracking-tight text-white/90 whitespace-nowrap shrink-0">
+                          Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">Imagination</span>
+                        </h1>
+                        {/* 描述：在中等屏幕上可能会截断，保持一行 */}
+                        <p className="text-[11px] text-gray-500 font-light truncate opacity-80 hidden md:block">
+                          High-quality AI generated imagery & prompts database.
                         </p>
                     </div>
                 </div>
 
-                {/* 右侧：搜索框 */}
-                {/* 🟢 修复：保持 shrink-0 固定宽度，不被挤压 */}
-                <div className="w-full sm:w-auto lg:w-[300px] relative group shrink-0">
-                    <div className="relative flex items-center bg-slate-800/50 rounded-lg border border-white/5 focus-within:border-indigo-500/50 focus-within:ring-1 focus-within:ring-indigo-500/50 transition-all h-9">
-                        <div className="pl-2.5 text-slate-400"><Search className="w-3.5 h-3.5" /></div>
+                {/* 右侧：搜索框 (固定宽度紧凑版) */}
+                <div className="w-full sm:w-auto lg:w-[240px] relative group shrink-0">
+                    <div className="relative flex items-center bg-black/40 rounded-lg border border-white/5 focus-within:border-indigo-500/50 focus-within:ring-1 focus-within:ring-indigo-500/50 transition-all h-9">
+                        <div className="pl-2.5 text-gray-500"><Search className="w-3.5 h-3.5" /></div>
                         <input 
                             type="text" 
                             placeholder="Search..." 
-                            className="w-full bg-transparent px-2 py-1 text-slate-200 placeholder-slate-500 focus:outline-none text-xs h-full"
+                            className="w-full bg-transparent px-2 py-1 text-white placeholder-gray-600 focus:outline-none text-xs h-full"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        {search && <button onClick={() => setSearch("")} className="p-1 text-slate-400 hover:text-white transition mr-1"><X size={12} /></button>}
+                        {search && <button onClick={() => setSearch("")} className="p-1 text-gray-400 hover:text-white transition mr-1"><X size={12} /></button>}
                         <div className="hidden sm:flex items-center pr-2.5 pl-2 border-l border-white/5 h-4">
-                            <span className="text-[9px] font-mono text-slate-500 whitespace-nowrap"><span className="font-bold text-indigo-400 mr-0.5">{images.length}</span> CASES</span>
+                            <span className="text-[9px] font-mono text-gray-500 whitespace-nowrap"><span className="font-bold text-indigo-400 mr-0.5">{images.length}</span></span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* --- 第二行：Tags --- */}
-            <div className="border-t border-white/5 pt-3 flex items-start gap-3">
-                <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider py-1 shrink-0 mt-px">Tags</div>
+            {/* 第二行：Tags (全宽 + 折叠) */}
+            <div className="border-t border-white/5 pt-2 flex items-start gap-3">
+                <div className="text-[10px] font-bold text-gray-600 uppercase tracking-wider py-1 shrink-0 mt-px">Tags</div>
                 <div className={`flex flex-wrap justify-start gap-1.5 transition-all duration-300 overflow-hidden w-full ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[28px]'}`}>
                     {displayTags.map((tag) => (
                         <button 
                             key={tag} 
                             onClick={() => setSearch(tag === search ? "" : tag)} 
                             className={`px-2.5 py-0.5 rounded-md border text-[10px] font-medium transition-all duration-200 whitespace-nowrap h-[26px] flex items-center
-                                ${search === tag ? 'bg-slate-100 text-black border-slate-100' : 'bg-slate-800/50 border-white/5 text-slate-400 hover:text-white hover:bg-slate-700 hover:border-white/20'}
+                                ${search === tag ? 'bg-white text-black border-white' : 'bg-white/5 border-white/10 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/30'}
                             `}
                         >
                             {tag}
@@ -177,8 +173,8 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
                 <button 
                     onClick={() => setIsTagsExpanded(!isTagsExpanded)}
-                    className="p-1 rounded-md bg-slate-800/50 border border-white/5 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors shrink-0 mt-0 h-[24px] w-[24px] flex items-center justify-center"
-                    title={isTagsExpanded ? "Collapse" : "Expand"}
+                    className="p-1 rounded-md bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-colors shrink-0 mt-0 h-[24px] w-[24px] flex items-center justify-center"
+                    title={isTagsExpanded ? "Collapse tags" : "Show all tags"}
                 >
                     {isTagsExpanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
                 </button>
@@ -194,7 +190,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 <div 
                 key={image.id}
                 onClick={() => setSelectedId(image.id)}
-                className="group relative mb-6 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-slate-800/40 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-900/20 hover:border-white/20 backdrop-blur-sm break-inside-avoid"
+                className="group relative mb-6 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-[#1e1e20] border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-900/20 hover:border-white/20 backdrop-blur-sm break-inside-avoid"
                 >
                 <img 
                     src={image.url} 
@@ -202,8 +198,8 @@ export default function Gallery({ images }: { images: any[] }) {
                     className="w-full h-auto object-cover transform transition will-change-auto"
                     loading="lazy"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/90 via-slate-950/60 to-transparent pt-12 pb-4 px-4">
-                    <h3 className="font-bold text-slate-100 text-xs sm:text-sm line-clamp-1 tracking-wide">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent pt-12 pb-4 px-4">
+                    <h3 className="font-bold text-gray-100 text-xs sm:text-sm line-clamp-1 tracking-wide">
                         {image.title}
                     </h3>
                 </div>
@@ -211,7 +207,7 @@ export default function Gallery({ images }: { images: any[] }) {
             ))}
             </div>
         ) : (
-            <div className="flex flex-col items-center justify-center h-48 text-slate-500 border border-dashed border-white/10 rounded-xl bg-white/5">
+            <div className="flex flex-col items-center justify-center h-48 text-gray-500 border border-dashed border-white/10 rounded-xl bg-white/5">
                 <Search size={32} className="mb-2 opacity-20" />
                 <p>No results found</p>
                 <button onClick={() => setSearch("")} className="mt-2 text-indigo-400 text-xs underline">Clear search</button>
@@ -219,34 +215,31 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 弹窗 (增加透明度) --- */}
+      {/* --- 弹窗 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-          {/* 🟢 修改：遮罩更透 bg-slate-950/50 */}
-          <div className="fixed inset-0 bg-slate-950/50 backdrop-blur-md transition-opacity" onClick={() => setSelectedId(null)} />
+          <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
           
-          {/* 🟢 修改：主体半透明 bg-[#0f172a]/80 + backdrop-blur-xl */}
-          <div className="relative w-full max-w-4xl bg-[#0f172a]/80 backdrop-blur-xl shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
+          <div className="relative w-full max-w-4xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
-            {/* 🟢 修改：顶部栏更透 bg-[#0f172a]/50 */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#0f172a]/50 backdrop-blur-md shrink-0 z-20 sticky top-0">
-                <div className="flex items-center gap-2 text-sm font-bold text-slate-400">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#18181b]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
+                <div className="flex items-center gap-2 text-sm font-bold text-gray-400">
                     <span className="text-indigo-400">Doro Gallery</span> / Preview
                 </div>
                 <div className="flex gap-2 shrink-0">
-                   <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 text-slate-400 hover:text-white transition bg-white/5 hover:bg-white/10 rounded-lg" title="View Original"><ExternalLink size={18}/></button>
-                   <button onClick={() => setSelectedId(null)} className="p-2 text-slate-400 hover:text-white transition bg-white/5 hover:bg-white/10 rounded-lg" title="Close"><X size={18}/></button>
+                   <button onClick={() => window.open(selectedImage.url, '_blank')} className="p-2 text-gray-400 hover:text-white transition bg-white/5 hover:bg-white/10 rounded-lg" title="View Original"><ExternalLink size={18}/></button>
+                   <button onClick={() => setSelectedId(null)} className="p-2 text-gray-400 hover:text-white transition bg-white/5 hover:bg-white/10 rounded-lg" title="Close"><X size={18}/></button>
                 </div>
             </div>
 
-            <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
+            <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                 <div className="max-w-3xl mx-auto w-full pb-12">
                     
                     <div className="px-6 pt-8 pb-6">
                         <div className="flex flex-wrap items-center gap-2 mb-3">
                             <span className="px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider">AI Generated</span>
                             {selectedImage.tags?.map((tag: string) => (
-                                <span key={tag} className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[10px] text-slate-400">#{tag}</span>
+                                <span key={tag} className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-400">#{tag}</span>
                             ))}
                         </div>
                         <h2 className="text-3xl font-bold text-white leading-tight tracking-tight">{selectedImage.title}</h2>
@@ -254,8 +247,8 @@ export default function Gallery({ images }: { images: any[] }) {
 
                     <div className="relative w-full flex items-center justify-center group/nav mb-8 px-6">
                         <img src={selectedImage.url} className="w-full h-auto rounded-lg shadow-2xl border border-white/5" alt="Detail" />
-                        {selectedIndex > 0 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/50 text-white/70 hover:text-white hover:bg-slate-900/80 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>}
-                        {selectedIndex < images.length - 1 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/50 text-white/70 hover:text-white hover:bg-slate-900/80 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronRight size={24} /></button>}
+                        {selectedIndex > 0 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>}
+                        {selectedIndex < images.length - 1 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronRight size={24} /></button>}
                     </div>
 
                     <div className="px-6 w-full">
