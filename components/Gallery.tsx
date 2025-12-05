@@ -4,9 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { X, Copy, Check, Search, Sparkles, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash, Languages, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
-// --- 独立的提示词组件 ---
 const PromptBox = ({ title, content, icon: Icon }: { title: string, content: string, icon: any }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = (e: React.MouseEvent) => {
@@ -18,7 +16,6 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
 
   return (
     <div className="mb-6 last:mb-0 w-full">
-      {/* 标题栏 */}
       <div className="flex items-center justify-between mb-2 px-1">
         <div className="flex items-center gap-2">
             <Icon size={16} className="text-indigo-400" />
@@ -31,16 +28,11 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
           {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
         </button>
       </div>
-
-      {/* 内容框 */}
-      <div className="relative group w-full">
-        {/* 🟢 核心修改：增强毛玻璃特效 (backdrop-blur-xl + bg-black/30) */}
-        <div className="w-full rounded-xl bg-black/30 backdrop-blur-xl border border-white/10 p-5 shadow-xl transition-colors hover:border-white/20">
-            <div className="text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
-                <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
-                    {content.replace(/\n/g, '  \n')}
-                </ReactMarkdown>
-            </div>
+      <div className="relative group w-full rounded-xl border border-white/10 bg-black/20 overflow-hidden hover:border-white/20 transition-colors">
+        <div className="px-4 py-4 text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+            <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
+                {content.replace(/\n/g, '  \n')}
+            </ReactMarkdown>
         </div>
       </div>
     </div>
@@ -106,35 +98,29 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 首页 Hero 区域 --- */}
-      {/* 🔴 核心修改：pt-16 (64px)，紧贴顶部导航栏下沿，消除多余留白 */}
+      {/* --- 首页 Hero 区域 (极致紧贴顶部) --- */}
+      {/* 🔴 pt-16: 刚好避开 h-14 的导航栏，只留一点点呼吸感 */}
       <div className="relative pt-16 pb-4 px-4 w-full bg-transparent border-b border-white/5">
-         
-         {/* 背景光效 */}
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-32 left-[20%] w-96 h-96 bg-pink-600 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-4000"></div>
+            <div className="absolute -bottom-32 left-[20%] w-96 h-96 bg-pink-600 rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-blob animation-delay-4000"></div>
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
         <div className="max-w-[1960px] mx-auto relative z-10">
             
-            {/* 第一行：工具栏布局 */}
+            {/* 第一行：标题 + 描述 + 搜索框 (Flex Row) */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
                 
                 {/* 左侧：标题组 */}
-                <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-left overflow-hidden">
-                    <div className="flex items-center gap-2 shrink-0">
-                        <Sparkles size={18} className="text-indigo-400" />
-                        <h1 className="text-xl md:text-2xl font-extrabold tracking-tight text-white whitespace-nowrap">
+                <div className="flex flex-col gap-1 text-left lg:flex-1 min-w-0">
+                    <div className="flex items-center gap-3">
+                        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white leading-tight drop-shadow-xl whitespace-nowrap">
                           Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">Imagination</span>
                         </h1>
                     </div>
-
-                    <div className="hidden sm:block w-px h-6 bg-white/20"></div>
-
-                    <p className="text-gray-400 text-xs sm:text-sm font-light opacity-80 whitespace-nowrap overflow-hidden text-ellipsis max-w-2xl">
+                    <p className="text-gray-400 text-xs sm:text-sm font-light opacity-80 leading-relaxed max-w-2xl">
                       High-quality AI generated imagery & prompts database. Create your masterpiece.
                     </p>
                 </div>
@@ -152,16 +138,14 @@ export default function Gallery({ images }: { images: any[] }) {
                         />
                         {search && <button onClick={() => setSearch("")} className="p-1 rounded-full hover:bg-white/10 text-gray-400 transition mr-1"><X size={12} /></button>}
                         <div className="hidden sm:flex items-center pr-3 pl-2 border-l border-white/10 h-4">
-                            <span className="text-[10px] font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors"><span className="font-bold mr-0.5">{images.length}</span></span>
+                            <span className="text-[10px] font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors"><span className="font-bold mr-0.5">{images.length}</span> CASES</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* 第二行：Tags */}
+            {/* 第二行：Tags 折叠功能 */}
             <div className="border-t border-white/5 pt-3 flex items-start gap-2">
-                <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider py-1.5 shrink-0">Tags</div>
-                
                 <div className={`flex flex-wrap justify-start gap-1.5 transition-all duration-300 overflow-hidden w-full ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[28px]'}`}>
                     {displayTags.map((tag) => (
                         <button 
@@ -221,7 +205,7 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 弹窗 (保持垂直布局) --- */}
+      {/* --- 弹窗 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
@@ -240,7 +224,6 @@ export default function Gallery({ images }: { images: any[] }) {
 
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                 <div className="max-w-3xl mx-auto w-full pb-12">
-                    
                     <div className="px-6 pt-8 pb-6">
                         <div className="flex flex-wrap items-center gap-2 mb-3">
                             <span className="px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider">AI Generated</span>
