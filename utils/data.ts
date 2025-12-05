@@ -322,18 +322,60 @@ export const localData: Record<string, DataRecord> = {
               negative_prompt": "no realism that breaks Y2K aesthetic, no modern 2020s clothing, no messy composition, no blurry face, no distorted hands, no extra limbs, no face warping, no low resolution, no grain, no muted colors, no watermark, no AI artifacts"`,
   },
 
-  "dr-16_seialm": {
-    title: "城市俯视等距3D卡通微缩场景",
-    tags: ["architecture", "cartoon", "landscape", "logo", "minimalist", "nature", "vehicle"],
-    promptCn: `呈现[城市]清晰的45°俯视等距3D卡通微缩场景，展现其最具标志性的地标和建筑元素。使用柔和细腻的纹理、逼真的PBR材质以及柔和自然的灯光和阴影。将当前天气状况直接融入城市环境，营造身临其境的氛围。”
-              使用简洁的极简主义构图，搭配柔和的纯色背景。在顶部中心位置，用粗体大字显示标题“[郑州]”，在其下方放置一个醒目的天气图标，然后是日期（小字）和温度（中字）。
-              所有文字必须居中，间距一致，并且可以略微与建筑物顶部重叠。1080x1080 正方形。`,
-    promptEn: ` Present a clear, 45° top-down isometric miniature 3D cartoon scene of [ZHENGZHOU], featuring its most iconic landmarks and architectural elements. Use soft, refined textures with realistic PBR materials and gentle, lifelike lighting and shadows.
-              Integrate the current weather conditions directly into the city environment to create an immersive atmospheric mood.
-              Use a clean, minimalistic composition with a soft, solid-colored background.
-              At the top-center, place the title “[ZHENGZHOU]” in large bold text, a prominent weather icon beneath it, then the date (small text) and temperature (medium text).
-              All text must be centered with consistent spacing, and may subtly overlap the tops of the buildings.
-              Square 1080x1080 dimension.`,
+  "dr-16_zrokdc": {
+    title: "9种照片专业打光效果",
+    tags: ["portrait", "character", "landscape", ],
+    promptCn: `编辑场景，3x3网格布局，冷灰色无缝背景。
+              人物（面部特征与上传图片完全一致）身穿炭灰色无袖连衣裙。
+              灯光：大型顶置柔光箱，轻微侧向反射光。
+              照片包括：1. 脸颊和颈部特写，前景手指虚化（85mm，f/1. 8) ；
+              2. 目光锁定镜头，可见顶部反光（85mm，f/2. 0) ；
+              3. 单色下巴托手肖像，画面填充强烈（50mm，f/2.2）；
+              4. 透过模糊的肩带拍摄的半遮肩照（85mm，f/2. 0) ；
+              5. 正面特写，面部阴影交错（50mm，f/2.5）；
+              6. 斜角拍摄的原始人像，头发蓬乱（85mm，f/2.2）；
+              7. 双手置于锁骨附近的特写（50mm，f/3.2）；
+              8. 坐姿半身侧面照，画面边缘虚化（35mm，f/4.5）；
+              9. 侧面微距照，单颗水滴高光（85mm，f/1.9）。
+              原始素材，平滑对比度，编辑柔化效果。`,
+    promptEn: `Editorial 3x3 grid in a cool-grey seamless backdrop. 
+              Character (face characteristics 100% same as uploaded image) wearing a charcoal sleeveless dress. 
+              Lighting: large overhead softbox, faint side bounce. 
+              Shots include: 1. tight cheek + neck close-up with blurred finger foreground (85mm, f/1.8); 
+              2. eyes locked to lens, top-light reflection visible (85mm, f/2.0); 
+              3. monochrome chin-on-hand portrait with strong frame fill (50mm, f/2.2); 
+              4. half-obscured over-shoulder shot through blurred dress strap (85mm, f/2.0); 
+              5. head-on close-up with intersecting shadows across face (50mm, f/2.5); 
+              6. angled raw portrait with tousled hair (85mm, f/2.2); 
+              7. tight detail of hands resting near collarbone (50mm, f/3.2); 
+              8. seated half-body profile with blurred frame edges (35mm, f/4.5); 
+              9. profile macro with single water droplet highlight (85mm, f/1.9). 
+              RAW, smooth contrast, editorial softness.`,
+  },
+
+  "dr-17_i1ol9s": {
+    title: "一张超逼真的8K人像",
+    tags: ["portrait"],
+    promptCn: `创作一张超逼真的8K人像，人物站在深红色背景前。
+              她五官轮廓分明，一头凌乱的深色头发，表情自信而略带锐利。
+              她身穿黑色西装外套，内搭白色衬衫，领口微微敞开，系着一条红色条纹网状领带。
+              无限免费：戏剧性的红黑光影突显了她脸部、下颌和颈部的轮廓，营造出电影般的震撼氛围。
+              请勿修改面部特征，并保持头部姿势不变。`,
+    promptEn: ` Create an Ultra-realistic 8k portrait, standing against a deep red background. 
+              She has sharp facial features, messy styled dark hair, and a confident, slightly intense expression. 
+              She is wearing a black suits jacket over a white shirt with the collar slightly open paired with a net red stripped tie 
+              Unlimited Free :Dramatic red and black lighting highlights the contour of her face, jawline, and neck creating a cinematic powerful and moody atmosphere.
+              Please do not alter facial features and leave head positioning as is.`,
+  },
+
+  "dr-18_a1lrli": {
+    title: "大幅的油画肖像",
+    tags: ["fashion","interior","landscape","nature","photography","portrait"],
+    promptCn: `使用上传的照片作为面部参考，绘制背景中的大幅油画肖像和前景中的全身女性形象。创作一个时尚的电影场景：一位女性自信地坐在她豪华私人办公室的桌子上。她身着宽松的粉彩色连衣裙或宽松的浅色套装，优雅中透着一丝大胆。
+              背景是一幅同一位女性的巨幅艺术肖像，以富有表现力的粉彩色笔触——粉色、桃色、米色——绘制而成，动感流畅的笔触营造出灵动的氛围。柔和的日光，时尚大片的风格，简洁的构图。签名：Jin Cen`,
+    promptEn: ` Use the uploaded photo as the face reference for both the large painted portrait in the background and the full-body woman in the foreground. Create a stylish cinematic scene with a woman sitting confidently on the table in her personal luxury office room. 
+              She wears a loose pastel-toned dress or an oversized soft-colored suit, blending elegance and subtle boldness.The background features a huge artistic portrait of the same woman, painted with expressive pastel brushstrokes — pink, peach, beige — dynamic, sweeping strokes that create movement. 
+              Soft daylight, fashion-editorial mood, clean composition.Signature: Jin Cen`,
   },
   
 };
