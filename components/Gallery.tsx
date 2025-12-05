@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { X, Copy, Check, Search, Sparkles, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash, Languages, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
+// 提示词组件 (固定高度滚动，不折叠)
 const PromptBox = ({ title, content, icon: Icon }: { title: string, content: string, icon: any }) => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -93,58 +94,72 @@ export default function Gallery({ images }: { images: any[] }) {
     if (type === 'default') { setCopiedDefault(true); setTimeout(() => setCopiedDefault(false), 2000); }
   };
 
-  const defaultTags = ['Portrait', 'Cyberpunk', 'Anime', '3D Render', 'Logo Design', 'Chinese Style', 'Architecture', 'Sci-Fi'];
+  const defaultTags = ['Portrait', 'Cyberpunk', 'Anime', '3D Render', 'Logo Design', 'Chinese Style', 'Architecture', 'Sci-Fi', 'Game Art', 'Minimalist'];
   const displayTags = allTags.length > 0 ? allTags : defaultTags;
 
   return (
     <>
-      {/* --- 首页 Hero 区域 (极致紧贴顶部) --- */}
-      {/* 🔴 pt-16: 刚好避开 h-14 的导航栏，只留一点点呼吸感 */}
-      <div className="relative pt-16 pb-4 px-4 w-full bg-transparent border-b border-white/5">
+      {/* --- 首页 顶部区域 (Logo + 标题 + 搜索) --- */}
+      <div className="relative pt-6 pb-4 px-4 w-full bg-transparent border-b border-white/5">
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-blob"></div>
             <div className="absolute top-[-10%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-32 left-[20%] w-96 h-96 bg-pink-600 rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-blob animation-delay-4000"></div>
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
         <div className="max-w-[1960px] mx-auto relative z-10">
             
-            {/* 第一行：标题 + 描述 + 搜索框 (Flex Row) */}
+            {/* 第一行：Logo + 标题 | 搜索 */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
                 
-                {/* 左侧：标题组 */}
-                <div className="flex flex-col gap-1 text-left lg:flex-1 min-w-0">
-                    <div className="flex items-center gap-3">
-                        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white leading-tight drop-shadow-xl whitespace-nowrap">
-                          Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">Imagination</span>
-                        </h1>
+                {/* 左侧组合：Logo + 分割线 + 标题/描述 */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-6">
+                    
+                    {/* Logo & Brand */}
+                    <div className="flex items-center gap-3 shrink-0">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20">
+                           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-md">
+                             <path d="M15 12H9V16H15C17.2091 16 19 14.2091 19 12C19 9.79086 17.2091 8 15 8H9V12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                             <path d="M6 4V20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                           </svg>
+                        </div>
+                        <span className="text-xl font-bold tracking-tight text-white font-sans">Doro Gallery</span>
                     </div>
-                    <p className="text-gray-400 text-xs sm:text-sm font-light opacity-80 leading-relaxed max-w-2xl">
-                      High-quality AI generated imagery & prompts database. Create your masterpiece.
-                    </p>
+
+                    {/* 分割线 (大屏显示) */}
+                    <div className="hidden sm:block w-px h-8 bg-white/10"></div>
+
+                    {/* Slogan / Title */}
+                    <div className="flex flex-col justify-center">
+                        <h1 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                           Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">Infinite Imagination</span>
+                        </h1>
+                        <p className="text-[10px] sm:text-xs text-gray-500 font-light max-w-md hidden sm:block">
+                           High-quality AI generated imagery & prompts database.
+                        </p>
+                    </div>
                 </div>
 
                 {/* 右侧：搜索框 */}
-                <div className="w-full sm:w-auto lg:w-[300px] relative group z-10 shrink-0">
-                    <div className="relative flex items-center bg-[#121212]/90 backdrop-blur-xl rounded-lg p-1 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-lg">
-                        <div className="pl-3 text-gray-500"><Search className="w-3.5 h-3.5" /></div>
+                <div className="w-full sm:w-auto lg:w-[320px] relative group z-10 shrink-0">
+                    <div className="relative flex items-center bg-[#121212]/80 backdrop-blur-xl rounded-lg p-1 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all shadow-lg">
+                        <div className="pl-3 text-gray-500"><Search className="w-4 h-4" /></div>
                         <input 
                             type="text" 
-                            placeholder="Search..." 
-                            className="w-full bg-transparent px-2 py-1.5 text-white placeholder-gray-600 focus:outline-none text-xs sm:text-sm"
+                            placeholder="Search prompts..." 
+                            className="w-full bg-transparent px-3 py-1.5 text-white placeholder-gray-600 focus:outline-none text-sm"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
                         {search && <button onClick={() => setSearch("")} className="p-1 rounded-full hover:bg-white/10 text-gray-400 transition mr-1"><X size={12} /></button>}
                         <div className="hidden sm:flex items-center pr-3 pl-2 border-l border-white/10 h-4">
-                            <span className="text-[10px] font-mono text-gray-500 whitespace-nowrap group-focus-within:text-indigo-400 transition-colors"><span className="font-bold mr-0.5">{images.length}</span> CASES</span>
+                            <span className="text-[10px] font-mono text-gray-500 whitespace-nowrap"><span className="font-bold mr-0.5">{images.length}</span></span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* 第二行：Tags 折叠功能 */}
+            {/* 第二行：Tags 全宽 + 折叠 */}
             <div className="border-t border-white/5 pt-3 flex items-start gap-2">
                 <div className={`flex flex-wrap justify-start gap-1.5 transition-all duration-300 overflow-hidden w-full ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[28px]'}`}>
                     {displayTags.map((tag) => (
@@ -159,16 +174,14 @@ export default function Gallery({ images }: { images: any[] }) {
                         </button>
                     ))}
                 </div>
-
                 <button 
                     onClick={() => setIsTagsExpanded(!isTagsExpanded)}
                     className="p-1 rounded-md bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-colors shrink-0 mt-0"
-                    title={isTagsExpanded ? "Collapse" : "Expand"}
+                    title={isTagsExpanded ? "Collapse tags" : "Show all tags"}
                 >
                     {isTagsExpanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
                 </button>
             </div>
-
         </div>
       </div>
 
@@ -212,6 +225,7 @@ export default function Gallery({ images }: { images: any[] }) {
           
           <div className="relative w-full max-w-4xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
+            {/* 顶部 */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#18181b]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
                 <div className="flex items-center gap-2 text-sm font-bold text-gray-400">
                     <span className="text-indigo-400">Doro Gallery</span> / Preview
@@ -222,8 +236,10 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
+            {/* 滚动区域 */}
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                 <div className="max-w-3xl mx-auto w-full pb-12">
+                    
                     <div className="px-6 pt-8 pb-6">
                         <div className="flex flex-wrap items-center gap-2 mb-3">
                             <span className="px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider">AI Generated</span>
