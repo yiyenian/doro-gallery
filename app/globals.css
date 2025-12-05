@@ -8,9 +8,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* 🟢 核心修改：使用 Slate-950 到 Slate-900 的渐变，比纯黑更有质感 */
-  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  /* 🟢 改为深邃的午夜蓝渐变，比纯黑更有活力 */
+  background: radial-gradient(circle at center, #1e1b4b 0%, #020617 100%);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 img {
@@ -18,23 +19,35 @@ img {
   max-width: 100%;
 }
 
-/* 动画定义 */
+/* --- 升级版：五彩流动动画 --- */
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
+  33% { transform: translate(50px, -50px) scale(1.2); }
+  66% { transform: translate(-40px, 20px) scale(0.8); }
   100% { transform: translate(0px, 0px) scale(1); }
 }
 
-.animate-blob {
-  animation: blob 10s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+@keyframes tilt {
+  0%, 50%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
 }
 
+.animate-blob {
+  animation: blob 15s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-tilt {
+  animation: tilt 10s infinite linear;
+}
+
+/* 延迟类 */
 .animation-delay-2000 { animation-delay: 2s; }
 .animation-delay-4000 { animation-delay: 4s; }
+.animation-delay-6000 { animation-delay: 6s; }
 
-/* 滚动条美化 - 颜色调亮 */
-::-webkit-scrollbar { width: 8px; height: 8px; }
+/* 滚动条样式 */
+::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); }
