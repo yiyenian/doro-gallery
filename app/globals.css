@@ -8,8 +8,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* 🟢 修改：从 #050505/#121212 改为 #18181b (更柔和的高级深灰) */
-  background-color: #18181b;
+  /* 🟢 核心修改：使用 Slate-950 到 Slate-900 的渐变，比纯黑更有质感 */
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
   min-height: 100vh;
 }
 
@@ -18,7 +18,7 @@ img {
   max-width: 100%;
 }
 
-/* 动画定义 (保持不变) */
+/* 动画定义 */
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(30px, -50px) scale(1.1); }
@@ -33,8 +33,8 @@ img {
 .animation-delay-2000 { animation-delay: 2s; }
 .animation-delay-4000 { animation-delay: 4s; }
 
-/* 滚动条美化 */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: #18181b; }
-::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #52525b; }
+/* 滚动条美化 - 颜色调亮 */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
