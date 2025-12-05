@@ -251,75 +251,89 @@ export const localData: Record<string, DataRecord> = {
     title: "多彩剪贴簿海报风格",
     tags: ["fashion", "landscape", "photography", "nature", "photography", "portrait", "poster", "retro"],
     promptCn: `facelock_identity："true",
-    “准确率”： “100%”，
-    场景：“色彩缤纷的Y2K剪贴簿海报美学，鲜艳的贴纸，多个人物穿着相同的服装和发型，摆出不同的姿势，并配以剪纸，色彩斑斓的笔触和线条，无框拼贴风格。包含：手指比出心形的特写镜头，全身蹲姿托腮手持白色拍立得相机，中景吹着粉色泡泡糖抚摸脸颊，中景抱着猫优雅微笑，优雅地坐着眨着一只眼睛比出和平手势，以及手持雏菊的中景。全息纹理、柔和的渐变色、闪光点缀、趣味涂鸦、杂志剪贴图案，布局看似混乱却又平衡，极具艺术性和视觉吸引力。”
-    主主题：{
-    “描述”：“一位年轻的千禧年风格女性，是剪贴簿拼贴画的中心焦点。”
-    "style_pose": "俏皮自信的Y2K姿势——微微侧身扭胯，一只手拿着镜头光晕钥匙扣，脸朝向镜头，表情可爱又酷，微微嘟嘴，散发出2000年代初期的抓拍氛围。"
-    全套服装”： {
-    上衣：浅色短款宽松毛衣，带有刺绣贴片。
-    “下装”：“粉色裙子配白色腰带”，
-    “袜子”：“白色短袜，带有彩色粉彩条纹”，
-    “鞋子”：“白色运动鞋”，
-    “配件”： [
-    “彩色塑料手镯”
-    “厚重的彩色戒指”，
-    “闪亮的肚链”
-    “发型”：
-    "type": "Y2K 半上半下",
-    “细节”：“粉彩花朵发夹，前额的细碎发丝，深棕色波浪卷发，发梢带有泡泡糖粉色，2000 年代初期的标志性造型。”
-    additional_visuals：
-    “心形、星星和蝴蝶贴纸”
-    “复古闪光”，
-    “宝丽来相框”，
-    “霓虹轮廓”，
-    “涂鸦边框”
-    “杂志剪报上的文字：‘太可爱了！’、‘199X！’、‘少女心’”
-    “柔和的灯光”，
-    “光泽梦幻的复古光芒”，
-    “超美剪贴簿布局”
-    摄影渲染：{
-    "color_grading": "电影霓虹 Y2K"
-    “lighting”: “柔和闪光灯照明”,“skin_texture”: “光滑光泽表面”,
-    “渲染”：“高细节超写实Y2K剪贴簿色调”，
-    “质量”: “8K”
-    “构图”：“完美平衡且富有艺术性”
-    negative_prompt": "不追求打破 Y2K 美学的写实效果，不穿 2020 年代的现代服装，不做凌乱的构图，不模糊的脸，不扭曲的手，不添加额外的肢体，不扭曲脸部，不降低分辨率，不添加颗粒感，不降低色彩饱和度，不添加水印，不添加 AI 伪影"`,
-    promptEn: `facelock_identity": "true",
-    "accuracy": "100%",
-    scene"Colorful Y2K scrapbook poster aesthetic, vibrant stickers, multiple subjects wearing the same outfit and hairstyle with different poses and cutouts, colorful strokes and lines, frameless collage style. Includes: close-up shot with heart-shape fingers, full-body squatting pose supporting chin while holding a white polaroid camera, mid-shot touching cheek while blowing pink bubblegum, mid-shot smiling elegantly while holding a cat ,seated elegantly with one eye winking and peace sign, and mid-shot holding daisy flowers. Holographic textures, pastel gradients, glitter accents, playful doodles, magazine cut-out graphics, chaotic yet balanced layout, extremely artistic and visually engaging",
-    main_subject": {
-    "description": "A young Y2K-styled woman as the main focus in the center of the scrapbook collage.",
-    "style_pose": "Playful and confident Y2K pose — slight side hip pop, one hand holding a lens-flare keychain, face toward the camera with a cute-cool expression, slight pout, candid early-2000s photo vibe."
-    outfit": {
-    "top": "Cropped oversized sweater in pastel color with embroidered patches",
-    "bottom": "pastel skirt with a white belt",
-    "socks": "White ankle socks with colorful pastel stripes",
-    "shoes": "white sneakers",
-    "accessories": [
-    "Colorful plastic bracelets",
-    "Chunky colorful rings",
-    "Sparkling belly chain",
-    "hairstyle":
-    "type": "Y2K half-up half-down",
-    "details": "Pastel flowers clips,thin front tendrils, wavy dark brown hair with bubblegum-pink tint on the lower strands, iconic early-2000s look."
-    additional_visuals":
-    "Heart, star, and butterfly stickers",
-    "Retro sparkles",
-    "Polaroid frames",
-    "Neon outlines",
-    "Doodle borders",
-    "Magazine cutout texts: 'SO CUTE!', '199X!', 'GIRL VIBES'",
-    "Pastel lighting",
-    "Glossy dreamy retro glow",
-    "Ultra-aesthetic scrapbook layout"
-    photography_rendering": {
-    "color_grading": "Cinematic neon Y2K",
-    "lighting": "Soft flash lighting","skin_texture": "Smooth glossy finish",
-    "rendering": "High-detail hyperrealistic Y2K scrapbook tone",
-    "quality": "8K",
-    "composition": "Perfectly balanced and artistic"
-    negative_prompt": "no realism that breaks Y2K aesthetic, no modern 2020s clothing, no messy composition, no blurry face, no distorted hands, no extra limbs, no face warping, no low resolution, no grain, no muted colors, no watermark, no AI artifacts"`,
+              “准确率”： “100%”，
+              场景：“色彩缤纷的Y2K剪贴簿海报美学，鲜艳的贴纸，多个人物穿着相同的服装和发型，摆出不同的姿势，并配以剪纸，色彩斑斓的笔触和线条，无框拼贴风格。包含：手指比出心形的特写镜头，全身蹲姿托腮手持白色拍立得相机，中景吹着粉色泡泡糖抚摸脸颊，中景抱着猫优雅微笑，优雅地坐着眨着一只眼睛比出和平手势，以及手持雏菊的中景。全息纹理、柔和的渐变色、闪光点缀、趣味涂鸦、杂志剪贴图案，布局看似混乱却又平衡，极具艺术性和视觉吸引力。”
+              主主题：{
+              “描述”：“一位年轻的千禧年风格女性，是剪贴簿拼贴画的中心焦点。”
+              "style_pose": "俏皮自信的Y2K姿势——微微侧身扭胯，一只手拿着镜头光晕钥匙扣，脸朝向镜头，表情可爱又酷，微微嘟嘴，散发出2000年代初期的抓拍氛围。"
+              全套服装”： {
+              上衣：浅色短款宽松毛衣，带有刺绣贴片。
+              “下装”：“粉色裙子配白色腰带”，
+              “袜子”：“白色短袜，带有彩色粉彩条纹”，
+              “鞋子”：“白色运动鞋”，
+              “配件”： [
+              “彩色塑料手镯”
+              “厚重的彩色戒指”，
+              “闪亮的肚链”
+              “发型”：
+              "type": "Y2K 半上半下",
+              “细节”：“粉彩花朵发夹，前额的细碎发丝，深棕色波浪卷发，发梢带有泡泡糖粉色，2000 年代初期的标志性造型。”
+              additional_visuals：
+              “心形、星星和蝴蝶贴纸”
+              “复古闪光”，
+              “宝丽来相框”，
+              “霓虹轮廓”，
+              “涂鸦边框”
+              “杂志剪报上的文字：‘太可爱了！’、‘199X！’、‘少女心’”
+              “柔和的灯光”，
+              “光泽梦幻的复古光芒”，
+              “超美剪贴簿布局”
+              摄影渲染：{
+              "color_grading": "电影霓虹 Y2K"
+              “lighting”: “柔和闪光灯照明”,“skin_texture”: “光滑光泽表面”,
+              “渲染”：“高细节超写实Y2K剪贴簿色调”，
+              “质量”: “8K”
+              “构图”：“完美平衡且富有艺术性”
+              negative_prompt": "不追求打破 Y2K 美学的写实效果，不穿 2020 年代的现代服装，不做凌乱的构图，不模糊的脸，不扭曲的手，不添加额外的肢体，不扭曲脸部，不降低分辨率，不添加颗粒感，不降低色彩饱和度，不添加水印，不添加 AI 伪影"`,
+              promptEn: `facelock_identity": "true",
+              "accuracy": "100%",
+              scene"Colorful Y2K scrapbook poster aesthetic, vibrant stickers, multiple subjects wearing the same outfit and hairstyle with different poses and cutouts, colorful strokes and lines, frameless collage style. Includes: close-up shot with heart-shape fingers, full-body squatting pose supporting chin while holding a white polaroid camera, mid-shot touching cheek while blowing pink bubblegum, mid-shot smiling elegantly while holding a cat ,seated elegantly with one eye winking and peace sign, and mid-shot holding daisy flowers. Holographic textures, pastel gradients, glitter accents, playful doodles, magazine cut-out graphics, chaotic yet balanced layout, extremely artistic and visually engaging",
+              main_subject": {
+              "description": "A young Y2K-styled woman as the main focus in the center of the scrapbook collage.",
+              "style_pose": "Playful and confident Y2K pose — slight side hip pop, one hand holding a lens-flare keychain, face toward the camera with a cute-cool expression, slight pout, candid early-2000s photo vibe."
+              outfit": {
+              "top": "Cropped oversized sweater in pastel color with embroidered patches",
+              "bottom": "pastel skirt with a white belt",
+              "socks": "White ankle socks with colorful pastel stripes",
+              "shoes": "white sneakers",
+              "accessories": [
+              "Colorful plastic bracelets",
+              "Chunky colorful rings",
+              "Sparkling belly chain",
+              "hairstyle":
+              "type": "Y2K half-up half-down",
+              "details": "Pastel flowers clips,thin front tendrils, wavy dark brown hair with bubblegum-pink tint on the lower strands, iconic early-2000s look."
+              additional_visuals":
+              "Heart, star, and butterfly stickers",
+              "Retro sparkles",
+              "Polaroid frames",
+              "Neon outlines",
+              "Doodle borders",
+              "Magazine cutout texts: 'SO CUTE!', '199X!', 'GIRL VIBES'",
+              "Pastel lighting",
+              "Glossy dreamy retro glow",
+              "Ultra-aesthetic scrapbook layout"
+              photography_rendering": {
+              "color_grading": "Cinematic neon Y2K",
+              "lighting": "Soft flash lighting","skin_texture": "Smooth glossy finish",
+              "rendering": "High-detail hyperrealistic Y2K scrapbook tone",
+              "quality": "8K",
+              "composition": "Perfectly balanced and artistic"
+              negative_prompt": "no realism that breaks Y2K aesthetic, no modern 2020s clothing, no messy composition, no blurry face, no distorted hands, no extra limbs, no face warping, no low resolution, no grain, no muted colors, no watermark, no AI artifacts"`,
   },
 
+  "dr-14_seialm": {
+    title: "城市俯视等距3D卡通微缩场景",
+    tags: ["architecture", "cartoon", "landscape", "logo", "minimalist", "nature", "vehicle"],
+    promptCn: `呈现[城市]清晰的45°俯视等距3D卡通微缩场景，展现其最具标志性的地标和建筑元素。使用柔和细腻的纹理、逼真的PBR材质以及柔和自然的灯光和阴影。将当前天气状况直接融入城市环境，营造身临其境的氛围。”
+              使用简洁的极简主义构图，搭配柔和的纯色背景。在顶部中心位置，用粗体大字显示标题“[郑州]”，在其下方放置一个醒目的天气图标，然后是日期（小字）和温度（中字）。
+              所有文字必须居中，间距一致，并且可以略微与建筑物顶部重叠。1080x1080 正方形。`,
+    promptEn: ` Present a clear, 45° top-down isometric miniature 3D cartoon scene of [ZHENGZHOU], featuring its most iconic landmarks and architectural elements. Use soft, refined textures with realistic PBR materials and gentle, lifelike lighting and shadows.
+              Integrate the current weather conditions directly into the city environment to create an immersive atmospheric mood.
+              Use a clean, minimalistic composition with a soft, solid-colored background.
+              At the top-center, place the title “[ZHENGZHOU]” in large bold text, a prominent weather icon beneath it, then the date (small text) and temperature (medium text).
+              All text must be centered with consistent spacing, and may subtly overlap the tops of the buildings.
+              Square 1080x1080 dimension.`,
+  },
+  
 };
