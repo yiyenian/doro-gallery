@@ -98,10 +98,10 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 🔴 浅色版 Hero (吸顶) --- */}
-      {/* bg-white/80: 白色半透明毛玻璃 */}
+      {/* --- Hero 区域 (浅色吸顶) --- */}
       <div className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200/60 shadow-sm transition-all">
          
+         {/* 背景光效 */}
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-30">
             <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-200/50 rounded-full blur-[100px]"></div>
             <div className="absolute top-0 right-[20%] w-96 h-96 bg-cyan-200/50 rounded-full blur-[100px]"></div>
@@ -109,11 +109,13 @@ export default function Gallery({ images }: { images: any[] }) {
 
         <div className="max-w-[1960px] mx-auto px-4 sm:px-6 pt-4 pb-3">
             
-            {/* 第一行 */}
+            {/* 第一行：全能通栏 (Flex Row) */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
                 
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-left">
-                    {/* Logo (深色) */}
+                {/* 左侧组合：Logo | 标题 | 描述 */}
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-left overflow-hidden">
+                    
+                    {/* Logo */}
                     <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-purple-600 shadow-md shadow-indigo-200">
                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
@@ -124,22 +126,28 @@ export default function Gallery({ images }: { images: any[] }) {
                         <span className="text-lg font-bold tracking-tight text-slate-900 font-sans">Doro Gallery</span>
                     </div>
 
-                    <div className="hidden sm:block w-px h-6 bg-slate-200 shrink-0"></div>
+                    {/* 分割线 1 */}
+                    <div className="hidden sm:block w-px h-5 bg-slate-300 shrink-0"></div>
 
-                    <div className="flex flex-col justify-center">
-                        <div className="flex items-baseline gap-2">
-                            <h1 className="text-sm sm:text-base font-bold tracking-tight text-slate-800 whitespace-nowrap">
-                              Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">Imagination</span>
-                            </h1>
-                        </div>
-                        <p className="text-[10px] text-slate-500 font-medium max-w-lg leading-tight hidden sm:block mt-0.5">
-                           High-quality AI generated imagery & prompts database.
+                    {/* 标题 & 描述 (同一行，字体加粗) */}
+                    <div className="flex items-center gap-3 overflow-hidden whitespace-nowrap">
+                        {/* 标题 */}
+                        <h1 className="text-base sm:text-lg font-extrabold tracking-tight text-slate-800 shrink-0">
+                          Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">Imagination</span>
+                        </h1>
+
+                        {/* 分割线 2 */}
+                        <span className="text-slate-300 text-lg font-light hidden md:block">|</span>
+
+                        {/* 🔴 核心修改：描述文字样式升级 (加粗、变大、黑色) */}
+                        <p className="text-sm sm:text-base font-bold text-slate-700 truncate hidden md:block">
+                          High-quality AI generated imagery & prompts database.
                         </p>
                     </div>
                 </div>
 
-                {/* 搜索框 (白底灰边) */}
-                <div className="w-full sm:w-auto lg:w-[300px] relative group shrink-0">
+                {/* 右侧：搜索框 */}
+                <div className="w-full sm:w-auto lg:w-[280px] relative group shrink-0">
                     <div className="relative flex items-center bg-white rounded-lg border border-slate-200 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 transition-all h-9 shadow-sm">
                         <div className="pl-2.5 text-slate-400"><Search className="w-3.5 h-3.5" /></div>
                         <input 
@@ -201,7 +209,6 @@ export default function Gallery({ images }: { images: any[] }) {
                     className="w-full h-auto object-cover transform transition will-change-auto"
                     loading="lazy"
                 />
-                {/* 底部遮罩：改为白色渐变 */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white/95 via-white/70 to-transparent pt-12 pb-4 px-4">
                     <h3 className="font-bold text-slate-800 text-xs sm:text-sm line-clamp-1 tracking-wide">
                         {image.title}
@@ -249,12 +256,10 @@ export default function Gallery({ images }: { images: any[] }) {
                         <h2 className="text-3xl font-bold text-slate-900 leading-tight tracking-tight">{selectedImage.title}</h2>
                     </div>
 
-                    {/* 图片背景改为浅灰格纹，突出图片 */}
                     <div className="relative w-full flex items-center justify-center group/nav mb-8 px-6">
                         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5"></div>
                         <img src={selectedImage.url} className="w-full h-auto rounded-lg shadow-2xl shadow-slate-300/50 border border-slate-200/50 z-10" alt="Detail" />
                         
-                        {/* 导航按钮：深色半透明 */}
                         {selectedIndex > 0 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/80 text-slate-700 hover:text-slate-900 hover:bg-white shadow-lg border border-slate-200 transition z-20 backdrop-blur-md"><ChevronLeft size={24} /></button>}
                         {selectedIndex < images.length - 1 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/80 text-slate-700 hover:text-slate-900 hover:bg-white shadow-lg border border-slate-200 transition z-20 backdrop-blur-md"><ChevronRight size={24} /></button>}
                     </div>
