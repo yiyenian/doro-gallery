@@ -6,7 +6,6 @@ import ReactMarkdown from 'react-markdown';
 
 // --- 提示词组件 ---
 const PromptBox = ({ title, content, icon: Icon }: { title: string, content: string, icon: any }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = (e: React.MouseEvent) => {
@@ -30,38 +29,12 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
           {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
         </button>
       </div>
-      <div 
-        className={`relative group w-full rounded-2xl border transition-all duration-300 overflow-hidden ${
-            isExpanded 
-            ? 'bg-black/40 border-white/20' 
-            : 'bg-white/5 border-white/10 hover:bg-white/[0.08] cursor-pointer'
-        }`}
-        onClick={() => !isExpanded && setIsExpanded(true)}
-      >
-        <div className={`px-6 pt-5 pb-2 text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words transition-all duration-500 ease-in-out ${
-            isExpanded ? 'max-h-[2000px]' : 'max-h-[100px] overflow-hidden'
-        }`}>
+      <div className="relative group w-full rounded-xl border border-white/10 bg-black/20 overflow-hidden hover:border-white/20 transition-colors">
+        <div className="px-4 py-4 text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
             <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
                 {content.replace(/\n/g, '  \n')}
             </ReactMarkdown>
         </div>
-        {!isExpanded && (
-            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#121212] to-transparent flex items-end justify-center pb-3 pointer-events-none">
-                <div className="flex items-center gap-1 text-[10px] font-bold text-gray-400 bg-black/80 px-3 py-1.5 rounded-full border border-white/10 shadow-lg backdrop-blur-md pointer-events-auto transition-transform group-hover:scale-105 hover:text-white">
-                    <ChevronDown size={12} /> Expand
-                </div>
-            </div>
-        )}
-        {isExpanded && (
-            <div className="flex justify-center pb-4 pt-2">
-                 <button 
-                    onClick={(e) => { e.stopPropagation(); setIsExpanded(false); }}
-                    className="flex items-center gap-1 text-[10px] font-bold text-gray-500 hover:text-white px-4 py-1.5 rounded-full hover:bg-white/10 transition-colors"
-                 >
-                    <ChevronUp size={12} /> Collapse
-                 </button>
-            </div>
-        )}
       </div>
     </div>
   );
@@ -126,18 +99,27 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 🔴 Hero 区域 (固定吸顶) --- */}
-      {/* sticky top-0: 核心，让这一块在滚动时吸附在顶部 */}
-      {/* z-50: 保证层级最高，盖住图片列表 */}
-      {/* bg-[#121212]/90: 不透明背景，防止透出下方滚动的文字 */}
-      <div className="sticky top-0 z-50 pt-4 pb-4 px-4 w-full bg-[#121212]/90 backdrop-blur-xl border-b border-white/10 transition-all">
+      {/* --- 🔴 Hero 区域 (吸顶固定版) --- */}
+      {/* sticky top-0: 核心属性，吸附在顶部 
+          z-40: 确保层级高于下方的图片列表
+          bg-[#121212]/95: 不透明背景，遮挡下方滚动内容
+          pt-6: 减小顶部留白，因为没有 Header 了
+      */}
+      <div className="sticky top-0 z-40 pt-6 pb-4 px-4 w-full bg-[#121212]/95 backdrop-blur-xl border-b border-white/10 transition-all shadow-lg">
          
-        <div className="max-w-[1960px] mx-auto">
+         {/* 背景光效 (仅在 Hero 内部显示，随 Hero 滚动/固定) */}
+         <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-50">
+            <div className="absolute top-[-50%] left-[10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-blob"></div>
+            <div className="absolute top-[-50%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-blob animation-delay-2000"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        </div>
+
+        <div className="max-w-[1960px] mx-auto relative z-10">
             
-            {/* --- 第一行：Logo + 标题 + 搜索 --- */}
+            {/* 第一行：Logo + 标题 + 搜索 */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
                 
-                {/* 左侧：Logo & 标题组合 */}
+                {/* 左侧 */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 text-left">
                     {/* Logo */}
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20 shrink-0">
@@ -158,7 +140,7 @@ export default function Gallery({ images }: { images: any[] }) {
                     </div>
                 </div>
 
-                {/* 右侧：搜索框 (靠右) */}
+                {/* 右侧：搜索框 */}
                 <div className="w-full sm:w-auto lg:w-[300px] relative group shrink-0">
                     <div className="relative flex items-center bg-black/40 rounded-lg p-1 ring-1 ring-white/10 focus-within:ring-indigo-500/50 focus-within:ring-2 transition-all">
                         <div className="pl-2 text-gray-500"><Search className="w-3.5 h-3.5" /></div>
@@ -177,7 +159,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
-            {/* --- 第二行：Tags --- */}
+            {/* 第二行：Tags (全宽 + 折叠) */}
             <div className="border-t border-white/5 pt-3 flex items-start gap-2">
                 <div className={`flex flex-wrap justify-start gap-1.5 transition-all duration-300 overflow-hidden w-full ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[28px]'}`}>
                     {displayTags.map((tag) => (
@@ -195,6 +177,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 <button 
                     onClick={() => setIsTagsExpanded(!isTagsExpanded)}
                     className="p-1 rounded-md bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-colors shrink-0 mt-0"
+                    title={isTagsExpanded ? "Collapse tags" : "Show all tags"}
                 >
                     {isTagsExpanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
                 </button>
@@ -203,7 +186,7 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      {/* --- 瀑布流列表 (自动在固定头部下方滚动) --- */}
+      {/* --- 瀑布流列表 --- */}
       <div className="max-w-[1960px] mx-auto px-4 pb-20 pt-6 min-h-[400px]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4">
@@ -236,7 +219,7 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 弹窗 (保持不变) --- */}
+      {/* --- 弹窗 (保持) --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
@@ -255,6 +238,7 @@ export default function Gallery({ images }: { images: any[] }) {
 
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                 <div className="max-w-3xl mx-auto w-full pb-12">
+                    
                     <div className="px-6 pt-8 pb-6">
                         <div className="flex flex-wrap items-center gap-2 mb-3">
                             <span className="px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider">AI Generated</span>
