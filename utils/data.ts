@@ -322,7 +322,7 @@ export const localData: Record<string, DataRecord> = {
               negative_prompt": "no realism that breaks Y2K aesthetic, no modern 2020s clothing, no messy composition, no blurry face, no distorted hands, no extra limbs, no face warping, no low resolution, no grain, no muted colors, no watermark, no AI artifacts"`,
   },
 
-  "dr-14_seialm": {
+  "dr-16_seialm": {
     title: "城市俯视等距3D卡通微缩场景",
     tags: ["architecture", "cartoon", "landscape", "logo", "minimalist", "nature", "vehicle"],
     promptCn: `呈现[城市]清晰的45°俯视等距3D卡通微缩场景，展现其最具标志性的地标和建筑元素。使用柔和细腻的纹理、逼真的PBR材质以及柔和自然的灯光和阴影。将当前天气状况直接融入城市环境，营造身临其境的氛围。”
