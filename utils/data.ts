@@ -394,7 +394,7 @@ export const localData: Record<string, DataRecord> = {
 
   "dr-20_xi5sj0": {
     title: "城市户外LED屏上的3D视觉效果",
-    tags: ["city","Illustration"，,"design","3D"],
+    tags: ["city","Illustration","design","3D"],
     promptCn: `创作一张超逼真的8一块巨大的L型裸眼3D LED屏幕醒目地矗立在繁华的城市十字路口，其标志性的建筑风格令人联想起东京新宿或成都太古里。
               屏幕上播放着引人入胜的裸眼3D动画，[场景描述]。人物和物体拥有惊人的立体感，仿佛突破屏幕的边界，向外延伸或栩栩如生地悬浮在半空中。
               在逼真的日光条件下，这些元素在屏幕表面和周围的建筑物上投射出逼真的阴影。动画细节丰富，色彩鲜艳，与城市环境和头顶明亮的天空完美融合。
