@@ -405,7 +405,7 @@ export const localData: Record<string, DataRecord> = {
               The characters and objects possess striking depth and appear to break through the screen’s boundaries, extending outward or floating vividly in mid-air. 
               Under realistic daylight conditions, these elements cast lifelike shadows onto the screen’s surface and surrounding buildings. 
               Rich in intricate detail and vibrant colors, the animation seamlessly integrates with the urban setting and the bright sky overhead.
-              ---- Scene Description:
+              Scene Description:
               [A giant, adorable panda teases passersby with its paws, its furry paws and curious face realistically extending into the space surrounding the screen.]`,
   },
 
