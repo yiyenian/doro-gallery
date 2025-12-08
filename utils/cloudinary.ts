@@ -22,30 +22,30 @@ export async function getImages() {
       const publicId = resource.public_id;
       const cleanId = publicId.split('/').pop(); 
       const noExtId = cleanId?.split('.')[0];
-      const localInfo = localData[publicId] || localData[cleanId] || localData[noExtId] || {};
 
-      let title = localInfo.title || resource.context?.caption || resource.context?.custom?.caption;
+      // 🔴 核心修复：添加 ': any'，告诉 TS 这是一个任意对象，不要报错
+      const localInfo: any = localData[publicId] || 
+                             localData[cleanId] || 
+                             localData[noExtId] || 
+                             {};
+
+      // 标题逻辑
+      let title = localInfo.title || 
+                  resource.context?.caption || 
+                  resource.context?.custom?.caption;
+
       if (!title) {
         title = noExtId ? noExtId.replace(/[-_]/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()) : "Untitled";
       }
 
-      const prompt = localInfo.prompt || resource.context?.alt || resource.context?.description || "No prompt available";
-      const tags = localInfo.tags || resource.tags || [];
+      // 提示词逻辑
+      const prompt = localInfo.prompt || 
+                     resource.context?.alt || 
+                     resource.context?.description || 
+                     "No prompt available";
 
-      // 🔴 核心优化：智能压缩链接生成
-      // 我们不直接用 resource.secure_url (那是原图)
-      // 而是手动构造一个带参数的 URL
-      // f_auto: 自动格式 (WebP/AVIF)
-      // q_auto: 智能压缩
-      // w_1920: 限制最大宽度为 1920 (足够 4K 屏看了，但体积小很多)
-      // c_limit: 保持比例缩放，不裁剪
-      const optimizedUrl = cloudinary.url(publicId, {
-        fetch_format: 'auto',
-        quality: 'auto',
-        width: 1920, 
-        crop: 'limit',
-        secure: true
-      });
+      // 标签
+      const tags = localInfo.tags || resource.tags || [];
 
       return {
         id: index,
@@ -55,11 +55,11 @@ export async function getImages() {
         height: resource.height,
         title: title,
         prompt: prompt,
+        // 获取双语提示词 (如果有)
         promptCn: localInfo.promptCn || null,
         promptEn: localInfo.promptEn || null,
         tags: tags,
-        // 🔴 将优化后的 URL 传给前端
-        url: optimizedUrl, 
+        url: resource.secure_url,
       };
     });
   } catch (error) {
