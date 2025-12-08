@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { X, Copy, Check, Search, Sparkles, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash, Languages, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
-// --- 提示词组件 (毛玻璃背景 + 内部滚动) ---
+// --- 提示词组件 (固定高度 + 内部滚动) ---
 const PromptBox = ({ title, content, icon: Icon }: { title: string, content: string, icon: any }) => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -29,15 +29,11 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
           {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
         </button>
       </div>
-      
-      <div className="relative group w-full">
-        {/* 🟢 修改：统一毛玻璃风格 bg-white/5 + backdrop-blur */}
-        <div className="w-full rounded-xl bg-white/5 backdrop-blur-md border border-white/10 p-5 shadow-inner transition-colors hover:bg-white/[0.08]">
-            <div className="px-1 text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2">
-                <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
-                    {content.replace(/\n/g, '  \n')}
-                </ReactMarkdown>
-            </div>
+      <div className="relative group w-full rounded-xl border border-white/10 bg-black/20 overflow-hidden hover:border-white/20 transition-colors">
+        <div className="px-4 py-4 text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+            <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
+                {content.replace(/\n/g, '  \n')}
+            </ReactMarkdown>
         </div>
       </div>
     </div>
@@ -50,8 +46,6 @@ export default function Gallery({ images }: { images: any[] }) {
   const [copiedEn, setCopiedEn] = useState(false);
   const [copiedDefault, setCopiedDefault] = useState(false);
   const [search, setSearch] = useState("");
-  
-  // 🟢 Tags 折叠状态
   const [isTagsExpanded, setIsTagsExpanded] = useState(false);
 
   const allTags = useMemo(() => {
@@ -105,21 +99,25 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 头部 Hero (吸顶 + 毛玻璃) --- */}
-      <div className="sticky top-0 z-40 w-full bg-[#121212]/80 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
+      {/* --- 🔴 Hero 区域 (吸顶固定) --- */}
+      {/* bg-[#121212]/95: 与页面背景色一致，仅保留极微弱的透视感 */}
+      <div className="sticky top-0 z-40 w-full bg-[#121212]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
          
-         {/* 背景光效 (仅在 Header 内部) */}
-         <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-40">
-            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/30 rounded-full blur-[100px] animate-pulse"></div>
-            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/30 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
+         {/* 背景光效 (仅在 Header 内部显示，且弱化，防止过度抢眼) */}
+         <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-30">
+            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/20 rounded-full blur-[100px] animate-pulse"></div>
+            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/20 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
-        <div className="max-w-[1960px] mx-auto px-4 sm:px-6 pt-5 pb-3">
+        <div className="max-w-[1960px] mx-auto px-4 sm:px-6 pt-4 pb-3">
             
             {/* 第一行：Logo + 标题 + 搜索 */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
+                
+                {/* 左侧 */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-left">
+                    {/* Logo */}
                     <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-md">
@@ -144,7 +142,8 @@ export default function Gallery({ images }: { images: any[] }) {
                     </div>
                 </div>
 
-                <div className="w-full sm:w-auto lg:w-[280px] relative group shrink-0">
+                {/* 右侧：搜索框 */}
+                <div className="w-full sm:w-auto lg:w-[300px] relative group shrink-0">
                     <div className="relative flex items-center bg-black/40 rounded-lg border border-white/5 focus-within:border-indigo-500/50 focus-within:ring-1 focus-within:ring-indigo-500/50 transition-all h-9">
                         <div className="pl-2.5 text-gray-500"><Search className="w-3.5 h-3.5" /></div>
                         <input 
@@ -162,12 +161,10 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
-            {/* 第二行：Tags (全宽 + 折叠按钮) */}
+            {/* 第二行：Tags */}
             <div className="border-t border-white/5 pt-3 flex items-start gap-3">
-                <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider py-1 shrink-0 mt-px">Tags</div>
-                
-                {/* 🟢 核心修改：Tags 容器带最大高度控制 */}
-                <div className={`flex flex-wrap justify-start gap-2 transition-all duration-300 overflow-hidden w-full ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[28px]'}`}>
+                <div className="text-[10px] font-bold text-gray-600 uppercase tracking-wider py-1 shrink-0 mt-px">Tags</div>
+                <div className={`flex flex-wrap justify-start gap-1.5 transition-all duration-300 overflow-hidden w-full ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[28px]'}`}>
                     {displayTags.map((tag) => (
                         <button 
                             key={tag} 
@@ -180,8 +177,6 @@ export default function Gallery({ images }: { images: any[] }) {
                         </button>
                     ))}
                 </div>
-
-                {/* 展开/收起按钮 */}
                 <button 
                     onClick={() => setIsTagsExpanded(!isTagsExpanded)}
                     className="p-1 rounded-md bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-colors shrink-0 mt-0 h-[24px] w-[24px] flex items-center justify-center"
@@ -193,7 +188,8 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      {/* --- 瀑布流列表 (统一毛玻璃风格) --- */}
+      {/* --- 瀑布流列表 --- */}
+      {/* pt-6 保持适度间距，背景色一致 */}
       <div className="max-w-[1960px] mx-auto px-4 pb-20 pt-6 min-h-[100vh]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4">
@@ -201,8 +197,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 <div 
                 key={image.id}
                 onClick={() => setSelectedId(image.id)}
-                // 🟢 修改：卡片背景改为 bg-white/5 + blur，与头部协调
-                className="group relative mb-6 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-white/5 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-900/20 hover:border-white/20 backdrop-blur-sm break-inside-avoid"
+                className="group relative mb-6 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-[#1e1e20] border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-900/20 hover:border-white/20 backdrop-blur-sm break-inside-avoid"
                 >
                 <img 
                     src={image.url} 
@@ -227,17 +222,14 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 弹窗 (通栏布局 + 毛玻璃背景) --- */}
+      {/* --- 弹窗 (保持不变) --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-          {/* 背景遮罩 */}
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
+          <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
           
-          {/* 弹窗主体：增强毛玻璃感 */}
-          <div className="relative w-full max-w-4xl bg-[#121212]/90 backdrop-blur-2xl shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
+          <div className="relative w-full max-w-4xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
-            {/* 顶部固定栏 */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#121212]/80 backdrop-blur-md shrink-0 z-20 sticky top-0">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#18181b]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
                 <div className="flex items-center gap-2 text-sm font-bold text-gray-400">
                     <span className="text-indigo-400">Doro Gallery</span> / Preview
                 </div>
@@ -247,11 +239,9 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
-            {/* 滚动内容区域 */}
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                 <div className="max-w-3xl mx-auto w-full pb-12">
                     
-                    {/* 标题与标签 */}
                     <div className="px-6 pt-8 pb-6">
                         <div className="flex flex-wrap items-center gap-2 mb-3">
                             <span className="px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 uppercase tracking-wider">AI Generated</span>
@@ -262,14 +252,12 @@ export default function Gallery({ images }: { images: any[] }) {
                         <h2 className="text-3xl font-bold text-white leading-tight tracking-tight">{selectedImage.title}</h2>
                     </div>
 
-                    {/* 图片展示 */}
                     <div className="relative w-full flex items-center justify-center group/nav mb-8 px-6">
                         <img src={selectedImage.url} className="w-full h-auto rounded-lg shadow-2xl border border-white/5" alt="Detail" />
                         {selectedIndex > 0 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>}
                         {selectedIndex < images.length - 1 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/60 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronRight size={24} /></button>}
                     </div>
 
-                    {/* 提示词区域 */}
                     <div className="px-6 w-full">
                         <div className="w-full space-y-6">
                             {selectedImage.promptCn && <PromptBox title="Chinese Prompt" content={selectedImage.promptCn} icon={Languages} />}
