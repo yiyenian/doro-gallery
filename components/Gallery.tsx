@@ -29,8 +29,9 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
           {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
         </button>
       </div>
-      <div className="relative group w-full rounded-xl border border-white/5 bg-black/20 overflow-hidden hover:border-white/10 transition-colors">
-        <div className="px-4 py-4 text-sm leading-7 text-slate-300 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
+      {/* 🟢 修改：提示词框背景改为 bg-slate-900/50，更匹配新色调 */}
+      <div className="relative group w-full rounded-xl border border-white/5 bg-slate-900/50 overflow-hidden hover:border-white/10 transition-colors">
+        <div className="px-4 py-4 text-sm leading-7 text-slate-300 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-transparent">
             <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
                 {content.replace(/\n/g, '  \n')}
             </ReactMarkdown>
@@ -99,22 +100,23 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 吸顶头部 (颜色修正：Slate-950) --- */}
-      {/* 🔴 核心修改：bg-[#020617]/95，与背景色一致，消除色差 */}
-      <div className="sticky top-0 z-40 w-full bg-[#020617]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all">
+      {/* --- 吸顶头部 (颜色修正：Slate-900) --- */}
+      {/* 🟢 核心修改：bg-[#0f172a]/90，深蓝灰半透明 */}
+      <div className="sticky top-0 z-40 w-full bg-[#0f172a]/90 backdrop-blur-xl border-b border-white/5 shadow-lg transition-all">
          
          {/* 背景光效 */}
-         <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-40">
-            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/30 rounded-full blur-[100px] animate-pulse"></div>
-            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/30 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
+         <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-30">
+            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] animate-pulse"></div>
+            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-600/20 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
-        {/* 🔴 核心修改：w-full + px-8 (移除 max-w，全宽显示) */}
-        <div className="w-full px-4 sm:px-8 pt-4 pb-3">
+        <div className="max-w-[1960px] mx-auto px-4 sm:px-6 pt-5 pb-3">
             
             {/* 第一行 */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
+                
+                {/* 左侧 */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-left">
                     {/* Logo */}
                     <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer">
@@ -124,7 +126,7 @@ export default function Gallery({ images }: { images: any[] }) {
                              <path d="M6 4V20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                            </svg>
                         </div>
-                        <span className="text-lg font-bold tracking-tight text-white font-sans">Doro Gallery</span>
+                        <span className="text-lg font-bold tracking-tight text-slate-100 font-sans">Doro Gallery</span>
                     </div>
 
                     <div className="hidden sm:block w-px h-6 bg-white/10 shrink-0"></div>
@@ -141,8 +143,10 @@ export default function Gallery({ images }: { images: any[] }) {
                     </div>
                 </div>
 
+                {/* 右侧：搜索框 */}
                 <div className="w-full sm:w-auto lg:w-[300px] relative group shrink-0">
-                    <div className="relative flex items-center bg-black/40 rounded-lg border border-white/5 focus-within:border-indigo-500/50 focus-within:ring-1 focus-within:ring-indigo-500/50 transition-all h-9">
+                    {/* 🟢 修改：搜索框背景 bg-slate-800/50 */}
+                    <div className="relative flex items-center bg-slate-800/50 rounded-lg border border-white/5 focus-within:border-indigo-500/50 focus-within:ring-1 focus-within:ring-indigo-500/50 transition-all h-9">
                         <div className="pl-2.5 text-slate-500"><Search className="w-3.5 h-3.5" /></div>
                         <input 
                             type="text" 
@@ -159,7 +163,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
-            {/* Tags */}
+            {/* 第二行：Tags */}
             <div className="border-t border-white/5 pt-3 flex items-start gap-3">
                 <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider py-1 shrink-0 mt-px">Tags</div>
                 <div className={`flex flex-wrap justify-start gap-1.5 transition-all duration-300 overflow-hidden w-full ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[28px]'}`}>
@@ -168,7 +172,7 @@ export default function Gallery({ images }: { images: any[] }) {
                             key={tag} 
                             onClick={() => setSearch(tag === search ? "" : tag)} 
                             className={`px-2.5 py-0.5 rounded-md border text-[10px] font-medium transition-all duration-200 whitespace-nowrap h-[26px] flex items-center
-                                ${search === tag ? 'bg-slate-100 text-slate-900 border-slate-100' : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:bg-white/10 hover:border-white/20'}
+                                ${search === tag ? 'bg-slate-100 text-slate-900 border-slate-100' : 'bg-slate-800/40 border-white/5 text-slate-400 hover:text-white hover:bg-slate-700 hover:border-white/10'}
                             `}
                         >
                             {tag}
@@ -177,7 +181,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
                 <button 
                     onClick={() => setIsTagsExpanded(!isTagsExpanded)}
-                    className="p-1 rounded-md bg-white/5 border border-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition-colors shrink-0 mt-0 h-[24px] w-[24px] flex items-center justify-center"
+                    className="p-1 rounded-md bg-slate-800/40 border border-white/5 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors shrink-0 mt-0 h-[24px] w-[24px] flex items-center justify-center"
                     title={isTagsExpanded ? "Collapse" : "Expand"}
                 >
                     {isTagsExpanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
@@ -187,16 +191,14 @@ export default function Gallery({ images }: { images: any[] }) {
       </div>
 
       {/* --- 瀑布流列表 --- */}
-      {/* 🟢 核心修改：w-full + px-4 sm:px-8，全宽显示，5 列布局 */}
-      <div className="w-full px-4 sm:px-8 pb-20 pt-6 min-h-[100vh]">
+      <div className="max-w-[1960px] mx-auto px-4 pb-20 pt-6 min-h-[100vh]">
         {filteredImages.length > 0 ? (
-            // 🟢 核心修改：增加 3xl:columns-5，超大屏显示5列
-            <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4 3xl:columns-5">
+            <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4">
             {filteredImages.map((image) => (
                 <div 
                 key={image.id}
                 onClick={() => setSelectedId(image.id)}
-                // 🟢 修改：卡片背景 bg-slate-800/20
+                // 🟢 修改：卡片背景 bg-slate-800/20，透出一点点底色
                 className="group relative mb-6 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-slate-800/20 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-900/20 hover:border-white/10 backdrop-blur-sm break-inside-avoid"
                 >
                 <img 
@@ -228,10 +230,10 @@ export default function Gallery({ images }: { images: any[] }) {
           {/* 🟢 修改：遮罩 bg-slate-950/70 */}
           <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md transition-opacity" onClick={() => setSelectedId(null)} />
           
-          {/* 🟢 修改：弹窗主体 bg-[#020617] */}
-          <div className="relative w-full max-w-4xl bg-[#020617] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
+          {/* 🟢 修改：主体 bg-[#0f172a] (Slate 900) */}
+          <div className="relative w-full max-w-4xl bg-[#0f172a] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#020617]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#0f172a]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
                 <div className="flex items-center gap-2 text-sm font-bold text-slate-400">
                     <span className="text-indigo-400">Doro Gallery</span> / Preview
                 </div>
