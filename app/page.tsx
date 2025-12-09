@@ -7,14 +7,15 @@ export default async function Page() {
   const images = await getImages();
 
   return (
-    // 🟢 修改：背景色改为 #18181b，与弹窗背景一致
-    <main className="min-h-screen bg-[#18181b] selection:bg-indigo-500/30 text-white relative overflow-x-hidden">
+    // 🟢 修改：背景色统一为 #020617，消除与头部的色差
+    <main className="min-h-screen bg-[#020617] selection:bg-indigo-500/30 text-white relative">
       
-      {/* 全局背景光效 */}
+      {/* 背景光效 */}
       <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-purple-900/10 blur-[120px] opacity-30 animate-blob mix-blend-screen" />
-        <div className="absolute top-[20%] right-[-5%] h-[500px] w-[500px] rounded-full bg-blue-900/10 blur-[100px] opacity-30 animate-blob animation-delay-2000 mix-blend-screen" />
-        <div className="absolute -bottom-32 left-[20%] w-[600px] h-[600px] rounded-full bg-indigo-900/10 blur-[120px] opacity-25 animate-blob animation-delay-4000 mix-blend-screen" />
+        <div className="absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-purple-600/20 blur-[120px] opacity-40 animate-blob mix-blend-screen" />
+        <div className="absolute top-[20%] right-[-5%] h-[500px] w-[500px] rounded-full bg-indigo-600/20 blur-[100px] opacity-40 animate-blob animation-delay-2000 mix-blend-screen" />
+        <div className="absolute -bottom-32 left-[20%] w-[600px] h-[600px] rounded-full bg-cyan-600/20 blur-[120px] opacity-30 animate-blob animation-delay-4000 mix-blend-screen" />
+        {/* 纹理 */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       </div>
 
