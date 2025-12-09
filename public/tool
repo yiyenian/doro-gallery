@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表情包网格裁剪 | Doro Tools</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        /* 深色磨玻璃风格 CSS */
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #0f0f12; /* 深色背景 */
+            background-image: radial-gradient(circle at 50% 0%, #2a2a35 0%, #0f0f12 70%);
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            /* 磨玻璃核心代码 */
+            background: rgba(30, 30, 35, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 { margin-top: 0; color: #fff; letter-spacing: 1px; }
+        p { color: #888; }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.2);
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+
+        label { font-size: 0.9em; color: #aaa; }
+
+        input[type="number"] {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #fff;
+            padding: 6px;
+            border-radius: 4px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        
+        .btn-upload { 
+            background: rgba(255,255,255,0.1); 
+            color: #fff; 
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .btn-upload:hover { background: rgba(255,255,255,0.2); }
+
+        .btn-download { 
+            background: linear-gradient(135deg, #6366f1, #a855f7); /* 紫色渐变 */
+            color: white; 
+            display: none; 
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+        }
+        .btn-download:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        #fileInput { display: none; }
+
+        #previewContainer {
+            margin-top: 20px;
+            display: grid;
+            gap: 8px;
+            grid-template-columns: repeat(4, 1fr); 
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 12px;
+            min-height: 100px;
+        }
+
+        .preview-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .status { margin-top: 15px; color: #666; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>✂️ 表情包切分工具</h1>
+    <p>Image Grid Cropper</p>
+
+    <div class="controls">
+        <div class="input-group">
+            <label>列数</label>
+            <input type="number" id="cols" value="4" min="1">
+        </div>
+        <div class="input-group">
+            <label>行数</label>
+            <input type="number" id="rows" value="6" min="1">
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn btn-upload" onclick="document.getElementById('fileInput').click()">上传图片</button>
+        <input type="file" id="fileInput" accept="image/*">
+        <button class="btn btn-download" id="downloadBtn">下载 ZIP 包</button>
+    </div>
+
+    <div id="previewContainer"></div>
+    <div class="status" id="statusText">准备就绪</div>
+</div>
+
+<script>
+    // JS 逻辑保持不变，为了节省篇幅，这里引用之前的逻辑
+    // 请确保复制上面那个版本的 <script> 标签内的所有内容到这里
+    const fileInput = document.getElementById('fileInput');
+    const previewContainer = document.getElementById('previewContainer');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const statusText = document.getElementById('statusText');
+    const inputCols = document.getElementById('cols');
+    const inputRows = document.getElementById('rows');
+    let processedBlobs = [];
+
+    fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const img = new Image();
+            img.onload = function() { processImage(img, file.name); };
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    });
+
+    async function processImage(img, originalFilename) {
+        statusText.textContent = '正在处理...';
+        previewContainer.innerHTML = '';
+        processedBlobs = [];
+        downloadBtn.style.display = 'none';
+        const cols = parseInt(inputCols.value);
+        const rows = parseInt(inputRows.value);
+        previewContainer.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+        const itemWidth = img.width / cols;
+        const itemHeight = img.height / rows;
+        const promises = [];
+
+        for (let y = 0; y < rows; y++) {
+            for (let x = 0; x < cols; x++) {
+                const canvas = document.createElement('canvas');
+                canvas.width = itemWidth;
+                canvas.height = itemHeight;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, x * itemWidth, y * itemHeight, itemWidth, itemHeight, 0, 0, itemWidth, itemHeight);
+                const previewImg = document.createElement('img');
+                const div = document.createElement('div');
+                div.className = 'preview-item';
+                div.appendChild(previewImg);
+                previewContainer.appendChild(div);
+                const p = new Promise(resolve => {
+                    canvas.toBlob(blob => {
+                        const index = y * cols + x + 1;
+                        previewImg.src = URL.createObjectURL(blob);
+                        processedBlobs.push({ name: `emoji_${index.toString().padStart(2, '0')}.png`, blob: blob });
+                        resolve();
+                    }, 'image/png');
+                });
+                promises.push(p);
+            }
+        }
+        await Promise.all(promises);
+        statusText.textContent = `✅ 完成: ${cols}x${rows}`;
+        downloadBtn.style.display = 'block';
+        downloadBtn.onclick = () => downloadZip(originalFilename);
+    }
+
+    function downloadZip(originalFilename) {
+        const zip = new JSZip();
+        const folder = zip.folder("cropped_emojis");
+        processedBlobs.forEach(item => { folder.file(item.name, item.blob); });
+        statusText.textContent = '正在打包...';
+        zip.generateAsync({type:"blob"}).then(function(content) {
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(content);
+            const nameBase = originalFilename.split('.')[0];
+            link.download = `${nameBase}_cropped.zip`;
+            link.click();
+            statusText.textContent = '✅ 下载已开始';
+        });
+    }
+</script>
+</body>
+</html>
