@@ -426,5 +426,55 @@ export const localData: Record<string, DataRecord> = {
               其他需求：不要原图复制。所有标注为手写简体中文。
               生成的图片需为 4K 分辨率 16:9`,
   },
+
+  "dr-23_oppo1f": {
+    title: "可爱玩偶版电影海报",
+    tags: ["character","cartoon","poster"],
+    promptCn: `输入要生成的电影名字{
+  "style_template_en_v2": {
+    "style_name": "3D Q-Version Healing Toy Movie Poster (Optimized)",
+    "style_description": "A highly tactile 3D digital rendering style mimicking macro product photography of premium designer toy collectibles. It transforms movie characters and scenes into cute, Q-version miniature dioramas. The core aesthetic relies on the contrast between matte resin/vinyl surfaces and soft, flocked plush textures, bathed in warm, diffused light to create a calm, healing atmosphere with clean poster typography.",
+    "style_prompt": {
+      "positive": "A tactile 3D digital render mimicking high-end product photography of collectible designer toys presented as a movie poster. Cute Q-version proportions. The defining feature is mixed materials: smooth matte resin or vinyl for bodies/hard objects contrasting with soft, fuzzy flocked plush textures (like felt or velvet) on clothing, hair, moss, or animals. The setting is a miniature natural diorama. Lighting is soft, warm, and diffused with gentle dappled shadows (komorebi effect), creating a calm, healing (治愈系) atmosphere. Shallow depth of field, macro lens effect, bokeh background. Clean bilingual typography.",
+      "negative": "2D illustration, painting, pixel art, low poly, rough sketch, realistic human proportions, harsh direct lighting, hard dark shadows, glossy plastic shine, metallic reflections, noisy grain, blurry textures, distressed or grungy look, aggressive mood, dark themes, excessive ornamental decoration on text elements."
+    },
+    "composition_guidelines": {
+      "top_element": {
+        "content_goal": "Stylized Bilingual Movie Title",
+        "visual_directive": {
+          "position": "Top center, prominent placement.",
+          "font_style": "Cute, decorative serif or rounded font that echoes the movie's theme (e.g., integrating tiny leaves, clouds, or icons relevant to the film).",
+          "structure": "Large Chinese title above smaller English subtitle."
+        }
+      },
+      "center_element": {
+        "content_goal": "Main Character(s) in Miniature Diorama",
+        "visual_directive": {
+          "subject_style": "Cute, proportional Q-version toy figurines.",
+          "material_focus": "Emphasize the contrast between matte skin/armor versus flocked clothing/hair.",
+          "environment": "A self-contained, soft-focus miniature environment diorama (e.g., on a floating island, a windowsill, inside a glass cloche) that tells the movie's story gently."
+        }
+      },
+      "bottom_element": {
+        "content_goal": "Healing Interpretation Quote",
+        "visual_directive": {
+          "position": "Bottom center, grounding the composition.",
+          "font_style": "Refined, clean serif or elegant handwritten style. Small and subtle.",
+          "decoration_style": "Minimalist. Clean text only. Avoid excessive scrolls, banners, ornate lines, or complex decorative borders surrounding the text (as per recent optimization)."
+        }
+      }
+    },
+    "rendering_and_atmosphere": {
+      "lighting_style": "Soft, warm, diffused natural light. Golden hour feel. Gentle, non-harsh shadows. Dappled light effects are highly encouraged.",
+      "camera_lens": "Macro photography aesthetic. Very shallow depth of field, focusing sharply on the toy textures while blurring the foreground and background into soft bokeh.",
+      "emotional_mood": "Warm, calm, cozy, safe, nostalgic, and healing."
+    },
+    "usage_notes": {
+      "best_suited_for": "Transforming emotionally resonant or even slightly dark movies into comforting, collectible merchandise forms.",
+      "key_success_factor": "The success of this style hinges on the convincing rendering of the 'flocked/fuzzy' texture against the 'smooth matte' texture. The lighting must be gentle to sell the 'healing' vibe."
+    }
+  }
+}`,
+  },
   
 };
