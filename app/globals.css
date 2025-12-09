@@ -8,8 +8,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* 🔴 颜色修正 */
-  background: linear-gradient(to bottom, #020617, #0f172a);
+  /* 🟢 修正：统一背景色为 #0f172a (Slate-900)，消除色差 */
+  background-color: #0f172a;
   min-height: 100vh;
 }
 
