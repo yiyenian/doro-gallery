@@ -7,8 +7,8 @@ export default async function Page() {
   const images = await getImages();
 
   return (
-    // 🔴 颜色修正：bg-[#020617] (Slate 950)
-    <main className="min-h-screen bg-[#020617] selection:bg-indigo-500/30 text-white relative overflow-x-hidden">
+    // 🟢 修正：背景色明确指定为 #0f172a，与 Gallery 组件一致
+    <main className="min-h-screen bg-[#0f172a] selection:bg-indigo-500/30 text-white relative overflow-x-hidden">
       
       {/* 背景光效 */}
       <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
