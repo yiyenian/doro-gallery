@@ -353,7 +353,7 @@ export const localData: Record<string, DataRecord> = {
               RAW, smooth contrast, editorial softness.`,
   },
 
-  "dr-17_i1ol9s": {
+  "dr-17_ucpatj": {
     title: "一张超逼真的8K人像",
     tags: ["portrait"],
     promptCn: `创作一张超逼真的8K人像，人物站在深红色背景前。
