@@ -179,7 +179,7 @@ export const localData: Record<string, DataRecord> = {
               No repeats of any object. Aspect ratio 1:1.`,
   },
   
-  "dr-10_lxxmv8": {
+  "dr-10_cy2ifv": {
     title: "一张黑白影棚肖像照",
     tags: ["portrait", "photography"],
     promptCn: `上传的图片是一张黑白影棚肖像照，照片中的年轻女子面无表情地直视镜头。她身穿一件纯黑色圆领毛衣。
@@ -430,7 +430,7 @@ export const localData: Record<string, DataRecord> = {
   "dr-23_oppo1f": {
     title: "可爱玩偶版电影海报",
     tags: ["character","cartoon","poster"],
-    promptCn: `输入要生成的电影名字{
+    promptCn: `movie name【】{
   "style_template_en_v2": {
     "style_name": "3D Q-Version Healing Toy Movie Poster (Optimized)",
     "style_description": "A highly tactile 3D digital rendering style mimicking macro product photography of premium designer toy collectibles. It transforms movie characters and scenes into cute, Q-version miniature dioramas. The core aesthetic relies on the contrast between matte resin/vinyl surfaces and soft, flocked plush textures, bathed in warm, diffused light to create a calm, healing atmosphere with clean poster typography.",
