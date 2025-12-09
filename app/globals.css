@@ -8,7 +8,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* 🟢 修改：回归 Slate-950 深蓝灰渐变，更有质感 */
+  /* 🟢 核心修改：统一使用 Slate-950 深蓝灰渐变 */
   background: linear-gradient(to bottom, #020617, #0f172a);
   min-height: 100vh;
 }
@@ -33,7 +33,7 @@ img {
 .animation-delay-2000 { animation-delay: 2s; }
 .animation-delay-4000 { animation-delay: 4s; }
 
-/* 滚动条美化 */
+/* 滚动条美化 - 适配深色 */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 3px; }
