@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 15, 23, 42; /* Slate 900 */
+  --foreground-rgb: 255, 255, 255;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* 🟢 浅色系背景：纯白 -> 极淡的灰蓝 */
-  background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+  /* 🟢 修改：使用 Slate-900 深蓝灰，比纯黑更有质感，不压抑 */
+  background-color: #0f172a;
   min-height: 100vh;
 }
 
@@ -18,7 +18,7 @@ img {
   max-width: 100%;
 }
 
-/* 柔和的流动动画 */
+/* 动画定义 */
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(30px, -50px) scale(1.1); }
@@ -33,8 +33,8 @@ img {
 .animation-delay-2000 { animation-delay: 2s; }
 .animation-delay-4000 { animation-delay: 4s; }
 
-/* 浅色模式滚动条 */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+/* 滚动条 - 适配 Slate 色系 */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
