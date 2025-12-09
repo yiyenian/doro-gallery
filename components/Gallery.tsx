@@ -29,7 +29,8 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
           {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
         </button>
       </div>
-      <div className="relative group w-full rounded-xl border border-white/10 bg-black/20 overflow-hidden hover:border-white/20 transition-colors">
+      {/* 🟢 修复：提示词框回归深色背景 bg-black/40，保证对比度 */}
+      <div className="relative group w-full rounded-xl border border-white/10 bg-black/40 overflow-hidden hover:border-white/20 transition-colors">
         <div className="px-4 py-4 text-sm leading-7 text-gray-200 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
             <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
                 {content.replace(/\n/g, '  \n')}
@@ -99,18 +100,19 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 吸顶头部 (颜色修正：Slate-950 #18181b) --- */}
-      {/* 🔴 核心修改：bg-[#18181b]/95，与背景色一致，消除色差 */}
-      <div className="sticky top-0 z-40 w-full bg-[#18181b]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all">
+      {/* --- 🟢 修复：Hero 吸顶区域 --- */}
+      {/* bg-[#121212]/95: 回归深色背景，不再发蓝 */}
+      <div className="sticky top-0 z-40 w-full bg-[#121212]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
          
-         {/* 背景光效 (仅在 Header 内部) */}
-         <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-40">
-            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/30 rounded-full blur-[100px] animate-pulse"></div>
-            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/30 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
+         {/* 背景光效 (仅在 Header 内部，透明度降低) */}
+         <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-30">
+            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/20 rounded-full blur-[100px] animate-pulse"></div>
+            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/20 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
+            {/* 网格纹理 */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
-        {/* 布局核心：max-w-[1960px] 全宽 */}
+        {/* 🟢 修复：max-w-[1960px] 全宽布局，与瀑布流对齐 */}
         <div className="max-w-[1960px] mx-auto px-4 sm:px-6 pt-4 pb-3">
             
             {/* 第一行：Logo + 标题 + 搜索 */}
@@ -129,7 +131,6 @@ export default function Gallery({ images }: { images: any[] }) {
                         <span className="text-lg font-bold tracking-tight text-white font-sans">Doro Gallery</span>
                     </div>
 
-                    {/* 分割线 */}
                     <div className="hidden sm:block w-px h-6 bg-white/10 shrink-0"></div>
 
                     {/* 标题 & 描述 */}
@@ -188,11 +189,11 @@ export default function Gallery({ images }: { images: any[] }) {
                     {isTagsExpanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
                 </button>
             </div>
-
         </div>
       </div>
 
       {/* --- 瀑布流列表 --- */}
+      {/* 🟢 修复：全宽显示 */}
       <div className="max-w-[1960px] mx-auto px-4 pb-20 pt-6 min-h-[100vh]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4">
@@ -225,13 +226,13 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 弹窗 --- */}
+      {/* --- 🟢 修复：弹窗颜色还原 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-          {/* 🔴 弹窗遮罩背景 bg-[#18181b]/70，与主题色一致 */}
-          <div className="fixed inset-0 bg-[#18181b]/70 backdrop-blur-md transition-opacity" onClick={() => setSelectedId(null)} />
+          {/* 遮罩：深黑 */}
+          <div className="fixed inset-0 bg-black/90 backdrop-blur-lg transition-opacity" onClick={() => setSelectedId(null)} />
           
-          {/* 弹窗主体 */}
+          {/* 主体：深色背景 bg-[#18181b] */}
           <div className="relative w-full max-w-4xl bg-[#18181b] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#18181b]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
