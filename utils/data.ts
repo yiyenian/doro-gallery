@@ -476,5 +476,62 @@ export const localData: Record<string, DataRecord> = {
   }
 }`,
   },
+
+  "dr-24_faeasj": {
+    title: "杂志风旅游照片",
+    tags: ["fashion","character"],
+    promptCn: `使用[地址]提示生成杂志风旅游照片集，融入实时天气与角色旅游场景，布局精美如专业摄影。
+              请将指定角色融入到位于  [重庆洪崖洞] 的实景中，呈现他们在此地观光的场景。务必确保角色本人脸部特征（包括五官、比例等）100% 保留且完整一致。
+              整体排版需如同摄影集般精致，充分利用9:16的画面比例，制作成杂志封面。以“这是能影响游客数量的重要页面”为心态进行打造。`,
+  },
+
+  "dr-25_": {
+    title: "随手拍的照片上添加超写实微观景观",
+    tags: ["landscape","miniature"],
+    promptCn: `将超精细的微缩世界逼真地融入上传照片中的现有物体/表面。分析照片，找到最合适的平面或曲面（例如桌面、柱顶、石面、书皮、手掌等）来放置微缩景观。
+              微缩世界规格：
+              - 比例：微缩人物相对于底座表面的高度应为 2-5 毫米
+              - 极致逼真的细节，达到专业微距摄影品质
+              - 包含多种微观元素：微型建筑（带有可见的窗户、门和纹理）、带有独立叶片的微型树木、小型车辆（汽车、自行车）、各种姿势和活动的微型人物、街道设施（长椅、路灯、标志）、水景（带有真实倒影的池塘、喷泉）、带有纹理细节的小径和道路
+              技术要求：
+              - 真实照片与微缩世界无缝融合
+              - 自然光照，与原照片的光照方向和色温相匹配
+              - 移轴摄影效果，增强微缩世界的真实感
+              - 浅景深，聚焦于微缩场景
+              - 微缩物体在底座表面投射阴影
+              - 真实元素与微缩元素之间的反射和光线互动
+              - 8K 超高清画质
+              - 保留原照片的背景和环境（略微模糊处理）深度）
+              艺术细节：
+              - 微缩建筑的风化和老化效果
+              - 带有清晰可读微缩文字的微型标牌
+              - 具有自然色彩变化的微缩植物
+              - 根据情境添加小型动物或宠物
+              - 季节性氛围（根据原图进行匹配或增强）
+              - 微观大气效果（细小的雾气、光线中的尘埃颗粒）
+              最终效果应营造一种奇妙的发现感——仿佛在日常物品上发现了一个隐藏的微型文明。从宏观到微观的过渡应自然流畅，又令人惊叹。`,
+    promptEn: ` Photorealistic integration of an ultra-detailed miniature world onto the existing object/surface in the uploaded photo. Analyze the photo to find the most suitable flat or rounded surface (table top, pillar cap, stone surface, book cover, hand palm, etc.) to place the miniature landscape.
+              MINIATURE WORLD SPECIFICATIONS:
+              - Scale: Miniature people should be 2-5mm tall relative to the base surface
+              - Extreme hyper-realistic details with professional macro photography quality
+              - Include diverse micro elements: tiny buildings (with visible windows, doors, textures), miniature trees with individual leaves, small vehicles (cars, bicycles), microscopic people in various poses and activities, street furniture (benches, lamp posts, signs), water features (ponds, fountains with real reflections), pathways and roads with texture details
+              TECHNICAL REQUIREMENTS:
+              - Seamless integration between real photo and miniature world
+              - Natural lighting that matches the original photo's light direction and color temperature
+              - Tilt-shift photography effect to enhance miniature realism
+              - Shallow depth of field focusing on the miniature scene
+              - Cast shadows from miniature objects onto the base surface
+              - Reflections and light interactions between real and miniature elements
+              - 8K ultra-high definition quality
+              - Preserve the original photo's background and context (slightly blurred for depth)
+              ARTISTIC DETAILS:
+              - Weathering and aging effects on miniature structures
+              - Tiny signs with readable micro-text
+              - Miniature vegetation with natural color variations
+              - Small animals or pets if contextually appropriate
+              - Seasonal atmosphere (match or enhance based on original photo)
+              - Micro atmospheric effects (tiny mist, dust particles in light rays)
+              The final result should create a magical sense of discovery - as if a hidden micro-civilization has been revealed on an everyday object. The transition from macro to micro should feel natural yet wonderous.`,
+  },
   
 };
