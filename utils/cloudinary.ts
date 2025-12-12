@@ -19,17 +19,40 @@ export async function getImages() {
       .execute();
 
     return results.resources.map((resource: any, index: number) => {
-      const publicId = resource.public_id;
-      const cleanId = publicId.split('/').pop(); 
-      const noExtId = cleanId?.split('.')[0];
+      const publicId = resource.public_id; // 例如: "gallery/dr-26ezwl2b"
+      const cleanId = publicId.split('/').pop(); // 例如: "dr-26ezwl2b"
+      const noExtId = cleanId?.split('.')[0];    // 去掉后缀
+      
+      // --- 🔴 核心修复：智能模糊匹配逻辑 ---
+      let localInfo: any = {};
 
-      // 1. 智能匹配本地数据 (防报错)
-      const localInfo: any = localData[publicId] || 
-                             localData[cleanId] || 
-                             localData[noExtId] || 
-                             {};
+      // 1. 第一轮：尝试精确匹配 (最快)
+      if (localData[publicId]) {
+        localInfo = localData[publicId];
+      } 
+      // 2. 第二轮：尝试无文件夹名匹配
+      else if (cleanId && localData[cleanId]) {
+        localInfo = localData[cleanId];
+      }
+      // 3. 第三轮：前缀/包含匹配 (解决 Cloudinary 加后缀问题)
+      // 只要 Cloudinary 的 ID 包含了 data.ts 里的 key，就算匹配成功
+      // 例如：Key="dr-26"，ID="dr-26ezwl2b" -> 匹配成功
+      else {
+         const matchedKey = Object.keys(localData).find(key => {
+             // 忽略 gallery/ 前缀差异，只比对核心部分
+             const coreKey = key.split('/').pop() || "";
+             return cleanId && cleanId.startsWith(coreKey);
+         });
+         
+         if (matchedKey) {
+             localInfo = localData[matchedKey];
+         }
+      }
+      
+      // 兜底空对象
+      localInfo = localInfo || {};
 
-      // 2. 标题
+      // 标题
       let title = localInfo.title || 
                   resource.context?.caption || 
                   resource.context?.custom?.caption;
@@ -38,7 +61,7 @@ export async function getImages() {
         title = noExtId ? noExtId.replace(/[-_]/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()) : "Untitled";
       }
 
-      // 3. 提示词
+      // 提示词
       const prompt = localInfo.prompt || 
                      resource.context?.alt || 
                      resource.context?.description || 
@@ -46,9 +69,7 @@ export async function getImages() {
 
       const tags = localInfo.tags || resource.tags || [];
 
-      // 4. 🔴 终极修复：使用 (as any) 强行调用 url 方法
-      // 解决 "Property 'url' does not exist..." 的类型报错
-      // 只要 Cloudinary SDK 装了，v2.url 在运行时绝对是存在的
+      // 生成优化链接
       const optimizedUrl = (cloudinary.v2 as any).url(publicId, {
         fetch_format: 'auto',
         quality: 'auto',
@@ -68,7 +89,6 @@ export async function getImages() {
         promptCn: localInfo.promptCn || null,
         promptEn: localInfo.promptEn || null,
         tags: tags,
-        // 如果上面强行调用失败(极小概率)，回退到原始 URL
         url: optimizedUrl || resource.secure_url, 
       };
     });
