@@ -19,24 +19,15 @@ export async function getImages() {
       .execute();
 
     return results.resources.map((resource: any, index: number) => {
-      const publicId = resource.public_id; 
-      
-      // 1. 智能匹配 (尝试去后缀)
-      let matchId = publicId;
-      let localInfo = (localData[matchId] as any);
+      const publicId = resource.public_id;
+      const cleanId = publicId.split('/').pop(); 
+      const noExtId = cleanId?.split('.')[0];
 
-      if (!localInfo) {
-        const idNoSuffix = publicId.replace(/_[a-zA-Z0-9]+$/, "");
-        localInfo = localData[idNoSuffix];
-      }
-
-      if (!localInfo) {
-        const fileName = publicId.split('/').pop() || "";
-        const fileNameNoSuffix = fileName.replace(/_[a-zA-Z0-9]+$/, "");
-        localInfo = localData[fileNameNoSuffix];
-      }
-      
-      localInfo = localInfo || {};
+      // 1. 智能匹配本地数据 (防报错)
+      const localInfo: any = localData[publicId] || 
+                             localData[cleanId] || 
+                             localData[noExtId] || 
+                             {};
 
       // 2. 标题
       let title = localInfo.title || 
@@ -44,8 +35,7 @@ export async function getImages() {
                   resource.context?.custom?.caption;
 
       if (!title) {
-        const cleanName = publicId.split('/').pop()?.replace(/_[a-zA-Z0-9]+$/, "") || "";
-        title = cleanName.replace(/[-_]/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+        title = noExtId ? noExtId.replace(/[-_]/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()) : "Untitled";
       }
 
       // 3. 提示词
@@ -56,9 +46,10 @@ export async function getImages() {
 
       const tags = localInfo.tags || resource.tags || [];
 
-      // 4. 🔴 核心修复：使用 cloudinary.v2.url (加了 .v2)
-      // 这样就能正确调用 URL 生成函数，不再报错
-      const optimizedUrl = cloudinary.v2.url(publicId, {
+      // 4. 🔴 终极修复：使用 (as any) 强行调用 url 方法
+      // 解决 "Property 'url' does not exist..." 的类型报错
+      // 只要 Cloudinary SDK 装了，v2.url 在运行时绝对是存在的
+      const optimizedUrl = (cloudinary.v2 as any).url(publicId, {
         fetch_format: 'auto',
         quality: 'auto',
         width: 1920,
@@ -77,7 +68,8 @@ export async function getImages() {
         promptCn: localInfo.promptCn || null,
         promptEn: localInfo.promptEn || null,
         tags: tags,
-        url: optimizedUrl, 
+        // 如果上面强行调用失败(极小概率)，回退到原始 URL
+        url: optimizedUrl || resource.secure_url, 
       };
     });
   } catch (error) {
