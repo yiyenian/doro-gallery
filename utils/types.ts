@@ -7,9 +7,9 @@ export interface ImageProps {
   format: string;
   blurDataUrl?: string;
   title?: string;
-  prompt?: string;      // 默认/兜底提示词
-  promptCn?: string;    // 中文提示词
-  promptEn?: string;    // 英文提示词
+  prompt?: string;    // 🔴 保持一致：加上问号
+  promptCn?: string;
+  promptEn?: string;
   url?: string;
   tags?: string[];
 }
