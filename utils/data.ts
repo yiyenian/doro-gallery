@@ -8,7 +8,7 @@ export interface DataRecord {
 
 export const localData: Record<string, DataRecord> = {
   // === 01. 全景式角色 ===
-  "dr-1_u0ugns": {
+  "dr-1": {
     title: "全景式角色深度概念分解图",
     tags: ["Character Design", "Concept Art", "Game Art", "2.5D"],
     promptCn: `### Role (角色设定)
@@ -49,7 +49,7 @@ ar 16:9 v 6.0 stylize 250`,
   },
 
   // === 02. 诸葛连弩 ===
-  "dr-2_bdkvvg": {
+  "dr-2": {
     title: "诸葛连弩结构爆炸图",
     tags: ["Industrial Design", "Retro", "Structure"],
     promptCn: `请创建诸葛连弩的复古风格工程爆炸图。
@@ -66,7 +66,7 @@ Background: Aged yellow parchment paper. ar 16:9 v 6.0`,
   },
 
   // === 03. 泡泡玛特宇航员 ===
-  "dr-3_eghzd5": {
+  "dr-3": {
     title: "泡泡玛特风格宇航员",
     tags: ["3D Render", "IP Design", "Blind Box", "Cute", "C4D"],
     promptCn: `**角色描述:**
@@ -87,7 +87,7 @@ ar 3:4  niji 6  style cute`,
   },
 
   // === 04. 极简科技 Logo ===
-  "dr-4_cscuhq": {
+  "dr-4": {
     title: "极简科技 Logo",
     tags: ["Logo Design", "Graphic Design", "Minimalist", "Vector"],
     promptCn: `**设计主题:**
@@ -107,7 +107,7 @@ no realistic, 3d, text, shadow  ar 1:1  v 6.0`,
   },
 
   // === 05. 微缩森林 ===
-  "dr-5_tiubjj": {
+  "dr-5": {
     title: "微缩森林瓶中界",
     tags: ["Macro Photography", "Still Life", "Fantasy", "Nature"],
     promptCn: `**画面主体:**
@@ -127,7 +127,7 @@ ar 4:5 stylize 250  v 6.0`,
   },
 
   // === 06. 流体博物馆 ===
-  "dr-6_xwhvt1": {
+  "dr-6": {
     title: "流体未来博物馆",
     tags: ["Architecture", "Futuristic", "Zaha Hadid", "Parametric"],
     promptCn: `**建筑描述:**
@@ -148,7 +148,7 @@ ar 16:9  v 6.0`,
   },
 
   // === 07. 赛博龙女 ===
-  "dr-7_phzi2h": {
+  "dr-7": {
     title: "新中式赛博龙女",
     tags: ["Guochao", "Illustration", "Chinese Style", "Cyberpunk"],
     promptCn: `**角色:**
@@ -167,7 +167,7 @@ ar 3:4  niji 6`,
     prompt: "Illustration of a dragon girl wearing modified Hanfu..."
   },
 
-  "dr-8_s50wbm": {
+  "dr-8": {
     title: "朱迪和松果的联名杂志",
     tags: ["Branding", "Fashion", "Photography", "Portrait", "Typography"],
     promptCn: `一张宽高比为9:16的垂直肖像照片,展示了一张干净、独立的高级光面时尚杂志封面。杂志顶部是巨大的黑色粗衬线字体标题 **“SONGGUO”**，散发着奢华品牌的氛围。
@@ -181,7 +181,7 @@ ar 3:4  niji 6`,
 - 背景是干净、中性的高级摄影棚渐变背景。`,
   },
 
-  "dr-9_xaidyz": {
+  "dr-9": {
     title: "上海地标微缩冰箱贴",
     tags: ["Product Photography", "Miniature", "Creative"],
     promptEn: `A clear, directly top-down photograph of shanghai landmarks as realistic miniature 3D magnets, arranged neatly in parallel lines and right angles, knolling on a neutral surface. 
@@ -190,7 +190,7 @@ Incorporate realistic miniature items necessary for today's weather into the kno
 No repeats of any object. Aspect ratio 1:1.`,
   },
 
-  "dr-10_cy2ifv": {
+  "dr-10": {
     title: "一张黑白影棚肖像照",
     tags: ["Portrait", "Photography", "Black and White"],
     promptCn: `上传的图片是一张黑白影棚肖像照，照片中的年轻女子面无表情地直视镜头。她身穿一件纯黑色圆领毛衣。
@@ -201,7 +201,7 @@ She is wearing a plain black crew-neck sweater. Deep black background with hard-
 3:4 aspect ratio.`,
   },
 
-  "dr-11_skqln5": {
+  "dr-11": {
     title: "Q版星巴克迷你概念店",
     tags: ["Branding", "Character", "Fashion", "Landscape", "Product", "Toy"],
     promptCn: `这款3D Q版星巴克迷你概念店设计别具匠心,其外观灵感源自品牌最具代表性的产品和包装。
@@ -211,7 +211,7 @@ She is wearing a plain black crew-neck sweater. Deep black background with hard-
 该店铺采用Cinema 4D软件渲染,呈现出微缩城市景观风格，兼具盲盒玩具的精致美感，细节丰富，栩栩如生，柔和的灯光更增添了午后轻松惬意的氛围。--ar 2:3`,
   },
 
-  "dr-12_peh99r": {
+  "dr-12": {
     title: "中国各省美食地图",
     tags: ["Food", "Map", "Creative"],
     promptCn: `一张极其详细的、俯拍的中国地图照片，明确包括台湾岛。整个地图完全由各省的标志性美食雕刻和堆砌而成，精确构成地理形状，放在一张质朴的木桌上，光线令人垂涎。
@@ -225,7 +225,7 @@ She is wearing a plain black crew-neck sweater. Deep black background with hard-
 ar 16:9`,
   },
 
-  "dr-13_sluruu": {
+  "dr-13": {
     title: "9种服装风格和背景 (3x3网格)",
     tags: ["Fashion", "Portrait", "Photography", "Outfit Change"],
     promptCn: `基于[上传人物图片]并保持其面部特征绝对不变，生成一张高质量的3x3九宫格拼贴照片，九个独立画面分别展示该人物身着：
@@ -241,7 +241,7 @@ ar 16:9`,
 **要求:** 整体画面要求电影感光影、细节精致且色彩和谐统一。宽高比9:16`,
   },
 
-  "dr-14_seialm": {
+  "dr-14": {
     title: "城市动态天气卡片",
     tags: ["3D Render", "Miniature", "City"],
     promptCn: `以清晰的45°俯视视角，呈现城市地标的 3D Q版微缩场景，画面竖版（9:16）居中构图，建筑置于画面中央，突出微缩模型精准细致的立体美感。 
@@ -254,7 +254,7 @@ Display a prominent weather icon at the top-center, with date and temperature ra
 City name:【Yunnan】`,
   },
 
-  "dr-15_diu1jk": {
+  "dr-15": {
     title: "多彩剪贴簿海报风格",
     tags: ["Fashion", "Landscape", "Photography", "Retro", "Poster Design"],
     promptCn: `**风格:** 色彩缤纷的Y2K剪贴簿海报美学，鲜艳的贴纸，多个人物穿着相同的服装和发型，摆出不同的姿势，并配以剪纸，色彩斑斓的笔触和线条，无框拼贴风格。全息纹理、柔和的渐变色、闪光点缀、趣味涂鸦、杂志剪贴图案，布局看似混乱却又平衡，极具艺术性和视觉吸引力。
@@ -272,7 +272,7 @@ Outfit: Cropped oversized sweater in pastel color, pastel skirt with white belt.
 Visuals: Heart, star, and butterfly stickers, Retro sparkles, Polaroid frames, Neon outlines.`,
   },
 
-  "dr-16_zrokdc": {
+  "dr-16": {
     title: "9种照片专业打光效果",
     tags: ["Portrait", "Character", "Photography", "Lighting"],
     promptCn: `编辑场景，3x3网格布局，冷灰色无缝背景。人物（面部特征与上传图片完全一致）身穿炭灰色无袖连衣裙。灯光：大型顶置柔光箱，轻微侧向反射光。
@@ -292,7 +292,7 @@ Shots include: 1. tight cheek + neck close-up with blurred finger foreground; 2.
 RAW, smooth contrast, editorial softness.`,
   },
 
-  "dr-17_ucpatj": {
+  "dr-17": {
     title: "一张超逼真的8K人像",
     tags: ["Portrait", "Photography", "Realistic"],
     promptCn: `创作一张超逼真的8K人像，人物站在深红色背景前。她五官轮廓分明，一头凌乱的深色头发，表情自信而略带锐利。她身穿黑色西装外套，内搭白色衬衫，领口微微敞开，系着一条红色条纹网状领带。
@@ -302,7 +302,7 @@ RAW, smooth contrast, editorial softness.`,
 Dramatic red and black lighting highlights the contour of her face, jawline, and neck creating a cinematic powerful and moody atmosphere.`,
   },
 
-  "dr-18_a1lrli": {
+  "dr-18": {
     title: "大幅的油画肖像",
     tags: ["Fashion", "Interior", "Photography", "Portrait", "Art"],
     promptCn: `使用上传的照片作为面部参考，绘制背景中的大幅油画肖像和前景中的全身女性形象。创作一个时尚的电影场景：一位女性自信地坐在她豪华私人办公室的桌子上。她身着宽松的粉彩色连衣裙或宽松的浅色套装，优雅中透着一丝大胆。
@@ -311,7 +311,7 @@ Dramatic red and black lighting highlights the contour of her face, jawline, and
 The background features a huge artistic portrait of the same woman, painted with expressive pastel brushstrokes. Soft daylight, fashion-editorial mood, clean composition.`,
   },
 
-  "dr-19_yz4c3t": {
+  "dr-19": {
     title: "泡泡玛特发展史",
     tags: ["Product Design", "Illustration", "Infographic", "3D"],
     promptEn: `Role & Subject: A massive, encyclopedic 16:9 3D infographic poster titled "THE EVOLUTION OF POP MART". 
@@ -323,7 +323,7 @@ Dense Annotation Network: Hundreds of fine white hairlines connecting specific K
 Technical Specs: Octane render, Unreal Engine 5 aesthetic, editorial layout, information design masterpiece.`,
   },
 
-  "dr-20_xi5sj0": {
+  "dr-20": {
     title: "城市户外LED屏上的3D视觉效果",
     tags: ["City", "Illustration", "Design", "3D"],
     promptCn: `创作一张超逼真的8一块巨大的L型裸眼3D LED屏幕醒目地矗立在繁华的城市十字路口，其标志性的建筑风格令人联想起东京新宿或成都太古里。
@@ -336,7 +336,63 @@ The characters and objects possess striking depth and appear to break through th
 Under realistic daylight conditions, these elements cast lifelike shadows.`,
   },
 
-  // === 26. 艺术圣诞肖像 ===
+  "dr-21": {
+    title: "纸艺剪纸效果角色",
+    tags: ["Fashion", "Character", "Cartoon", "Craft"],
+    promptCn: `[角色] = 陈平安
+木质书桌上摆着一件充满奇趣的手工纸艺作品：将手绘的 [角色] 从纸上剪下，折叠成一个立体的站立小人偶。
+[角色] [姿势]。在它身旁的纸面上，不仅有那个留下的空白剪影，还手写着一句它的 [经典台词]。
+画面比例：1080 x 1080`,
+  },
+
+  "dr-22": {
+    title: "彩色手绘风格表情包",
+    tags: ["Emoji", "Character", "Cartoon"],
+    promptCn: `为我生成图中角色的绘制 Q 版的，LINE 风格的半身像表情包，注意头饰要正确
+彩色手绘风格，使用 4x6 布局，涵盖各种各样的常用聊天语句，或是一些有关的娱乐 meme
+其他需求：不要原图复制。所有标注为手写简体中文。
+生成的图片需为 4K 分辨率 16:9`,
+  },
+
+  "dr-23": {
+    title: "可爱玩偶版电影海报",
+    tags: ["Character", "Cartoon", "Poster", "3D"],
+    promptCn: `style_name: "3D Q-Version Healing Toy Movie Poster"
+Description: A highly tactile 3D digital rendering style mimicking macro product photography of premium designer toy collectibles.
+Core Aesthetic: Contrast between matte resin/vinyl surfaces and soft, flocked plush textures. Warm, diffused light.
+Composition: 
+- Top: Stylized Bilingual Movie Title (Chinese above English).
+- Center: Main Character(s) in Miniature Diorama (Cute Q-version figurines).
+- Bottom: Healing Interpretation Quote.
+Lighting: Soft, warm, diffused natural light. Golden hour feel.`,
+  },
+
+  "dr-24": {
+    title: "杂志风旅游照片",
+    tags: ["Fashion", "Character", "Photography", "Layout"],
+    promptCn: `使用[地址]提示生成杂志风旅游照片集，融入实时天气与角色旅游场景，布局精美如专业摄影。
+请将指定角色融入到位于 [重庆洪崖洞] 的实景中，呈现他们在此地观光的场景。务必确保角色本人脸部特征（包括五官、比例等）100% 保留且完整一致。
+整体排版需如同摄影集般精致，充分利用9:16的画面比例，制作成杂志封面。`,
+  },
+
+  "dr-25": {
+    title: "随手拍的照片上添加超写实微观景观",
+    tags: ["Landscape", "Miniature", "Creative"],
+    promptCn: `将超精细的微缩世界逼真地融入上传照片中的现有物体/表面。分析照片，找到最合适的平面或曲面（例如桌面、柱顶、石面、书皮、手掌等）来放置微缩景观。
+**微缩世界规格：**
+- 比例：微缩人物相对于底座表面的高度应为 2-5 毫米
+- 极致逼真的细节，达到专业微距摄影品质
+- 包含多种微观元素：微型建筑、微型树木、小型车辆、微型人物、街道设施、水景
+**技术要求：**
+- 真实照片与微缩世界无缝融合
+- 自然光照，移轴摄影效果，浅景深
+- 8K 超高清画质`,
+    promptEn: `Photorealistic integration of an ultra-detailed miniature world onto the existing object/surface in the uploaded photo.
+Scale: Miniature people should be 2-5mm tall.
+Include diverse micro elements: tiny buildings, miniature trees, small vehicles, microscopic people.
+Technical: Seamless integration, Natural lighting, Tilt-shift photography effect, Shallow depth of field, 8K quality.`,
+  },
+
   "dr-26": {
     title: "艺术圣诞肖像：瓶中微缩自我",
     tags: ["Portrait", "Christmas", "Surreal", "Macro", "Artistic"],
