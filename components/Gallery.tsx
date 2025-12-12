@@ -48,6 +48,14 @@ export default function Gallery({ images }: { images: any[] }) {
   const [search, setSearch] = useState("");
   const [isTagsExpanded, setIsTagsExpanded] = useState(false);
 
+  // 🔴 核心优化：生成小图链接 (用于列表页加速)
+  // 将后端传来的 w_1920 (大图) 替换为 w_720 (小图)
+  // Cloudinary 支持动态 URL 变换，无需重新上传
+  const getThumbnailUrl = (url: string) => {
+    if (!url) return '';
+    return url.replace('w_1920', 'w_720');
+  };
+
   const allTags = useMemo(() => {
     const tags = new Set<string>();
     images.forEach(img => {
@@ -99,11 +107,9 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 吸顶头部 --- */}
-      {/* 🟢 修正：bg-[#0f172a]/95 */}
+      {/* --- 吸顶头部 (Sticky Header) --- */}
       <div className="sticky top-0 z-40 w-full bg-[#0f172a]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all">
          
-         {/* 背景光效 */}
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-40">
             <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/20 rounded-full blur-[100px] animate-pulse"></div>
             <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/20 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
@@ -112,10 +118,7 @@ export default function Gallery({ images }: { images: any[] }) {
 
         <div className="w-full px-4 sm:px-8 pt-5 pb-3">
             
-            {/* 第一行 */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
-                
-                {/* 左侧 */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-left">
                     <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
@@ -141,7 +144,6 @@ export default function Gallery({ images }: { images: any[] }) {
                     </div>
                 </div>
 
-                {/* 右侧搜索 */}
                 <div className="w-full sm:w-auto lg:w-[300px] relative group shrink-0">
                     <div className="relative flex items-center bg-slate-900/50 rounded-lg border border-white/5 focus-within:border-indigo-500/50 focus-within:ring-1 focus-within:ring-indigo-500/50 transition-all h-9">
                         <div className="pl-2.5 text-slate-500"><Search className="w-3.5 h-3.5" /></div>
@@ -160,7 +162,6 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
-            {/* 第二行 Tags */}
             <div className="border-t border-white/5 pt-3 flex items-start gap-3">
                 <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider py-1 shrink-0 mt-px">Tags</div>
                 <div className={`flex flex-wrap justify-start gap-1.5 transition-all duration-300 overflow-hidden w-full ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[28px]'}`}>
@@ -187,7 +188,7 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      {/* --- 瀑布流 --- */}
+      {/* --- 瀑布流列表 --- */}
       <div className="w-full px-4 sm:px-8 pb-20 pt-6 min-h-[100vh]">
         {filteredImages.length > 0 ? (
             <div className="columns-1 gap-6 sm:columns-2 xl:columns-3 2xl:columns-4 3xl:columns-5">
@@ -198,7 +199,8 @@ export default function Gallery({ images }: { images: any[] }) {
                 className="group relative mb-6 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-slate-800/20 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-900/20 hover:border-white/10 backdrop-blur-sm break-inside-avoid"
                 >
                 <img 
-                    src={image.url} 
+                    // 🔴 列表页使用 getThumbnailUrl (w_720)，极速加载
+                    src={getThumbnailUrl(image.url)} 
                     alt={image.title || "AI Art"} 
                     className="w-full h-auto object-cover transform transition will-change-auto"
                     loading="lazy"
@@ -223,10 +225,8 @@ export default function Gallery({ images }: { images: any[] }) {
       {/* --- 弹窗 --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-          {/* 🟢 修正：遮罩 bg-slate-950/70 */}
           <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md transition-opacity" onClick={() => setSelectedId(null)} />
           
-          {/* 🟢 修正：主体 bg-[#0f172a] */}
           <div className="relative w-full max-w-4xl bg-[#0f172a] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#0f172a]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
@@ -253,6 +253,7 @@ export default function Gallery({ images }: { images: any[] }) {
                     </div>
 
                     <div className="relative w-full flex items-center justify-center group/nav mb-8 px-6">
+                        {/* 弹窗继续使用高清图 (url, 即 w_1920) */}
                         <img src={selectedImage.url} className="w-full h-auto rounded-lg shadow-2xl border border-white/5" alt="Detail" />
                         {selectedIndex > 0 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/50 text-white/70 hover:text-white hover:bg-slate-900/80 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>}
                         {selectedIndex < images.length - 1 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/50 text-white/70 hover:text-white hover:bg-slate-900/80 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronRight size={24} /></button>}
