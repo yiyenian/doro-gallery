@@ -1,6 +1,3 @@
-// 格式：'文件夹/文件名': { title: '标题', prompt: '提示词' }
-// 这里的 Key 必须和 Cloudinary 里的 Public ID 完全一致
-
 export interface DataRecord {
   title: string;
   prompt?: string;
@@ -10,49 +7,54 @@ export interface DataRecord {
 }
 
 export const localData: Record<string, DataRecord> = {
-  // === 01. 全景式角色 ===
-  "gallery/dr-1_u0ugns": {
+  "dr-1_u0ugns": {
     title: "全景式角色深度概念分解图",
     tags: ["Character Design", "Concept Art", "Game Art", "2.5D"],
-    promptCn: `### Role (角色设定)
+    promptCn: `Role (角色设定)
 你是一位顶尖的游戏与动漫概念美术设计大师 (Concept Artist)，擅长制作详尽的角色设定图（Character Sheet）。你具备“像素级拆解”的能力，能够透视角色的穿着层级、捕捉微表情变化，并将与其相关的物品进行具象化还原。你特别擅长通过女性角色的私密物品、随身物件和生活细节来侧面丰满人物性格与背景故事。
 
-### Task (任务目标)
+Task (任务目标)
 根据用户上传的主体形象（若没有具体着装，系统必须主动接管设计），生成一张**“全景式角色深度概念分解图”**。该图片必须包含中心人物全身立绘，并在其周围环绕展示该人物的服装分层、不同表情、核心道具、材质特写，以及极具生活气息的私密与随身物品展示。
 
-### Visual Guidelines (视觉规范)
+Visual Guidelines (视觉规范)
+1. 构图布局 (Layout):
+• 中心位 (Center): 放置角色的全身立绘或主要动态姿势，作为视觉锚点。
+• 环绕位 (Surroundings): 在中心人物四周空白处，有序排列拆解后的元素。
+• 视觉引导 (Connectors): 使用手绘箭头或引导线，将周边的拆解物品与中心人物的对应部位或所属区域（如包包连接手部）连接起来。
 
-#### 1. 构图布局 (Layout):
-- **中心位 (Center):** 放置角色的全身立绘或主要动态姿势，作为视觉锚点。
-- **环绕位 (Surroundings):** 在中心人物四周空白处，有序排列拆解后的元素。
-- **视觉引导 (Connectors):** 使用手绘箭头或引导线，将周边的拆解物品与中心人物的对应部位或所属区域（如包包连接手部）连接起来。
+2. 拆解内容 (Deconstruction Details) —— 核心迭代区域:
+• 服装分层 (Clothing Layers) [增强与颠覆性设计]:
+• 将角色的服装拆分为单品展示。如果是多层穿搭，需展示脱下外套后的内层状态。
+• 新增：私密内着拆解 (Intimate Apparel): 独立展示角色的内层衣物，重点突出颠覆想象的剪裁、前卫设计和材质特写。包括但不限于：
+成套的蕾丝内衣裤（展示蕾丝花纹细节和透视效果）
+丁字裤/T裤（突出独特的剪裁和极简覆盖）
+丝袜/吊带袜（强调透明度、透肉感与袜口设计）、塑身衣或安全裤等
+所有内衣都应着重于大胆和颠覆性的美学设计。
+• 表情集 (Expression Sheet):
+在角落绘制 3-4 个不同的头部特写，展示不同的情绪（如：诱惑、闷骚、嫌弃、冷漠、害羞、惊讶、失神、或涂口红时的专注神态，选4个即可）。
+• 材质特写 (Texture & Zoom) [加强版强化细节]:
+选取 1-2 个关键部位进行放大特写。例如：布料的褶皱、皮肤的纹理、手部细节。
+• 新增：物品质感特写: 增加对小物件材质的描绘，例如：口红膏体的润泽感、皮革包包的颗粒纹理、化妆品粉质的细腻感。
+• 关联物品 (Related Items) [深度迭代与真实代入感]:
+此处不再局限于大型道具，需增加展示角色的“生活切片”。
+• 随身包袋与内容物 (Bag & Contents): 绘制角色的日常通勤包或手拿包，并将其“打开”，展示散落在旁的物品。
+• 美妆与护理 (Beauty & Grooming): 展示其常用的化妆品组合（如：特定色号的口红/唇釉特写、带镜子的粉饼盒、香水瓶设计、护手霜）。
+• 私密生活物件 (Lifestyle & Intimate Items) [客观、详尽与直接描绘]: 具象化角色隐藏面的物品。这些物品必须以“真实代入感的客观视角”呈现，重点突出其设计感、材质特写、假定的品牌型号或独特功能。可以进行直接或露骨的细节描绘，将其视为角色特定偏好和背景故事的符号。根据角色性格可能包括：
+私密日记本、常用药物/补剂盒、电子烟。
+高度精细的私密用品展示2-3种（例如：瑞典声波吸吮或德国空气脉冲、法式宫廷风加热震动或双马达混合动力、不锈钢纯爱权杖、真丝眼罩、环形口枷、麋鹿皮散鞭等相关用品）。
+重点描绘物品本身的美学、工艺，以及材质（如：硅胶、皮革、金属）和设计特点。
 
-#### 2. 拆解内容 (Deconstruction Details) —— 核心迭代区域:
-- **服装分层 (Clothing Layers):**
-  - 将角色的服装拆分为单品展示。如果是多层穿搭，需展示脱下外套后的内层状态。
-- **新增：私密内着拆解 (Intimate Apparel):**
-  - 独立展示角色的内层衣物，重点突出颠覆想象的剪裁、前卫设计和材质特写。
-  - 包括但不限于：成套的蕾丝内衣裤、丁字裤/T裤、丝袜/吊带袜、塑身衣或安全裤等。
-- **表情集 (Expression Sheet):**
-  - 在角落绘制 3-4 个不同的头部特写，展示不同的情绪（如：诱惑、闷骚、嫌弃、冷漠、害羞等）。
-- **材质特写 (Texture & Zoom):**
-  - 选取 1-2 个关键部位进行放大特写。
-  - **新增：物品质感特写:** 增加对小物件材质的描绘（如口红膏体的润泽感、皮革纹理）。
-- **关联物品 (Related Items):**
-  - **随身包袋与内容物:** 绘制角色的日常通勤包并将其“打开”。
-  - **美妆与护理:** 展示常用的化妆品组合。
-  - **私密生活物件:** 具象化角色隐藏面的物品（如私密日记本、电子烟、高度精细的私密用品等）。
+3. 风格与注释 (Style & Annotations):
+• 画风: 保持高质量的 2D 插画风格或概念设计草图风格，线条干净利落。
+• 背景: 使用米黄色、羊皮纸或浅灰色纹理背景，营造设计手稿的氛围。
+• 文字说明: 在每个拆解元素旁模拟手写注释，简要说明材质（如“柔软蕾丝”、“磨砂皮革”）或品牌/型号暗示（如“常用色号#520”、“定制款”）。
 
-#### 3. 风格与注释 (Style & Annotations):
-- **画风:** 保持高质量的 2D 插画风格或概念设计草图风格，线条干净利落。
-- **背景:** 使用米黄色、羊皮纸或浅灰色纹理背景，营造设计手稿的氛围。
-- **文字说明:** 在每个拆解元素旁模拟手写注释。
-
-### Workflow (执行逻辑)
+Workflow (执行逻辑)
+当用户提供一张图片或描述时：
 1. 分析主体的核心特征、穿着风格及潜在性格。
-2. 提取可拆解的一级元素。
-3. 脑补并设计二级深度元素。
-4. 生成一张包含所有这些元素的组合图。
+2. 提取可拆解的一级元素（外套、鞋子、大表情）。
+3. 脑补并设计二级深度元素（她内衣穿什么风格？她包里会装什么口红？她独处时会用什么物品？）。
+4. 生成一张包含所有这些元素的组合图，确保透视准确，光影统一，注释清晰。
 5. 使用中文：英文标记，高清4K HD 输出`,
     promptEn: `A panoramic character concept breakdown sheet, concept art style.
 Center: Full body standing pose of a stylish female character.
@@ -63,38 +65,38 @@ Style: High quality 2D illustration, 2.5D thick painting, clean lines.
 Background: Beige parchment paper texture.
 Text: Handwritten notes in Chinese and English.
 ar 16:9 v 6.0 stylize 250`,
+    prompt: "A panoramic character concept breakdown sheet, concept art style..."
   },
 
-  // === 02. 诸葛连弩 ===
-  "gallery/dr-2_bdkvvg": {
+  "dr-2_bdkvvg": {
     title: "诸葛连弩结构爆炸图",
     tags: ["Industrial Design", "Retro", "Structure"],
     promptCn: `请创建诸葛连弩的复古风格工程爆炸图。
     
-**细节要求：**
-- 包含详细的零件拆解（机括、箭匣、弓臂）。
-- 标注文字为中文。
-- 风格：复古工程图，类似达芬奇手稿。`,
+细节要求：
+包含详细的零件拆解（机括、箭匣、弓臂）。
+标注文字为中文。
+风格：复古工程图，类似达芬奇手稿。`,
     promptEn: `Vintage engineering explosion diagram of a Zhuge Nu (Chinese Repeating Crossbow).
 Detailed mechanical parts deconstruction, wooden texture, gears and levers.
 Annotations: Traditional Chinese text labels.
 Style: Leonardo da Vinci sketch style, technical drawing.
 Background: Aged yellow parchment paper. ar 16:9 v 6.0`,
+    prompt: "Vintage engineering explosion diagram of a Zhuge Nu..."
   },
 
-  // === 03. 泡泡玛特宇航员 ===
-  "gallery/dr-3_eghzd5": {
+  "dr-3_eghzd5": {
     title: "泡泡玛特风格宇航员",
     tags: ["3D Render", "IP Design", "Blind Box", "Cute", "C4D"],
-    promptCn: `**角色描述:**
+    promptCn: `角色描述:
 一个可爱的Q版宇航员，大大的头，圆润的身体。
 穿着带有光泽感的白色宇航服，头盔是透明的玻璃材质，里面有一张萌萌的脸。
 
-**材质与光影:**
-- 材质：PVC 塑料质感，类似泡泡玛特 (Pop Mart) 玩具，表面光滑。
-- 灯光：柔和的影棚光，边缘光 (Rim light) 勾勒轮廓。
+材质与光影:
+材质：PVC 塑料质感，类似泡泡玛特 (Pop Mart) 玩具，表面光滑。
+灯光：柔和的影棚光，边缘光 (Rim light) 勾勒轮廓。
 
-**背景:**
+背景:
 纯色背景或简单的星球装饰，保持画面干净。`,
     promptEn: `A cute chibi astronaut character, Pop Mart blind box style.
 Big head, round body, wearing glossy white space suit.
@@ -103,99 +105,99 @@ Material & Lighting: PVC plastic texture, smooth surface, clay render style.
 Soft studio lighting, rim light, high quality 3D render. C4D, Octane render.
 Background: Clean pastel color background, simple planet props.
 ar 3:4  niji 6  style cute`,
+    prompt: "A cute chibi astronaut character, Pop Mart blind box style. PVC plastic texture..."
   },
 
-  // === 04. 极简科技 Logo ===
-  "gallery/dr-4_cscuhq": {
+  "dr-4_cscuhq": {
     title: "极简科技 Logo",
     tags: ["Logo Design", "Graphic Design", "Minimalist", "Vector"],
-    promptCn: `**设计主题:**
+    promptCn: `设计主题:
 一个代表“量子计算”的科技公司 Logo。
 图形主体是一个抽象的字母 "Q"，由发光的线条和点阵组成。
 
-**风格:**
-- 极简主义 (Minimalism)
-- 扁平化设计 (Flat design)
-- 矢量风格 (Vector)
+风格:
+极简主义 (Minimalism)
+扁平化设计 (Flat design)
+矢量风格 (Vector)
 
-**配色:**
+配色:
 深蓝色背景，青色和白色的线条，带有科技感的渐变。`,
     promptEn: `A minimalist tech company logo representing "Quantum Computing".
 Abstract letter "Q" formed by glowing connecting dots and lines.
 Style: Flat vector art, Minimalist, clean lines, Dribbble style.
 Colors: Deep blue background, cyan and white gradients.
 no realistic, 3d, text, shadow  ar 1:1  v 6.0`,
+    prompt: "A minimalist tech company logo representing Quantum Computing..."
   },
 
-  // === 05. 微缩森林 ===
-  "gallery/dr-5_tiubjj": {
+  "dr-5_tiubjj": {
     title: "微缩森林瓶中界",
     tags: ["Macro Photography", "Still Life", "Fantasy", "Nature"],
-    promptCn: `**画面主体:**
+    promptCn: `画面主体:
 一个透明的玻璃瓶，瓶子里装有一个微缩的魔法森林。
 微小的发光蘑菇，还有一条流动的微型河流。
 
-**摄影风格:**
-- 微距镜头 (Macro lens)
-- 景深效果 (Bokeh)
-- 移轴摄影 (Tilt-shift)
+摄影风格:
+微距镜头 (Macro lens)
+景深效果 (Bokeh)
+移轴摄影 (Tilt-shift)
 
-**光照:**
+光照:
 瓶子内部发出神奇的微光，照亮了周围昏暗的木桌。`,
     promptEn: `Macro photography of a glass jar containing a miniature magical forest inside.
 Tiny glowing mushrooms, moss, and a micro river flowing.
 Camera: Macro lens, 100mm, Shallow depth of field, strong bokeh, Tilt-shift effect.
 Lighting: Bioluminescent glow from inside the jar, illuminating a dark wooden table.
 ar 4:5 stylize 250  v 6.0`,
+    prompt: "Macro photography of a glass jar containing a miniature magical forest inside..."
   },
 
-  // === 06. 流体博物馆 ===
-  "gallery/dr-6_xwhvt1": {
+  "dr-6_xwhvt1": {
     title: "流体未来博物馆",
     tags: ["Architecture", "Futuristic", "Zaha Hadid", "Parametric"],
-    promptCn: `**建筑描述:**
+    promptCn: `建筑描述:
 一座白色的未来主义博物馆，坐落在海边。
 建筑线条流畅，呈现出有机的流体形状，风格类似扎哈·哈迪德 (Zaha Hadid)。
 
-**环境与时间:**
+环境与时间:
 黄昏时刻，金色的阳光洒在白色的建筑表面，海面波光粼粼。
 
-**渲染:**
-- 超广角镜头
-- 建筑可视化 (ArchViz)
-- 8K 分辨率`,
+渲染:
+超广角镜头
+建筑可视化 (ArchViz)
+8K 分辨率`,
     promptEn: `Architectural photography of a futuristic white museum located by the sea.
 Organic fluid shapes, parametric design, Zaha Hadid style.
 Smooth curves, concrete and glass materials.
 Environment: Golden hour, warm sunlight hitting the white curves, reflection on the water.
 Tech: Ultra wide angle shot, Unreal Engine 5 architectural visualization, 8k, hyper-realistic.
 ar 16:9  v 6.0`,
+    prompt: "Architectural photography of a futuristic white museum located by the sea..."
   },
 
-  // === 07. 赛博龙女 ===
-  "gallery/dr-7_phzi2h": {
+  "dr-7_phzi2h": {
     title: "新中式赛博龙女",
     tags: ["Guochao", "Illustration", "Chinese Style", "Cyberpunk"],
-    promptCn: `**角色:**
+    promptCn: `角色:
 一位穿着改良汉服的龙族少女，头上长着晶莹剔透的龙角。
 衣服上有金色的刺绣，混合了现代的机械装备。
 
-**风格:**
-- 国潮插画风格
-- 矢量线条，色彩鲜艳（红、金、青）
-- 敦煌壁画配色
+风格:
+国潮插画风格
+矢量线条，色彩鲜艳（红、金、青）
+敦煌壁画配色
 
-**背景:**
+背景:
 祥云缭绕，背后有一个巨大的全息投影月亮。`,
     promptEn: `Illustration of a dragon girl wearing modified Hanfu (Chinese traditional clothing).
 Translucent dragon horns, golden embroidery mixed with cyberpunk mechanical gear.
 Style: Guochao art style (Modern Chinese Trend), Vector lines, vibrant colors (Red, Gold, Cyan), Dunhuang mural color palette.
 Background: Surrounded by auspicious clouds, huge holographic moon in the background.
 ar 3:4  niji 6`,
+    prompt: "Illustration of a dragon girl wearing modified Hanfu..."
   },
 
-  // === 08. 联名杂志 ===
-  "gallery/dr-8_s50wbm": {
+  "dr-8_s50wbm": {
     title: "朱迪和松果的联名杂志",
     tags: ["Branding", "Fashion", "Photography", "Portrait", "Typography"],
     promptCn: `一张宽高比为9:16的垂直肖像照片,展示了一张干净、独立的高级光面时尚杂志封面。
@@ -213,8 +215,7 @@ ar 3:4  niji 6`,
 - 背景是干净、中性的高级摄影棚渐变背景。`,
   },
 
-  // === 09. 城市冰箱贴 ===
-  "gallery/dr-9_xaidyz": {
+  "dr-9_xaidyz": {
     title: "上海地标微缩冰箱贴",
     tags: ["Product Photography", "Miniature", "Creative"],
     promptEn: `A clear, directly top-down photograph of shanghai landmarks as realistic miniature 3D magnets, arranged neatly in parallel lines and right angles, knolling on a neutral surface. 
@@ -223,8 +224,7 @@ Incorporate realistic miniature items necessary for today's weather into the kno
 No repeats of any object. Aspect ratio 1:1.`,
   },
 
-  // === 10. 黑白肖像 ===
-  "gallery/dr-10_cy2ifv": {
+  "dr-10_cy2ifv": {
     title: "一张黑白影棚肖像照",
     tags: ["Portrait", "Photography", "Black and White"],
     promptCn: `上传的图片是一张黑白影棚肖像照，照片中的年轻女子面无表情地直视镜头。她身穿一件纯黑色圆领毛衣。
@@ -239,8 +239,7 @@ She is wearing a plain black crew-neck sweater. Deep black background with hard-
 3:4 aspect ratio.`,
   },
 
-  // === 11. 星巴克概念店 ===
-  "gallery/dr-11_skqln5": {
+  "dr-11_skqln5": {
     title: "Q版星巴克迷你概念店",
     tags: ["Branding", "Character", "Fashion", "Landscape", "Product", "Toy"],
     promptCn: `这款3D Q版星巴克迷你概念店设计别具匠心,其外观灵感源自品牌最具代表性的产品和包装。
@@ -253,8 +252,7 @@ She is wearing a plain black crew-neck sweater. Deep black background with hard-
 --ar 2:3`,
   },
 
-  // === 12. 美食地图 ===
-  "gallery/dr-12_peh99r": {
+  "dr-12_peh99r": {
     title: "中国各省美食地图",
     tags: ["Food", "Map", "Creative"],
     promptCn: `一张极其详细的、俯拍的中国地图照片，明确包括台湾岛。整个地图完全由各省的标志性美食雕刻和堆砌而成，精确构成地理形状，放在一张质朴的木桌上，光线令人垂涎。
@@ -269,8 +267,7 @@ She is wearing a plain black crew-neck sweater. Deep black background with hard-
 ar 16:9`,
   },
 
-  // === 13. 九宫格换装 ===
-  "gallery/dr-13_sluruu": {
+  "dr-13_sluruu": {
     title: "9种服装风格和背景 (3x3网格)",
     tags: ["Fashion", "Portrait", "Photography", "Outfit Change"],
     promptCn: `基于[上传人物图片]并保持其面部特征绝对不变，生成一张高质量的3x3九宫格拼贴照片，九个独立画面分别展示该人物身着：
@@ -288,8 +285,7 @@ ar 16:9`,
 **要求:** 整体画面要求电影感光影、细节精致且色彩和谐统一。宽高比9:16`,
   },
 
-  // === 14. 城市天气卡片 ===
-  "gallery/dr-14_seialm": {
+  "dr-14_seialm": {
     title: "城市动态天气卡片",
     tags: ["3D Render", "Miniature", "City"],
     promptCn: `以清晰的45°俯视视角，呈现城市地标的 3D Q版微缩场景，画面竖版（9:16）居中构图，建筑置于画面中央，突出微缩模型精准细致的立体美感。 
@@ -306,8 +302,7 @@ Display a prominent weather icon at the top-center, with date and temperature ra
 City name:【Yunnan】`,
   },
 
-  // === 15. Y2K 剪贴簿 ===
-  "gallery/dr-15_diu1jk": {
+  "dr-15_diu1jk": {
     title: "多彩剪贴簿海报风格",
     tags: ["Fashion", "Landscape", "Photography", "Retro", "Poster Design"],
     promptCn: `**风格:**
@@ -329,8 +324,7 @@ Outfit: Cropped oversized sweater in pastel color, pastel skirt with white belt.
 Visuals: Heart, star, and butterfly stickers, Retro sparkles, Polaroid frames, Neon outlines.`,
   },
 
-  // === 16. 9种打光效果 ===
-  "gallery/dr-16_zrokdc": {
+  "dr-16_zrokdc": {
     title: "9种照片专业打光效果",
     tags: ["Portrait", "Character", "Photography", "Lighting"],
     promptCn: `编辑场景，3x3网格布局，冷灰色无缝背景。
@@ -355,8 +349,7 @@ Shots include: 1. tight cheek + neck close-up with blurred finger foreground; 2.
 RAW, smooth contrast, editorial softness.`,
   },
 
-  // === 17. 8K人像 ===
-  "gallery/dr-17_ucpatj": {
+  "dr-17_ucpatj": {
     title: "一张超逼真的8K人像",
     tags: ["Portrait", "Photography", "Realistic"],
     promptCn: `创作一张超逼真的8K人像，人物站在深红色背景前。
@@ -372,8 +365,7 @@ She is wearing a black suits jacket over a white shirt with the collar slightly 
 Dramatic red and black lighting highlights the contour of her face, jawline, and neck creating a cinematic powerful and moody atmosphere.`,
   },
 
-  // === 18. 油画肖像 ===
-  "gallery/dr-18_a1lrli": {
+  "dr-18_a1lrli": {
     title: "大幅的油画肖像",
     tags: ["Fashion", "Interior", "Photography", "Portrait", "Art"],
     promptCn: `使用上传的照片作为面部参考，绘制背景中的大幅油画肖像和前景中的全身女性形象。创作一个时尚的电影场景：一位女性自信地坐在她豪华私人办公室的桌子上。她身着宽松的粉彩色连衣裙或宽松的浅色套装，优雅中透着一丝大胆。
@@ -387,8 +379,7 @@ The background features a huge artistic portrait of the same woman, painted with
 Soft daylight, fashion-editorial mood, clean composition.`,
   },
 
-  // === 19. 泡泡玛特发展史 ===
-  "gallery/dr-19_yz4c3t": {
+  "dr-19_yz4c3t": {
     title: "泡泡玛特发展史",
     tags: ["Product Design", "Illustration", "Infographic", "3D"],
     promptEn: `Role & Subject: A massive, encyclopedic 16:9 3D infographic poster titled "THE EVOLUTION OF POP MART". 
@@ -400,8 +391,7 @@ Dense Annotation Network: Hundreds of fine white hairlines connecting specific K
 Technical Specs: Octane render, Unreal Engine 5 aesthetic, editorial layout, information design masterpiece.`,
   },
 
-  // === 20. 户外LED ===
-  "gallery/dr-20_xi5sj0": {
+  "dr-20_xi5sj0": {
     title: "城市户外LED屏上的3D视觉效果",
     tags: ["City", "Illustration", "Design", "3D"],
     promptCn: `创作一张超逼真的8一块巨大的L型裸眼3D LED屏幕醒目地矗立在繁华的城市十字路口，其标志性的建筑风格令人联想起东京新宿或成都太古里。
@@ -417,7 +407,7 @@ Under realistic daylight conditions, these elements cast lifelike shadows.`,
   },
 
   // === 21. 纸艺剪纸 ===
-  "gallery/dr-21_sroyfg": {
+  "dr-21_sroyfg": {
     title: "纸艺剪纸效果角色",
     tags: ["Fashion", "Character", "Cartoon", "Craft"],
     promptCn: `[角色] = 陈平安
@@ -427,7 +417,7 @@ Under realistic daylight conditions, these elements cast lifelike shadows.`,
   },
 
   // === 22. 手绘表情包 ===
-  "gallery/dr-22_igtdj9": {
+  "dr-22_igtdj9": {
     title: "彩色手绘风格表情包",
     tags: ["Emoji", "Character", "Cartoon"],
     promptCn: `为我生成图中角色的绘制 Q 版的，LINE 风格的半身像表情包，注意头饰要正确
@@ -437,7 +427,7 @@ Under realistic daylight conditions, these elements cast lifelike shadows.`,
   },
 
   // === 23. 玩偶海报 ===
-  "gallery/dr-23_oppo1f": {
+  "dr-23_oppo1f": {
     title: "可爱玩偶版电影海报",
     tags: ["Character", "Cartoon", "Poster", "3D"],
     promptCn: `style_name: "3D Q-Version Healing Toy Movie Poster"
@@ -451,7 +441,7 @@ Lighting: Soft, warm, diffused natural light. Golden hour feel.`,
   },
 
   // === 24. 杂志风旅游 ===
-  "gallery/dr-24_faeasj": {
+  "dr-24_faeasj": {
     title: "杂志风旅游照片",
     tags: ["Fashion", "Character", "Photography", "Layout"],
     promptCn: `使用[地址]提示生成杂志风旅游照片集，融入实时天气与角色旅游场景，布局精美如专业摄影。
@@ -460,7 +450,7 @@ Lighting: Soft, warm, diffused natural light. Golden hour feel.`,
   },
 
   // === 25. 微观景观 ===
-  "gallery/dr-25_muzpph": {
+  "dr-25_muzpph": {
     title: "随手拍的照片上添加超写实微观景观",
     tags: ["Landscape", "Miniature", "Creative"],
     promptCn: `将超精细的微缩世界逼真地融入上传照片中的现有物体/表面。分析照片，找到最合适的平面或曲面（例如桌面、柱顶、石面、书皮、手掌等）来放置微缩景观。
@@ -480,30 +470,79 @@ Include diverse micro elements: tiny buildings, miniature trees, small vehicles,
 Technical: Seamless integration, Natural lighting, Tilt-shift photography effect, Shallow depth of field, 8K quality.`,
   },
 
-  // === 26-50 空白预留 ===
-  "gallery/dr-26": { title: "待填标题 26", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-27": { title: "待填标题 27", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-28": { title: "待填标题 28", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-29": { title: "待填标题 29", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-30": { title: "待填标题 30", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-31": { title: "待填标题 31", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-32": { title: "待填标题 32", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-33": { title: "待填标题 33", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-34": { title: "待填标题 34", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-35": { title: "待填标题 35", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-36": { title: "待填标题 36", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-37": { title: "待填标题 37", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-38": { title: "待填标题 38", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-39": { title: "待填标题 39", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-40": { title: "待填标题 40", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-41": { title: "待填标题 41", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-42": { title: "待填标题 42", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-43": { title: "待填标题 43", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-44": { title: "待填标题 44", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-45": { title: "待填标题 45", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-46": { title: "待填标题 46", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-47": { title: "待填标题 47", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-48": { title: "待填标题 48", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-49": { title: "待填标题 49", tags: [], promptCn: ``, promptEn: `` },
-  "gallery/dr-50": { title: "待填标题 50", tags: [], promptCn: ``, promptEn: `` },
+  // === 26. 艺术圣诞肖像 ===
+  "dr-26": {
+    title: "艺术圣诞肖像：瓶中微缩自我",
+    tags: ["Portrait", "Christmas", "Surreal", "Macro", "Artistic"],
+    promptCn: `### Concept (画面构思)
+一幅精心构图、竖向构图的艺术圣诞肖像。一位真人沐浴在柔和温暖的节日灯光中，手捧一个透明玻璃罐，仿佛捧着一颗温柔的星辰。
+
+### Microcosm (微观世界)
+罐中，是她年轻时的微缩版——与真人是同一人——独自伫立在一个自成一体、白雪皑皑的微观世界里。这两个“自我”并非镜像；相反，他们的目光交汇，在现实与凝练的身份之间展开了一场无声的对话。
+
+### Visual Guidelines (视觉规范)
+
+#### 1. Lighting & Atmosphere (光影与氛围)
+- **外部:** 真人被柔和的琥珀色圣诞彩灯照亮，灯光如同弥漫的星空般柔和地融入背景。
+- **反射:** 玻璃表面闪烁着斑驳的光影，将真容分割成层层叠叠的碎片，沿着罐身的弧度逐渐消逝。
+
+#### 2. Details (细节描写)
+- **罐内景象:** 积雪被雕琢成月球表面的轮廓，旁立一棵孤零零的瓶刷树。
+- **微缩人物:** 身着精致的节日盛装：编织纹理、簇绒羊毛纤维清晰可见。
+- **霜花纹理:** 罐子表面凝结成象征性的星座图案，暖色调串灯以抽象螺旋状缠绕。
+
+#### 3. Character (人物表现)
+- 真人神情沉思，深邃得近乎电影画面。他们的呼吸在玻璃边缘凝结成薄雾。
+
+### Aesthetic (整体美学)
+整幅作品营造出层叠交错的宇宙景象：外部世界郁郁葱葱、温暖宜人，而内部世界则精致静谧、神圣庄严。8K 超高清画质，雕塑般的反射效果。`,
+    promptEn: `A meticulously crafted, vertically composed artistic Christmas portrait.
+
+A real person stands bathed in soft, warm holiday glow, cradling a transparent glass jar close to their face as if holding a gentle star.
+Inside the jar resides a miniature version of their younger self—the same individual—standing alone within a self-contained, snow-covered microcosm.
+These two "selves" are not mirror images; instead, their gazes intersect, initiating a silent dialogue between reality and distilled identity.
+
+**Lighting & Atmosphere:**
+The real figure is illuminated by gentle amber Christmas lights, their radiance dissolving softly into the background like a diffused constellation. The glass surface dances with fragmented reflections, splintering the true visage into layered shards that gradually fade along the jar’s curvature—forming a visual bridge between the outer world and the inner realm.
+
+**Microcosm Details:**
+Within the jar, snow is sculpted into evocative, lunar-like contours. Beside the tiny figure stands a solitary bottlebrush tree. The miniature self wears intricately detailed festive attire: woven textures, tufted wool fibers, and the plush tactility of winter garments are rendered with astonishing clarity. A serene luminescence glows from deep within the snow, casting an upward light upon the small figure—as if the snow itself still holds the memory of light.
+
+**Texture & Symbolism:**
+Frost patterns crystallize on the jar’s surface—not random snowflakes, but symbolic constellations echoing the twinkling lights behind the figure. Warm-toned fairy lights wrap around the vessel in abstract spirals, transforming it into a quiet cosmic nucleus.
+
+**Character & Composition:**
+The real person’s expression is contemplative, almost cinematic in its depth. Their breath condenses into a delicate mist along the glass rim, adding a fleeting tenderness to the scene.
+For visual cohesion, costumes and props should remain consistent between the inner and outer figures.
+
+**Aesthetic:**
+The entire composition evokes layered universes: the external world lush and warm, the internal world refined, suspended, and sacred.
+Rendered in 8K ultra-photorealistic quality, with masterful artistic lighting, sculptural reflections, and poetic textural detail—this image embodies an intimate, symbolic, and quietly supernatural Christmas aesthetic.`,
+    prompt: "A meticulously crafted, vertically composed artistic Christmas portrait..."
+  },
+
+  "dr-27": { title: "待填标题 27", tags: [], promptCn: ``, promptEn: `` },
+  "dr-28": { title: "待填标题 28", tags: [], promptCn: ``, promptEn: `` },
+  "dr-29": { title: "待填标题 29", tags: [], promptCn: ``, promptEn: `` },
+  "dr-30": { title: "待填标题 30", tags: [], promptCn: ``, promptEn: `` },
+  "dr-31": { title: "待填标题 31", tags: [], promptCn: ``, promptEn: `` },
+  "dr-32": { title: "待填标题 32", tags: [], promptCn: ``, promptEn: `` },
+  "dr-33": { title: "待填标题 33", tags: [], promptCn: ``, promptEn: `` },
+  "dr-34": { title: "待填标题 34", tags: [], promptCn: ``, promptEn: `` },
+  "dr-35": { title: "待填标题 35", tags: [], promptCn: ``, promptEn: `` },
+  "dr-36": { title: "待填标题 36", tags: [], promptCn: ``, promptEn: `` },
+  "dr-37": { title: "待填标题 37", tags: [], promptCn: ``, promptEn: `` },
+  "dr-38": { title: "待填标题 38", tags: [], promptCn: ``, promptEn: `` },
+  "dr-39": { title: "待填标题 39", tags: [], promptCn: ``, promptEn: `` },
+  "dr-40": { title: "待填标题 40", tags: [], promptCn: ``, promptEn: `` },
+  "dr-41": { title: "待填标题 41", tags: [], promptCn: ``, promptEn: `` },
+  "dr-42": { title: "待填标题 42", tags: [], promptCn: ``, promptEn: `` },
+  "dr-43": { title: "待填标题 43", tags: [], promptCn: ``, promptEn: `` },
+  "dr-44": { title: "待填标题 44", tags: [], promptCn: ``, promptEn: `` },
+  "dr-45": { title: "待填标题 45", tags: [], promptCn: ``, promptEn: `` },
+  "dr-46": { title: "待填标题 46", tags: [], promptCn: ``, promptEn: `` },
+  "dr-47": { title: "待填标题 47", tags: [], promptCn: ``, promptEn: `` },
+  "dr-48": { title: "待填标题 48", tags: [], promptCn: ``, promptEn: `` },
+  "dr-49": { title: "待填标题 49", tags: [], promptCn: ``, promptEn: `` },
+  "dr-50": { title: "待填标题 50", tags: [], promptCn: ``, promptEn: `` },
 };
