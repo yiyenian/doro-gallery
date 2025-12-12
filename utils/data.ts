@@ -504,7 +504,39 @@ The terrain is a continuous, rising expanse:
     prompt: "Borderless Miniature World Architect - Create a hyper-dense, vertically stacked isometric world..."
   },
 
-  "dr-28": { title: "待填标题 28", tags: [], promptCn: ``, promptEn: `` },
+  // === 28. 时尚人像拼贴大片 ===
+  "dr-28": {
+    title: "时尚人像拼贴大片",
+    tags: ["Fashion", "Portrait", "Collage", "Magazine", "Creative"],
+    promptCn: `### 一、总体目标
+**功能描述：** 根据用户上传的人物参考图，提取人物气质、妆容风格、光线和色彩特征，创作一张独一无二的时尚人像拼贴大片。
+**差异要求：** 保留参考人物的五官结构与整体气质，不直接临摹原图，妆容和构图在同一风格体系中做创意变化。
+### 二、画面构图与输出形式
+- **主画面：** 生成人物面部超近景或近景，头部和肩部占据画面大部分空间，视线参考原图气质设计。
+- **拼贴结构：** 右侧或一角增加多张小图拼贴，包含侧脸特写、手部特写、局部妆容特写等，形成杂志排版感。
+- **背景方式：** 保持背景简洁干净，以纯色或轻微明度过渡为主，突出人物与妆容。
+### 三、文字与图形设计
+- **标题文字：** 画面上方放置大号杂志标题，字形简洁有力量，保持居中或上中对齐。
+- **副标题与小字：** 在画面一侧或底部添加几行小字（主题词、日期），排列整齐，字号统一。
+- **几何图形：** 在人物周围加入细线条、窄矩形色块或半透明色块，增加平面构成感。
+### 四、风格继承与变化
+- **色彩继承：** 整体色调、明暗对比贴合参考图，主色提取自最显眼的妆容或服饰。
+- **光线继承：** 还原原图的光线方向与质感（柔光或硬光）。
+- **创意妆容：** 在参考风格基础上增加局部夸张处理（如扩大腮红范围、强化唇部晕染、增加雀斑或高光点）。
+- **细节手势：** 增加触碰嘴唇、脸颊、眼下等手部动作，增强故事感。
+### 五、整体质感
+- **清晰度：** 8K超清，保持皮肤毛孔和细节可见，避免过度磨皮。
+- **色调处理：** 整体色调统一，强化主色，降低杂乱颜色。`,
+    promptEn: `High-fashion editorial portrait collage, magazine cover layout design.
+**Main Visual:** An ultra close-up or close-up shot of a model's face and shoulders, capturing a specific mood and temperament derived from the reference image.
+**Collage Elements:** On the right side or corners, include artistic inset shots: side profile silhouette, macro details of hands touching lips or cheeks, and extreme close-up of eye/lip makeup.
+**Design & Typography:** Large, bold, minimalist magazine title centered at the top. Small, organized sans-serif text (dates, themes) at the bottom. Thin geometric lines and semi-transparent color blocks overlaying the composition for a graphic design feel.
+**Style & Makeup:** Creative variations of the reference makeup—exaggerated blush, smudged lips, or added freckles/highlights. Fashion accessories (earrings, rings) matching the main color palette.
+**Lighting & Texture:** Professional studio lighting (matching reference softness/hardness). 8k resolution, ultra-realistic skin texture, visible pores, sharp focus on eyes, soft background colors.
+--ar 3:4 --v 6.0 --style raw`,
+    prompt: "A high-fashion portrait collage with magazine layout and creative makeup details..."
+  },
+  
   "dr-29": { title: "待填标题 29", tags: [], promptCn: ``, promptEn: `` },
   "dr-30": { title: "待填标题 30", tags: [], promptCn: ``, promptEn: `` },
   "dr-31": { title: "待填标题 31", tags: [], promptCn: ``, promptEn: `` },
