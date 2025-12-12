@@ -8,7 +8,7 @@ export interface DataRecord {
 
 export const localData: Record<string, DataRecord> = {
   // === 01. 全景式角色 ===
-  "dr-1": {
+  "dr-1_u0ugns": {
     title: "全景式角色深度概念分解图",
     tags: ["Character Design", "Concept Art", "Game Art", "2.5D"],
     promptCn: `### Role (角色设定)
@@ -49,7 +49,7 @@ ar 16:9 v 6.0 stylize 250`,
   },
 
   // === 02. 诸葛连弩 ===
-  "dr-2": {
+  "dr-2_bdkvvg": {
     title: "诸葛连弩结构爆炸图",
     tags: ["Industrial Design", "Retro", "Structure"],
     promptCn: `请创建诸葛连弩的复古风格工程爆炸图。
@@ -66,7 +66,7 @@ Background: Aged yellow parchment paper. ar 16:9 v 6.0`,
   },
 
   // === 03. 泡泡玛特宇航员 ===
-  "dr-3": {
+  "dr-3_eghzd5": {
     title: "泡泡玛特风格宇航员",
     tags: ["3D Render", "IP Design", "Blind Box", "Cute", "C4D"],
     promptCn: `**角色描述:**
@@ -87,7 +87,7 @@ ar 3:4  niji 6  style cute`,
   },
 
   // === 04. 极简科技 Logo ===
-  "dr-4": {
+  "dr-4_cscuhq": {
     title: "极简科技 Logo",
     tags: ["Logo Design", "Graphic Design", "Minimalist", "Vector"],
     promptCn: `**设计主题:**
@@ -107,7 +107,7 @@ no realistic, 3d, text, shadow  ar 1:1  v 6.0`,
   },
 
   // === 05. 微缩森林 ===
-  "dr-5": {
+  "dr-5_tiubjj": {
     title: "微缩森林瓶中界",
     tags: ["Macro Photography", "Still Life", "Fantasy", "Nature"],
     promptCn: `**画面主体:**
@@ -127,7 +127,7 @@ ar 4:5 stylize 250  v 6.0`,
   },
 
   // === 06. 流体博物馆 ===
-  "dr-6": {
+  "dr-6_xwhvt1": {
     title: "流体未来博物馆",
     tags: ["Architecture", "Futuristic", "Zaha Hadid", "Parametric"],
     promptCn: `**建筑描述:**
@@ -148,7 +148,7 @@ ar 16:9  v 6.0`,
   },
 
   // === 07. 赛博龙女 ===
-  "dr-7": {
+  "dr-7_phzi2h": {
     title: "新中式赛博龙女",
     tags: ["Guochao", "Illustration", "Chinese Style", "Cyberpunk"],
     promptCn: `**角色:**
@@ -167,7 +167,7 @@ ar 3:4  niji 6`,
     prompt: "Illustration of a dragon girl wearing modified Hanfu..."
   },
 
-  "dr-8": {
+  "dr-8_s50wbm": {
     title: "朱迪和松果的联名杂志",
     tags: ["Branding", "Fashion", "Photography", "Portrait", "Typography"],
     promptCn: `一张宽高比为9:16的垂直肖像照片,展示了一张干净、独立的高级光面时尚杂志封面。杂志顶部是巨大的黑色粗衬线字体标题 **“SONGGUO”**，散发着奢华品牌的氛围。
@@ -181,7 +181,7 @@ ar 3:4  niji 6`,
 - 背景是干净、中性的高级摄影棚渐变背景。`,
   },
 
-  "dr-9": {
+  "dr-9_xaidyz": {
     title: "上海地标微缩冰箱贴",
     tags: ["Product Photography", "Miniature", "Creative"],
     promptEn: `A clear, directly top-down photograph of shanghai landmarks as realistic miniature 3D magnets, arranged neatly in parallel lines and right angles, knolling on a neutral surface. 
@@ -190,7 +190,7 @@ Incorporate realistic miniature items necessary for today's weather into the kno
 No repeats of any object. Aspect ratio 1:1.`,
   },
 
-  "dr-10": {
+  "dr-10_cy2ifv": {
     title: "一张黑白影棚肖像照",
     tags: ["Portrait", "Photography", "Black and White"],
     promptCn: `上传的图片是一张黑白影棚肖像照，照片中的年轻女子面无表情地直视镜头。她身穿一件纯黑色圆领毛衣。
@@ -201,7 +201,7 @@ She is wearing a plain black crew-neck sweater. Deep black background with hard-
 3:4 aspect ratio.`,
   },
 
-  "dr-11": {
+  "dr-11_skqln5": {
     title: "Q版星巴克迷你概念店",
     tags: ["Branding", "Character", "Fashion", "Landscape", "Product", "Toy"],
     promptCn: `这款3D Q版星巴克迷你概念店设计别具匠心,其外观灵感源自品牌最具代表性的产品和包装。
@@ -211,7 +211,7 @@ She is wearing a plain black crew-neck sweater. Deep black background with hard-
 该店铺采用Cinema 4D软件渲染,呈现出微缩城市景观风格，兼具盲盒玩具的精致美感，细节丰富，栩栩如生，柔和的灯光更增添了午后轻松惬意的氛围。--ar 2:3`,
   },
 
-  "dr-12": {
+  "dr-12_peh99r": {
     title: "中国各省美食地图",
     tags: ["Food", "Map", "Creative"],
     promptCn: `一张极其详细的、俯拍的中国地图照片，明确包括台湾岛。整个地图完全由各省的标志性美食雕刻和堆砌而成，精确构成地理形状，放在一张质朴的木桌上，光线令人垂涎。
@@ -225,7 +225,7 @@ She is wearing a plain black crew-neck sweater. Deep black background with hard-
 ar 16:9`,
   },
 
-  "dr-13": {
+  "dr-13_sluruu": {
     title: "9种服装风格和背景 (3x3网格)",
     tags: ["Fashion", "Portrait", "Photography", "Outfit Change"],
     promptCn: `基于[上传人物图片]并保持其面部特征绝对不变，生成一张高质量的3x3九宫格拼贴照片，九个独立画面分别展示该人物身着：
@@ -241,10 +241,10 @@ ar 16:9`,
 **要求:** 整体画面要求电影感光影、细节精致且色彩和谐统一。宽高比9:16`,
   },
 
-  "dr-14": {
+  "dr-14_seialm": {
     title: "城市动态天气卡片",
     tags: ["3D Render", "Miniature", "City"],
-    promptCn: `以清晰的45°俯视视角，呈现城市地标的 3D Q版微缩场景，画面竖版（9:16）居中构图，建筑置于画面中央，突出微缩模型精准细致的立体美感。 
+    promptCn: `以清晰的45°俯视视角，呈现城市地标的3D Q版微缩场景，画面竖版（9:16）居中构图，建筑置于画面中央，突出微缩模型精准细致的立体美感。 
 **视觉风格:** 画面材质细腻温润，体现真实的PBR质感与柔和逼真的光影效果。整体构图简洁干净、视觉统一，巧妙在城市建筑中融入天气元素，动态天气效果与城市景观融合互动，营造身临其境的天气视觉氛围。 
 **排版:** 图片正上方显示醒目的代表天气的图标，图标下方是日期（超小字）、温度范围（中号），图标上方是城市名（大号）。
 城市名称：【云南】`,
@@ -254,7 +254,7 @@ Display a prominent weather icon at the top-center, with date and temperature ra
 City name:【Yunnan】`,
   },
 
-  "dr-15": {
+  "dr-15_diu1jk": {
     title: "多彩剪贴簿海报风格",
     tags: ["Fashion", "Landscape", "Photography", "Retro", "Poster Design"],
     promptCn: `**风格:** 色彩缤纷的Y2K剪贴簿海报美学，鲜艳的贴纸，多个人物穿着相同的服装和发型，摆出不同的姿势，并配以剪纸，色彩斑斓的笔触和线条，无框拼贴风格。全息纹理、柔和的渐变色、闪光点缀、趣味涂鸦、杂志剪贴图案，布局看似混乱却又平衡，极具艺术性和视觉吸引力。
@@ -272,7 +272,7 @@ Outfit: Cropped oversized sweater in pastel color, pastel skirt with white belt.
 Visuals: Heart, star, and butterfly stickers, Retro sparkles, Polaroid frames, Neon outlines.`,
   },
 
-  "dr-16": {
+  "dr-16_zrokdc": {
     title: "9种照片专业打光效果",
     tags: ["Portrait", "Character", "Photography", "Lighting"],
     promptCn: `编辑场景，3x3网格布局，冷灰色无缝背景。人物（面部特征与上传图片完全一致）身穿炭灰色无袖连衣裙。灯光：大型顶置柔光箱，轻微侧向反射光。
@@ -292,7 +292,7 @@ Shots include: 1. tight cheek + neck close-up with blurred finger foreground; 2.
 RAW, smooth contrast, editorial softness.`,
   },
 
-  "dr-17": {
+  "dr-17_ucpatj": {
     title: "一张超逼真的8K人像",
     tags: ["Portrait", "Photography", "Realistic"],
     promptCn: `创作一张超逼真的8K人像，人物站在深红色背景前。她五官轮廓分明，一头凌乱的深色头发，表情自信而略带锐利。她身穿黑色西装外套，内搭白色衬衫，领口微微敞开，系着一条红色条纹网状领带。
@@ -302,7 +302,7 @@ RAW, smooth contrast, editorial softness.`,
 Dramatic red and black lighting highlights the contour of her face, jawline, and neck creating a cinematic powerful and moody atmosphere.`,
   },
 
-  "dr-18": {
+  "dr-18_a1lrli": {
     title: "大幅的油画肖像",
     tags: ["Fashion", "Interior", "Photography", "Portrait", "Art"],
     promptCn: `使用上传的照片作为面部参考，绘制背景中的大幅油画肖像和前景中的全身女性形象。创作一个时尚的电影场景：一位女性自信地坐在她豪华私人办公室的桌子上。她身着宽松的粉彩色连衣裙或宽松的浅色套装，优雅中透着一丝大胆。
@@ -311,7 +311,7 @@ Dramatic red and black lighting highlights the contour of her face, jawline, and
 The background features a huge artistic portrait of the same woman, painted with expressive pastel brushstrokes. Soft daylight, fashion-editorial mood, clean composition.`,
   },
 
-  "dr-19": {
+  "dr-19_yz4c3t": {
     title: "泡泡玛特发展史",
     tags: ["Product Design", "Illustration", "Infographic", "3D"],
     promptEn: `Role & Subject: A massive, encyclopedic 16:9 3D infographic poster titled "THE EVOLUTION OF POP MART". 
@@ -323,7 +323,7 @@ Dense Annotation Network: Hundreds of fine white hairlines connecting specific K
 Technical Specs: Octane render, Unreal Engine 5 aesthetic, editorial layout, information design masterpiece.`,
   },
 
-  "dr-20": {
+  "dr-20_xi5sj0": {
     title: "城市户外LED屏上的3D视觉效果",
     tags: ["City", "Illustration", "Design", "3D"],
     promptCn: `创作一张超逼真的8一块巨大的L型裸眼3D LED屏幕醒目地矗立在繁华的城市十字路口，其标志性的建筑风格令人联想起东京新宿或成都太古里。
@@ -336,7 +336,8 @@ The characters and objects possess striking depth and appear to break through th
 Under realistic daylight conditions, these elements cast lifelike shadows.`,
   },
 
-  "dr-21": {
+  // === 21. 纸艺剪纸 ===
+  "dr-21_sroyfg": {
     title: "纸艺剪纸效果角色",
     tags: ["Fashion", "Character", "Cartoon", "Craft"],
     promptCn: `[角色] = 陈平安
@@ -345,7 +346,8 @@ Under realistic daylight conditions, these elements cast lifelike shadows.`,
 画面比例：1080 x 1080`,
   },
 
-  "dr-22": {
+  // === 22. 手绘表情包 ===
+  "dr-22_igtdj9": {
     title: "彩色手绘风格表情包",
     tags: ["Emoji", "Character", "Cartoon"],
     promptCn: `为我生成图中角色的绘制 Q 版的，LINE 风格的半身像表情包，注意头饰要正确
@@ -354,7 +356,8 @@ Under realistic daylight conditions, these elements cast lifelike shadows.`,
 生成的图片需为 4K 分辨率 16:9`,
   },
 
-  "dr-23": {
+  // === 23. 玩偶海报 ===
+  "dr-23_oppo1f": {
     title: "可爱玩偶版电影海报",
     tags: ["Character", "Cartoon", "Poster", "3D"],
     promptCn: `style_name: "3D Q-Version Healing Toy Movie Poster"
@@ -367,7 +370,8 @@ Composition:
 Lighting: Soft, warm, diffused natural light. Golden hour feel.`,
   },
 
-  "dr-24": {
+  // === 24. 杂志风旅游 ===
+  "dr-24_faeasj": {
     title: "杂志风旅游照片",
     tags: ["Fashion", "Character", "Photography", "Layout"],
     promptCn: `使用[地址]提示生成杂志风旅游照片集，融入实时天气与角色旅游场景，布局精美如专业摄影。
@@ -375,7 +379,8 @@ Lighting: Soft, warm, diffused natural light. Golden hour feel.`,
 整体排版需如同摄影集般精致，充分利用9:16的画面比例，制作成杂志封面。`,
   },
 
-  "dr-25": {
+  // === 25. 微观景观 ===
+  "dr-25_muzpph": {
     title: "随手拍的照片上添加超写实微观景观",
     tags: ["Landscape", "Miniature", "Creative"],
     promptCn: `将超精细的微缩世界逼真地融入上传照片中的现有物体/表面。分析照片，找到最合适的平面或曲面（例如桌面、柱顶、石面、书皮、手掌等）来放置微缩景观。
@@ -393,6 +398,7 @@ Include diverse micro elements: tiny buildings, miniature trees, small vehicles,
 Technical: Seamless integration, Natural lighting, Tilt-shift photography effect, Shallow depth of field, 8K quality.`,
   },
 
+  // === 26. 艺术圣诞肖像 (新增) ===
   "dr-26": {
     title: "艺术圣诞肖像：瓶中微缩自我",
     tags: ["Portrait", "Christmas", "Surreal", "Macro", "Artistic"],
@@ -430,8 +436,74 @@ The entire composition evokes layered universes: the external world lush and war
 Rendered in 8K ultra-photorealistic quality, with masterful artistic lighting, sculptural reflections, and poetic textural detail—this image embodies an intimate, symbolic, and quietly supernatural Christmas aesthetic.`,
     prompt: "A meticulously crafted, vertically composed artistic Christmas portrait..."
   },
+  
+  // === 27. 无边框微缩世界建筑师 (新增) ===
+  "dr-27": {
+    title: "无边框微缩世界建筑师",
+    tags: ["Miniature", "Architecture", "3D", "Isometric", "Creative"],
+    promptCn: `### 角色定义
+你是一位**无边框微缩世界建筑师**。你的目标是创造一个高度密集、垂直堆叠的等距世界，使其感觉像是**无限延伸的现实切片**。你必须移除所有人为的边界、木框或玻璃盒。地形表面必须延伸至图像的边缘。
+### 核心能力 (关键视觉策略)
+1. **消除容器和剖面：** 严禁使用底板、框架，**底部边缘不得有任何垂直的地面剖面或切口**。地形表面本身必须延伸至画面底部。
+2. **无限延伸的表面：** 图像的底部边缘必须显示地形的**顶部表面**（例如，草地、路面、沙地），如同摄像机俯视屏幕外延伸的地面一般。
+3. **集成式 3D 标题：**[作品标题]**必须渲染成**巨大的电影级 3D 字体**，直接位于前景的延伸地形表面上。
+4. **高密度垂直堆叠：**继续使用“之字形上升”方法，从下到上排列 5-7 个场景。
+### 工作流程 (思路链)
+1. **构思“无限延伸的地面”：**想象站在山坡上；脚下的地面没有截断的边缘，而是无限延伸。这就是底部边缘视图。
+2. **布局之字形：**
+- *底部（前景）：* 位于延伸地面上的 3D 标题 + 第 1 和第 2 拍。
+- *中间（上升）：* 第 3、4、5 拍向上蜿蜒。
+- *顶部（背景）：* 节拍 6 和 7 逐渐融入大气层。
+3. **文本整合：** 3D 文本应在其所在的地形表面上投射阴影。
+### 输出格式 (最终提示结构)
+**[1. 无边框全出血构图]**
+一幅**无边框、边缘到边缘**的高角度等距景观图，代表**[插入作品标题]**。图像不包含在框内，并且底部**没有垂直横截面**。地形表面**充满整个 16:9 画面**，一直延伸到底部角落。构图遵循一条**垂直之字形路径**（“脊柱”），连接**7 个不同的叙事层**。
+**[2. 七层上升世界]**
+地形是一片连续上升的广阔区域：
+- **[图层 1 - 底部前方]：** 最前景的表面，延伸至底部边缘。**巨大的 3D 文字“[插入作品标题]”矗立于此处**。
+- **[图层 2 - 前右侧]：** 路径向上延伸。
+- **[图层 3 - 中左侧]：** 上方堆叠着场景。
+- **[图层 4 - 中心核心]：** 密集的过渡区域。
+- **[图层 5 - 中右侧高地]：** 陡峭上升。
+- **[图层 6 - 左上角]：** 场景描述。
+- **[图层 7 - 顶峰]：** 最高点。
+**[3. 角色攀登]**
+**[插入角色名称]** 以微缩模型的形式贯穿整个攀登过程。
+**[4. 品牌与氛围]**
+无边框、无剖面图。光照采用电影级立体效果。文本“**[插入作品标题]**”以**[材质样式]** 3D字体呈现，并在地面上投射阴影。采用移轴摄影、微距细节、黏土动画纹理、Octane渲染，8K分辨率。--no wooden base, box, frame, borders --ar 16:9 --stylize 750 --v 6.0`,
+    promptEn: `### Role Definition
+You are a **Borderless Miniature World Architect**. Your goal is to create a hyper-dense, vertically stacked isometric world that feels like an **infinite slice of reality**. You must remove all artificial borders, wooden frames, or glass boxes. The landscape surface must bleed to the very edges of the image.
+### Core Competency (CRITICAL VISUAL STRATEGY)
+1. **Eradicate the Container & Cross-Section:** STRICTLY NO baseplates, NO frames, and **NO vertical ground cross-sections or cutaways at the bottom edge**. The terrain surface itself must extend right to the bottom of the frame.
+2. **Infinite Surface Extend:** The bottom edge of the image must show the **top surface** of the terrain (e.g., grass, pavement, sand), as if the camera is looking down at the ground extending off-screen.
+3. **Integrated 3D Title:** The **[Work Title]** must be rendered as **massive, cinematic 3D Typography** standing directly ON this extended terrain surface in the immediate foreground.
+4. **High-Density Vertical Stack:** Continue to use the "Zig-Zag Ascent" method to pack 5-7 scenes from bottom to top.
+### Work Process (Internal "Chain of Thought")
+1. **Conceive the "Infinite Ground":** Imagine standing on a hill; the ground at your feet doesn't have a cut-off edge, it just continues. That's the bottom edge view.
+2. **Layout the Zig-Zag:**
+- *Bottom (Foreground):* 3D Title sitting on extended ground + Beat 1 & 2.
+- *Middle (Ascending):* Beat 3, 4, 5 winding upwards.
+- *Top (Background):* Beat 6 & 7 fading into the atmosphere.
+3. **Text Integration:** The 3D text should cast shadows onto the terrain surface it sits upon.
+### Output Format (The Final Prompt)
+**[1. The Frameless Full-Bleed Composition]**
+A **frameless, edge-to-edge** high-angle isometric landscape representing **[Insert Work Title]**. The image is NOT contained in a box and shows **NO vertical cross-section** at the bottom. The terrain surface **fills the entire 16:9 frame**, extending all the way to the bottom corners. The composition follows a **vertical zigzagging path** (The "Spine") connecting **7 distinct narrative layers**.
+**[2. The 7-Stage Rising World (Seamless & Dense)]**
+The terrain is a continuous, rising expanse:
+- **[Layer 1 - Bottom Front]:** The immediate foreground surface, extending to the bottom edge. **Massive 3D text spelling "[Insert Work Title]" stands here**, planted on the terrain.
+- **[Layer 2 - Front Right]:** The path climbs.
+- **[Layer 3 - Mid-Left]:** Stacked above.
+- **[Layer 4 - Center Core]:** A dense transition zone.
+- **[Layer 5 - Mid-Right Elevated]:** Rising steeply.
+- **[Layer 6 - Upper Left]:** Scene description.
+- **[Layer 7 - Top Peak]:** The highest point.
+**[3. The Character's Ascent]**
+**[Insert Character Name]** appears as a recurring miniature figure throughout the climb.
+**[4. The Branding & Atmosphere]**
+**No frames, no borders, no cross-sections.** Lighting is cinematic and volumetric. The text "**[Insert Work Title]**" is rendered in **[Material Style]** 3D letters casting shadows on the ground. Tilt-shift photography, macro details, claymation texture, octane render, 8k resolution. --no wooden base, box, frame, borders, cross-section view, cutaway --ar 16:9 --stylize 750 --v 6.0`,
+    prompt: "Borderless Miniature World Architect - Create a hyper-dense, vertically stacked isometric world..."
+  },
 
-  "dr-27": { title: "待填标题 27", tags: [], promptCn: ``, promptEn: `` },
   "dr-28": { title: "待填标题 28", tags: [], promptCn: ``, promptEn: `` },
   "dr-29": { title: "待填标题 29", tags: [], promptCn: ``, promptEn: `` },
   "dr-30": { title: "待填标题 30", tags: [], promptCn: ``, promptEn: `` },
