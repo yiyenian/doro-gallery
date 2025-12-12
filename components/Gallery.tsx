@@ -50,7 +50,6 @@ export default function Gallery({ images }: { images: any[] }) {
 
   // 🔴 核心优化：生成小图链接 (用于列表页加速)
   // 将后端传来的 w_1920 (大图) 替换为 w_720 (小图)
-  // Cloudinary 支持动态 URL 变换，无需重新上传
   const getThumbnailUrl = (url: string) => {
     if (!url) return '';
     return url.replace('w_1920', 'w_720');
@@ -107,7 +106,7 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 吸顶头部 (Sticky Header) --- */}
+      {/* --- 吸顶头部 --- */}
       <div className="sticky top-0 z-40 w-full bg-[#0f172a]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all">
          
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-40">
@@ -117,7 +116,6 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
 
         <div className="w-full px-4 sm:px-8 pt-5 pb-3">
-            
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-left">
                     <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer">
@@ -199,7 +197,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 className="group relative mb-6 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-slate-800/20 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-900/20 hover:border-white/10 backdrop-blur-sm break-inside-avoid"
                 >
                 <img 
-                    // 🔴 列表页使用 getThumbnailUrl (w_720)，极速加载
+                    // 🔴 列表页使用小图 w_720
                     src={getThumbnailUrl(image.url)} 
                     alt={image.title || "AI Art"} 
                     className="w-full h-auto object-cover transform transition will-change-auto"
@@ -253,7 +251,6 @@ export default function Gallery({ images }: { images: any[] }) {
                     </div>
 
                     <div className="relative w-full flex items-center justify-center group/nav mb-8 px-6">
-                        {/* 弹窗继续使用高清图 (url, 即 w_1920) */}
                         <img src={selectedImage.url} className="w-full h-auto rounded-lg shadow-2xl border border-white/5" alt="Detail" />
                         {selectedIndex > 0 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex - 1].id); }} className="absolute left-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/50 text-white/70 hover:text-white hover:bg-slate-900/80 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronLeft size={24} /></button>}
                         {selectedIndex < images.length - 1 && <button onClick={(e) => { e.stopPropagation(); setSelectedId(images[selectedIndex + 1].id); }} className="absolute right-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/50 text-white/70 hover:text-white hover:bg-slate-900/80 border border-white/10 transition opacity-0 group-hover/nav:opacity-100 backdrop-blur-md"><ChevronRight size={24} /></button>}
