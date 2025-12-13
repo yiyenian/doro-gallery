@@ -504,7 +504,33 @@ Lighting & Texture: Professional studio lighting (matching reference softness/ha
     prompt: "A high-fashion portrait collage with magazine layout and creative makeup details..."
   },
 
-  "dr-29": { title: "待填标题 29", tags: [], promptCn: ``, promptEn: `` },
+  "dr-29": {
+    title: "3D微缩城市岛屿模板",
+    tags: ["3D Render", "City", "Map", "Miniature", "Unreal Engine"],
+    promptCn: `【指令】请根据用户输入的城市，生成一张超高清3D微缩岛屿海报：
+1. 核心构图：
+主体：一座漂浮在白云之上的微缩岛屿，其形状必须与 [插入城市名称] 的地图轮廓完全一致。
+标题：岛屿中心，巨大的白色3D汉字 “[插入城市名称]” 镌刻于地表之上，字形现代厚重。
+2. 城市细节 (融合)：
+地标建筑：岛屿上无缝融合该城市的标志性建筑（请列举3-4个，如：[地标A]、[地标B]、[地标C]）。
+自然元素：包含该城市的地理特征（如：[海岸线/山脉/河流/森林]）。
+特色装饰：点缀该城市的市花或特色植物（如：[植物名]）。
+3. 视觉风格 (科技与自然的结合)：
+纹理：地面装饰以未来感十足的电路板纹理，结合真实的植被覆盖。
+灯光：霓虹灯点缀建筑边缘，科技感十足的全息投影标识悬浮空中。
+光照：电影级光照，黄金时段（Golden Hour），暖色阳光从侧面打入。
+4. 渲染参数：
+视角：空中俯视视角 (Aerial View)。
+引擎：虚幻引擎5 (Unreal Engine 5) 渲染，OC渲染器风格。
+质量：8K分辨率，超写实，色彩鲜艳，细节锐利。`,
+    promptEn: `An ultra-HD 3D miniature island floating above white clouds, shaped exactly like the map of [Insert City Name].
+Typography: Massive white 3D characters spelling "[Insert City Name]" engraved on the surface in the center.
+Landmarks & Nature: Seamlessly integrates the city's iconic landmarks (e.g., [Landmark 1], [Landmark 2]) and natural features (e.g., [Mountains/Rivers/Coastline]). Decorated with [City Flower].
+Style & Tech: Futuristic circuit board textures blended with realistic vegetation. Neon accents and holographic projection signs. Cinematic lighting, golden hour.
+Render Specs: Aerial view, Hyper-realistic, Unreal Engine 5 render, 8K resolution, vivid colors.`,
+    prompt: "An ultra-HD 3D miniature island shaped like a city map..."
+  },
+
   "dr-30": { title: "待填标题 30", tags: [], promptCn: ``, promptEn: `` },
   "dr-31": { title: "待填标题 31", tags: [], promptCn: ``, promptEn: `` },
   "dr-32": { title: "待填标题 32", tags: [], promptCn: ``, promptEn: `` },
