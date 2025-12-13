@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { X, Copy, Check, Search, Sparkles, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash, Languages, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
-// --- 提示词组件 (紧凑排版优化) ---
+// --- 提示词组件 (紧凑排版 + 深色背景 + 滚动) ---
 const PromptBox = ({ title, content, icon: Icon }: { title: string, content: string, icon: any }) => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -30,16 +30,12 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
         </button>
       </div>
       
-      {/* 🟢 修改：背景加深 bg-black/40，增强文字对比度 */}
+      {/* 🟢 修复：背景加深 bg-black/40，增强文字对比度 */}
       <div className="relative group w-full rounded-xl border border-white/5 bg-black/40 overflow-hidden hover:border-white/10 transition-colors">
-        {/* 🟢 修改：
-            1. text-xs sm:text-sm (字体微调)
-            2. leading-6 (行高收紧，之前是 leading-7)
-            3. py-3 (内边距稍微收紧)
-        */}
-        <div className="px-4 py-3 text-xs sm:text-sm leading-6 text-slate-300 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
+        {/* 🟢 修复：紧凑排版 (leading-6, py-3, text-xs) */}
+        <div className="px-4 py-3 text-xs sm:text-sm leading-6 text-slate-300 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-transparent">
             <ReactMarkdown components={{ 
-              // 🟢 修改：段落间距从 mb-4 减小到 mb-2
+              // 🟢 修复：段落间距 mb-2
               p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} /> 
             }}>
                 {content.replace(/\n/g, '  \n')}
@@ -109,20 +105,23 @@ export default function Gallery({ images }: { images: any[] }) {
 
   return (
     <>
-      {/* --- 吸顶头部 --- */}
-      <div className="sticky top-0 z-40 w-full bg-[#0f172a]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all">
+      {/* --- 吸顶头部 (恢复深蓝灰 Slate-950) --- */}
+      {/* 🟢 修复：bg-[#020617]/95，与首页背景一致，不发黑 */}
+      <div className="sticky top-0 z-40 w-full bg-[#020617]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all">
          
+         {/* 背景光效 */}
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-40">
-            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/20 rounded-full blur-[100px] animate-pulse"></div>
-            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/20 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
+            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/30 rounded-full blur-[100px] animate-pulse"></div>
+            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/30 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
-        <div className="max-w-[1960px] mx-auto px-4 sm:px-6 pt-5 pb-3">
+        <div className="w-full px-4 sm:px-8 pt-5 pb-3">
             
+            {/* 第一行：一行流布局 (Logo+标题+搜索) */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
-                
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-left">
+                    {/* Logo */}
                     <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-md">
@@ -147,6 +146,7 @@ export default function Gallery({ images }: { images: any[] }) {
                     </div>
                 </div>
 
+                {/* 搜索框 */}
                 <div className="w-full sm:w-auto lg:w-[300px] relative group shrink-0">
                     <div className="relative flex items-center bg-slate-900/50 rounded-lg border border-white/5 focus-within:border-indigo-500/50 focus-within:ring-1 focus-within:ring-indigo-500/50 transition-all h-9">
                         <div className="pl-2.5 text-slate-500"><Search className="w-3.5 h-3.5" /></div>
@@ -165,6 +165,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 </div>
             </div>
 
+            {/* 第二行：Tags */}
             <div className="border-t border-white/5 pt-3 flex items-start gap-3">
                 <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider py-1 shrink-0 mt-px">Tags</div>
                 <div className={`flex flex-wrap justify-start gap-1.5 transition-all duration-300 overflow-hidden w-full ${isTagsExpanded ? 'max-h-[500px]' : 'max-h-[28px]'}`}>
@@ -224,14 +225,15 @@ export default function Gallery({ images }: { images: any[] }) {
         )}
       </div>
 
-      {/* --- 弹窗 --- */}
+      {/* --- 弹窗 (深蓝灰背景 + 垂直布局) --- */}
       {selectedId !== null && selectedImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md transition-opacity" onClick={() => setSelectedId(null)} />
           
-          <div className="relative w-full max-w-4xl bg-[#0f172a] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
+          {/* 🟢 修复：弹窗背景改为 #020617，与全局一致 */}
+          <div className="relative w-full max-w-4xl bg-[#020617] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#0f172a]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#020617]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
                 <div className="flex items-center gap-2 text-sm font-bold text-slate-400">
                     <span className="text-indigo-400">Doro Gallery</span> / Preview
                 </div>
