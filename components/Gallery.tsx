@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { X, Copy, Check, Search, Sparkles, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash, Languages, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
-// --- 提示词组件 ---
+// --- 提示词组件 (紧凑排版优化) ---
 const PromptBox = ({ title, content, icon: Icon }: { title: string, content: string, icon: any }) => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -29,9 +29,19 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
           {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
         </button>
       </div>
-      <div className="relative group w-full rounded-xl border border-white/5 bg-slate-900/50 overflow-hidden hover:border-white/10 transition-colors">
-        <div className="px-4 py-4 text-sm leading-7 text-slate-300 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-transparent">
-            <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
+      
+      {/* 🟢 修改：背景加深 bg-black/40，增强文字对比度 */}
+      <div className="relative group w-full rounded-xl border border-white/5 bg-black/40 overflow-hidden hover:border-white/10 transition-colors">
+        {/* 🟢 修改：
+            1. text-xs sm:text-sm (字体微调)
+            2. leading-6 (行高收紧，之前是 leading-7)
+            3. py-3 (内边距稍微收紧)
+        */}
+        <div className="px-4 py-3 text-xs sm:text-sm leading-6 text-slate-300 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
+            <ReactMarkdown components={{ 
+              // 🟢 修改：段落间距从 mb-4 减小到 mb-2
+              p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} /> 
+            }}>
                 {content.replace(/\n/g, '  \n')}
             </ReactMarkdown>
         </div>
@@ -47,13 +57,6 @@ export default function Gallery({ images }: { images: any[] }) {
   const [copiedDefault, setCopiedDefault] = useState(false);
   const [search, setSearch] = useState("");
   const [isTagsExpanded, setIsTagsExpanded] = useState(false);
-
-  // 🔴 核心优化：生成小图链接 (用于列表页加速)
-  // 将后端传来的 w_1920 (大图) 替换为 w_720 (小图)
-  const getThumbnailUrl = (url: string) => {
-    if (!url) return '';
-    return url.replace('w_1920', 'w_720');
-  };
 
   const allTags = useMemo(() => {
     const tags = new Set<string>();
@@ -115,8 +118,10 @@ export default function Gallery({ images }: { images: any[] }) {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
-        <div className="w-full px-4 sm:px-8 pt-5 pb-3">
+        <div className="max-w-[1960px] mx-auto px-4 sm:px-6 pt-5 pb-3">
+            
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
+                
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-left">
                     <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
@@ -197,8 +202,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 className="group relative mb-6 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-slate-800/20 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-900/20 hover:border-white/10 backdrop-blur-sm break-inside-avoid"
                 >
                 <img 
-                    // 🔴 列表页使用小图 w_720
-                    src={getThumbnailUrl(image.url)} 
+                    src={image.url} 
                     alt={image.title || "AI Art"} 
                     className="w-full h-auto object-cover transform transition will-change-auto"
                     loading="lazy"
