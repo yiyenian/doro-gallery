@@ -19,37 +19,31 @@ export async function getImages() {
       .execute();
 
     return results.resources.map((resource: any, index: number) => {
-      const publicId = resource.public_id; // 例如: "gallery/dr-26ezwl2b"
-      const cleanId = publicId.split('/').pop(); // 例如: "dr-26ezwl2b"
-      const noExtId = cleanId?.split('.')[0];    // 去掉后缀
+      const publicId = resource.public_id; // 例如 "gallery/dr-10_u0ugns"
+      const cleanId = publicId.split('/').pop() || ""; // 例如 "dr-10_u0ugns"
       
-      // --- 🔴 核心修复：智能模糊匹配逻辑 ---
-      let localInfo: any = {};
+      // 🔴 核心修复：精准匹配逻辑
+      let localInfo: any = null;
 
-      // 1. 第一轮：尝试精确匹配 (最快)
-      if (localData[publicId]) {
-        localInfo = localData[publicId];
-      } 
-      // 2. 第二轮：尝试无文件夹名匹配
-      else if (cleanId && localData[cleanId]) {
+      // 策略 1: 直接用 data.ts 里的 Key 匹配 (最准)
+      // 如果你在 data.ts 里写了完整 ID，优先用它
+      if (localData[cleanId]) {
         localInfo = localData[cleanId];
-      }
-      // 3. 第三轮：前缀/包含匹配 (解决 Cloudinary 加后缀问题)
-      // 只要 Cloudinary 的 ID 包含了 data.ts 里的 key，就算匹配成功
-      // 例如：Key="dr-26"，ID="dr-26ezwl2b" -> 匹配成功
-      else {
-         const matchedKey = Object.keys(localData).find(key => {
-             // 忽略 gallery/ 前缀差异，只比对核心部分
-             const coreKey = key.split('/').pop() || "";
-             return cleanId && cleanId.startsWith(coreKey);
-         });
-         
-         if (matchedKey) {
-             localInfo = localData[matchedKey];
-         }
+      } else {
+        // 策略 2: 智能去后缀匹配 (解决 dr-1 vs dr-10 冲突)
+        // 正则解释：
+        // _        匹配下划线
+        // [^._]+   匹配非点非下划线的字符(随机码)
+        // $        匹配字符串结尾
+        // 这样可以把 "dr-10_u0ugns" 变成 "dr-10"，而不会把 "dr-1" 误认为 "dr-10" 的前缀
+        const idNoSuffix = cleanId.replace(/_[a-zA-Z0-9]+$/, "");
+        
+        if (localData[idNoSuffix]) {
+          localInfo = localData[idNoSuffix];
+        }
       }
       
-      // 兜底空对象
+      // 兜底：如果还是没找到，给个空对象
       localInfo = localInfo || {};
 
       // 标题
@@ -58,7 +52,9 @@ export async function getImages() {
                   resource.context?.custom?.caption;
 
       if (!title) {
-        title = noExtId ? noExtId.replace(/[-_]/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()) : "Untitled";
+        // 自动标题：去掉后缀，把 - 换成空格
+        const baseName = cleanId.replace(/_[a-zA-Z0-9]+$/, "");
+        title = baseName.replace(/[-_]/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
       }
 
       // 提示词
@@ -69,7 +65,7 @@ export async function getImages() {
 
       const tags = localInfo.tags || resource.tags || [];
 
-      // 生成优化链接
+      // 生成极速优化链接
       const optimizedUrl = (cloudinary.v2 as any).url(publicId, {
         fetch_format: 'auto',
         quality: 'auto',
