@@ -531,7 +531,50 @@ Render Specs: Aerial view, Hyper-realistic, Unreal Engine 5 render, 8K resolutio
     prompt: "An ultra-HD 3D miniature island shaped like a city map..."
   },
 
-  "dr-30": { title: "待填标题 30", tags: [], promptCn: ``, promptEn: `` },
+  "dr-30": {
+    title: "古诗词绘本插画",
+    tags: ["Illustration", "Poetry", "Chinese Style", "Children's Book", "Watercolor"],
+    promptCn: `[角色] 资深儿童绘本插画师。
+[风格] 混合媒介（水彩晕染和彩色铅笔细节）。
+[氛围] 治愈、奇幻、童话。
+[任务]请检索诗词《[在此输入诗名]》的全文及作者。
+根据这首诗的意境，将其转化为一幅横向连续的四场景叙事插画。并将全诗内容以书法形式自然融入画面。
+[版式与排版]
+构图： 流畅的S形曲线将画面分割成四个连续的场景，并无缝衔接。
+标题： 在右上角优雅展示诗名。
+印章： 在标题旁盖上一个清晰的传统红色方印，印文为该诗作者的姓名。
+全文展示： 请在画面留白处或专门的文字容器中，以竖排书法形式展示全诗内容。
+[视觉叙事结构] (请自动对应诗歌的起承转合)
+场景 1 (左上 - 起): 对应第一句诗的意象。关键物体、天气、光线。留出自然留白放文字。
+场景 2 (左中 - 承): 对应第二句诗的意象。与场景1自然衔接，创造如卷轴或水波般的文字容器。
+场景 3 (右中 - 转): 对应第三句诗的意象。画面高潮或动作转折，漩涡状纹理。
+场景 4 (右下 - 合): 对应第四句诗的意象。结局或远景，意境悠远，文字如星尘般浮现。
+[艺术风格细节]
+色彩： 梦幻般的粉彩色调，深邃的夜蓝色，温暖的琥珀色生物发光效果。
+纹理： 清晰可见的纸张纹理，柔和的毛边。
+角色： 一个古风小孩角色将引导观众踏上旅程。`,
+    promptEn: `[Role] Senior Children's Book Illustrator.
+[Style] Mixed Media (Watercolor washes and colored pencil details).
+[Mood] Healing, Whimsical, Fairy Tale.
+[Task]
+Retrieve the full text and author of the Chinese poem "[Insert Poem Title Here]".
+Visualize this poem as a continuous horizontal 4-panel illustration based on its imagery. Incorporating the full text of the poem into the illustration (e.g., vertical calligraphy).
+[Layout]
+Composition: A flowing S-curve divides the image into four continuous, seamlessly blended scenes.
+Title: Top right corner, elegant layout.
+Signature: Place a traditional Chinese red seal (square vermilion chop) next to the title with the author's name.
+[Visual Narrative Structure] (Auto-map to the 4 verses)
+Scene 1 (Top Left): Imagery of the 1st verse. Natural negative space for text.
+Scene 2 (Mid Left): Imagery of the 2nd verse. Flowing connection to Scene 1.
+Scene 3 (Mid Right): Imagery of the 3rd verse. Visual climax/turn.
+Scene 4 (Bottom Right): Imagery of the 4th verse. Fading/Ending atmosphere.
+[Details]
+Colors: Dreamy pastels, deep midnight blues, warm amber bioluminescence.
+Texture: Visible paper grain, soft deckled edges.
+Character: A small child character guides the viewer through the journey.`,
+    prompt: "Classical Chinese Poetry Illustration Template - Input title only..."
+  },
+  
   "dr-31": { title: "待填标题 31", tags: [], promptCn: ``, promptEn: `` },
   "dr-32": { title: "待填标题 32", tags: [], promptCn: ``, promptEn: `` },
   "dr-33": { title: "待填标题 33", tags: [], promptCn: ``, promptEn: `` },
