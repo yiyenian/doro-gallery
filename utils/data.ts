@@ -858,7 +858,89 @@ Rich atmosphere, viral visual impact, high-end commercial blockbuster aesthetic.
     prompt: "Cinematic 3D action commercial poster with dynamic particles and high contrast...",
   },
   
-  "dr-38": { title: "待填标题 38", tags: [], promptCn: ``, promptEn: `` },
+    "dr-38": {
+    title: "文化信息图 (诗词雅韵版)",
+    tags: ["Infographic", "Culture", "Poetry", "Chinese Style", "Design"],
+    promptCn: `[主题核心]
+垂直文化信息图，可视化 [文化/历史/品牌背景主题] 和 [主体生命周期/加工流程]。
+视觉旅程从 [初始状态/原材料] 到 [最终形态/商品]。
+四个不同阶段呈流畅的S形曲线排列：
+1.[阶段1: 原材料/初始状态]
+2.[阶段2: 初步加工/中间状态]
+3.[阶段3: 成型/成熟状态]
+4.[阶段4: 最终包装/成品堆叠]
+[细节与质感]
+微观瑕疵至关重要。
+基底材质：陈旧的 [羊皮纸/皮革/丝绸卷轴]，具有可见的 [纸浆纤维/纹理/编织图案]，严重的霉斑，边缘扩散的不规则 [水渍/包浆/老化痕迹]，以及自然的裂纹/折痕。
+主体对象：超写实纹理。
+阶段1细节：可见 [表面微观纹理] 和 [边缘细节]，轻微半透明 (SSS) 或 [特定材质属性 - 如蜡状光泽、露珠、新鲜茎]。
+阶段2细节：[形态描述] 带有 [光泽/质感描述] (例如：油性、哑光、烘烤质感、颜色变化、自然瑕疵)。
+阶段3细节：高密度颗粒凹凸贴图或 [表面凹凸细节]，[结构特征]，明显的 [视觉重心]，微划痕，毛孔可见。
+阶段4细节：[外包装/外部材质质感 - 如木箱、纸包装]，物理 [物理痕迹/磨损/绑定 - 如绳索绑定、边角磨损]，轻微 [边缘破损/陈旧感]。
+[排版布局]
+构图：一条清晰优雅的黑色虚线引导视线，呈蛇形“S”路径从顶部中心到底部中心。
+标题：左上角 [5%, 10%]。巨大的浓墨重彩书法 [主题名称]，传统中国风格，具有戏剧性的墨水晕染/羽化边缘和“飞白” (枯笔) 效果。
+古诗词融合 (核心新增)：
+背景中巧妙嵌入褪色的半透明中国古典诗词诗句，以优雅的小楷/行书书写。包含 [主题相关的古诗词 - 如咏物诗、田园诗、节气诗]。
+诗词文本应显得风化并部分褪色融入基底，创造文化深度的层次。
+诗句围绕水墨山水呈竖排流动：
+顶部：[诗句1] 漂浮在雾气/云层区域
+中部：[诗句2] 巧妙融入山脉/建筑轮廓
+底部：[诗句3] 沿着河流/道路/景观元素流动
+标注：关键对象使用漂浮的半透明白色圆角矩形标注，清晰的黑色无衬线中文文本，柔和的投影以分离UI。
+插图框：左下角 [10%, 80%]。一个矩形框内嵌详细的木刻/蚀刻风格插图，描绘 [相关辅助插图: 如生产场景/运输/起源/人物活动]，使用复杂的交叉影线代替颜色。
+[环境与背景]
+3D前景对象与2D水墨背景及诗词融合。
+顶部：宏伟的 [顶部地标建筑/自然景观] 从白雾和云层中显现，褪色的诗句 [诗句主题] 漂浮在雾气区域。
+中部：褪色的水墨 [中部背景: 山水/城市轮廓] (山水风格) 和古代 [建筑细节/地标]，古典诗词片段 [诗句内容] 以优雅的书法巧妙融入景观轮廓。
+底部：[底部背景: 河流/道路/场景] 带有微小的 [交通工具/人物]，展现细腻的 [相关材质] 纹理，关于 [主题] 的诗句沿着环境元素流动。
+氛围：朦胧、历史感、诗意、梦幻、书卷气。通过大气透视实现深度，褪色的墨色调和分层的诗词文本创造视觉深度。
+[光影与色彩]
+配色：复古 [深褐色/暖色]/大地色调，具有书卷气审美。[主体色调 - 鲜艳/自然色] 用于 [主体]，[深色调 - 深棕/黑] 用于 [细节部分]，温暖的 [陈旧米色/琥珀色] 用于基底，棕灰色用于水墨，褪色的深褐色/浅灰色用于诗词文本。
+光照：四个主要 [主体对象] 采用柔光箱影棚照明，以揭示表面微观纹理和 [材质特定细节]。背景山水和诗词层采用平坦的环境光。
+特效：主要对象周围有微妙的白色模切轮廓 (贴纸效果)，以便将它们从复杂的背景和诗词层中分离出来。
+[风格与渲染]
+博物馆级教育插图，具有书卷气的文学审美。中国传统水墨画、古典诗词手稿设计与高保真微距摄影的融合。
+古代 [皮革装订诗集/御用卷轴/学者手稿] 的美学遇上现代信息图设计。
+Behance 精选项目质量，矢量锐利的前景与水彩柔和的背景，分层的书法诗词创造文化深度。
+陈旧破损的基底，具有深厚的包浆和嵌入的中国古典诗句，9:16 竖向构图，强调视觉艺术与文学遗产的和谐融合。
+技术参数：--ar 9:16 --style raw --stylize 400 --q 2`,
+    promptEn: `[Subject & Core] Vertical cultural infographic visualizing [Cultural/Historical/Brand Theme] and the [Lifecycle/Processing Flow]. A visual journey from [Initial State/Raw Material] to [Final Form/Product]. Four distinct stages arranged in a flowing S-curve:
+1.[Stage 1: Raw Material/Initial State],
+2.[Stage 2: Processing/Intermediate State],
+3.[Stage 3: Mature/Formed State],
+4.[Stage 4: Final Packaging/Product Stack].
+[Detail & Texture] Micro-imperfections are essential.
+Substrate: The base is aged [parchment paper/leather hide/silk scroll] with visible [pulp fibers/grain texture/weave pattern], heavy foxing spots (brown mildew dots), irregular [water stains/patina/aging marks] spreading at the edges, and natural cracks/creases.
+Main Objects: Hyper-realistic textures.
+Stage 1 Detail: Visible [micro-texture] and [edge details], slight translucency (SSS) or [specific material attribute - e.g., waxy sheen, dewdrops, fresh stem].
+Stage 2 Detail: [Shape description] with [Sheen/Texture description] (e.g., oily, matte, roasted texture, color variation, natural blemishes).
+Stage 3 Detail: High-density granular bump map or [surface bump details], [structural features], distinct [visual focal point], micro-scratches, pores visibility.
+Stage 4 Detail: [Packaging/Outer material texture - e.g., wooden crate, paper wrapping], physical [wear/binding marks - e.g., rope binding, corner wear], slight [edge damage/aging].
+[Typography & Layout]
+Composition: A defined elegant black dotted line guides the eye in a serpentine "S" path from Top-Center to Bottom-Center.
+Title: Top-Left [5%, 10%]. Massive Heavy Brush Calligraphy [Topic Name] in traditional Chinese style with dramatic ink bleed/feathering edges and "flying white" (dry brush) effects.
+Classical Poetry Integration: Faded semi-transparent classical Chinese poetry verses subtly embedded in the background, written in elegant small regular script (Kaishu/Xingshu). Include [Relevant Poems - e.g., Ode to objects, Pastoral poetry, Solar terms poetry].
+The poetry text should appear weathered and partially faded into the substrate, creating layers of cultural depth. Position poetry verses flowing around the ink-wash landscapes in vertical columns, integrated into:
+Top section: [Verse 1] floating in misty/cloudy areas
+Mid section: [Verse 2] subtly integrated into mountain/architectural contours
+Bottom section: [Verse 3] flowing along rivers/roads/landscape elements
+Labels: Key objects labeled with floating translucent white rounded rectangles, clean black Sans-serif Chinese text, soft drop shadow for UI separation.
+Inset: Bottom-Left [10%, 80%]. A rectangular framed inset featuring a detailed Woodcut/Etching style illustration of [Related illustration: e.g., production scene/transport/origin/human activity], using intricate cross-hatching lines instead of color.
+[Environment & Background] A mix of 3D foreground objects and 2D Ink Wash background with poetry integration.
+Top: The majestic [Top Landmark/Natural Landscape] emerging from white mist and clouds, with faded poetry verses [Verse Theme] floating in the misty areas.
+Mid: Faded ink-wash [Mid Background: Landscape/City Silhouette] (Shanshui style) and ancient [Architectural Details/Landmarks], classical poetry fragments [Verse Content] subtly integrated into the landscape contours in elegant calligraphy.
+Bottom: A [Bottom Background: River/Road/Scene] with small [Vehicles/People], exhibiting delicate [Material] textures, poetry verses about [Theme] flowing along the environmental elements.
+Atmosphere: Misty, historical, poetic, dreamlike, scholarly. Depth achieved through atmospheric perspective with fading ink tones and layered poetry text creating visual depth.
+[Lighting & Color]
+Palette: Vintage [Sepia/Warm]/Earth tones with scholarly aesthetic. [Subject Color - vibrant/natural color] for [Main Subject], [Dark Tone - deep brown/black] for [Details], warm [aged beige/amber] for substrate, brownish-grey for ink wash, faded sepia/light grey for poetry text.
+Lighting: Softbox studio lighting on the four main [Main Objects] to reveal surface micro-texture and [Material Specific Details]. Flat ambient light for the background landscape and poetry layers.
+Effect: Subtle white die-cut outlines (sticker effect) around main objects to separate them from the complex background and poetry layers.
+[Style & Render] Museum-grade educational illustration with scholarly literary aesthetic. Fusion of Traditional Chinese Ink Painting, Classical Poetry Manuscript Design, and High-fidelity Macro Photography. The aesthetic of an ancient [leather-bound poetry anthology/imperial scroll/scholarly manuscript] meets modern infographic design. Behance featured project quality, vector-sharp foregrounds against watercolor-soft backgrounds with layered calligraphic poetry creating cultural depth. Aged distressed substrate with deep patina and embedded classical Chinese verses, 9:16 vertical composition, emphasizing the harmonious integration of visual art and literary heritage.
+--ar 9:16 --style raw --stylize 400 --q 2`,
+    prompt: "Vertical cultural infographic with classical poetry integration...",
+  },
+  
   "dr-39": { title: "待填标题 39", tags: [], promptCn: ``, promptEn: `` },
   "dr-40": { title: "待填标题 40", tags: [], promptCn: ``, promptEn: `` },
   "dr-41": { title: "待填标题 41", tags: [], promptCn: ``, promptEn: `` },
