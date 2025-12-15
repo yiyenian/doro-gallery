@@ -625,9 +625,138 @@ Grid Alignment: Perfectly aligned 3x3 photobooth strip style. Spacing: Equidista
     prompt: "3x3 grid collage of a person with consistent identity and different expressions..."
   },
   
-  "dr-32": { title: "待填标题 32", tags: [], promptCn: ``, promptEn: `` },
-  "dr-33": { title: "待填标题 33", tags: [], promptCn: ``, promptEn: `` },
-  "dr-34": { title: "待填标题 34", tags: [], promptCn: ``, promptEn: `` },
+  "dr-32": {
+    title: "3D卡通表情包挑战",
+    tags: ["3D Render", "Cartoon", "Character", "Expression", "Grid"],
+    promptCn: `核心指令：3x3网格拼贴，面部特征锁定（基于上传照片），100%精确匹配。
+风格：精致流畅的3D卡通风格，皮肤具有柔软、光滑、逼真的卡通纹理。
+面板详情：
+1.喜悦：灿烂的笑容，微微耸肩。高马尾，粉彩连帽衫，柔和的渐变天蓝色背景。
+2.惊讶：双手放在脸旁，睁大眼睛。蓬松的波浪卷发，休闲T恤，浅桃色背景。
+3.悲伤：低头，眼神柔和。低发髻，宽松毛衣，柔和的薰衣草色背景。
+4.温柔：温柔的微笑，微微侧头。半扎发，柔软的针织衫，暖米色背景。
+5.大胆：自信的眼神，微微抬起下巴。梳得一丝不苟，时尚外套，深蓝绿色背景。
+6.俏皮：鼓起的脸颊，俏皮的眼神。短波波头，条纹衬衫，柔和的薄荷绿背景。
+7.迷人：手指靠近脸颊眨眼。双丸子头，趣味图案上衣，浅粉色背景。
+8.震惊：张嘴，扬眉。凌乱的披肩发，简约衬衫，浅黄色背景。
+9.愤怒：双臂交叉，目光锐利。高高盘起的紧致丸子头，深色修身上衣，深红色背景。
+渲染与构图：
+灯光：柔和的摄影棚灯光，均匀分布在所有面板上。
+阴影：平滑的渐变，微妙的高光。
+质量：超高分辨率，所有面板的色彩搭配和比例协调一致。
+构图：完美对齐的 3x3 网格，面板间等边距，简洁的纯色中性边框。`,
+    promptEn: `Core Instruction:3x3 Grid Collage. Face Reference: Uploaded photo. Face Identity Lock: True, 100% accuracy.
+Style: Polished fluid 3D cartoon style. Skin: Soft, smooth, realistic cartoon texture.
+Panels:
+1.Joy: Radiant smile, slight shrug. High ponytail, pastel hoodie, soft gradient sky blue background.
+2.Surprise: Hands near face, wide eyes. Voluminous waves, casual t-shirt, light peach background.
+3.Sadness: Looking down, soft eyes. Low bun, loose sweater, muted lavender background.
+4.Gentle: Gentle smile, head tilt. Half-up hair, soft knitwear, warm beige background.
+5.Bold: Confident gaze, chin up. Slicked back hair, stylish jacket, deep teal background.
+6.Playful: Puffed cheeks, playful eyes. Short bob, striped shirt, soft mint green background.
+7.Charming: Winking, finger poking cheek. Double buns, graphic top, light pink background.
+8.Shock: Open mouth, raised brows. Messy loose hair, minimalist shirt, pale yellow background.
+9.Anger: Arms crossed, sharp gaze. High tight bun, dark fitted top, deep red background.
+Rendering & Composition:
+Lighting: Soft studio lighting, evenly distributed.
+Shadows: Smooth gradients, subtle highlights.
+Quality: Ultra-high resolution, consistent color palette and proportions.
+Composition: Perfectly aligned 3x3 grid, equal spacing, clean solid neutral border.`,
+  },
+  
+    "dr-33": {
+    title: "超写实生活方式产品摄影",
+    tags: ["Product Photography", "Commercial", "Lifestyle", "Branding", "Realistic"],
+    promptCn: `角色设定: 你是一名顶级商业摄影师与品牌视觉导演，擅长用真实生活场景与克制但具有吸引力的人物参与，打造高传播力的产品影像。
+核心输入:
+产品参考: [用户上传的产品图片] (必须严格保持产品原貌、Logo和细节)
+场景关键词: {{SCENE_KEYWORDS}}
+季节/时间: {{SEASON}} {{TIME_OF_DAY}}
+人物气质: {{MODEL_VIBE}}
+创作总原则（最高优先级）:
+1.产品主角: 画面基于用户上传的产品图进行生成。产品必须是对焦最清晰、细节最锐利的主体。
+2.人物背景: 人物作为中景/背景层级出现，身体结构与姿态必须完整可读，避免碎片化。
+3.吸引力: 吸引力来自身体整体曲线、姿态、皮肤质感与光影氛围（健康、自信、放松）。
+4.真实生活感: 画面像现实生活中自然发生的一幕，保留轻微生活痕迹。
+人物策略:
+人物用于放大产品的欲望价值与感官吸引力。
+匹配最合适的人体特征：清爽/夏日→大腿、腰线；精致→手部；高级→锁骨、肩颈。
+呈现方式：人物在画面中可见面积约30%–60%，可裁掉头部，但身体躯干与曲线必须完整可感知。
+姿态自然（坐、倚靠、站立、行走、伸手拿取/放下）。
+服装与场景/季节一致，暴露程度自然合理、健康审美。
+核心场景描述:
+生成一张超写实生活方式产品照片：核心主体为**用户上传的产品图片中的物品**。该产品位于画面前景或视觉焦点位置，为全画面最清晰对焦主体。
+场景为[季节]的[时间]，地点：[场景关键词]暗示的真实生活空间（如窗边/阳台/沙滩/泳池边）。
+画面中出现一位成年人作为中景或背景元素，气质[人物气质]，身体比例自然健康，曲线完整可感知，姿态松弛自然（如坐在椅子旁、倚靠栏杆、从桌面拿起物品或刚放下产品），通过光影与皮肤质感提供高级的感官吸引力，但绝不喧宾夺主。
+整体情绪：松弛、真实、干净、略带欲望张力；像手机随手抓拍到的高级瞬间，但画质与构图达到商业摄影级别。
+构图与镜头语言:
+构图层级: 前景=上传的产品（主角）；中景/背景=人物+环境。
+镜头: 35mm或50mm写实商业摄影感，轻微透视。`,
+    promptEn: `Role: Top-tier commercial photographer & brand visual director.
+Goal: Create high-impact product imagery using real-life scenes with subtle but attractive human presence, strictly based on the uploaded product reference.
+Core Principles (Highest Priority):
+1.Product Hero: The **uploaded reference image** defines the product. It MUST be the sharpest, most detailed element, maintaining fidelity to the original design and logos.
+2.Human Context: Humans appear in mid-ground/background. Body structure must be readable and complete (torso, limbs, curves).
+3.Appeal: Attraction comes from body curves, posture, skin texture, and lighting (healthy, confident, relaxed).
+4.Realism: Looks like a natural moment in real life, not a staged studio ad. Slight signs of life.
+Human Strategy:
+Purpose: Amplify desire and sensory appeal (comfort, freshness, luxury).
+Presentation: Human occupies 30%-60% of frame. Head can be cropped or blurred, but torso/curves must be perceptible.
+Pose: Natural (sitting, leaning, standing, reaching). Avoid exaggerated posing.
+Clothing: Consistent with scene/season. Healthy aesthetic.
+Scene Description Template:
+Generate a hyper-realistic lifestyle product photo featuring the **product from the uploaded image** as the core subject. It is positioned in the foreground/focal point with razor-sharp focus.
+Scene: [Season] [Time of Day], Location: Real living space implied by [Scene Keywords] (e.g., window side, balcony, beach, pool, cafe terrace).
+Human Element: An adult in mid-ground/background, [Vibe] temperament, natural healthy body proportions, perceptible curves, relaxed posture (sitting, leaning, picking up/putting down the product). High-quality lighting and skin texture provide sensory appeal without overpowering the product.
+Mood: Relaxed, authentic, clean, subtle desire. Looks like a high-end candid mobile shot but with commercial-grade quality and composition.
+Composition & Lens:
+Layers: Foreground = Uploaded Product (Hero); Mid/Background = Human + Environment.
+Lens: 35mm or 50mm realistic commercial photography style, slight perspective.`,
+    prompt: "Hyper-realistic lifestyle product photography based on uploaded reference...",
+  },
+  
+   "dr-34": {
+    title: "3D时尚杂志海报：9种风格挑战",
+    tags: ["Fashion", "Editorial", "3D Effect", "Magazine", "Grid"],
+    promptCn: `创作一张 2:3 的竖版时尚海报，同一位女性，同一套服装，以 9 种不同的杂志风格呈现，并添加 3D 立体效果。
+人物一致性（最高优先级）：所有 9 个位置均由同一位女性模特出镜：冷艳美，棱角分明的下颌线，20 岁出头的亚洲超模脸。所有造型中保持完全一致。
+服装一致性：黑色宽松 V 领羊绒衫，高腰阔腿纯白修身长裤，黑色皮质乐福鞋，金色配饰。低髻发型。
+构图结构（3x3 网格）：背景层 (Z=0)：包含 8 个可见的杂志风格单元格（中心单元格 [2,2] 被 3D 人物遮挡）。
+[1,1] Vogue：高对比度光线，精致优雅。
+[1,2] Harper's Bazaar：侧脸回眸，柔和氛围。
+[1,3] Elle：街拍行走，自然光。
+[2,1] i-D：坐姿，大胆图形构图。
+[2,3] Dazed：动态飘逸，实验性角度。
+[3,1] Marie Claire：自信职场，双臂交叉。
+[3,2] GQ：极简建筑构图，倚墙而立。
+[3,3] W 杂志：艺术姿态，鲜明对比。
+前景图层 (Z=5-10cm) - 3D 立体效果：同一女性（造型 5）从画面中心“走出来”，完全遮挡中心单元格。头部触及顶部边缘，鞋子触及底部边缘，占据最大垂直空间。
+姿势：动态向前行走，自信迈步，直视镜头，气场强大。
+技术细节：人物饱和度比背景高 20%，清晰度略高，投射真实阴影到背景网格上，营造强烈的“破框而出”的 3D 视觉错觉。
+光照与质感：背景网格：大景深 (f/16)，全清晰。均匀明亮的影棚灯光。
+整体：8K 超高清，杂志级修图。`,
+    promptEn: `Create a 2:3 vertical fashion poster featuring the same female model in the same outfit, presented in 9 different magazine styles with a 3D pop-out effect.
+Character Consistency (Critical): Same Asian supermodel face (early 20s, sharp jawline, high cheekbones, cool expression) across all 9 slots.
+Outfit Consistency: Black loose V-neck cashmere sweater, high-waisted white wide-leg trousers, black loafers, gold accessories, low bun.
+Structure (3x3 Grid):
+Background Layer (Z=0): 8 visible magazine-style cells (center [2,2] occluded).
+[1,1] Vogue style: High contrast, elegant standing pose.
+[1,2] Harper's Bazaar: Profile, soft lighting.
+[1,3] Elle: Street snap, walking, natural light.
+[2,1] i-D: Sitting, bold graphic composition.
+[2,3] Dazed: Dynamic movement, experimental angle.
+[3,1] Marie Claire: Professional, arms crossed.
+[3,2] GQ: Minimalist, leaning against wall.
+[3,3] W Mag: Artistic pose, expressive.
+Foreground Layer (Z=5-10cm) - 3D Pop-out:
+The same woman (Style 5) walking OUT of the center frame.
+Head touches top edge, shoes touch bottom edge.
+Dynamic walking pose, confident gaze.
+Technical: Foreground subject has 20% higher saturation and sharpness. Casts realistic drop shadows (blur 12px, offset) onto the background grid to create a convincing 3D depth effect.
+Lighting: Even studio lighting for background; Cinematic lighting for the 3D foreground figure. 8k resolution.`,
+    prompt: "3D pop-out fashion magazine poster, 3x3 grid, same model different styles...",
+  },
+  
   "dr-35": { title: "待填标题 35", tags: [], promptCn: ``, promptEn: `` },
   "dr-36": { title: "待填标题 36", tags: [], promptCn: ``, promptEn: `` },
   "dr-37": { title: "待填标题 37", tags: [], promptCn: ``, promptEn: `` },
