@@ -993,7 +993,7 @@ Hand-drawn black text "[Insert City Name]." elegantly placed in an open sky area
     title: "真人感街拍：城市打卡挑战",
     tags: ["Street Photography", "Travel", "Candid", "Portrait", "City"],
     promptCn: `九宫格真人感极强的街拍照片，保持人物五官、穿搭、身材比例在不同场景中高度一致。
-场景设定：背景为不同城市的特色墙面或带有巨大文字的标志性背景（如“上海”、“北京”、“香港”等墙面涂鸦或地标）。
+场景设定：背景为9个不同城市的特色墙面或带有巨大文字的标志性背景（如“上海”、“北京”、“香港”等墙面涂鸦或地标）。
 镜头语言：使用超广角镜头（16mm-24mm）增强张力。包含仰拍（显得腿长气场强）和俯拍（大头俏皮感）等动态视角。
 人物动作：自然松弛的抓拍感，不要摆拍痕迹。动作包括：热情挥手、自信走路、比心手势、抬手遮阳、回眸一笑。
 光影与氛围：通透的自然光，阳光感强，画面清晰锐利，色彩真实。
@@ -1007,8 +1007,47 @@ Actions: Waving enthusiastically, Walking confidently, Making a heart sign, Shie
 Lighting:Bright, translucent natural sunlight, sharp focus, high fidelity, 8k resolution. Real life texture, no plastic skin.`,
     prompt: "Hyper-realistic candid street photography with consistent character in various city settings...",
   },
- 
-  "dr-41": { title: "待填标题 41", tags: [], promptCn: ``, promptEn: `` },
+  
+  "dr-41": {
+    title: "电影故事板：3x3 镜头语言分析",
+    tags: ["Cinematic", "Storyboard", "Grid", "Photography", "Reference"],
+    promptCn: `【任务目标】
+分析输入图像的整个构图。识别所有存在的关键主体（无论是单人、群体/情侣、车辆还是特定物体）及其空间关系/互动。
+生成一个连贯的 3x3 网格“电影印样（Contact Sheet）”，展示在同一环境中完全是这些主体的 9 个不同镜头。
+【镜头规划】
+第 1 行（建立背景）：
+1.大远景 (ELS)： 主体在广阔的环境中显得很小，交代环境关系。
+2.全景 (LS)： 完整的主体或群体从上到下可见（从头到脚 / 从车轮到车顶）。
+3.中远景 (MLS)： 美式镜头/四分之三。构图从膝盖以上（针对人物）或 3/4 视角（针对物体）。
+第 2 行（核心覆盖）：
+4.中景 (MS)：构图从腰部以上（或物体的中心核心）。聚焦于互动/动作。
+5.中特写 (MCU) 构图从胸部以上。主要主体的亲密构图。
+6.特写 (CU)：紧凑构图于脸部或物体的“正面”。
+第 3 行（细节与角度）：
+7.大特写 (ECU)：强烈聚焦于关键特征（眼睛、手、标志、纹理）的微距细节。
+8.低角度镜头 (Low Angle)：从地面仰望主体（壮观/英雄感）。
+9.高角度镜头 (High Angle)：从上方俯瞰主体（上帝视角）。
+【一致性要求】
+确保严格的一致性：所有 9 个面板中必须是**相同的人物/物体、相同的衣服和相同的光照**。
+景深应逼真地变化（全景深 vs 特写镜头中的背景虚化）。
+所有帧均具有照片般逼真的纹理和一致的电影级调色。`,
+    promptEn: `Analyze the full composition of the input image. Identify key subjects and their spatial relationships.
+Generate a coherent 3x3 grid "Cinematic Contact Sheet" featuring these exact subjects in the same environment across 9 distinct camera shots.
+Row 1 (Establish):
+1.Extreme Long Shot (ELS): Subject small in vast environment.
+2.Long Shot (LS): Full subject visible head-to-toe.
+3.Medium Long Shot (MLS): Knees up / 3/4 view.
+Row 2 (Coverage):
+4.Medium Shot (MS): Waist up. Focus on action/interaction.
+5.Medium Close-Up (MCU): Chest up. Intimate.
+6.Close-Up (CU): Tight on face/front.
+Row 3 (Details & Angles):
+7.Extreme Close-Up (ECU): Macro detail of key feature (eye/hand/texture).
+8.Low Angle: Looking up at subject (heroic).
+9.High Angle: Looking down on subject.
+Consistency: Strict adherence to the same character/object, outfit, and lighting across all panels. Realistic depth of field changes.`,
+    prompt: "A professional 3x3 cinematic storyboard grid analyzing the input image...",
+  },
   "dr-42": { title: "待填标题 42", tags: [], promptCn: ``, promptEn: `` },
   "dr-43": { title: "待填标题 43", tags: [], promptCn: ``, promptEn: `` },
   "dr-44": { title: "待填标题 44", tags: [], promptCn: ``, promptEn: `` },
