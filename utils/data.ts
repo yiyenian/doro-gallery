@@ -796,8 +796,68 @@ Pose: Sitting with legs crossed, body slightly tilted, holding a small flower, l
     prompt: "Ultra-realistic Douyin style portrait of a woman in a seaside garden...",
   },
   
-  "dr-36": { title: "待填标题 36", tags: [], promptCn: ``, promptEn: `` },
-  "dr-37": { title: "待填标题 37", tags: [], promptCn: ``, promptEn: `` },
+  "dr-36": {
+    title: "古诗词电影感截图",
+    tags: ["Cinematic", "Movie Still", "Poetry", "Realistic", "IMAX"],
+    promptCn: `角色设定：好莱坞顶级电影摄影指导 (DoP) 兼视觉特效总监。
+任务：请检索古文/古诗《[在此插入标题]》的全文及深层含义，并将其核心意象转化为一张史诗级电影截图。
+视觉风格 (Core Aesthetics)：
+1.震撼感：大广角、强烈的明暗对比 (Chiaroscuro)、体积光。
+2.电影字幕：画面底部必须包含“电影字幕 (Movie Subtitles)”，还原电影截图质感。
+3.真实感：严禁 CG 感，强调皮肤纹理、物理材质、真实光影。
+画面构建指令：
+场景(Scene)：根据诗歌意境，构建一个宏大的电影场景。可以是著名的历史人物（著名演员饰演，粗粝真实感）在充满张力的时刻，或者是壮丽的自然景观。
+氛围(Atmosphere)：根据诗意添加尘土、烟雾、火花、雨水、迷雾等元素，营造战场或静谧山河的氛围。
+字幕(Subtitle)：从原诗中选取最经典的一句，作为电影字幕显示在画面底部（白色/黄色标准电影字体）。
+技术参数：
+Shot on IMAX 70mm, Anamorphic lens (2.39:1 aspect ratio), shallow depth of field, film grain, color graded like a blockbuster movie.`,
+    promptEn: `Role: Top Hollywood Director of Photography (DoP) & VFX Supervisor.
+Task: Retrieve the full text and meaning of the Chinese poem/classic text "[Insert Title Here]". Translate its core imagery into an Epic Cinematic Film Still.
+Visual Style:
+1.Impact: Wide angle, Chiaroscuro lighting, Volumetric fog.
+2.Subtitles: Must include "movie subtitles at the bottom" to simulate a screencap.
+3.Realism: Gritty realism, dirty faces, physical textures, no CGI look.
+Scene Construction:
+Scene:Based on the poem's mood, create a grand cinematic scene. It could be a famous historical figure (portrayed by a famous actor, gritty realism) or a majestic landscape.
+Atmosphere:Add dust, smoke, sparks, rain, or mist to create a chaotic battlefield or serene nature atmosphere.
+Subtitle(Critical): Select the most iconic line from the poem and display it as a cinematic subtitle at the bottom of the screen (Standard font, white/yellow).
+Tech Specs:
+Shot on IMAX 70mm, Anamorphic lens (2.39:1 aspect ratio), shallow depth of field, film grain, color graded like a blockbuster movie, 8k resolution.`,
+    prompt: "Cinematic film still of a Chinese poem with subtitles...",
+  },
+
+    "dr-37": {
+    title: "电影感3D动作广告",
+    tags: ["3D Render", "Commercial", "Action", "Cinematic", "Advertisement"],
+    promptCn: `为 [此处插入产品/品牌名称] 打造一部极具电影感的3D动作广告海报。
+核心画面：以紧张刺激的动态瞬间捕捉精彩画面，产品处于动作的高潮点（如飞跃、撞击、极速运动中）。
+运用极具冲击力的慢动作镜头感（Frozen Moment）。
+视觉特效：
+灯光：专业的影棚灯光，强烈的明暗对比，轮廓光勾勒产品边缘。
+粒子：动感的粒子特效（火花、碎片、水珠、烟雾），增强速度感和张力。
+质感：光鲜亮丽的商业质感，超逼真的渲染效果，锐利的细节。
+品牌元素：
+品牌标识巧妙融入场景（如刻在物体上、背景霓虹灯）。
+简洁现代的标语清晰地置于画面下方。
+整体氛围：浓郁的氛围感，极具感染力的视觉效果，尽显高端商业大片的视觉美感，具有病毒式传播潜力。
+8K分辨率，Octane 渲染。`,
+    promptEn: `Create a highly cinematic 3D action commercial poster for [Insert Product/Brand Name].
+Core Visual:
+Capture a high-tension dynamic moment in a freeze-frame style. The product is at the peak of action (e.g., flying, impacting, speeding).
+High-impact slow-motion aesthetic.
+Visual Effects:
+Lighting:Professional studio lighting, strong contrast (Chiaroscuro), rim lighting to separate the product.
+Particles:Dynamic particle effects (sparks, debris, liquid splashes, smoke) to enhance speed and tension.
+Texture:Glossy commercial quality, hyper-realistic rendering, razor-sharp details.
+Branding:
+Brand logo subtly integrated into the scene (e.g., embossed, neon background).
+A clean, modern slogan placed clearly at the bottom.
+Atmosphere:
+Rich atmosphere, viral visual impact, high-end commercial blockbuster aesthetic.
+8k resolution, Octane render.`,
+    prompt: "Cinematic 3D action commercial poster with dynamic particles and high contrast...",
+  },
+  
   "dr-38": { title: "待填标题 38", tags: [], promptCn: ``, promptEn: `` },
   "dr-39": { title: "待填标题 39", tags: [], promptCn: ``, promptEn: `` },
   "dr-40": { title: "待填标题 40", tags: [], promptCn: ``, promptEn: `` },
