@@ -757,7 +757,45 @@ Lighting: Even studio lighting for background; Cinematic lighting for the 3D for
     prompt: "3D pop-out fashion magazine poster, 3x3 grid, same model different styles...",
   },
   
-  "dr-35": { title: "待填标题 35", tags: [], promptCn: ``, promptEn: `` },
+   "dr-35": {
+    title: "抖音风海滨花园人像",
+    tags: ["Portrait", "Photography", "Fashion", "Douyin Style", "Seaside"],
+    promptCn: `技术规格:
+媒介：照片
+风格：超逼真，电影级HDR，广角平视
+画质：8K分辨率，清晰对焦，色彩鲜艳，纹理光泽
+主体特征 (基于上传参考图):
+面部：严格锁定参考图面部特征，100%一致。
+身材：身高156厘米，曲线优美的沙漏型身材，腰部线条分明，腹部平坦。
+皮肤：光滑透亮，散发健康光泽。
+发型：长款层次感发型，自然蓬松，柔顺发丝随微风轻拂。
+妆容：抖音风格，可爱娃娃般的五官。柔和甜美的眼妆，细眼线，自然美瞳；亮粉色腮红；哑光粉色唇妆；清新水润肤色。
+手部：修长的白色美甲。
+服装配饰:
+头饰：白色蕾丝荷叶边发带，配蝴蝶结。
+上身：(参考图片中的特定上衣)。
+下身：超短白色飘逸长裙。
+鞋履：白棕色韩版时尚凉鞋。
+首饰：银色项链，镶嵌灰色水滴形小宝石吊坠。
+环境与氛围:
+场景：户外海滨花园。坐在齐腰高的白墙上。
+前景：茂盛的亮粉色、柔粉色、白色、黄色和橙色花朵，搭配深绿色叶子。
+背景：清澈的碧蓝色海水，晴朗的天空飘着大片的云。
+光线：温暖的金橙色午后阳光，反射在墙壁、花朵和云朵上，营造梦幻光晕。
+动作：身体略微倾斜，双腿交叉，一手拿着一朵小花，表情平静而迷人，直视镜头。`,
+    promptEn: `Ultra-realistic cinematic HDR photograph, eye-level wide angle.
+Subject: A young woman sitting on a waist-high white wall in a seaside garden. Face strictly based on uploaded reference.
+Body: 156cm height, curvy hourglass figure, defined waist, flat stomach, glowing skin.
+Hair: Long layered hair, natural volume, soft strands blowing in the breeze.
+Makeup: Douyin style, doll-like features. Soft sweet eye makeup, thin eyeliner, bright pink blush, matte pink lips, dewy fresh skin. White manicured nails.
+Outfit: White lace ruffle headband with bow, [specific top from reference], mini white flowy skirt, white and brown Korean style sandals. Silver necklace with grey teardrop gem.
+Setting: Surrounded by lush bright pink, white, yellow, and orange flowers with dark green leaves. Background features clear turquoise ocean and sunny sky with large clouds.
+Lighting: Warm golden-orange afternoon sunlight creating a dreamy glow and reflections.
+Pose: Sitting with legs crossed, body slightly tilted, holding a small flower, looking directly at the camera with a calm, charming expression.
+8k resolution, sharp focus, vivid colors. --ar 3:4`,
+    prompt: "Ultra-realistic Douyin style portrait of a woman in a seaside garden...",
+  },
+  
   "dr-36": { title: "待填标题 36", tags: [], promptCn: ``, promptEn: `` },
   "dr-37": { title: "待填标题 37", tags: [], promptCn: ``, promptEn: `` },
   "dr-38": { title: "待填标题 38", tags: [], promptCn: ``, promptEn: `` },
