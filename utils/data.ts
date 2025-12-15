@@ -941,8 +941,73 @@ Effect: Subtle white die-cut outlines (sticker effect) around main objects to se
     prompt: "Vertical cultural infographic with classical poetry integration...",
   },
   
-  "dr-39": { title: "待填标题 39", tags: [], promptCn: ``, promptEn: `` },
-  "dr-40": { title: "待填标题 40", tags: [], promptCn: ``, promptEn: `` },
+   "dr-39": {
+    title: "城市极简手绘插画",
+    tags: ["Illustration", "City", "Minimalist", "Line Art", "Poster"],
+    promptCn: `这是一幅精致简约的手绘线条插画。其美学风格类似于高端丝网印刷海报，采用大胆的色块和粗犷自信的黑色轮廓线。画面铺满整个画面。
+城市：[插入城市名称]
+主题：[插入标志性视角，如：从外滩看向浦东]
+[构图策略：动态透视]
+避免水平分割：严格避免将画面分割成扁平的水平条带（天空/建筑/地面）。
+景深与角度：画面必须运用自然透视（三点透视或两点透视）。地面（街道/河流）应利用对角线引导线从前景延伸至远方，而不是平铺在底部。
+元素交错：构图必须自然流畅。树木可以从前景向上延伸，与建筑物交叠；建筑应动态地切入天空。地平线应该是断续的、不规则的，而不是直线。
+拍摄角度：使用平视或略微低角度的拍摄，以强调地标的宏伟，营造沉浸感，而非平面的地图视图。
+[色彩策略：语义和谐的色块]
+图像使用有限的“平面”调色板，应用于特定物体，但通过透视进行塑造：
+1.天空（负空间）：从[插入城市名称]的调色板中选择深沉、浓郁且精致的色块（例如，深青色、海军蓝或栗色）。它填充建筑物周围和背后的负空间，而不仅仅是“顶部”。
+2.舞台（地面和水面）：
+地面/路面：纯色的中性大地色（例如，米色、浅石色或柔和的灰色）。至关重要的是，由于透视原理，这块色块会形成梯形或三角形，而不是矩形。
+水（如有）：亮度与地面相似，但色调不同（例如，淡鼠尾草绿或柔和的蓝色）。水面应融入画面，而不仅仅是横跨画面。
+3.建筑：主要以纯白色或米白色渲染，并用黑色线条勾勒轮廓。
+4.人物（融入场景）：
+风格：完全白色填充，并用粗黑线勾勒轮廓。头发可以是黑色或深色自然色调。
+位置：人物分散在不同的景深中——一些较大的人物位于前景，一些较小的人物位于中景——以此来锚定透视。他们之间的互动自然流畅（融入画面，而不仅仅是左右移动）。
+服饰：服装采用简洁的色块设计，并以[插入城市名称]的专属色块点缀。
+[文本元素]
+手绘黑色文字“[插入城市名称].”优雅地置于一片开阔的天空区域，平衡了整体构图。`,
+    promptEn: `A sophisticated, minimalist hand-drawn line illustration. Aesthetic resembles high-end screen-printed posters with bold color blocks and confident, thick black outlines. Full bleed.
+City:[Insert City Name]
+Subject:[Insert Iconic View]
+[Composition:Dynamic Perspective]
+No Horizontal Splits: Strictly avoid dividing the image into flat horizontal bands.
+Depth & Angles:Use natural 2-point or 3-point perspective. Ground/Water should use diagonal leading lines extending into the distance.
+Overlapping:Natural flow. Trees extending up from foreground overlapping buildings. Buildings cutting dynamically into the sky. Broken, irregular horizon line.
+Angle:Eye-level or slightly low angle to emphasize grandeur and immersion, not a flat map view.
+[Color Strategy: Harmonic Blocks]
+Limited "flat" palette applied to specific objects shaped by perspective:
+1.Sky (Negative Space): Deep, rich, sophisticated color block derived from [Insert City Name]'s palette (e.g., Deep Teal, Navy, or Maroon). Fills negative space AROUND and BEHIND buildings.
+2.Stage (Ground & Water):
+Ground:Solid neutral earth tone (Beige, Stone, Soft Grey). Forms trapezoids/triangles due to perspective.
+Water (if present): Similar lightness to ground but distinct hue (Sage Green, Soft Blue). Integrated into the scene.
+3.Architecture: Rendered primarily in Pure White or Off-White with black line art outlines.
+4.Figures (Integrated):
+Style:Pure White fill with thick black outlines. Dark natural hair colors.
+Placement:Scattered at different depths - larger in foreground, smaller in mid-ground to anchor perspective. Natural interaction.
+Clothing:Simple color blocks, accented with [Insert City Name]'s signature colors.
+[Text]
+Hand-drawn black text "[Insert City Name]." elegantly placed in an open sky area to balance the composition.`,
+    prompt: "Minimalist hand-drawn line illustration of a city with bold color blocks...",
+  },
+
+   "dr-40": {
+    title: "真人感街拍：城市打卡挑战",
+    tags: ["Street Photography", "Travel", "Candid", "Portrait", "City"],
+    promptCn: `九宫格真人感极强的街拍照片，保持人物五官、穿搭、身材比例在不同场景中高度一致。
+场景设定：背景为不同城市的特色墙面或带有巨大文字的标志性背景（如“上海”、“北京”、“香港”等墙面涂鸦或地标）。
+镜头语言：使用超广角镜头（16mm-24mm）增强张力。包含仰拍（显得腿长气场强）和俯拍（大头俏皮感）等动态视角。
+人物动作：自然松弛的抓拍感，不要摆拍痕迹。动作包括：热情挥手、自信走路、比心手势、抬手遮阳、回眸一笑。
+光影与氛围：通透的自然光，阳光感强，画面清晰锐利，色彩真实。
+人物形象：[上传人物参考图]，保持该人物的面部特征和服装完全一致。`,
+    promptEn: `A series of hyper-realistic candid street photography shots featuring the SAME character in different city settings.
+Character Consistency:Strictly maintain the same facial features, body proportions, and outfit (based on uploaded reference) across all shots.
+Settings:Distinctive city feature walls or backgrounds with large text typography (e.g., city names, slogans).
+Camera & Angles:Ultra-wide angle lens (16mm) for dynamic perspective. Mix of Low-angle shots (empowering, leg-lengthening) and High-angle shots (playful).
+Actions & Vibe:Natural, relaxed, unposed 'caught in the moment' feel.
+Actions: Waving enthusiastically, Walking confidently, Making a heart sign, Shielding eyes from sun, Looking back with a smile.
+Lighting:Bright, translucent natural sunlight, sharp focus, high fidelity, 8k resolution. Real life texture, no plastic skin.`,
+    prompt: "Hyper-realistic candid street photography with consistent character in various city settings...",
+  },
+ 
   "dr-41": { title: "待填标题 41", tags: [], promptCn: ``, promptEn: `` },
   "dr-42": { title: "待填标题 42", tags: [], promptCn: ``, promptEn: `` },
   "dr-43": { title: "待填标题 43", tags: [], promptCn: ``, promptEn: `` },
