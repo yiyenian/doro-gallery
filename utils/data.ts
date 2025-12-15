@@ -7,7 +7,6 @@ export interface DataRecord {
 }
 
 export const localData: Record<string, DataRecord> = {
-  // === 01. 全景式角色 ===
   "dr-1": {
     title: "全景式角色深度概念分解图",
     tags: ["Character Design", "Concept Art", "Game Art", "2.5D"],
@@ -48,7 +47,6 @@ Text: Handwritten notes in Chinese and English.`,
     prompt: "A panoramic character concept breakdown sheet, concept art style..."
   },
 
-  // === 02. 诸葛连弩 ===
   "dr-2": {
     title: "诸葛连弩结构爆炸图",
     tags: ["Industrial Design", "Retro", "Structure"],
@@ -63,7 +61,6 @@ Background: Aged yellow parchment paper`,
     prompt: "Vintage engineering explosion diagram of a Zhuge Nu..."
   },
 
-  // === 03. 泡泡玛特宇航员 ===
   "dr-3": {
     title: "泡泡玛特风格宇航员",
     tags: ["3D Render", "IP Design", "Blind Box", "Cute", "C4D"],
@@ -82,7 +79,6 @@ Background: Clean pastel color background, simple planet props.`,
     prompt: "A cute chibi astronaut character, Pop Mart blind box style. PVC plastic texture..."
   },
 
-  // === 04. 极简科技 Logo ===
   "dr-4": {
     title: "极简科技 Logo",
     tags: ["Logo Design", "Graphic Design", "Minimalist", "Vector"],
@@ -97,7 +93,6 @@ no realistic, 3d, text, shadow  ar 1:1  v 6.0`,
     prompt: "A minimalist tech company logo representing Quantum Computing..."
   },
 
-  // === 05. 微缩森林 ===
   "dr-5": {
     title: "微缩森林瓶中界",
     tags: ["Macro Photography", "Still Life", "Fantasy", "Nature"],
@@ -112,7 +107,6 @@ ar 4:5 stylize 250  v 6.0`,
     prompt: "Macro photography of a glass jar containing a miniature magical forest inside..."
   },
 
-  // === 06. 流体博物馆 ===
   "dr-6": {
     title: "流体未来博物馆",
     tags: ["Architecture", "Futuristic", "Zaha Hadid", "Parametric"],
@@ -127,7 +121,6 @@ Tech: Ultra wide angle shot, Unreal Engine 5 architectural visualization, 8k, hy
     prompt: "Architectural photography of a futuristic white museum located by the sea..."
   },
 
-  // === 07. 赛博龙女 ===
   "dr-7": {
     title: "新中式赛博龙女",
     tags: ["Guochao", "Illustration", "Chinese Style", "Cyberpunk"],
@@ -575,7 +568,63 @@ Character: A small child character guides the viewer through the journey.`,
     prompt: "Classical Chinese Poetry Illustration Template - Input title only..."
   },
   
-  "dr-31": { title: "待填标题 31", tags: [], promptCn: ``, promptEn: `` },
+  "dr-31": {
+    title: "3x3 人像表情挑战",
+    tags: ["Portrait", "Photography", "Expression", "Grid", "Realistic"],
+    promptCn: `关键指令：绝对优先级：所有面板中保持相同的面部结构。无论呈现何种表情，都不得改变底层骨骼结构、鼻子形状、眼距或下颌线。每个镜头中都必须清晰可辨。
+格式：3x3 网格拼贴
+主体：面部参考：用户上传图片
+身份锁定：关键：固定身份，与参考面部特征零偏差。强制 100% 精确匹配。
+细节保留：确保每个面板中瞳距一致、鼻梁形状精确、下颌结构准确。
+负面约束：不要改变鼻子形状，不要改变眼睛大小或间距，不要改变颧骨结构，不要有整容效果。
+风格：超写实人像摄影，8K分辨率，RAW照片美学。
+皮肤：高度精细的自然皮肤纹理，可见毛孔，细微瑕疵，逼真肤色，在所有光照条件下保持一致。
+相机设置：使用索尼A7R IV拍摄，85mm人像镜头，f/1.8光圈，眼睛清晰对焦，浅景深。
+面板详情：
+1.喜悦：灿烂自然的笑容（保持下颌线条），肩膀微微抬起。高马尾，留有几缕碎发。粉彩色棉质连帽衫。柔和渐变天蓝色影棚背景。
+2.惊讶：双手靠近脸部，睁大眼睛（不改变眼形），自然反应。自然蓬松的波浪卷发。休闲棉质T恤衫。浅桃色影棚背景。
+3.悲伤：低头，眼神柔和，充满情感。凌乱的低发髻。宽松羊毛衫。柔和的薰衣草色影棚背景。
+4.温柔：温柔的微笑，微微侧头。优雅的半扎发。柔软的针织上衣。暖米色影棚背景。
+5.大胆：自信的眼神，下巴微微抬起（展现流畅的下颌线条）。别致的背头。时尚的皮夹克或牛仔夹克。深蓝绿色影棚背景。
+6.俏皮：脸颊微微鼓起（确保鼻子保持不变），眼神俏皮。短款纹理波波头。条纹亚麻衬衫。柔和的薄荷绿摄影棚背景。
+7.迷人：眨眼，手指轻戳脸颊。俏皮的双丸子头。时尚图案T恤。浅粉色摄影棚背景。
+8.震惊：嘴巴微张，眉毛上扬（额头皱纹与参考年龄相符）。蓬松的披肩发。简约的丝绸衬衫。浅黄色摄影棚背景。
+9.愤怒：双臂交叉，目光锐利（眼睛眯起但保持一定距离）。高髻。深色修身高领衫。深红色摄影棚背景。
+渲染与构图：
+灯光：电影级摄影棚灯光，柔光箱照明，冷暖色调混合，轮廓光用于分离。
+阴影：逼真的阴影，皮肤表面散射，一致的面部建模。
+质量：照片级真实感，超高细节，获奖摄影，杂志品质。
+一致性：所有9个面板的形象一致性和灯光设置完美无瑕。
+网格对齐：完美对齐的3x3照片亭条形。间距：面板之间等距的白色边距。背景边框：干净的白色边框。`,
+    promptEn: `Critical Instruction: Absolute Priority: Maintain identical facial structure across all panels. No changes to underlying bone structure, nose shape, eye distance, or jawline regardless of expression. Must be recognizable in every shot.
+Format: 3x3 Grid Collage.
+Subject:
+Face Reference: Uploaded photo.
+Identity Lock: CRITICAL: Fixed identity, zero deviation from reference features. Forced 100% precise match.
+Identity Preservation: Ensure consistent pupil distance, exact nose bridge shape, accurate jaw structure in every panel.
+Negative Constraints: No nose shape change, no eye size/spacing change, no cheekbone structure change, no plastic surgery effect.
+Style: Hyper-realistic portrait photography, 8K resolution, RAW photo aesthetic.
+Skin: Highly detailed natural skin texture, visible pores, micro-imperfections, realistic skin tone consistent across all lighting.
+Camera: Shot on Sony A7R IV, 85mm portrait lens, f/1.8 aperture, sharp focus on eyes, shallow depth of field.
+Panels:
+1.Joy: Radiant natural smile (maintaining jawline), shoulders slightly raised. High ponytail with wisps. Pastel cotton hoodie. Soft gradient sky blue studio background.
+2.Surprise: Hands near face, wide eyes (no eye shape change), natural reaction. Natural loose waves. Casual cotton t-shirt. Light peach studio background.
+3.Sadness: Looking down, soft eyes, emotional. Messy low bun. Oversized cardigan. Muted lavender studio background.
+4.Gentle: Soft smile, slight head tilt. Elegant half-up half-down hair. Soft knit top. Warm beige studio background.
+5.Bold: Confident gaze, chin slightly up (showing consistent jawline). Chic slicked-back hair. Stylish leather or denim jacket. Deep teal studio background.
+6.Playful: Cheeks slightly puffed (ensure nose stays consistent), playful eyes. Short textured bob. Striped linen shirt. Soft mint green studio background.
+7.Charming: Winking, finger poking cheek. Playful double buns. Trendy graphic tee. Light pink studio background.
+8.Shock: Mouth slightly open, eyebrows raised (forehead wrinkles matching reference age). Voluminous blowout. Minimalist silk blouse. Pale yellow studio background.
+9.Anger: Arms crossed, sharp gaze (eyes narrowed but spacing kept). High top knot. Dark fitted turtleneck. Deep red studio background.
+Rendering & Composition:
+Lighting: Cinematic studio lighting, softbox illumination, mixed cool/warm tones, rim light for separation.
+Shadows: Realistic occlusion, subsurface scattering, consistent facial modeling.
+Quality: Photorealistic, ultra-detailed, award-winning photography, magazine quality.
+Consistency: Flawless identity consistency and lighting setup across all 9 panels.
+Grid Alignment: Perfectly aligned 3x3 photobooth strip style. Spacing: Equidistant white margins between panels. Border: Clean white background border.`,
+    prompt: "3x3 grid collage of a person with consistent identity and different expressions..."
+  },
+  
   "dr-32": { title: "待填标题 32", tags: [], promptCn: ``, promptEn: `` },
   "dr-33": { title: "待填标题 33", tags: [], promptCn: ``, promptEn: `` },
   "dr-34": { title: "待填标题 34", tags: [], promptCn: ``, promptEn: `` },
