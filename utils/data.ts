@@ -1064,8 +1064,48 @@ Consistency: Strict adherence to the same character/object, outfit, and lighting
 艺术风格:融合了18世纪植物插画的精准、当代超写实主义以及电影剧照的美学（王家卫式的色彩诗意）。
 构图:居中，微距镜头视角，8K超高分辨率。`,
   },
-  "dr-43": { title: "待填标题 44", tags: [], promptCn: ``, promptEn: `` },
-  "dr-44": { title: "待填标题 44", tags: [], promptCn: ``, promptEn: `` },
+
+   "dr-43": {
+    title: "极简角色折纸艺术",
+    tags: ["Origami", "Paper Art", "Minimalist", "Character", "Studio Lighting"],
+    promptCn: `这款 [插入角色名称] 的折纸作品细节极其丰富。
+材质与工艺：采用高品质彩色纸张折叠而成，边缘清晰锐利，纸张纹理真实逼真。
+折痕以简洁的几何形式，精准捕捉了角色的标志性特征、服装细节和整体轮廓。
+场景与光影：作品置于干净的摄影棚平面上，背景极简。
+柔和的影棚灯光投射出细腻的阴影，增强立体感。
+风格：极简主义收藏级艺术风格 (Minimalist Collectible Art)。
+照片级写实细节，焦点清晰锐利。
+规格：1080x1080 正方形构图，8K 超高清。`,
+    promptEn: `A highly detailed origami artwork of [Insert Character Name].
+Material & Craft: Folded from high-quality colored paper with sharp edges and realistic paper texture.
+Simple geometric folds capture the character's iconic features, outfit, and silhouette.
+Scene & Lighting: Placed on a clean studio flat surface with a minimalist background.
+Soft studio lighting creating gentle shadows to enhance dimensionality.
+Style: Minimalist collectible art style.
+Photorealistic details, sharp focus.
+Specs: 1080x1080 square format, 8k resolution.`,
+    prompt: "High-quality origami artwork of a character, minimalist style...",
+  },
+
+    "dr-44": {
+    title: "唐风雪夜回眸人像",
+    tags: ["Portrait", "Tang Dynasty", "Photography", "Cinematic", "Snow", "Full Body"],
+    promptCn: `一张超写实的电影感全身肖像，描绘了一位身着华丽唐代服装（齐胸襦裙）的年轻女子。
+人物特征：年轻东亚女性，面部特征与参考图完全一致。精致的唐风妆容，花钿点缀眉间，面靥装饰脸颊。
+姿态与动作：全身动态展示。她正在雪地中轻盈行走或微微转身回眸，姿态优雅舒展。一手持红色刺绣团扇，另一手轻提裙摆，露出精致的**翘头履 (Cloud-toe silk shoes)**，鞋尖绣有精美花纹。
+服饰细节：唐代齐胸襦裙，袒领设计，半透明的大袖衫随风飘动，飘逸的披帛缠绕臂间。整体以红色与金色为主调，裙摆层层叠叠，质感华丽。
+发型：唐代高髻，佩戴牡丹花发饰、金步摇和华丽发梳。
+环境与氛围：大雪纷飞的唐代宫廷庭院或梅花林。背景不再局限于纯黑，可是**雪后的清晨**或**傍晚的蓝调时刻**，白雪覆盖的红墙绿瓦若隐若现。空气中弥漫着清冷的寒气。
+摄影参数：8K 超高分辨率，85mm 或 50mm 镜头，全身构图。光线柔和自然，或是具有戏剧性的电影布光，强调丝绸的光泽和雪的质感。`,
+    promptEn: `A hyper-realistic cinematic full-body portrait of a young woman wearing magnificent Tang Dynasty clothing (Qixiong Ruqun).
+Character: Young East Asian female, facial features strictly identical to reference. Exquisite Tang-style makeup with Huadian (forehead flower) and Mianye (dimple dots).
+Pose & Action: Full body shot in dynamic motion. She is walking gracefully or turning back in the snow. One hand holds a red embroidered round fan, the other gently lifts her skirt hem, revealing exquisite **Cloud-toe silk shoes (Qiaotou shoes)** with intricate embroidery.
+Outfit: Tang Dynasty Qixiong Ruqun, low-cut bodice, sheer wide sleeves flowing in the wind, long draping Pibo ribbon. Red and gold dominant colors. Layered silk skirt.
+Hair: High Tang-style bun adorned with a peony flower, gold dangling hairpin (Buyao), and ornate combs.
+Environment: A snowy Tang Dynasty royal garden or plum blossom forest. Time can be a **snowy morning** or **blue hour twilight** (not limited to pitch black). Snow-covered traditional architecture in the background.
+Photography: 8k resolution, ultra-detailed masterpiece. Shot on 85mm or 50mm lens. Cinematic lighting highlighting the sheen of silk and the texture of snow. Full body composition.`,
+    prompt: "Hyper-realistic Tang Dynasty full-body portrait, walking in snow, showing shoes...",
+  },
   "dr-45": { title: "待填标题 45", tags: [], promptCn: ``, promptEn: `` },
   "dr-46": { title: "待填标题 46", tags: [], promptCn: ``, promptEn: `` },
   "dr-47": { title: "待填标题 47", tags: [], promptCn: ``, promptEn: `` },
