@@ -1106,8 +1106,72 @@ Tech Specs: 8k resolution, Octane render, volumetric lighting, cinematic composi
     prompt: "Conceptual 3D weapon design based on a novel's spirit...",
   },
   
-  "dr-46": { title: "待填标题 46", tags: [], promptCn: ``, promptEn: `` },
-  "dr-47": { title: "待填标题 47", tags: [], promptCn: ``, promptEn: `` },
+  "dr-46": {
+    title: "3x3 3D混合时尚杂志海报",
+    tags: ["Fashion", "Magazine", "3D Render", "Collage", "Grid", "Pop-out"],
+    promptCn: `角色指令：你是一位专业的时尚艺术总监/AI。根据固定的服装和人物特征，生成一张100%忠实于原型的图像。不要改变服装、风格、颜色或层次。
+核心参数：比例：9:16。风格：高级时尚杂志封面布局（类似 Vogue & Harper's Bazaar），3x3 网格拼贴。特效：前景主角“破框而出”，打破网格边界。画质：8K 超高清，大师级品质。
+人物锁定：面部：严格锁定上传的参考图面部特征（100% 结构匹配）。服装：严格遵守上传的服装单品（100% 材质匹配）。禁忌：无变形、无随机服装、无蜡质皮肤、无换人。
+视觉概念：风格：光面杂志封面，混合流派背景的 3x3 网格布局。主角大胆站立，“打破”网格（前景层）。
+美学：混合媒体拼贴（撕纸边缘、半调网点、排版叠加）。未来主义、几何线条、电影感光效。
+布局结构 (3x3 网格)：背景层：完美对齐的 3x3 网格，带有艺术性的间距。每个格子有独特的视觉风格。
+[1] Vogue波普风：眼部/细节特写，红色实色背景，速度线，高对比闪光灯。
+[2] 极简主义：腰部以上中景，侧身，深色渐变背景，柔光箱照明。
+[3] 全身时尚：动态行走，城市街景背景，自然光。
+[4] 原始情感：黑白肖像，发丝凌乱，颗粒质感，朋克字体。
+[5] Marie Claire优雅：头肩肖像，下巴托手，暖米色背景，伦勃朗光。
+[6] 科幻风格：配饰/手部特写，赛博朋克线条，双色凝胶光效。
+[7] 美妆特写：唇/眼极度特写，柔和粉彩渐变，环形光，微距毛孔细节。
+[8] Lo-Fi街拍：双重曝光或动态模糊，夜景散景，概念光效。
+[9] 数据美学：剪影或抽象形状，单色背景，极简平铺。前景层 (Hero Layer)：主角全身或 3/4 身剪影，穿着完全相同的服装，居中或偏侧站立。
+图像清晰锐利，与网格背景有强烈的视觉分离，产生强烈的 3D 弹出错觉。排版与图形：英文主标题（衬线/无衬线混合），日文副标题（增加视觉纹理）。顶部大胆的杂志刊头，底部条形码，装饰性取景框线。红色和白色的文本框。
+技术规格：摄影：哈苏 X2D 100C 中画幅相机，85mm f/1.2 镜头。光照：专业影棚布光，轮廓光，体积雾。后期：高锐度，低噪点（除颗粒效果外），生动清晰。`,
+    promptEn: `High fashion magazine cover, 3x3 grid layout collage with a 3D pop-out hero subject. 
+    Subject Consistency: Strict likeness lock on uploaded facial features and outfit. 100% fidelity. 
+    Layout & Composition: Background Layer: 3x3 Grid. 
+    [Panel 1]: Vogue Pop Art. Macro eye detail. Red background with speed lines. High contrast flash. 
+    [Panel 2]: Minimalist. Medium shot profile. Deep gradient background. Soft box lighting. 
+    [Panel 3]: Full Body Fashion. Dynamic walking. City street background. Natural light. 
+    [Panel 4]: Raw B&W. Windblown hair portrait. Gritty texture. High saturation B&W. 
+    [Panel 5]: Elegant Portrait. Head & shoulders, chin prop. Warm beige background. Rembrandt lighting. 
+    [Panel 6]: Sci-Fi Detail. Accessories/Hand focus. Cyberpunk lines background. Duo-tone gel lighting. 
+    [Panel 7]: Beauty Macro. Lips/Eye close-up. Pastel gradient. Ring light. 
+    [Panel 8]: Lo-Fi Motion Blur. Candid action. Night city bokeh. Conceptual lighting. 
+    [Panel 9]: Abstract Data. Silhouette/Shape. Monochrome background. Minimalist. Foreground Hero Layer: Full body/3/4 body cut-out of the main character (same outfit). Standing boldly, breaking the grid boundaries. Crisp, sharp, 3D pop-out illusion. 
+    Style & Atmosphere: Glossy magazine aesthetic, mixed media collage (torn paper, halftone dots). Bold, electric, primary colors (Red, White, Black). Typography: Bold English masthead, Japanese vertical subtitles, barcode, decorative viewfinder lines. 
+    Tech: Photorealistic, 8k, Hasselblad X2D, 85mm f/1.2. Studio professional lighting.`,
+    prompt: "3x3 grid fashion magazine cover with 3D pop-out hero subject...",
+  },
+
+  "dr-47": {
+    title: "现代都市光影剪纸",
+    tags: ["Paper Art", "Cityscape", "Architecture", "Lighting", "Creative"],
+    promptCn: `角色设定：现代剪纸艺术大师。
+任务：根据用户输入的城市名，创作一幅该城市的现代都市景观剪纸艺术画。
+城市：[插入城市名称]
+核心构图：
+以 [插入城市名称] 的现代地标建筑（自动检索该城市地标，如塔、桥、中心大厦）为灵感，通过精巧的镂空手法在一整幅纸上立体刻画。
+所有建筑与元素均以流畅的线条与结构相连，无孤立部分，构成一幅完整的都市画卷。
+材质与光影：
+画面采用金属箔或光泽纸材质，表面带有细腻的明暗光泽。
+在光照下呈现柔和的高光与阴影，仿佛被城市灯光轻轻照亮，体现纸张的层叠感。
+环境与氛围：
+背景以虚化的 [插入城市名称] 天际线为衬，点缀隐约可见的城市广场与树木轮廓。
+作品中巧妙融入轻盈的蒲公英绒毛或星光般的动态光点，象征梦想与活力在这座城市中飘散飞扬。
+整体呈现：现代浪漫的氛围，8K超高清视觉，细节丰富，真实而富有艺术感染力。`,
+    promptEn: `Role: Modern Paper Cutting Artist. Task: Create a modern cityscape paper-cutting artwork based on [Insert City Name].
+Composition:
+Center on [Insert City Name]'s iconic modern landmarks (retrieve landmarks automatically), intricately carved on a single sheet using hollow-out techniques.
+All buildings and elements are connected by fluid lines and structures, forming a unified urban scroll with no isolated parts.
+Material & Lighting:
+Uses metallic foil or glossy paper texture with subtle sheen.
+Soft highlights and shadows created by lighting, resembling city illumination, highlighting the layered paper depth.
+Atmosphere:
+Background features a blurred skyline of [Insert City Name] with outlines of parks or trees.
+Incorporates floating dandelion fluff or starlight-like dynamic particles, symbolizing dreams and vitality.
+Style: Modern romantic atmosphere, 8K Ultra-HD, rich details, photorealistic texture, artistic impact.`,
+    prompt: "Modern urban paper cutting art with metallic foil texture and city lighting...",
+  },
   "dr-48": { title: "待填标题 48", tags: [], promptCn: ``, promptEn: `` },
   "dr-49": { title: "待填标题 49", tags: [], promptCn: ``, promptEn: `` },
   "dr-50": { title: "待填标题 50", tags: [], promptCn: ``, promptEn: `` },
