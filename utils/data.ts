@@ -401,71 +401,34 @@ Rendered in 8K ultra-photorealistic quality, with masterful artistic lighting, s
   },
 
   "dr-27": {
-    title: "无边框微缩世界建筑师",
-    tags: ["Miniature", "Architecture", "3D", "Isometric", "Creative"],
-    promptCn: `角色定义
-你是一位无边框微缩世界建筑师。你的目标是创造一个高度密集、垂直堆叠的等距世界，使其感觉像是无限延伸的现实切片。你必须移除所有人为的边界、木框或玻璃盒。地形表面必须延伸至图像的边缘。
-核心能力 (关键视觉策略)
-1. 消除容器和剖面： 严禁使用底板、框架，底部边缘不得有任何垂直的地面剖面或切口。地形表面本身必须延伸至画面底部。
-2. 无限延伸的表面： 图像的底部边缘必须显示地形的顶部表面（例如，草地、路面、沙地），如同摄像机俯视屏幕外延伸的地面一般。
-3. 集成式 3D 标题：[作品标题]必须渲染成巨大的电影级 3D 字体，直接位于前景的延伸地形表面上。
-4. 高密度垂直堆叠：继续使用“之字形上升”方法，从下到上排列 5-7 个场景。
-工作流程 (思路链)
-1. 构思“无限延伸的地面”：想象站在山坡上；脚下的地面没有截断的边缘，而是无限延伸。这就是底部边缘视图。
-2. 布局之字形：
-底部（前景）：位于延伸地面上的 3D 标题 + 第 1 和第 2 拍。
-中间（上升）：第 3、4、5 拍向上蜿蜒。
-顶部（背景）：节拍 6 和 7 逐渐融入大气层。
-3. 文本整合：3D 文本应在其所在的地形表面上投射阴影。
-输出格式 (最终提示结构)
-[1. 无边框全出血构图]
-一幅无边框、边缘到边缘的高角度等距景观图，代表[插入作品标题]。图像不包含在框内，并且底部没有垂直横截面。地形表面充满整个 16:9 画面，一直延伸到底部角落。构图遵循一条垂直之字形路径（“脊柱”），连接7 个不同的叙事层。
-[2. 七层上升世界]
-地形是一片连续上升的广阔区域：
-[图层 1 - 底部前方]：最前景的表面，延伸至底部边缘。巨大的 3D 文字“[插入作品标题]”矗立于此处，种植在地形上。
-[图层 2 - 前右侧]：路径向上延伸。
-[图层 3 - 中左侧]：上方堆叠着场景。
-[图层 4 - 中心核心]：密集的过渡区域。
-[图层 5 - 中右侧高地]：陡峭上升。
-[图层 6 - 左上角]：场景描述。
-[图层 7 - 顶峰]：最高点。
-[3. 角色攀登]
-[插入角色名称] 以微缩模型的形式贯穿整个攀登过程。
-[4. 品牌与氛围]
-无边框、无剖面图。光照采用电影级立体效果。文本“[插入作品标题]”以[材质样式] 3D字体呈现，并在地面上投射阴影。采用移轴摄影、微距细节、黏土动画纹理、Octane渲染，8K分辨率。--no wooden base, box, frame, borders --ar 16:9 --stylize 750 --v 6.0`,
-    promptEn: `Role Definition
-You are a Borderless Miniature World Architect. Your goal is to create a hyper-dense, vertically stacked isometric world that feels like an infinite slice of reality. You must remove all artificial borders, wooden frames, or glass boxes. The landscape surface must bleed to the very edges of the image.
-Core Competency (CRITICAL VISUAL STRATEGY)
-1. Eradicate the Container & Cross-Section: STRICTLY NO baseplates, NO frames, and NO vertical ground cross-sections or cutaways at the bottom edge. The terrain surface itself must extend right to the bottom of the frame.
-2. Infinite Surface Extend: The bottom edge of the image must show the top surface of the terrain (e.g., grass, pavement, sand), as if the camera is looking down at the ground extending off-screen.
-3. Integrated 3D Title: The [Work Title] must be rendered as massive, cinematic 3D Typography standing directly ON this extended terrain surface in the immediate foreground.
-4. High-Density Vertical Stack: Continue to use the "Zig-Zag Ascent" method to pack 5-7 scenes from bottom to top.
-Work Process (Internal "Chain of Thought")
-1. Conceive the "Infinite Ground": Imagine standing on a hill; the ground at your feet doesn't have a cut-off edge, it just continues. That's the bottom edge view.
-2. Layout the Zig-Zag:
-Bottom (Foreground): 3D Title sitting on extended ground + Beat 1 & 2.
-Middle (Ascending): Beat 3, 4, 5 winding upwards.
-Top (Background): Beat 6 & 7 fading into the atmosphere.
-3. Text Integration: The 3D text should cast shadows onto the terrain surface it sits upon.
-Output Format (The Final Prompt)
-[1. The Frameless Full-Bleed Composition]
-A frameless, edge-to-edge high-angle isometric landscape representing [Insert Work Title]. The image is NOT contained in a box and shows NO vertical cross-section at the bottom. The terrain surface fills the entire 16:9 frame, extending all the way to the bottom corners. The composition follows a vertical zigzagging path (The "Spine") connecting 7 distinct narrative layers.
-[2. The 7-Stage Rising World (Seamless & Dense)]
-The terrain is a continuous, rising expanse:
-[Layer 1 - Bottom Front]: The immediate foreground surface, extending to the bottom edge. Massive 3D text spelling "[Insert Work Title]" stands here, planted on the terrain.
-[Layer 2 - Front Right]: The path climbs.
-[Layer 3 - Mid-Left]: Stacked above.
-[Layer 4 - Center Core]: A dense transition zone.
-[Layer 5 - Mid-Right Elevated]: Rising steeply.
-[Layer 6 - Upper Left]: Scene description.
-[Layer 7 - Top Peak]: The highest point.
-[3. The Character's Ascent]
-[Insert Character Name] appears as a recurring miniature figure throughout the climb.
-[4. The Branding & Atmosphere]
-No frames, no borders, no cross-sections. Lighting is cinematic and volumetric. The text "[Insert Work Title]" is rendered in [Material Style] 3D letters casting shadows on the ground. Tilt-shift photography, macro details, claymation texture, octane render, 8k resolution. --no wooden base, box, frame, borders, cross-section view, cutaway --ar 16:9 --stylize 750 --v 6.0`,
-    prompt: "Borderless Miniature World Architect - Create a hyper-dense, vertically stacked isometric world..."
+    title: "3D名场面海报生成器",
+    tags: ["3D Render", "Isometric", "Movie Poster", "DreamWorks", "Typography"],
+    promptCn: `指令：请为影视剧/小说《[插入名称]》设计一张高品质的3D海报。
+1. 知识库检索：
+首先检索《[插入名称]》的内容，找出一个最具代表性的名场面或核心地点。
+2. 核心构图（轴侧微缩模型）：
+在画面中央，构建该场景的精致轴侧视角3D微缩模型。
+风格：梦工厂动画般的细腻、柔和渲染风格。
+细节：还原建筑细节、人物动态及环境氛围（如暴风雨或午后阳光），自然融合光影。
+3. 背景环境（虚空意境）：
+拒绝纯白底。在模型周围营造带有淡淡水墨晕染和流动光雾的虚空环境。
+色调雅致，具有呼吸感和纵深感，衬托模型的珍贵感。
+4. 排版与文字（博物馆铭牌感）：
+底部居中：书名/片名《[插入名称]》，字体设计需匹配原著风格。
+书名下方：自动检索一句关于该场景的经典描写或台词，使用优雅衬线体。
+整体布局平衡精致，如同高级博物馆藏品铭牌。`,
+    promptEn: `An exquisite isometric 3D miniature poster for [Insert Title].
+Centerpiece: A detailed 3D diorama of [Famous Scene/Location], rendered in DreamWorks Animation style—soft, delicate, and expressive.
+Details: Intricate architecture, dynamic tiny characters, and atmospheric weather effects seamlessly integrated.
+Background: A void environment with faint ink-wash smudges and flowing light mist. Elegant tones, creating depth and "breathing space" around the model. Not a plain white background.
+Typography:
+Bottom Center: Large stylized title "[Insert Title]" matching the original aesthetic.
+Below Title: A classic quote "[Insert Quote]" in an elegant serif font.
+Layout: Balanced and refined, resembling a high-end museum collection nameplate.
+Tech: 3D render, Octane Render, 8k resolution, soft cinematic lighting.`,
+    prompt: "Exquisite 3D isometric poster of a movie/novel scene, DreamWorks style...",
   },
-
+  
   "dr-28": {
     title: "时尚人像拼贴大片",
     tags: ["Fashion", "Portrait", "Collage", "Magazine", "Creative"],
@@ -1106,7 +1069,43 @@ Environment: A snowy Tang Dynasty royal garden or plum blossom forest. Time can 
 Photography: 8k resolution, ultra-detailed masterpiece. Shot on 85mm or 50mm lens. Cinematic lighting highlighting the sheen of silk and the texture of snow. Full body composition.`,
     prompt: "Hyper-realistic Tang Dynasty full-body portrait, walking in snow, showing shoes...",
   },
-  "dr-45": { title: "待填标题 45", tags: [], promptCn: ``, promptEn: `` },
+  
+  "dr-45": {
+    title: "概念神兵设计：小说精神具象化",
+    tags: ["Weapon Design", "Concept Art", "3D Render", "Game Asset", "Fantasy"],
+    promptCn: `请根据用户输入的小说或影视剧名称，将其核心精神内核“具象化”为一把独一无二的“概念神兵”，并生成一张高规格的 3D 装备展示海报。
+小说/影视剧：[在此输入作品名称]
+1. 核心概念转译 (逻辑层)
+时代锚定：根据作品设定决定形态。古代/奇幻=冷兵器/法器；近现代/悬疑=象征性改装物件；科幻/未来=高科技装置。
+阵营与基调：根据主题情感决定材质。阴暗=腐蚀/黑铁/暗影；光明=水晶/黄金/圣光；疯狂=破碎/混沌。
+2. 画面主体构建 (视觉层)
+在深邃的虚空背景中央，以3D次世代游戏资产的极高标准，悬浮展示这把武器。
+视角：略微倾斜，强调体积感、厚重感和结构美。
+细节：材质极致逼真。根据氛围添加岁月痕迹（划痕、铜锈、血迹）或完美科技光泽。
+氛围粒子：不要使用静态背景。在武器周围生成环绕流动的元素粒子特效，属性直接映射核心意象（如：漫天风雪、飘落桃花、燃烧余烬、流动数据），颜色和氛围由主题决定。
+3. 铭文与排版系统 (文字层)
+在画面底部正中央，生成极具仪式感的中文排版，仿佛博物馆藏品铭牌：
+作品原名：最上方较小字号居中写上《作品名称》。
+神兵赐名：下方用极具设计感、霸气的书法体或衬线体，创造一个富有诗意的武器名字。
+灵魂铭文：最底部使用优雅字体，自动检索并摘录一句该作品中最震撼人心的经典台词作为铭文。`,
+    promptEn: `Based on the novel/movie "[Insert Title Here]", visualize its core spirit into a unique "Conceptual God-Tier Weapon" and generate a high-spec 3D equipment showcase poster.
+1. Concept Translation:
+- Form: Determine physical form based on timeline (Ancient=Cold Weapon/Artifact; Modern=Modified Item; Sci-Fi=High-tech Device).
+- Tone: Material and lighting based on theme (Dark=Corroded/Iron/Shadow; Light=Crystal/Gold/Holy; Madness=Shattered/Chaos).
+2. Visual Construction:
+- Subject: A next-gen 3D game asset quality weapon floating in a deep void.
+- Angle: Slightly tilted to emphasize volume and structure.
+- Details: Hyper-realistic textures with appropriate wear and tear (scratches, rust) or pristine tech gloss.
+- Atmosphere Particles: Dynamic elemental particles swirling around the weapon, directly mapping the novel's core imagery (e.g., snow, petals, embers, data streams). The background should not be plain black but filled with atmospheric depth suited to the theme.
+3. Typography & UI:
+- Bottom center layout, like a museum plaque or game item detail page.
+- Top: Small text "《[Original Title]》".
+- Middle: Large, stylized, aggressive calligraphy for a creative "[Weapon Name]".
+- Bottom: Elegant font displaying a "[Classic Quote]" from the work.
+Tech Specs: 8k resolution, Octane render, volumetric lighting, cinematic composition.`,
+    prompt: "Conceptual 3D weapon design based on a novel's spirit...",
+  },
+  
   "dr-46": { title: "待填标题 46", tags: [], promptCn: ``, promptEn: `` },
   "dr-47": { title: "待填标题 47", tags: [], promptCn: ``, promptEn: `` },
   "dr-48": { title: "待填标题 48", tags: [], promptCn: ``, promptEn: `` },
