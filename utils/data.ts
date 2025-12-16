@@ -1172,7 +1172,81 @@ Incorporates floating dandelion fluff or starlight-like dynamic particles, symbo
 Style: Modern romantic atmosphere, 8K Ultra-HD, rich details, photorealistic texture, artistic impact.`,
     prompt: "Modern urban paper cutting art with metallic foil texture and city lighting...",
   },
-  "dr-48": { title: "待填标题 48", tags: [], promptCn: ``, promptEn: `` },
-  "dr-49": { title: "待填标题 49", tags: [], promptCn: ``, promptEn: `` },
+  
+  "dr-48": {
+    title: "微缩建筑工地创意摄影",
+    tags: ["Miniature", "Tilt-shift", "Creative", "Macro", "Construction"],
+    promptCn: `将日常物体转化为一个繁忙的微缩建筑工地现场。
+主体：
+[插入物体名称，如：百事可乐罐/香奈儿香水/劳力士手表]。物体在画面中显得巨大无比，矗立在场景中心或平放。
+微观细节：
+无数微小的建筑工人（穿着反光背心/防护服）正在围绕物体工作。
+搭建着精细的脚手架、使用微型起重机、梯子或绳索。
+场景动作：
+工人们正在对物体表面进行[插入施工动作，如：抛光金属/重新粉刷Logo/安装零件/清理水珠]。
+环境：
+放置在[插入环境背景，如：方格桌布/金色镜面托盘/工程师金属台/厨房柜台]。
+摄影风格：
+移轴摄影效果 (Tilt-shift)，微距镜头，浅景深 (Shallow depth of field)。
+光影与氛围：
+电影级布光，温暖或戏剧性的光线，强调物体的材质质感（如金属反光、玻璃通透感）和微缩世界的真实感。
+8K分辨率，超写实创意摄影。`,
+    promptEn: `Macro tilt-shift photography of a miniature construction site built on and around a giant everyday object.
+Subject:
+A massive [Insert Object Name] dominating the composition.
+Micro Details:
+Tiny miniature construction workers in high-vis vests or protective suits swarming the object.
+Intricate scaffolding, cranes, ladders, and warning signs surrounding the object.
+Action:
+Workers are [Insert Action, e.g., polishing the surface / painting the logo / repairing parts / cleaning droplets].
+Environment:
+Set on a [Insert Setting, e.g., checkered tablecloth / mirrored tray / metal workbench].
+Photography Style:
+Wide-angle view with Tilt-shift technique. Shallow depth of field focusing on the workers and texture.
+Lighting:
+Cinematic and volumetric lighting, highlighting textures and reflections.
+8k resolution, photorealistic, creative concept art.`,
+    prompt: "Tilt-shift photography of a miniature construction site on a giant object...",
+  },
+   
+  "dr-49": {
+    title: "故宫华服：雪景时尚大片",
+    tags: ["Fashion", "Portrait", "Hanfu", "Forbidden City", "Magazine", "Snow"],
+    promptCn: `项目目标：
+生成一张 9:16 竖版高端时尚杂志封面级写实照片。以用户上传的参考图为人物身份参考，100%还原五官与骨相。
+人物身穿明制华丽礼服方向的重工汉服（多层叠穿、手工刺绣/织金锦、贵重金饰头面），在故宫红墙长廊雪景中拍摄。
+画面具备 Vogue、Harper's Bazaar、ELLE 等一线杂志的摄影、造型与封面设计质感。
+身份锁定（最高优先级）：
+100%还原参考图的五官与骨相（眼距、鼻梁、唇形、下颌线）。
+真实皮肤质感，可见细微纹理与毛孔，拒绝过度磨皮。
+成年女性形象。
+场景与氛围：
+北京故宫红墙长廊，朱红墙、红柱、雕花窗棂，强调视纵深。
+天气：细雪飘落或雪后晴朗，背景干净无游客。
+摄影质感：
+85mm或50mm人像镜头感，浅景深，眼睛对焦最锐利。
+冬日自然光配合柔和补光，金饰与刺绣纹理清晰，色彩通透高级。
+服装造型（明制华丽礼服）：
+轮廓：多层叠穿，内层立领清晰，外层披帛/霞帔结构厚重，裙摆纹样连续。
+面料与工艺：织金锦主面料，盘金绣、立体刺绣工艺。纹样为牡丹、团花、祥云等，拒绝单一金色，要求宫廷织锦式多色刺绣。
+头面：金色为主的重工凤冠，密集簪钗，左右对称长流苏（有动态感）。
+颜色矩阵（随机应用）：
+底色可选翡翠绿、暖杏色或深朱红。
+刺绣必须多彩（金、朱红、宝蓝、米白等混用），形成丰富层次，避免单调。
+姿态与构图：
+半身或全身封面构图，留白给排版。
+姿态端正贵气，双手持扇或自然垂落，表情沉静自信。`,
+    promptEn: `High-end fashion magazine cover editorial, 9:16 vertical shot.
+Subject: Adult Asian female model, strict identity lock on facial features (100% match to reference). Realistic skin texture with visible pores.
+Outfit: Magnificent Ming Dynasty ceremonial Hanfu (luxury court style). Multi-layered structure with visible inner standing collar and heavy outer cape/cloud shoulder.
+Fabric & Details: Brocade fabric with heavy "Panjin" gold embroidery and multi-colored silk threads (peony, cloud patterns). Avoid monotone gold; distinct vibrant embroidery colors (blue, vermilion, white) on a base of [Emerald Green / Apricot / Deep Red].
+Headwear: Heavy elaborate gold phoenix crown with dense symmetrical tassels swaying slightly. Pearl and jade accents.
+Setting: The Forbidden City, Beijing. Red palace walls, intricate corridors, snow scene (falling snow or accumulated snow). Clean background, no tourists.
+Photography: Shot on Hasselblad, 85mm or 50mm lens. Cinematic lighting, soft winter daylight with fill light. Sharp focus on eyes and embroidery texture. Shallow depth of field.
+Composition: Magazine cover layout with negative space for typography. Pose is elegant, regal, and composed (holding a fan or natural hand placement).
+Style: Vogue / Harper's Bazaar aesthetic. Photorealistic, 8k resolution, masterpiece. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "High-fashion Hanfu portrait in Forbidden City snow scene...",
+  },
+
   "dr-50": { title: "待填标题 50", tags: [], promptCn: ``, promptEn: `` },
 };
