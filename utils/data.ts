@@ -1264,7 +1264,14 @@ Style: Vogue / Harper's Bazaar aesthetic. Photorealistic, 8k resolution, masterp
 每格模仿对应电影的色调、光线和氛围，圣诞装饰元素极其明显，电影海报构图，添加电影感标题文字效果，专业电影剧照质感，4K高清`,
   },
 
-    "dr-51": { title: "待填标题 51", tags: [], promptCn: ``, promptEn: `` },
+    "dr-51": {
+    title: "云朵形状创意合成",
+    tags: ["Nature", "Cloud Art", "Surreal", "Landscape", "Photography"],
+    promptCn: `创建一个超写实的天空场景，柔和、自然的云层有机地聚合，形成一个清晰可辨的【主体】轮廓。
+云朵形态高悬在明亮蔚蓝的天空中，自然漂浮，其下方是清晰可识别的【景观描述】景观，为画面提供稳固的视觉基础。
+画面构图为正方形（1080×1080），云层造型位于画面上半部分，下方的风景使整体场景更加平衡。
+光线清晰明亮，呈现出日光直射的效果，云朵上有被阳光照亮的高光，增强了层次感、柔软度与真实感。
+整体氛围应当宁静、积极、富有视觉冲击力，色彩饱和度高，画面干净纯粹，营造出平和而清新的感觉。`, },
     "dr-52": { title: "待填标题 52", tags: [], promptCn: ``, promptEn: `` },
     "dr-53": { title: "待填标题 53", tags: [], promptCn: ``, promptEn: `` },
     "dr-54": { title: "待填标题 54", tags: [], promptCn: ``, promptEn: `` },
