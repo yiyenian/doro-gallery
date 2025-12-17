@@ -1263,5 +1263,25 @@ Style: Vogue / Harper's Bazaar aesthetic. Photorealistic, 8k resolution, masterp
 格9：《Last Christmas》风格-时尚女性穿红色复古大衣配绿色围巾和金色耳环，手持圣诞礼物盒，站在伦敦圣诞街市彩灯下，背景科文特花园巨型圣诞树和节日橱窗，温暖夜景灯光，充满希望的表情，现代浪漫电影美学
 每格模仿对应电影的色调、光线和氛围，圣诞装饰元素极其明显，电影海报构图，添加电影感标题文字效果，专业电影剧照质感，4K高清`,
   },
-  
+
+    "dr-51": { title: "待填标题 51", tags: [], promptCn: ``, promptEn: `` },
+    "dr-52": { title: "待填标题 52", tags: [], promptCn: ``, promptEn: `` },
+    "dr-53": { title: "待填标题 53", tags: [], promptCn: ``, promptEn: `` },
+    "dr-54": { title: "待填标题 54", tags: [], promptCn: ``, promptEn: `` },
+    "dr-55": { title: "待填标题 55", tags: [], promptCn: ``, promptEn: `` },
+    "dr-56": { title: "待填标题 56", tags: [], promptCn: ``, promptEn: `` },
+    "dr-57": { title: "待填标题 57", tags: [], promptCn: ``, promptEn: `` },
+    "dr-58": { title: "待填标题 58", tags: [], promptCn: ``, promptEn: `` },
+    "dr-59": { title: "待填标题 59", tags: [], promptCn: ``, promptEn: `` },
+    "dr-60": { title: "待填标题 60", tags: [], promptCn: ``, promptEn: `` },
+    "dr-61": { title: "待填标题 61", tags: [], promptCn: ``, promptEn: `` },
+    "dr-62": { title: "待填标题 62", tags: [], promptCn: ``, promptEn: `` },
+    "dr-63": { title: "待填标题 63", tags: [], promptCn: ``, promptEn: `` },
+    "dr-64": { title: "待填标题 64", tags: [], promptCn: ``, promptEn: `` },
+    "dr-65": { title: "待填标题 65", tags: [], promptCn: ``, promptEn: `` },
+    "dr-66": { title: "待填标题 66", tags: [], promptCn: ``, promptEn: `` },
+    "dr-67": { title: "待填标题 67", tags: [], promptCn: ``, promptEn: `` },
+    "dr-68": { title: "待填标题 68", tags: [], promptCn: ``, promptEn: `` },
+    "dr-69": { title: "待填标题 69", tags: [], promptCn: ``, promptEn: `` },
+    "dr-70": { title: "待填标题 70", tags: [], promptCn: ``, promptEn: `` },
 };
