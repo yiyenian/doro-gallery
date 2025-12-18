@@ -1317,9 +1317,122 @@ Quality: 8k resolution, cinematic lighting, highly detailed textures.`,
     prompt: "3D Chinese fantasy concept art, character popping out of an ink painting scroll...",
   },
   
-    "dr-53": { title: "待填标题 53", tags: [], promptCn: ``, promptEn: `` },
-    "dr-54": { title: "待填标题 54", tags: [], promptCn: ``, promptEn: `` },
-    "dr-55": { title: "待填标题 55", tags: [], promptCn: ``, promptEn: `` },
+    "dr-53": {
+    title: "产品引力场：商业主视觉",
+    tags: ["Product Design", "Commercial", "3D Render", "Tech", "Minimalist"],
+    promptCn: `生成一张可直接用于官网、发布会、广告投放的 [插入产品名称] 的商业主视觉。
+通过“产品引力场”的方式，将结构、材质、功能与应用价值高度凝练地呈现在一张画面中，传达高端、专业、可信赖的品牌形象。
+整体定位：
+商业广告级、电影感超写实、极致质感、品牌主视觉风格。
+画幅与构图：
+画面比例：4:5。
+构图方式：产品置于画面正中央，三分之二构图。
+镜头机位：平视或略微低机位，强化产品存在感。
+画质：超高清，广告级分辨率，适合大幅输出。
+主体产品设定：
+展示对象为 [插入产品名称]，以真实比例呈现，产品静置于画面中心，姿态稳定、干净、完整，产品外观线条清晰，材质真实，边缘锐利，体现工业设计与制造品质。
+核心创意表达（产品引力场）：
+以“引力场 / 能力场”为视觉隐喻，所有视觉元素均服务于产品价值展示，而非装饰。
+悬浮展示元素（产品卖点可视化）：
+围绕产品悬浮的不是杂乱物品，而是与产品强相关的功能模块与应用场景象征，例如：
+产品核心零部件的拆解模块（结构剖析感）。
+材料切面展示（如金属、玻璃、织物、复合材料微观纹理）。
+功能示意图标或半透明结构线框。
+应用场景的抽象符号（城市、家庭、工业、户外等）。
+性能参数模块（图形化数据、刻度、线条）。
+所有悬浮元素风格统一，呈现为半透明、金属感或极简几何体，避免具象杂乱。
+空间逻辑与层级：
+悬浮模块以多层环绕结构分布，前后景层次清晰。
+元素之间形成视觉秩序，体现“系统化设计”与“产品逻辑”。
+整体构图稳定、理性、可读性强。
+环境与背景：
+场景类型：高级摄影棚 / 抽象空间 / 极简工业环境。
+背景颜色：深灰、深黑或品牌主色渐变。
+背景干净克制，预留文案、LOGO、参数信息展示空间。
+光影设计（商业产品级）：
+主光：柔性顶部或侧前光，精准刻画产品轮廓。
+轮廓光：强化边缘线条，使产品从背景中脱颖而出。
+点光源：用于强调材质细节、关键功能区。
+阴影干净利落，增强真实接地感。
+色彩策略：
+主色调：中性灰、黑、银、白（根据产品调整）。
+强调色：产品关键部位或卖点高光色（可替换为品牌色）。
+整体克制、高级、耐看。
+镜头与质感：
+镜头：85mm 或等效。
+光圈：f/2.8。
+对焦：产品主体极致锐利，悬浮元素略微虚化。
+材质表现：真实、细腻、广告级。
+画面质量要求：超写实。
+极致细节（边缘、纹理、材质反射）。
+无廉价 CG 感，无卡通感。`,
+    promptEn: `Generate a high-end commercial key visual for [Insert Product Name], suitable for official websites and launch events.
+Concept: "Product Gravitational Field". Visualize structure, materials, functions, and value in a condensed, high-tech manner.
+Style: Commercial advertising grade, cinematic hyper-realism, premium texture, brand key visual style.
+Composition:
+Ratio: 4:5.
+Subject: [Insert Product Name] centered, occupying 2/3 of the frame.
+Angle: Eye-level or slightly low angle to enhance presence.
+Subject Presentation: Realistic scale, stable posture, clean and complete. Sharp edges, authentic materials, industrial design quality.
+Creative Core (Gravitational Field):
+Floating Elements: NOT random objects, but functional modules and symbols orbiting the product.
+- Exploded view of core components.
+- Material cross-sections (metal, glass, micro-textures).
+- Semi-transparent wireframes or icons.
+- Abstract symbols of usage scenarios (city, home, industry).
+- Graphical data/performance metrics.
+Style of Floating Elements: Semi-transparent, metallic, minimalist geometric, unified style.
+Spatial Logic: Multi-layered orbital distribution, clear depth, organized visual order.
+Environment:
+High-end studio / Abstract tech space / Minimalist industrial.
+Background: Dark grey, deep black, or brand gradient. Clean and restrained, leaving space for copy.
+Lighting:
+Soft top/side main light. Strong rim light for separation. Point lights for details. Clean shadows for grounding.
+Colors: Neutral (Grey, Black, Silver, White) with accent highlights. Restrained and premium.
+Tech Specs: 85mm lens, f/2.8 aperture. Sharp focus on product, slight bokeh on floating elements. 8k resolution, octane render.`,
+    prompt: "Commercial product photography, gravitational field concept, floating components...",
+  },
+    
+    "dr-54": {
+    title: "水下梦境艺术摄影",
+    tags: ["Portrait", "Underwater", "Fashion", "Surreal", "Photography"],
+    promptCn: `整体呈现：水下梦境主题的艺术摄影。
+主体描述：[上传参考图]在清澈的水下世界中漂浮，阳光从水面倾泻而下形成柔和光束。
+动作与姿态：人物身体微微后仰，一只手向上伸展，另一只手自然下垂，姿态如水下芭蕾舞者，优雅而安静。
+装束：她身穿白色半透明薄纱长裙，轻盈的雪纺材质在水中流动，长长的裙摆和飘带随水流延展，大师级构图，头发自然散开。
+整体氛围：梦幻、浪漫、宁静，具有电影感与艺术摄影质感，超写实，细节精致，商业大片风格，4K超高清。`,
+    promptEn: `Artistic underwater photography, dreamscape theme.
+Subject: An [Asian woman] floating in a crystal clear underwater world. Sunlight beams cascade down from the surface creating soft light rays.
+Pose: Body slightly arched backwards, one hand reaching up, the other hanging naturally, resembling an underwater ballerina, elegant and quiet.
+Outfit: Wearing a white semi-transparent tulle long dress, lightweight chiffon material flowing in the water, long skirt hem and ribbons extending with the flow.
+Details: Master composition, hair spreading naturally.
+Atmosphere: Dreamy, romantic, serene, cinematic and fine art photography texture.
+Quality: Hyper-realistic, exquisite details, commercial blockbuster style, 8k Ultra HD. --ar 9:16`,
+    prompt: "Artistic underwater photography of an Asian woman in a white dress...",
+  },
+  
+    "dr-55": {
+    title: "LOMO风格：分身海报",
+    tags: ["LOMO", "High Angle", "Portrait", "Collage", "Cinematic"],
+    promptCn: `基于[参考照片人物]的艺术摄影。
+风格：LOMO LC-A 风格的高清摄影作品（高饱和度、暗角、胶片质感）。
+视角：高角度俯拍 (High angle shot)，镜头聚焦于主体。
+主体：一位绝美的日本电影女演员。面容与气质需与[参考照片人物]完全一致。
+服饰：身穿黑色长风衣，气质冷艳。
+环境：她正站在铺满地面的无数海报之上。
+关键细节：地面上的海报内容清晰可见，呈现为黑白网格排列的艺术人像。这些海报上的面孔全都是她本人演绎的不同风格的高端商业模特摄影大片。
+意境：仿佛她站在自己无数个不同造型的分身之上，形成强烈的自我审视与时空交错感。
+画质：4K高清，细节锐利，光影富有戏剧性。`,
+    promptEn: `LOMO LC-A style high-definition photography.
+Angle: High angle shot (top-down view), focusing on a stunning Japanese film actress.
+Subject Consistency: Face and aura strictly identical to the [Reference Photo].
+Outfit: Wearing a long black trench coat, cool and elegant vibe.
+Setting: She is standing on a floor completely tiled with countless posters.
+Crucial Detail: The posters on the ground are black and white artistic portraits arranged in a grid. Every single poster features HERSELF in different high-end commercial fashion styles and looks.
+Concept: Standing on top of her own multiple avatars/past selves.
+Visuals: LOMO aesthetic, slight vignette, rich colors, sharp focus, cinematic lighting, 4k resolution.`,
+    prompt: "LOMO style high angle shot of an actress standing on posters of herself...",
+  },
     "dr-56": { title: "待填标题 56", tags: [], promptCn: ``, promptEn: `` },
     "dr-57": { title: "待填标题 57", tags: [], promptCn: ``, promptEn: `` },
     "dr-58": { title: "待填标题 58", tags: [], promptCn: ``, promptEn: `` },
