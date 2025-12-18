@@ -1271,8 +1271,52 @@ Style: Vogue / Harper's Bazaar aesthetic. Photorealistic, 8k resolution, masterp
 云朵形态高悬在明亮蔚蓝的天空中，自然漂浮，其下方是清晰可识别的【景观描述】景观，为画面提供稳固的视觉基础。
 画面构图为正方形（1080×1080），云层造型位于画面上半部分，下方的风景使整体场景更加平衡。
 光线清晰明亮，呈现出日光直射的效果，云朵上有被阳光照亮的高光，增强了层次感、柔软度与真实感。
-整体氛围应当宁静、积极、富有视觉冲击力，色彩饱和度高，画面干净纯粹，营造出平和而清新的感觉。`, },
-    "dr-52": { title: "待填标题 52", tags: [], promptCn: ``, promptEn: `` },
+整体氛围应当宁静、积极、富有视觉冲击力，色彩饱和度高，画面干净纯粹，营造出平和而清新的感觉。`, 
+  },
+    
+    "dr-52": {
+    title: "3D国风画卷破壁海报",
+    tags: ["3D Render", "Chinese Style", "Ink Painting", "Surreal", "Pop-out"],
+    promptCn: `角色设定：3D国风幻想概念艺术大师。
+任务目标：生成一张融合传统水墨艺术与现代3D CG渲染的“画中破壁”海报。
+关键要求：保持参考图中卷轴的波浪形态、倾斜角度以及人物的动态飞天姿势不变，仅替换人物为用户指定的 [中国艺术表演者类型]，并自动生成与之主题匹配的卷轴水墨背景内容。
+核心构图 (固定框架)：
+长宽比：16:9 横向宽屏。
+空间关系：
+Layer 1 (背景)：柔和的深灰色影棚渐变背景。
+Layer 2 (中景-画卷)：一幅巨大的古风宣纸卷轴，呈波浪状腾空，从画面左前方向右后方延伸倾斜。卷轴表面是二维水墨画。
+Layer 3 (前景-人物)：3D超写实角色的身体和道具（如乐器、兵器、飘带）从卷轴表面动态“弹出”，姿态必须保持参考图中的向右上方飞舞、回首的S型动态构图。
+关键互动：3D人物必须在2D卷轴表面投下真实的阴影，强调立体感。
+图像生成流程：
+1. 复刻底座：重建波浪状、倾斜悬浮的古朴宣纸卷轴模型。卷轴左侧保留竖排书法和印章位置。卷轴右侧的水墨画内容需根据用户输入的[中国艺术表演者类型]进行主题推导和绘制（例如：若输入京剧武生，背景可是水墨戏台或战场；若输入剑舞者，背景可是寒山竹林）。
+2. 替换主体：在卷轴前方生成用户指定的[中国艺术表演者类型]（例如：京剧花旦、古琴演奏家、剑舞者等）。核心要求：无论角色身份为何，其整体姿态、身体朝向和飘带飞舞的轨迹必须模仿飞天造型，以维持构图的动势。风格：极致的3D C4D / Octane Render 超写实风格，服装和道具材质考究。
+3. 融合与特效：确保3D人物在2D画卷上投下柔和且准确的阴影。添加漂浮的元素（如花瓣、光点或与角色相关的元素如墨滴、剑气），模糊现实与画作的边界。
+整体视觉描述：
+风格关键词：超现实主义，基于参考图的固定构图，弹出式3D效果，水墨与超写实CG对比。
+色调：背景古朴，前景角色色彩华丽丰富，形成对比。
+画质：8K分辨率，电影级光照，高细节纹理。
+用户输入参数：
+[中国艺术表演者类型]：请输入你想展示的中国传统艺术表演者身份，例如：京剧花旦、武当剑客、古琴大师、昆曲小生等。AI将根据此身份自动匹配服装和卷轴背景的水墨画内容。`,
+    promptEn: `Role: 3D Guofeng Fantasy Concept Artist.
+Goal: Create a "breaking the 4th wall" poster fusing traditional Chinese Ink Art with modern 3D CG rendering.
+Key Constraint: Maintain the wave-like scroll shape, tilted angle, and the dynamic "Flying Apsaras" pose from the reference. Replace the character with [Insert Chinese Artist Type].
+Structure & Layout (Fixed):
+Aspect Ratio: 16:9.
+Layer 1 (Background): Soft dark grey studio gradient.
+Layer 2 (Midground): A giant ancient rice paper scroll floating in a wave shape, extending from front-left to back-right. The surface displays 2D ink wash painting.
+Layer 3 (Foreground): A hyper-realistic 3D character (based on input type) "popping out" from the scroll surface. Pose must be flying upward to the right, looking back, S-curve body.
+Interaction: The 3D character casts realistic soft shadows onto the 2D scroll surface.
+Workflow:
+1. Scroll Structure: Ancient paper texture, vertical calligraphy and red seal on the left. Ink painting content matches the character theme (e.g., Opera stage for Peking Opera actor, Bamboo forest for Swordsman).
+2. Character Replacement: Generate [Insert Chinese Artist Type] (e.g., Peking Opera Dan, Guqin Master, Sword Dancer) in front of the scroll. The pose, orientation, and ribbon trajectory must mimic the Flying Apsaras style. Style: Extreme 3D C4D / Octane Render hyper-realistic, exquisite costume and props.
+3. Effects: Floating elements (petals, light dots, ink drops, sword energy) blurring the boundary between reality and painting.
+Visual Description:
+Style Keywords: Surrealism, Fixed Composition based on ref image, Pop-out 3D effect, Ink wash painting vs Hyper-realistic CGI.
+Tone: Rustic background, rich and gorgeous foreground character colors, high contrast.
+Quality: 8k resolution, cinematic lighting, highly detailed textures.`,
+    prompt: "3D Chinese fantasy concept art, character popping out of an ink painting scroll...",
+  },
+  
     "dr-53": { title: "待填标题 53", tags: [], promptCn: ``, promptEn: `` },
     "dr-54": { title: "待填标题 54", tags: [], promptCn: ``, promptEn: `` },
     "dr-55": { title: "待填标题 55", tags: [], promptCn: ``, promptEn: `` },
