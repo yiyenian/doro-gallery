@@ -1433,7 +1433,27 @@ Concept: Standing on top of her own multiple avatars/past selves.
 Visuals: LOMO aesthetic, slight vignette, rich colors, sharp focus, cinematic lighting, 4k resolution.`,
     prompt: "LOMO style high angle shot of an actress standing on posters of herself...",
   },
-    "dr-56": { title: "待填标题 56", tags: [], promptCn: ``, promptEn: `` },
+  
+    "dr-56": {
+    title: "3D微缩城市风情",
+    tags: ["3D Render", "Miniature", "City", "Isometric", "Travel"],
+    promptCn: `图像设定：类型为3D微缩景观模型渲染，主题为[插入城市名称]城市风情。风格采用等距俯视图，现代与传统交融，松弛感，细节丰富。画幅比例16:9。
+视觉描述：一个生动迷人的微缩版[插入城市名称]世界。采用清晰的45度俯视等距视角，微缩模型玩具风格。场景包含标志性地标建筑及特色雕塑（如[插入地标]）、具有当地特色的传统建筑或老街区（如[插入老街]）、冒着诱人蒸汽的热闹户外美食小摊（如[插入美食]）、以及散落各处的休闲元素与茶馆/咖啡座桌椅。
+环境细节：地面上散落着[插入季节性植物/落叶]，营造出轻盈舒适的[插入季节]氛围，传统屋檐下悬挂着特色装饰。微缩小人模型正在进行当地特色活动（如[插入活动]）。
+文字元素：画面顶部中央有大型白色3D立体中文字符“[插入城市名称]”，下方附较小文字“温度 日期”。
+整体氛围：松弛、鲜活，都市感与传统感并存。
+光线：温暖的日常环境光混合特色区域的辉光，并带有升腾的蒸汽与飘落物效果。
+技术参数：3D渲染，Octane渲染引擎，高细节精度，黏土或树脂玩具质感，柔和阴影，景深聚焦于核心地标。`,
+    promptEn: `Image Setting: 3D miniature landscape model render, theme is [Insert City Name] city vibe. Style is isometric top-down view, blend of modern and traditional, relaxed, rich details. Aspect ratio 16:9.
+Visual Description: A vivid and charming miniature world of [Insert City Name]. Clear 45-degree isometric view, miniature toy style. Scene includes iconic landmarks and characteristic sculptures (e.g., [Insert Landmark]), traditional architecture or old streets (e.g., [Insert Old Street]), bustling outdoor food stalls (e.g., [Insert Food]) with rising steam, and scattered leisure elements like tea/coffee tables.
+Environment Details: Ground scattered with [Insert Seasonal Plants/Leaves], creating a light and comfortable [Insert Season] atmosphere. Characteristic decorations hang under traditional eaves. Miniature people models are engaging in local activities (e.g., [Insert Activity]).
+Text Elements: Large white 3D Chinese characters "[Insert City Name]" in the top center, with smaller text "Temperature Date" below.
+Overall Atmosphere: Relaxed, vivid, coexistence of urban and traditional feel.
+Lighting: Warm daily ambient light mixed with glow from featured areas, with effects of rising steam and falling particles.
+Tech Specs: 3D render, Octane render engine, high precision detail, clay or resin toy texture, soft shadows, depth of field focused on the core landmark.`,
+    prompt: "3D isometric miniature city landscape, clay toy texture, relaxed vibe...",
+  },
+  
     "dr-57": { title: "待填标题 57", tags: [], promptCn: ``, promptEn: `` },
     "dr-58": { title: "待填标题 58", tags: [], promptCn: ``, promptEn: `` },
     "dr-59": { title: "待填标题 59", tags: [], promptCn: ``, promptEn: `` },
