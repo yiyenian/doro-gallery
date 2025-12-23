@@ -1602,7 +1602,7 @@ Style: Vogue or Elle magazine aesthetic, high luxury fashion, clean lines, moder
     "dr-62": {
     title: "3x3网格高端商业营销",
     tags: ["Product Photography", "Grid", "Commercial", "Advertising", "3D Render"],
-    promptCn: `创建一个3×3的网格，宽高比为3:4，用于高端商业营销活动，以上传的产品为中心主体。
+    promptCn: `创建一个3×3的网格，宽高比为1:1，用于高端商业营销活动，以上传的产品为中心主体。
 每个画面必须呈现独特的视觉概念，同时确保所有九张图片中的产品保持完美的一致性。
 网格概念（每个单元格一个）：
 1. 具有大胆构图的标志性产品静物特写
@@ -1620,7 +1620,7 @@ Style: Vogue or Elle magazine aesthetic, high luxury fashion, clean lines, moder
 柔和、可控的影棚灯光。微妙的高光，逼真的阴影。高动态范围，超清晰对焦。编辑级奢华广告美学。高端感官营销视觉效果。
 整体感受：
 现代、精致、视觉统一。高端商业营销活动。专为品牌网站、社交媒体和数字广告牌设计。超现实、电影感、精致且充满吸引力。`,
-    promptEn: `Create a 3x3 grid with a 3:4 aspect ratio for a high-end commercial marketing campaign, featuring the uploaded product as the central subject.
+    promptEn: `Create a 3x3 grid with a 1:1 aspect ratio for a high-end commercial marketing campaign, featuring the uploaded product as the central subject.
 Each panel must present a unique visual concept while ensuring perfect product consistency across all nine images.
 Grid Concepts (One per cell):
 1. Iconic product still life with bold composition.
@@ -1644,8 +1644,8 @@ Modern, sophisticated, visually unified. High-end commercial marketing campaign.
    "dr-63": {
     title: "飘渺神话：流光剪影模板",
     tags: ["Abstract", "Fantasy", "Silhouette", "Light Flow", "Chinese Mythology", "Gemini"],
-    promptCn: `【指令】生成一幅宽幅全景数字艺术作品 (3:1 比例)。
-核心主体：[插入角色名称，如：西游记师徒四人]。
+    promptCn: `【指令】生成一幅宽幅全景数字艺术作品 (21:9 比例)。
+核心主体：[插入角色名称，如：隋唐英雄传]。
 表现形式：人物不是实体皮肤，而是由流动的光带、半透明的烟雾和虹彩粒子组成的飘渺剪影。
 姿态：由角色性格决定的姿势，悬浮在半空中，构图居中，两侧延伸出流动的能量轨迹。
 氛围与色彩：
@@ -1654,7 +1654,7 @@ Modern, sophisticated, visually unified. High-end commercial marketing campaign.
 特效：全息散射，丝绸般的能量轨迹，展现强烈的廷德尔效应（体积光）。
 风格定义：抽象奇幻，强调流畅的动态和梦幻般的氛围，非照片级真实感，无实体皮肤。
 画质：8K分辨率，高度精细的纹理，杰作。`,
-    promptEn: `A wide panoramic digital art piece (aspect ratio 3:1) depicting **[Insert Character Name, e.g., Journey to the West characters]** composed entirely of flowing ribbons of light, translucent smoke, and iridescent particles.
+    promptEn: `A wide panoramic digital art piece (aspect ratio 21:9) depicting **[Insert Character Name, e.g., Journey to the West characters]** composed entirely of flowing ribbons of light, translucent smoke, and iridescent particles.
 The figure is a silhouette suspended in mid-air against a deep, moody indigo and navy blue background.
 The subject emits a soft, magical bioluminescent glow in shades of gold, peach, and fluorescent cyan.
 Style: Abstract fantasy, ethereal, mysterious. Not photorealistic, no solid skin.
@@ -1693,5 +1693,4 @@ Tech: Shallow depth of field, sharp snow texture, high resolution 8k. --ar 9:16`
     prompt: "Cinematic photography of a woman kneeling in snow with pencil sketches on the ground...",
   },
 
-  
 };
