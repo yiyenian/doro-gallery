@@ -1530,5 +1530,55 @@ LOGO生成提示词
 若【主题】包含现代物品或概念，必须神话化转译为神祇/英雄/圣物或仪式象征物（例如：手机=发光刻板圣器、耳机=神圣头饰），用夸张肢体与仪式化动作表达叙事张力。
 若【主题】为传统题材，则保持古典叙事语法即可。`,
 },
-       
+
+   "dr-59": {
+    title: "圣诞精灵四格拼图",
+    tags: ["Christmas", "Elf", "4-Panel", "K-pop Style", "Character"],
+    promptCn: `一张照片般逼真的4格分屏拼图，所有画面为同一女性角色。
+关键：保持精确的面部特征，保留原始脸部结构，整个拼图中角色完全一致。角色皮肤白皙，质感自然，眼神明亮。
+左上图：角色穿着绿色的圣诞精灵服装，戴着尖尖的精灵耳朵道具，对着镜头敬礼，表情顽皮。
+右上图：角色手里拿着一个巨大的玩具锤子，假装要敲打镜头，眼睛睁得圆圆的。
+左下图：角色正在包装礼物，嘴里咬着丝带的一端，眉头微皱显得很专注可爱。
+右下图：角色坐在礼物堆上，双手托腮，双脚悬空晃动，一脸满足。
+环境：色彩饱和的圣诞工坊背景，红绿撞色。
+灯光：明亮的影棚灯光，无阴影，卡通感强。
+风格：K-pop专辑内页风格，色彩鲜艳跳跃，清晰对焦，活泼搞怪。`,
+    promptEn: `A photorealistic 4-panel split screen collage, featuring the SAME female character in all panels.
+Consistency: Maintain precise facial features and structure across all shots. Fair skin, natural texture, bright eyes.
+Top-Left: Wearing green Christmas elf outfit with pointed ears, saluting to camera, playful expression.
+Top-Right: Holding a giant toy hammer pretending to hit the camera, eyes wide open.
+Bottom-Left: Wrapping a gift, biting the ribbon end, focused and cute frown.
+Bottom-Right: Sitting on a pile of gifts, chin in hands, legs dangling, satisfied expression.
+Setting: Saturated Christmas workshop background, red and green color block.
+Lighting: Bright studio lighting, shadowless, strong cartoon pop feel.
+Style: K-pop album booklet aesthetic, vivid colors, sharp focus, lively and quirky. 8k resolution.`,
+    prompt: "4-panel Christmas elf photo collage, K-pop style...",
+  },
+
+    "dr-60": {
+    title: "角色收藏品-装备包",
+    tags: ["Product Design", "Collector's Edition", "Character Design", "Concept Art", "Knolling"],
+    promptCn: `【指令】为 [插入角色名称/IP] 设计一个终极收藏级“装备包”。
+1. 分析与推断：
+基于该角色的原型、标志性场景和道德弧光，推导出最具代表性的物品。
+2. 视觉目标：
+一个带隔层的高级收藏套装盒（无明显Logo，极少文字），采用 4:5 产品主图构图。
+3. 布局规则：
+中间隔层：放置角色的高精度迷你人偶。
+环绕隔层：陈列 10-16 件“遗物道具”，这些道具必须能展现角色的成长弧光（如：早期的简陋装备 vs 后期的神器、象征牺牲的物品、关键抉择的工具）。
+底部/侧边：添加一个包含 5 个节点的“弧线时间轴”长条标签，每个节点仅包含 1-2 个极简图标和单词。
+4. 风格与渲染：
+超写实产品摄影质感，顶级材质（皮革、金属、旧物痕迹），柔和的博物馆级布光。8K分辨率。`,
+    promptEn: `[Instruction] Create an Ultimate Collector's "Relic Equipment Kit" for [Insert Character/IP Name].
+1. Analysis: Derive iconic items based on the character's archetype, key scenes, and moral arc.
+2. Visual Goal: A premium compartmented collector's box (No logos, minimal text), 4:5 aspect ratio product shot.
+3. Layout Rules:
+- Center Compartment: A high-fidelity miniature figure of the character.
+- Surrounding Compartments: Display 10-16 "Relic Props" that narrate the character's arc (e.g., "Before" vs "After" items, symbols of sacrifice, tools of choice).
+- Timeline Strip: Add a small strip with a 5-node "Arc Timeline" (1-2 icons and words per node).
+4. Style & Render:
+Hyper-realistic product photography, premium textures (weathered leather, metal), museum-grade lighting. 8k resolution.`,
+    prompt: "Premium collector's relic kit box for a character, knolling style...",
+  },
+  
 };
