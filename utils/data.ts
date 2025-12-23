@@ -1531,17 +1531,4 @@ LOGO生成提示词
 若【主题】为传统题材，则保持古典叙事语法即可。`,
 },
        
-    "dr-58": { title: "待填标题 58", tags: [], promptCn: ``, promptEn: `` },
-    "dr-59": { title: "待填标题 59", tags: [], promptCn: ``, promptEn: `` },
-    "dr-60": { title: "待填标题 60", tags: [], promptCn: ``, promptEn: `` },
-    "dr-61": { title: "待填标题 61", tags: [], promptCn: ``, promptEn: `` },
-    "dr-62": { title: "待填标题 62", tags: [], promptCn: ``, promptEn: `` },
-    "dr-63": { title: "待填标题 63", tags: [], promptCn: ``, promptEn: `` },
-    "dr-64": { title: "待填标题 64", tags: [], promptCn: ``, promptEn: `` },
-    "dr-65": { title: "待填标题 65", tags: [], promptCn: ``, promptEn: `` },
-    "dr-66": { title: "待填标题 66", tags: [], promptCn: ``, promptEn: `` },
-    "dr-67": { title: "待填标题 67", tags: [], promptCn: ``, promptEn: `` },
-    "dr-68": { title: "待填标题 68", tags: [], promptCn: ``, promptEn: `` },
-    "dr-69": { title: "待填标题 69", tags: [], promptCn: ``, promptEn: `` },
-    "dr-70": { title: "待填标题 70", tags: [], promptCn: ``, promptEn: `` },
 };
