@@ -1693,4 +1693,37 @@ Tech: Shallow depth of field, sharp snow texture, high resolution 8k. --ar 9:16`
     prompt: "Cinematic photography of a woman kneeling in snow with pencil sketches on the ground...",
   },
 
+    "dr-65": {
+    title: "品牌包装设计提案：线稿与成品",
+    tags: ["Packaging Design", "Industrial Design", "Sketch", "Product Mockup", "Minimalist"],
+    promptCn: `【指令】生成一张专业的品牌包装设计提案展示图。
+产品类别：[插入类别，如：服装/奶茶/面包]
+核心对象：包装袋设计 + 配套吊牌/标签设计。
+整体风格：纯黑色（或指定颜色）包装，简约Logo设计，强调极具质感的材质细节。
+需融入形象：[插入具体图案/IP形象描述]。
+画面布局（左右对比）：
+左侧：黑色线稿结构图。线描风格，工业设计草图，展示尺寸标注和结构线。
+右侧：完成上色的成品效果图。真实材质质感（如特种纸、塑料、帆布），光影柔和。
+下方/角落：配有简洁的设计标注文字（尺寸、材质、工艺说明），排版理性、有秩序。
+背景与视角：
+背景：干净纯白背景，无干扰。
+视角：正视图 + 轻微等轴测视角 (Isometric)，展现立体感。
+氛围：专业设计提案，非商业广告海报。理性、高级、清晰。
+8K高分辨率，细节锐利。`,
+    promptEn: `Professional brand packaging design proposal showcase.
+Product Category: [Insert Category, e.g., Clothing/Milk Tea/Bakery].
+Subject: Packaging bag design + Hang tag/Label design.
+Style: Pure black (or custom color) packaging, minimalist Logo, high-quality textured materials. Integrate image: [Insert Image/IP Description].
+Layout (Left vs Right Comparison):
+Left Side: Black line art structure diagram. Line drawing style, industrial design sketch, showing dimension lines and structure.
+Right Side: Finished colored rendering. Realistic material textures (e.g., specialty paper, plastic, canvas), soft lighting.
+Bottom/Corner: Concise design annotations (dimensions, materials, process specs), rational and orderly typography.
+Environment:
+Background: Clean white background.
+Perspective: Front view + slight Isometric view.
+Vibe: Professional design proposal, not an advertisement. Rational, high-end, clean.
+8k resolution, sharp details.`,
+    prompt: "Brand packaging design proposal, sketch vs reality comparison...",
+  },
+  
 };
