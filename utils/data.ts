@@ -1810,5 +1810,52 @@ Environment: Sunset on a luxury open-air rooftop terrace, overlooking a modern c
 Quality: Photorealistic, 8k resolution, shallow depth of field. --ar 16:9 --v 6.0 --style raw`,
     prompt: "Cinematic group portrait of 9 Chinese TV characters on a luxury rooftop...",
   },
+
+ "dr-69": {
+    title: "极端广角动态重混",
+    tags: ["Photography", "Wide Angle", "Fisheye", "Dynamic Pose", "Fashion"],
+    promptCn: `核心指令：极端广角视角与动态姿势的重混编辑。这是一张在原图基础上进行编辑的图片，严格保留人物身份、发型、穿搭及场景类型。
+相机视角：
+使用超广角或鱼眼感镜头（12-18mm）。
+采用夸张机位：从正下向上仰视、从正上向下俯视、贴近地面超低机位、或倾斜的荷兰角度。
+始终营造强烈的透视缩短效果，离镜头最近的身体部位显得巨大。
+身体互动：
+每一张图中选择1-3个身体部位（如一只手、一只脚/鞋底、膝盖、脸部）极度靠近镜头，几乎要碰到镜头。
+清晰展示皮肤纹理、布料细节和真实的广角畸变。
+姿势设计：
+创造强烈、酷炫、充满动感的复杂姿势。
+如：伸展四肢、蹲伏、扭转躯干、手势互动（指向镜头、比耶）、坐姿或躺姿。
+环境一致性：
+保持与原图相同的地点特征（同一条街、房间、海滩）。
+逻辑上自然延展背景，不替换为完全不同的场景。
+光影与质感：
+保持原图光线氛围，增强对比度和戏剧性。保持真实的阴影以及与地面的接触关系。
+风格限制：
+完全写实照片风格，高分辨率时尚大片感。拒绝插画或二次元风格。无水印文字。`,
+    promptEn: `Extreme Wide-Angle Dynamic Pose Remix based on uploaded image.
+Consistency: Strict adherence to original character identity, hairstyle, outfit, and location type.
+Camera: Ultra wide-angle / Fisheye lens effect (12-18mm). Extreme angles: Worm's-eye view, Bird's-eye view, Dutch angle. Strong foreshortening: parts closest to lens appear massive.
+Body Focus: 1-2 body parts (hands, feet, face, knees) extremely close to the lens, showing texture details.
+Pose: Dynamic, complex, high-energy fashion poses (reaching, crouching, twisting, interacting with perspective).
+Environment: Same location logic as original, naturally extended background elements.
+Style: Photorealistic fashion/street photography, high contrast, cinematic lighting, sharp details. No CGI/Anime style.`,
+    prompt: "Extreme wide-angle dynamic fashion photography remix...",
+  },
+
+   "dr-69": {
+    title: "极端广角动态重混",
+    tags: ["Photography", "Wide Angle", "Fisheye", "Dynamic Pose", "Fashion"],
+    promptCn: `指令：基于原图进行极端广角与动态姿势重混编辑。
+严格约束：保持人物身份（面部/发型）、服装细节、场景环境与原图完全一致。
+相机视角：模拟12-18mm超广角或鱼眼镜头。采用极端机位（正仰视/正俯视/贴地/荷兰角）。制造强烈的透视缩短效果（近大远小）。
+主体表现：选择1-3个身体部位（手/脚/膝/脸）极度贴近镜头，展示清晰纹理细节。姿势需复杂、酷炫且充满张力（如伸展、蹲伏、扭转）。
+画质风格：超写实时尚大片感，高对比度，电影级光影。拒绝插画风格。`,
+    promptEn: `Instruction: Extreme Wide-Angle Dynamic Pose Remix based on original image.
+Constraints: Strictly maintain Character Identity, Outfit, and Location.
+Camera: Ultra wide-angle/Fisheye (12-18mm). Extreme angles (Worm's-eye, Bird's-eye, Low angle). Strong foreshortening effect.
+Subject: Dynamic, high-energy fashion poses. 1-3 body parts (Hands/Feet/Face) extremely close to the lens for exaggerated perspective.
+Style: Photorealistic fashion photography, high contrast, cinematic lighting, sharp details. No CGI/Anime.`,
+    prompt: "Extreme wide-angle dynamic fashion photography remix...",
+  },
   
 };
