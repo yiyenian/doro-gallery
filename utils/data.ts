@@ -1782,5 +1782,33 @@ Panels:
 Style: High-end magazine editorial quality, cinematic lighting, trendy, sharp focus, 8k resolution.`,
     prompt: "3x3 grid fashion collage, same person in 9 trending styles...",
   },
+
+    "dr-68": {
+    title: "9位中国影视角色世纪同框",
+    tags: ["Group Portrait", "Cinematic", "Chinese Drama", "Realistic", "Magazine Cover"],
+    promptCn: `创建一个超写实、极致锐利的全彩大画幅图像，在一个宽阔的电影感画面中，展示了9位知名中国影视剧角色穿着他们的成名影视剧造型站在一起。
+这张图像必须看起来像是一张完美拍摄的杂志社论封面，拥有无可挑剔的布光、逼真的皮肤纹理，以及头发、毛孔、反射和织物纤维的微观细节。
+总体风格与氛围：
+照片级真实感，8K分辨率，浅景深。
+光影：柔和的自然补光 + 强烈的金色边缘光（轮廓光）。
+色彩：高动态范围（HDR），经过校准的电影色彩分级。
+肤色：完美准确，展现亚洲人真实的皮肤质感。
+细节：清晰的织物细节，高级定制服装的单根线和材质纹理清晰可见。
+构图：平衡的构图，微广角镜头（35mm），中心重点构图。
+纯净度：极小的背景杂讯，但有足够的环境构建以营造真实感。
+环境设定：
+场景：日落时分，一个豪华的露天屋顶露台，俯瞰着现代（例如上海或香港风格的）城市天际线。
+氛围元素：温暖的金色日落光线包裹着人物剪影；抛光的大理石地面反射着光芒。
+宽高比：16:9`,
+    promptEn: `A hyper-realistic, ultra-sharp, full-color large-format cinematic shot featuring 9 famous Chinese TV drama characters standing together in their iconic costumes.
+Aesthetic: Flawless magazine editorial cover style. Impeccable lighting.
+Details: Realistic skin texture, micro-details of hair, pores, reflections, and fabric fibers (visible single threads of haute couture).
+Lighting & Tone: Soft natural fill light + Strong Golden Rim Light (Sunset). HDR, calibrated color grading.
+Skin: Perfectly accurate Asian skin tones and textures.
+Lens: 35mm slight wide-angle, center-weighted composition.
+Environment: Sunset on a luxury open-air rooftop terrace, overlooking a modern city skyline (Shanghai/Hong Kong style). Warm golden light wrapping silhouettes. Polished marble floor reflections.
+Quality: Photorealistic, 8k resolution, shallow depth of field. --ar 16:9 --v 6.0 --style raw`,
+    prompt: "Cinematic group portrait of 9 Chinese TV characters on a luxury rooftop...",
+  },
   
 };
