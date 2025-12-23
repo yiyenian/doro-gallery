@@ -1580,5 +1580,118 @@ Style: K-pop album booklet aesthetic, vivid colors, sharp focus, lively and quir
 Hyper-realistic product photography, premium textures (weathered leather, metal), museum-grade lighting. 8k resolution.`,
     prompt: "Premium collector's relic kit box for a character, knolling style...",
   },
+
+    "dr-61": {
+    title: "简约圣诞杂志风人像",
+    tags: ["Portrait", "Fashion", "Christmas", "Magazine", "Minimalist"],
+    promptCn: `（杂志封面版式，极简构图，留白设计）特定人物坐在高脚凳上的全身棚拍造型。【重点要求：务必保证人物面部与参考图完全一致】
+造型：简约时髦穿搭（黑色高领毛衣、牛仔裤），一条红色长围巾垂坠飘动。佩戴低调的驯鹿角发饰。
+道具：一颗红色圣诞装饰球用细绳悬挂，恰好位于她的手上方。
+背景：雪花光影图案投射于背景墙面；背景采用纯色浅灰或白色无缝背景纸。
+光线：柔和定向光，打造干净利落的视觉效果，同时形成轮廓清晰的阴影。
+风格：《Vogue》或《Elle》杂志风格，高奢时尚，线条简洁，兼具现代感与精致格调。`,
+    promptEn: `Magazine cover layout, minimalist composition, negative space. Full-body studio shot of a specific character sitting on a high stool. **[Critical: Strict face identity lock matching reference.]**
+Outfit: Minimalist chic (black turtleneck sweater, jeans), with a long red scarf draping and flowing. Wearing subtle reindeer antler hair accessories.
+Props: A red Christmas ornament ball suspended by a thin string, positioned just above her hand.
+Background: Snowflake shadow patterns projected onto the background wall; solid light grey or white seamless background paper.
+Lighting: Soft directional lighting creating a clean, sharp visual with defined shadows.
+Style: Vogue or Elle magazine aesthetic, high luxury fashion, clean lines, modern and sophisticated.`,
+    prompt: "Minimalist Christmas magazine portrait, high fashion style...",
+  },
+
+    "dr-62": {
+    title: "3x3网格高端商业营销",
+    tags: ["Product Photography", "Grid", "Commercial", "Advertising", "3D Render"],
+    promptCn: `创建一个3×3的网格，宽高比为3:4，用于高端商业营销活动，以上传的产品为中心主体。
+每个画面必须呈现独特的视觉概念，同时确保所有九张图片中的产品保持完美的一致性。
+网格概念（每个单元格一个）：
+1. 具有大胆构图的标志性产品静物特写
+2. 突出材质、表面或纹理的极致微距细节
+3. 产品周围动态的液体或粒子互动
+4. 极简主义雕塑式排列，运用抽象形式
+5. 漂浮元素构图，营造轻盈和创新的感觉
+6. 强调触感和真实感的感官特写
+7. 受产品配色方案启发的色彩驱动概念场景
+8. 成分或元素的抽象表现（非字面意义，象征性）
+9. 融合现实与想象的超现实而优雅的场景
+视觉规则：
+产品在形状、比例、标签、字体、颜色和品牌标识方面必须100%准确。产品不得出现扭曲、变形或重新设计。产品与背景之间清晰分离。
+灯光和风格：
+柔和、可控的影棚灯光。微妙的高光，逼真的阴影。高动态范围，超清晰对焦。编辑级奢华广告美学。高端感官营销视觉效果。
+整体感受：
+现代、精致、视觉统一。高端商业营销活动。专为品牌网站、社交媒体和数字广告牌设计。超现实、电影感、精致且充满吸引力。`,
+    promptEn: `Create a 3x3 grid with a 3:4 aspect ratio for a high-end commercial marketing campaign, featuring the uploaded product as the central subject.
+Each panel must present a unique visual concept while ensuring perfect product consistency across all nine images.
+Grid Concepts (One per cell):
+1. Iconic product still life with bold composition.
+2. Extreme macro detail highlighting material, surface, or texture.
+3. Dynamic liquid or particle interaction around the product.
+4. Minimalist sculptural arrangement using abstract forms.
+5. Floating element composition creating a sense of lightness and innovation.
+6. Sensory close-up emphasizing touch and realism.
+7. Color-driven concept scene inspired by the product's color scheme.
+8. Abstract representation of ingredients or elements (symbolic, not literal).
+9. Surreal yet elegant scene blending reality and imagination.
+Visual Rules:
+The product must be 100% accurate in shape, scale, label, font, color, and branding. No distortion, deformation, or redesign of the product allowed. Clear separation between product and background.
+Lighting and Style:
+Soft, controlled studio lighting. Subtle highlights, realistic shadows. High dynamic range, ultra-sharp focus. Editorial luxury advertising aesthetic. High-end sensory marketing visuals.
+Overall Feel:
+Modern, sophisticated, visually unified. High-end commercial marketing campaign. Designed for brand websites, social media, and digital billboards. Surreal, cinematic, exquisite, and engaging.`,
+    prompt: "3x3 grid high-end commercial product photography campaign...",
+  },
+
+   "dr-63": {
+    title: "飘渺神话：流光剪影模板",
+    tags: ["Abstract", "Fantasy", "Silhouette", "Light Flow", "Chinese Mythology", "Gemini"],
+    promptCn: `【指令】生成一幅宽幅全景数字艺术作品 (3:1 比例)。
+核心主体：[插入角色名称，如：西游记师徒四人]。
+表现形式：人物不是实体皮肤，而是由流动的光带、半透明的烟雾和虹彩粒子组成的飘渺剪影。
+姿态：由角色性格决定的姿势，悬浮在半空中，构图居中，两侧延伸出流动的能量轨迹。
+氛围与色彩：
+背景：深邃、忧郁的靛蓝色和深海军蓝调 (Deep Indigo/Navy)。
+光效：人物散发出柔和、神奇的生物荧光，色调为金色、桃色和荧光青色。
+特效：全息散射，丝绸般的能量轨迹，展现强烈的廷德尔效应（体积光）。
+风格定义：抽象奇幻，强调流畅的动态和梦幻般的氛围，非照片级真实感，无实体皮肤。
+画质：8K分辨率，高度精细的纹理，杰作。`,
+    promptEn: `A wide panoramic digital art piece (aspect ratio 3:1) depicting **[Insert Character Name, e.g., Journey to the West characters]** composed entirely of flowing ribbons of light, translucent smoke, and iridescent particles.
+The figure is a silhouette suspended in mid-air against a deep, moody indigo and navy blue background.
+The subject emits a soft, magical bioluminescent glow in shades of gold, peach, and fluorescent cyan.
+Style: Abstract fantasy, ethereal, mysterious. Not photorealistic, no solid skin.
+Atmosphere: Volumetric lighting (Tyndall effect), holographic scattering, silky energy trails extending to the sides.
+Render: 8k resolution, highly detailed textures, masterpiece. --ar 3:1 --v 6.0 --style raw`,
+    prompt: "Abstract fantasy digital art of a character made of flowing light and smoke...",
+  },
+
+    "dr-64": {
+    title: "雪地素描艺术肖像",
+    tags: ["Portrait", "Winter", "Snow Art", "Sketch", "Surreal", "Gemini"],
+    promptCn: `【指令】生成一张电影级艺术摄影作品 (9:16)。
+场景与氛围：冬季户外，纯白色的雪地背景。自然冬日阳光，柔和漫射，光影柔和无刺眼强光。
+整体氛围宁静、平和、诗意、梦幻，带有怀旧的温柔感。色调以白色、柔灰、柔和的浅绿为主。
+主体人物：一位年轻女子跪在雪地上，镜头从略微俯视的后方角度拍摄（看不到正脸，侧重背影和氛围）。
+外貌特征：面部特征需严格锁定参考图。皮肤白皙光滑，身材苗条。
+发型：低低的整洁发髻，几缕发丝自然地垂落在颈部。
+服装：身穿浅鼠尾草绿色的露背吊带裙，材质轻薄、柔软、飘逸、略微半透明。精致的垂坠感露出上半背部，展现优雅、柔美与脆弱感。双手轻轻放在身前的雪地上。
+核心创意元素（雪地素描）：
+在女子面前的雪地上，不是普通的痕迹，而是直接“显现”或“雕刻”出了一幅细腻的铅笔素描风格肖像。
+素描内容：画的是她本人的面部（大眼、精致五官），线条细腻，阴影柔和，具有逼真的石墨质感。
+文字元素：素描左侧有手写体文字 "2025 Winter"，仿佛用铅笔写在雪上，与雪地纹理自然融合。
+装饰元素：素描周围散落着几只简约俏皮的石墨素描风格熊猫，均匀分布，增添微妙的奇幻感。
+技术参数：浅景深，焦点在人物和雪地素描上。清晰的雪质感，高细节度的织物纹理。8K超高清，超现实主义风格。`,
+    promptEn: `Cinematic art photography, winter theme.
+Subject: A young woman kneeling on pristine white snow, viewed from a slightly high-angle from behind.
+Appearance: Face matches reference photo. Fair skin, slim body. Low neat bun with loose strands on neck.
+Outfit: Pale sage green backless slip dress, light, soft, flowy, slightly translucent fabric. Elegant and fragile vibe.
+Art Elements (The Snow Sketch):
+Directly on the snow surface in front of her, there is a realistic graphite pencil sketch portrait of herself (large eyes, delicate features).
+To the left of the sketch, handwritten text "2025 Winter" in pencil style blended with snow.
+Surrounded by playful minimalist pencil sketches of pandas scattered on the snow.
+Lighting: Soft diffused winter sunlight, gentle shadows.
+Mood: Serene, poetic, dreamy, nostalgic.
+Tech: Shallow depth of field, sharp snow texture, high resolution 8k. --ar 9:16`,
+    prompt: "Cinematic photography of a woman kneeling in snow with pencil sketches on the ground...",
+  },
+
   
 };
