@@ -1725,5 +1725,62 @@ Vibe: Professional design proposal, not an advertisement. Rational, high-end, cl
 8k resolution, sharp details.`,
     prompt: "Brand packaging design proposal, sketch vs reality comparison...",
   },
+
+    "dr-66": {
+    title: "冬日氛围拼贴：音乐与时刻",
+    tags: ["Collage", "Winter", "Photography", "iPhone Aesthetic", "Music Overlay", "Gemini"],
+    promptCn: `指令：生成一张编辑冬季海报风格的多面板拼贴画。
+核心要求：
+面部参考：严格锁定用户上传的照片，零偏差保留面部比例、皮肤纹理和表情。
+美学质量：自发的iPhone摄影感（抓拍、温馨、写实），带有柔和的雪花、细腻的模拟颗粒感和轻微的手持拍摄瑕疵。
+视觉元素：
+人物穿搭：短款人造毛皮外套，黑色紧身裤，经典UGG靴子。风格简约、舒适、极具冬日气息。
+关键道具：银色 iPhone 17 Pro Max（由主体持有）。色调包含温暖琥珀色、柔和红色、松树绿和冬日灰。
+布局配置：
+面板1（左上）：黄昏时分的商店橱窗反光照片。淡淡的圣诞彩灯、花环、磨砂玻璃边缘。主体拿着手机部分遮住脸部，呈现掠过的轮廓和层叠的反射效果。
+面板2（右上）：超广角街景人像（雪中人行道/圣诞市场）。近距离向下倾斜视角。主体随意向前倾，双手插兜。清晰可见黑色紧身裤和靴子。带有轻微运动模糊的飘雪。
+面板3（右下）：亲密俯视自拍。温暖的街道或咖啡馆照明。手持节日饮品（咖啡/热红酒），佩戴有线耳机。聚焦清晰细腻的毛皮纹理，氛围怀旧。
+图形叠加：
+在拼贴画中心漂浮一个极简 Apple Music 风格的迷你播放器。显示流行圣诞歌曲（如 'Last Christmas'）。渲染效果平整干净，无阴影。`,
+    promptEn: `Editorial winter poster style multi-panel collage.
+Aesthetic: Spontaneous iPhone photography (candid, cozy, realistic). Texture: Soft snow, subtle analog grain, slight handheld imperfections.
+Subject: Strict face adherence to reference. Outfit: Cropped faux fur jacket, black leggings, classic UGG boots. Device: Silver iPhone 17 Pro Max.
+Panel 1 (Top Left): Twilight shop window reflection shot. Faint Christmas lights, wreaths, frosted glass edges. Subject holding phone partially covering face. Glancing silhouette, layered reflections, soft ghosting.
+Panel 2 (Top Right): Ultra-wide angle street portrait (snowy sidewalk). Close-up, tilted down. Subject leaning forward casually, hands in pockets. Leggings and boots visible. Motion blur snow.
+Panel 3 (Bottom Right): Intimate overhead selfie. Warm street/cafe lighting. Holding festive takeaway drink, wired headphones visible. Focus on fur texture. Nostalgic grainy atmosphere.
+Graphic Overlay: Minimalist Apple Music style mini-player floating in center. Song: 'Last Christmas'. Flat clean render, no shadow.`,
+    prompt: "Winter aesthetic photo collage with Apple Music player overlay...",
+  },
+
+    "dr-67": {
+    title: "9种潮流时尚穿搭拼贴",
+    tags: ["Fashion", "Portrait", "Collage", "Trend", "Photography"],
+    promptCn: `基于[上传人物图片]并严苛保持面部特征不变，生成一张极具时尚感和网络热门度的3x3九宫格拼贴照片。
+九个独立画面分别展示：
+1. 酷飒街头风：黑色Oversized卫衣配工装裤（涂鸦霓虹后巷背景）。
+2. 清纯性感风：白色丝绸吊带睡裙外搭针织衫（柔光慵懒卧室窗边背景）。
+3. 运动塑形风：紧身时尚瑜伽套装（高端采光健身房背景）。
+4. 复古Y2K辣妹：短T恤配低腰牛仔裙（千禧风彩色充满CD的房间背景）。
+5. 华丽晚礼服：黑色高开叉亮片长裙（城市天际线天台酒吧夜景背景）。
+6. 赛博机能风：前卫赛博朋克机能风束带装束（未来感雨夜街道蓝紫光背景）。
+7. 都市摩登风：廓形西装内搭露脐装（极简高级艺术馆背景）。
+8. 热辣度假风：比基尼配透明防晒罩衫（奢华海景泳池日落背景）。
+9. 静奢老钱风：粗花呢小香风外套套装（古典欧式庄园庭院背景）。
+整体要求：高级杂志大片质感、光影迷人且富有潮流张力。`,
+    promptEn: `A 3x3 grid collage featuring the SAME female character in 9 different trending fashion styles.
+Consistency: Strict face identity lock based on uploaded photo.
+Panels:
+1. Streetwear: Black oversized hoodie, cargo pants. Graffiti neon back alley. Cool and edgy.
+2. Pure & Sexy: White silk slip dress, knit cardigan. Soft lighting by bedroom window. Lazy and alluring.
+3. Gym Chic: Tight fashion yoga set. High-end gym with natural lighting. Fit and energetic.
+4. Y2K Baddie: Baby tee, low-rise denim skirt. 2000s style room filled with CDs/posters. Colorful and retro.
+5. Glamour Night: Black sequin high-slit evening gown. Rooftop bar with city skyline night view. Luxurious.
+6. Cyberpunk Techwear: Avant-garde strappy gear. Futuristic rainy street with blue/purple neon lights.
+7. Urban Modern: Oversized blazer, crop top. Minimalist high-end art gallery. Chic and sophisticated.
+8. Hot Vacation: Bikini with sheer cover-up. Luxury ocean-view pool at sunset. Vibrant and hot.
+9. Old Money: Tweed Chanel-style jacket suit. Classic European manor garden. Quiet luxury.
+Style: High-end magazine editorial quality, cinematic lighting, trendy, sharp focus, 8k resolution.`,
+    prompt: "3x3 grid fashion collage, same person in 9 trending styles...",
+  },
   
 };
