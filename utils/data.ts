@@ -1820,5 +1820,160 @@ Quality: Photorealistic, 8k resolution, shallow depth of field. --ar 16:9 --v 6.
 主体表现：选择1-3个身体部位（手/脚/膝/脸）极度贴近镜头，展示清晰纹理细节。姿势需复杂、酷炫且充满张力（如伸展、蹲伏、扭转）。
 画质风格：超写实时尚大片感，高对比度，电影级光影。拒绝插画风格。`,
   },
+
+    "dr-70": {
+    title: "一周七日穿搭挑战",
+    tags: ["Fashion", "Lookbook", "7-Day Challenge", "Collage", "Lifestyle"],
+    promptCn: `提示词：严格参考图中人物
+画面中出现同一个女性的7个形象，对应一周的七天。
+明确为同一个人，但允许她们拥有符合主题或者场景的不同的姿态、表情、动作与穿着。
+主题 / 场景：
+[在此输入特定主题，如：职场通勤 / 海边度假 / 赛博朋克 / 魔法少女 / 居家生活]
+请 AI 根据该主题自由设计：
+服装搭配
+姿态与动作
+表情与气质
+整体氛围与风格
+不需要统一风格，不需要刻意对齐姿势，不需要明确规定情绪或动作。
+画面要求：
+横向构图（16:9），全身呈现。
+多个同一人物并排出现。
+整体自然、真实、有变化。
+背景中可以加一些符合场景和主题的手账图案。
+上方有个符合主题的中文标题。`,
+    promptEn: `Prompt: Strictly reference the character in the image.
+Content: 7 full-body figures of the SAME female character standing side-by-side horizontally, representing the 7 days of the week.
+Consistency: Explicitly the same person, but with different poses, expressions, actions, and outfits matching the theme/scene.
+Theme / Scene:
+[Insert Theme Here, e.g., Office Commute / Beach Vacation / Cyberpunk / Cozy Home]
+AI Design Instructions:
+Freely design the following based on the theme:
+Outfit coordination
+Poses and actions
+Expressions and vibes
+Overall atmosphere and style
+No need for uniform style, no forced alignment of poses, no specific emotion/action requirements. Focus on variety and naturalness.
+Visual Requirements:
+16:9 horizontal composition, full-body presentation.
+Multiple instances of the same character side-by-side.
+Natural, realistic, diverse.
+Background can include scrapbook-style doodles or stickers matching the theme.
+A Chinese title matching the theme at the top center.`,
+    prompt: "7-day fashion lookbook, same character, diverse styles based on theme...",
+  },
+
+   "dr-71": {
+    title: "萌娃Cosplay：角色自适应",
+    tags: ["Portrait", "Cosplay", "Kids", "Cinematic", "Creative"],
+    promptCn: `核心指令：基于上传照片生成，保持人物面部特征100%不变。
+主题：可爱小女孩/小男孩的 [插入角色名称] Cosplay写真。
+人物特征：
+参考图中的儿童，保留圆润可爱的脸庞和天真表情。
+服装造型 (高定重制)：
+穿着 [插入角色名称] 的标志性服装，但进行“高定童装化”设计：使用高级面料（丝绒、皮革、蕾丝、金属），增加精致的刺绣或纹理细节，使其看起来像昂贵的电影戏服而非廉价道具。
+场景自适应：
+背景自动匹配该角色的经典场景（例如：如果是艾莎则为冰雪城堡；如果是哈利波特则为魔法图书馆；如果是钢铁侠则为高科技实验室），但进行梦幻化、柔焦处理。
+创意特效：
+周围环绕着与角色能力相关的魔法粒子或光效（如冰晶、火焰、星光、科技全息图），增强画面张力。
+动作与神态：
+做出该角色的招牌动作（如施法、变身、飞行），表情自信、开朗，眼神中有光，充满童趣与信念感。
+摄影质感：
+电影级布光，主光柔和，辅以色彩鲜艳的轮廓光（颜色匹配角色主题色）。
+8K分辨率，超写实摄影，材质质感极致清晰。`,
+    promptEn: `Photorealistic cosplay portrait of a little kid as [Insert Character Name], based on the uploaded photo.
+Consistency: Strict identity lock on the child's face.
+Outfit (Haute Couture): A premium, miniaturized version of [Insert Character Name]'s iconic costume. Use high-quality textures (velvet, leather, lace, metal armor) and intricate details to look like a high-budget movie costume.
+Setting (Adaptive): A dreamy, cinematic background relevant to the character's lore (e.g., Ice Castle for Elsa, Magic School for Harry Potter, Sci-fi Lab for Iron Man), with soft bokeh.
+Effects: Surrounded by floating particles or magical aura relevant to the character's power (snowflakes, sparks, magic dust, holograms).
+Pose: Performing the character's signature move with a cute, confident expression.
+Lighting: Cinematic studio lighting. Key light is soft, with rim lighting matching the character's color theme.
+Quality: 8k Ultra HD, highly detailed textures, movie poster aesthetic. --ar 3:4`,
+    prompt: "Cute kid cosplay portrait, adaptive character and scene...",
+  },
+
+ "dr-72": {
+    title: "圣诞妆容教程界面",
+    tags: ["UI Design", "Beauty", "Christmas", "Tutorial", "Social Media"],
+    promptCn: `竖屏社交媒体故事设计 (9:16)，美妆博主圣诞妆容教程界面。背景为柔和的高级感粉色渐变，营造甜美梦幻氛围。
+核心视觉：
+人物一致性（最高权重）： 画面中央展示一位亚洲女性美妆博主，面部特征、五官及发型必须严格、完美地复刻上传的参考图片人物。
+妆容与配饰： 极度精致的“圣诞麋鹿甜酷妆”。眼妆为红棕色晕染，面部有白色小鹿斑点，头戴毛绒驯鹿角发箍。
+红笔标记与步骤对应（逻辑核心）： 在右侧完妆人物的面部，使用醒目的红色墨水笔引出5条指示线，分别指向妆容的5个关键部位，并按顺序标注中文：1. 眼影；2. 金色闪片；3. 睫毛；4. 鹿系腮红；5. 饱满红唇。
+排版布局：
+顶部：中文标题“圣诞妆容教程”，搭配口红图标。副标题“麋鹿少女妆 甜酷风”。
+中部（对比区）： 左右分屏设计。左侧为该人物“素颜”，右侧为“完妆”。中间用虚线和剪刀图标连接。
+下部（强关联步骤预览区）： 设置横向滑动的圆角卡片栏，展示5个与面部标记严格对应的步骤图：
+卡片1：眼部涂抹眼影的特写；
+卡片2：用手指点缀金色闪片的特写；
+卡片3：夹睫毛或刷睫毛的特写；
+卡片4：面颊扫腮红和画鹿斑的特写；
+卡片5：涂抹红色口红的嘴唇特写。 每张卡片左上角需清晰标注数字1-5，与面部红笔标记的序号呼应。
+底部（互动区）： “上滑看完整教程”箭头，“点击查看同款产品”按钮，点赞与收藏图标。
+风格： 高清商业摄影质感结合UI设计，光影通透，色彩鲜艳，肤质细腻真实，时尚杂志排版风格。`,
+    promptEn: `Vertical social media story UI design (9:16), beauty influencer Christmas makeup tutorial interface. Soft premium pink gradient background.
+Subject: Asian female beauty influencer (Strict identity lock to reference).
+Look: "Christmas Reindeer Sweet-Cool Makeup". Red-brown eye shadow, white fawn spots, plush reindeer antler headband.
+Annotations: Red ink leader lines pointing to 5 key areas on the finished face (1. Eyeshadow, 2. Gold Glitter, 3. Eyelashes, 4. Blush, 5. Red Lips) with Chinese labels.
+Layout:
+- Top: Chinese Title "Christmas Makeup Tutorial" with lipstick icon. Subtitle "Reindeer Girl Style".
+- Middle: Split screen comparison. Left: Bare face. Right: Finished look. Connected by dotted line and scissors icon.
+- Lower Section: Horizontal scrollable cards showing 5 close-up steps corresponding to the labels (applying eyeshadow, glitter, mascara, blush, lipstick). Numbered 1-5.
+- Bottom: Interactive UI icons (Swipe up, View Products, Like, Save).
+Style: High-end commercial photography blended with app UI, vivid colors, realistic skin texture, fashion editorial vibe. 8k resolution.`,
+    prompt: "Christmas makeup tutorial UI with before/after and step-by-step cards...",
+  },
+
+  "dr-73": {
+    title: "圣诞特辑：蜜桃少女拼图",
+    tags: ["Christmas", "Beauty", "Collage", "4-Panel", "Reindeer Makeup", "Portrait"],
+    promptCn: `(杰作, 最高画质, 超细节, 8k分辨率). 一张照片般逼真的4格分屏拼图，所有画面为同一女性角色。
+[关键：保持精确的面部特征，保留原始脸部结构，整个拼图中角色完全一致]. 角色皮肤白皙，质感自然，眼神明亮。
+左上图：特写镜头，角色化着精致的“麋鹿妆”（鼻头画红，脸颊有白色斑点），对着镜头Wink。
+右上图：角色双手握拳放在头顶模仿鹿角，吐舌头卖萌，穿着棕色毛绒连帽衫。
+左下图：角色侧身看着镜头，展示脸颊上的圣诞贴纸（雪花和铃铛图案），眼神妩媚。
+右下图：角色正对着镜头整理刘海，手里拿着一个小圣诞树，脸上是圣诞树的贴纸，表情自然日常。
+环境：粉色或蜜桃色的纯色背景。
+灯光：环形美妆灯，瞳孔中有漂亮的光圈，皮肤无瑕疵。
+风格：美妆博主风格，极度强调妆容细节，清晰对焦，少女感。`,
+    promptEn: `(Masterpiece, Best Quality, Ultra-Detailed, 8k Resolution). A photorealistic 4-panel split-screen collage, all featuring the SAME female character.
+[Critical: Maintain precise facial features, preserve original facial structure, character consistency throughout the collage]. Fair skin, natural texture, bright eyes.
+Top Left: Close-up shot, wearing exquisite "Reindeer Makeup" (red nose tip, white spots on cheeks), winking at the camera.
+Top Right: Hands balled up on top of head mimicking antlers, sticking tongue out playfully, wearing a brown fuzzy hoodie.
+Bottom Left: Side profile looking at camera, showing off Christmas stickers (snowflake and bell patterns) on cheek, charming gaze.
+Bottom Right: Facing camera adjusting bangs, holding a small Christmas tree, Christmas tree sticker on face, natural daily expression.
+Environment: Solid pink or peach background.
+Lighting: Ring light, beautiful catchlights in pupils, flawless skin.
+Style: Beauty influencer style, extreme emphasis on makeup details, sharp focus, girlish vibe.`,
+    prompt: "4-panel Christmas beauty collage, reindeer makeup, peach background...",
+  },
+
+    "dr-74": {
+    title: "圣诞特辑-费尔岛毛衣的圣诞六帧小美好",
+    tags: ["Christmas", "Portrait", "Grid", "6-Panel", "Studio", "Photography"],
+    promptCn: `（六格网格构图，多种道具，影棚人像）。一组六张照片，展现特定人物与不同圣诞物品互动的场景。
+关键一致性：保持面部特征的精准还原，保留人物原有的骨骼结构。
+服装：一件舒适的费尔岛图案毛衣。
+画面内容：
+1. 摇晃雪球。
+2. 亲吻木制胡桃夹子士兵。
+3. 阅读立体圣诞贺卡。
+4. 拥抱毛绒驯鹿玩具。
+5. 用圣诞老人造型的热可可杯啜饮。
+6. 躲在松枝后面。
+背景：柔和的米色或奶油色纸质背景。
+灯光：45度角柔光箱照明，营造立体感的同时保持人物的自然美感。`,
+    promptEn: `(Six-grid composition, multiple props, studio portrait). A set of six photos showing a specific person interacting with different Christmas items.
+Consistency: [Critical: Precise restoration of facial features, retaining original bone structure].
+Outfit: A cozy Fair Isle patterned sweater.
+Panels:
+1. Shaking a snow globe.
+2. Kissing a wooden nutcracker soldier.
+3. Reading a pop-up Christmas card.
+4. Hugging a plush reindeer toy.
+5. Sipping from a Santa-shaped hot cocoa mug.
+6. Hiding/Peeking behind pine branches.
+Background: Soft beige or cream seamless paper background.
+Lighting: 45-degree softbox lighting, creating dimensionality while maintaining natural beauty.`,
+  },
   
 };
