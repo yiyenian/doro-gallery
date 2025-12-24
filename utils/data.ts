@@ -1975,5 +1975,47 @@ Panels:
 Background: Soft beige or cream seamless paper background.
 Lighting: 45-degree softbox lighting, creating dimensionality while maintaining natural beauty.`,
   },
+
+  "dr-75": {
+    title: "儿童英语词汇思维导图",
+    tags: ["Education", "Infographic", "Vocabulary", "Illustration", "Mind Map", "Watercolor"],
+    promptCn: `【指令】生成一张适合社交媒体分享的“儿童英语词汇图解卡片 / 思维导图海报”。
+主题：[插入主题，例如：风 / 水 / 森林 / 交通工具]
+画面布局：
+画幅：竖版 3:4 (高分辨率印刷质感)。
+背景：干净白底，留白舒适。
+中心核心：绘制一个柔和的主题插画（如[插入主题]的具象化图标），下方标注主词大字（英文+音标+中文）。
+发散结构：从中心向四周发散多条柔和的彩色弧形连线，连接到 4-6 个逻辑分类模块。
+内容逻辑 (AI自动推演)：
+请将与 [插入主题] 相关的英语词汇按逻辑分类（例如：种类、动作、现象、工具、形容词等）。
+每个模块包含 4-6 个单词，每个单词排版如下：
+1.英文单词 (黑色加粗圆润无衬线体)
+2.IPA音标 (细体斜体)
+3.中文释义 (小字号)
+4.配套小插画 (每个词对应一个直观的小图标)
+艺术风格：
+童书科普手绘水彩风 + 彩铅线稿质感。
+配色柔和低饱和（莫兰迪色系），线条清晰。
+整体观感：信息密度高但不拥挤，知识点清晰，适合儿童阅读。`,
+    promptEn: `Create an educational English vocabulary mind map poster suitable for social media sharing.
+Theme: [Insert Theme, e.g., Wind / Water / Forest / Vehicles].
+Layout:
+- Ratio: Vertical 3:4 (High-res print quality).
+- Background: Clean white, generous whitespace.
+- Center: A soft, detailed illustration representing the theme. Main Word (Bold English) + IPA + Chinese meaning underneath.
+- Structure: Curved colored lines radiating from the center to 4-6 logical category clusters.
+Content Logic (Auto-generated):
+Categorize vocabulary related to [Theme] into logical groups (e.g., Types, Actions, Phenomena, Tools, Adjectives).
+Each category module includes 4-6 words, formatted as:
+1. English Word (Bold rounded sans-serif).
+2. IPA Phonetic Symbol (Italic).
+3. Chinese Definition (Small text).
+4. Tiny Illustration (A visual representation next to each word).
+Art Style:
+Children's science book aesthetic. Watercolor wash + Colored pencil sketch lines.
+Soft low-saturation color palette (Morandi tones).
+Visuals: High information density but organized, clean, and easy for children to read.`,
+    prompt: "Educational English vocabulary mind map poster, watercolor style...",
+  },
   
 };
