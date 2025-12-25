@@ -2045,4 +2045,259 @@ Lighting: Multi-light setup, rim lighting, high contrast, glossy magazine qualit
     prompt: "High-fashion Christmas portrait, metallic makeup, red velvet dress, full body...",
   },
 
+    "dr-77": {
+    title: "第一人称仰拍群像：围观视角",
+    tags: ["POV", "Low Angle", "Group Portrait", "Wide Angle", "Cinematic"],
+    promptCn: `这是一张从地面仰拍的超广角第一人称视角照片（POV）。
+核心主体：
+来自 [在此处插入电影/剧集名称或角色名称列表] 的各种角色紧密地围成一个完整的圆圈。
+构图与视角：
+他们俯视着镜头，脸离得很近，目光专注地盯着镜头。
+他们的头和肩膀构成了一个密密麻麻的圆环，几乎占据了整个画面，只有正上方中心的一小片明亮的蓝天和柔和的云朵隐约可见。
+画面边缘模糊的草叶、泥土或碎石，突显了地面的层次感（贴地视角）。
+动作与神态：
+他们对下面的“发现”既充满好奇，又感到好笑，脸上带着玩世不恭的笑容。
+一些角色正指着镜头，另一些则俯身靠近，想要看得更清楚。
+光影与质感：
+自然光从他们的后方和上方照射下来（逆光/顶光），凸显了皮肤、头发、皮毛、鳞片和衣物的纹理。
+8K分辨率，超写实电影质感。`,
+    promptEn: `Ultra-wide angle first-person view (POV) shot from the ground looking up.
+Subjects: Characters from [Insert Movie/Series Name or Character List] form a tight circle, looking down at the camera lens.
+Composition: Faces are very close, focused gazes. Their heads and shoulders form a dense ring occupying most of the frame, with only a small patch of bright blue sky and soft clouds visible in the dead center.
+Foreground Details: Blurred grass blades, dirt, or gravel at the edges, emphasizing the ground-level perspective.
+Expressions & Actions: Curious and amused expressions, playful smiles. Some characters pointing at the lens, others leaning in closer to get a better look.
+Lighting: Natural light coming from behind and above them, highlighting textures of skin, hair, fur, scales, and clothing.
+Quality: 8k resolution, photorealistic, cinematic lighting, sharp details. --ar 16:9`,
+    prompt: "Low angle POV shot of characters looking down at camera in a circle...",
+  },
+
+   "dr-78": {
+    title: "复古胶片四宫格拼贴",
+    tags: ["Portrait", "Polaroid", "Film Style", "Collage", "Lifestyle"],
+    promptCn: `整体要求：
+同一张画面包含4张独立的宝丽来风格肖像照，呈四宫格排列（2x2）。
+画面统一性：白色宝丽来相框，干净拼贴效果。
+核心要求：必须使用上传照片的真实面部特征与服饰特征，保持准确还原。
+风格：真实复古胶片感（褪色色调、柔和色彩、乳白质感、胶片颗粒、灰尘、划痕、梦幻晨光）。
+人物气质：自然率真，轻松生活化。
+分格详情：
+1. 左上（沙发场景，温柔复古）：室内沙发上。身体微微前倾，双手抱着抱枕，羞涩笑容。氛围静谧温暖，柔和晨光。
+2. 右上（黑墙背景，电影氛围）：靠在黑色墙边。单手拨弄头发，另一只手插袋，眼神轻松。复古电影感，略带神秘。
+3. 左下（沙发延续，活泼嬉戏）：盘腿坐在沙发上。双手半遮脸，忍不住笑出声。轻松活泼，生活化，明显的胶片颗粒与划痕。
+4. 右下（卧室床上，慵懒随性）：侧卧在床上。用手臂遮住脸庞，带着调皮的笑意。慵懒清晨，自然随性。`,
+    promptEn: `A 2x2 grid collage of 4 authentic Polaroid-style portraits featuring the SAME person.
+Consistency: Strict identity lock on facial features and outfit based on the uploaded photo.
+Style: Vintage film aesthetic, faded tones, milky texture, film grain, dust, scratches, dreamy morning light. Candid and natural vibe.
+Layout: White Polaroid frames, clean alignment.
+Panel 1 (Top Left): Indoor sofa. Leaning forward hugging a pillow, shy smile. Soft morning light, quiet warmth.
+Panel 2 (Top Right): Black wall background. Leaning against wall, hand running through hair, hand in pocket, relaxed gaze. Cinematic retro vibe.
+Panel 3 (Bottom Left): Sofa scene continued. Sitting cross-legged, hands half-covering face, laughing uncontrollably. Playful lifestyle feel.
+Panel 4 (Bottom Right): Bedroom bed. Lying sideways, arm covering face, mischievous smile. Lazy morning, natural and casual.`,
+    prompt: "4-panel vintage Polaroid portrait collage, film grain style...",
+  },
+
+  "dr-79": {
+    title: "3D潮玩日历卡片：角色自适应",
+    tags: ["3D Render", "Art Toy", "Calendar", "UI Design", "Mockup"],
+    promptCn: `一种横向日历卡片设计，采用分屏构图 (16:9)。
+左侧 (视觉主体)：
+[插入角色名称，如：LABUBU / Molly / 原创角色] 的详细3D渲染图。
+质感：3D艺术玩具 (Art Toy) 质感，材质细腻（如哑光及光泽塑料、植绒、搪胶）。
+场景与服装：[插入场景描述，如：积雪覆盖的松树林 / 温暖的咖啡馆 / 赛博朋克街道]。角色穿着与场景相符的厚实/时尚服装（如：羽绒服/毛衣/机能风外套）。
+动作：角色[插入动作，如：坐在木头上喝热可可 / 抱着宠物 / 滑板]，露出[插入表情，如：顽皮的笑容]。
+光影：柔和的电影式灯光，营造舒适氛围。
+右侧 (功能区域)：
+一个简洁、极简的白色背景区域。
+顶部：大号、醒目的主题色文字“[插入年份/日期，如：2026年1月1日]”。
+下方：整洁、现代的日历网格布局，字体清晰利落。
+整体风格：
+UI设计美学，高质量渲染，卡片模型展示效果，8K高清输出。`,
+    promptEn: `Horizontal calendar card design, split-screen composition.
+Left Side (Visual): Detailed 3D render of [Insert Character Name]. Art Toy texture (Pop Mart style, vinyl/flock). Placed in [Insert Scene, e.g., Snowy Pine Forest], wearing [Insert Outfit]. Action: [Insert Action, e.g., sitting on log holding hot cocoa], with a [Insert Expression] smile. Lighting: Soft cinematic, cozy atmosphere.
+Right Side (Functional): Clean, minimalist white area. Top: Large bold text "[Insert Date]" in matching accent color. Bottom: Neat, modern calendar grid layout.
+Style: UI design aesthetic, high-quality 3D rendering, card mockup look. 8k resolution. --ar 16:9`,
+    prompt: "3D art toy calendar card design, split screen, adaptive character...",
+  },
+
+    "dr-80": {
+    title: "诗书画卷：通用诗词生成",
+    tags: ["Chinese Painting", "Poetry", "Calligraphy", "Ink Wash", "Masterpiece"],
+    promptCn: `【指令】请根据用户输入的古诗词名称，创作一幅“诗书画印”完美融合的中国画。
+1. 智能检索：
+联网搜索诗词《[插入诗词名]》的全文内容、作者及创作背景。
+2. 画面构思 (画)：
+根据诗词的核心意象（如“大漠孤烟”、“小桥流水”、“明月松间”）构建水墨画场景。
+讲究“气韵生动”，构图留白（Liu Bai），虚实相生。
+3. 书法题跋 (书)：
+在画面的自然留白处（通常为天空或水面），以竖排书法（行书或楷书）题写诗词全文或千古名句。
+字体需飘逸灵动，与画面气息相通，非简单的电脑字体叠加。
+4. 印章落款 (印)：
+在书法末尾或画面对角处，盖上红色的篆刻闲章或名章，起到画龙点睛的作用。
+5. 材质与风格：
+宣纸或绢本的古朴纹理，水墨晕染效果，展现东方美学。`,
+    promptEn: `A masterpiece traditional Chinese ink wash painting visualizing the poem "[Insert Poem Title]".
+Visual Imagery: Based on the poem's content (e.g., misty mountains, moonlight on river, solitary boat), create a scene with "Spirit Resonance" (Qi Yun).
+Composition: Asymmetrical balance with intentional negative space (Liu Bai).
+Calligraphy: Elegant vertical columns of traditional Chinese calligraphy (the poem text) naturally integrated into the composition's void spaces, interacting with the painted elements.
+Details: Vermilion red seal stamps (chops) for signature. Visible rice paper or silk texture.
+Style: Literati painting, expressive brushstrokes, varying ink tones (thick/thin, wet/dry). 8k resolution, artstation style. --ar 3:4 --style raw`,
+    prompt: "Traditional Chinese ink wash painting with calligraphy based on a poem...",
+  },
+
+    "dr-81": {
+    title: "清新甜美六格漫画",
+    tags: ["Comic", "6-Panel", "Character", "Story", "Fresh"],
+    promptCn: `核心指令：以参考图人物为主角，创作一张9:16比例的6格漫画。
+人物一致性：严格参考图中人物面部特征。长直发，眉眼温柔，双眼明亮有神，鼻梁挺直，嘴唇微微上扬，面带微笑，整体给人清新甜美的感觉。
+画面布局：
+6个分镜格，排列工整。
+每格展示人物不同的自然表情和生动动作。
+包含中文气泡对话文案，内容与画面情境匹配，字体清晰可读，排版合理。
+背景与风格：
+背景简洁大方，或根据生活场景变化。
+整体画风统一，色彩清新明亮，高清画质。`,
+    promptEn: `A high-definition 6-panel comic strip (9:16 aspect ratio) featuring the same female protagonist throughout.
+Character Consistency: Strictly adhere to the reference face. Long straight hair, gentle eyes, bright gaze, straight nose, slight smile, radiating a fresh and sweet vibe.
+Layout: Six distinct panels arranged in a grid.
+Content: Each panel captures the character in natural, lively poses and expressions.
+Text: Includes speech bubbles with clear, legible Chinese text matching the context of each scene.
+Style: Consistent illustrative style, simple or contextual backgrounds, clean composition, high quality. --ar 9:16`,
+    prompt: "6-panel comic strip of a fresh and sweet girl with Chinese speech bubbles...",
+  },
+
+    "dr-82": {
+    title: "J人保姆级旅游攻略",
+    tags: ["Travel Guide", "Itinerary", "Infographic", "Planner", "Lifestyle"],
+    promptCn: `【指令】生成一张图文并茂的“J人保姆级”旅游攻略长图。
+目的地：[插入城市/地区，如：山西]
+时间安排：[插入时长，如：3天2夜 / 5天4晚]
+核心逻辑：合理规划，不绕路，高效游玩。
+画面内容板块：
+1. 🗺️ 路线概览图：
+用时间轴或手绘地图线条串联起 [插入时长] 的行程，清晰标注每日动线。
+2. 📅 每日详细安排 (Day by Day)：
+Day 1: [自动规划合理路线，如：地标A -> 地标B -> 特色街区]
+Day 2: [自动规划路线]
+... (根据时长自动扩展)
+3. 📍 热门景点卡片：
+列出该目的地的TOP景点（如：[自动检索该地著名景点]），每个景点配一张精美小图和一句亮点介绍（如：“世界最大黄色瀑布”、“千年古寺”）。
+4. 🏠 住宿指南：
+推荐2-3个便利商圈或特色区域（如：“市中心购物便利”、“古城内体验风情”），并标注优缺点。
+5. 🥘 美食地图：
+列出必吃特色菜及推荐餐厅，配上诱人的食物插图。
+6. 💡 贴心Tips：
+天气穿衣建议、交通避雷、必备物品（如“带雨衣”、“防晒”）。
+视觉风格：
+J人狂喜的清晰信息图表或精美手账风格。
+配色清新活泼（提取目的地代表色），图标可爱实用，字体清晰易读，布局紧凑但有呼吸感。`,
+    promptEn: `A comprehensive "J-type personality" (highly organized) travel itinerary infographic for [Insert Destination].
+Duration: [Insert Duration, e.g., 3 Days 2 Nights].
+Theme: "No Detours", Efficient, Ultimate Guide.
+Layout & Content:
+1. Route Map: A visual timeline or stylized map connecting the daily route clearly.
+2. Daily Schedule: Detailed breakdown (Day 1, Day 2...) with optimized routing.
+3. Top Attractions: Cards featuring must-visit spots (Auto-retrieve famous spots) with mini-photos and key highlights.
+4. Accommodation Guide: Best areas to stay (e.g., City Center vs. Old Town) with pros/cons.
+5. Food Guide: Must-eat local delicacies and restaurant recommendations with illustrations.
+6. Tips: Weather, clothing, transport, and avoidance advice.
+Visual Style:
+Clean infographic or aesthetic sketchbook style.
+Fresh color palette matching the destination vibe. Cute icons, clear typography, organized layout. High information density but visually pleasing.`,
+    prompt: "Comprehensive travel itinerary infographic, organized planner style...",
+  },
+
+  "dr-83": {
+    title: "奢华浴室化妆镜自拍",
+    tags: ["Portrait", "Luxury", "Mirror Selfie", "Makeup", "Photography"],
+    promptCn: `【指令】生成一张超写实电影级人像摄影作品 (3:4 竖版)。
+画面主题：魅力、美感、妆前准备。
+核心构图：
+中景侧面构图。一位美丽的亚洲年轻女子位于画面右侧，正看向左侧一面带有明亮冷白色LED光环的大型圆形镜子。
+镜中完整清晰地映出她的倒影，焦点同时聚焦在女子及其倒影上。
+主体细节：
+人物：亚洲女性，妆容精致无瑕，拥有黑色长卷发。
+穿搭：身着带有金色太阳纹装饰的白色无肩带礼服或上衣，佩戴金色项链与手链。
+动作：手中拿着红色口红管，正对镜涂抹，神态专注优雅。
+环境与氛围：
+场景：奢华现代风格的浴室。深色光面瓷砖墙，黑色台面，线条流畅的白色椭圆形台上盆搭配现代镀铬水龙头。
+道具：插有一支白色马蹄莲的白色陶瓷花瓶，以及黑色托盘上的小型化妆品瓶。
+光影：主光源来自LED镜环发出的柔和冷光，形成光晕效果并突出主体，辅以室内环境光。氛围精致、宁静而私密。
+色彩：鲜明白色、深邃黑色、鲜艳红色（口红）与金属金色。
+画质：照片级真实，8K分辨率，细节锐利，倒影清晰。`,
+    promptEn: `Photorealistic cinematic portrait photography, 3:4 aspect ratio.
+Subject: Beautiful young Asian woman with long black wavy hair, applying red lipstick.
+Composition: Medium shot, side profile. She is positioned on the right, looking into a large round mirror on the left with a bright cool white LED ring light. The mirror shows a perfect, sharp reflection of her face.
+Outfit: White strapless dress or top with gold sun pattern decoration, gold necklace and bracelet.
+Setting: Luxury modern bathroom. Dark glossy tile walls, black countertop, white oval vessel sink, chrome faucet. Props: White ceramic vase with a single calla lily, small cosmetic bottles on a black tray.
+Lighting: Soft cool light from the LED mirror ring creating a halo effect, highlighting the subject. Intimate and quiet atmosphere.
+Colors: High contrast white, deep black, vivid red lipstick, metallic gold.
+Tech Specs: 8k resolution, ultra-detailed, sharp focus on reflection, professional color grading. --ar 3:4`,
+    prompt: "Luxury bathroom mirror selfie, applying lipstick, high-end photography...",
+  },
+
+    "dr-84": {
+    title: "3D皮克斯拆解艺术",
+    tags: ["3D Render", "Pixar Style", "Knolling", "Deconstruction", "Character Design"],
+    promptCn: `核心指令 (Core Instruction):
+任务：基于参考图片，创作一张超高品质、电影级的3D皮克斯/迪士尼(Pixar/Disney)风格角色拆解艺术海报。将照片中的人物转换为风格化写实(Stylized Realism)的3D动画角色，并将其个人物品以严谨的"Knolling"（整齐排列）艺术风格进行布局展示。
+画面比例：16:9 横版。
+艺术风格核心：皮克斯"风格化写实主义" — 融合夸张的卡通比例与照片级真实材质光影。
+质量标杆：对标《寻梦环游记》、《青春变形记》、《夏日友晴天》官方角色海报。
+物品布局 (Item Layout) - Knolling放射式构图:
+总物品数：30-36件，围绕角色呈90度直角或放射状有序排列。
+分类1：时尚穿搭 (Fashion Atelier) - 香槟金标签。主服装拆解：衣袖、衣领、布料裁片、内衬等全部分离悬浮。鞋履拆解：鞋底、鞋面、鞋带、鞋跟等分离。随身配饰：腰带、包袋、帽子、围巾等。
+分类2：美妆个护 (Beauty Collection) - 玫瑰金标签。彩妆：口红（带膏体切面和色号标签）、眼影盘（每格颜色清晰）、粉饼、香水瓶（液体折射清晰可见）。护肤：精华液瓶、面霜罐、美容仪器。
+分类3：数码生活 (Modern Essentials) - 钢蓝色标签。电子设备：带手机壳的智能手机（屏幕需有内容）、无线耳机、智能手表、笔记本/平板电脑、相机。材质要求：金属、玻璃（带折射）、塑料等材质需有正确的粗糙度和反射效果。
+分类4：个人爱好 (Luxury & Hobbies) - 24K金标签。奢华配饰：珠宝首饰（项链、耳环、戒指等，宝石需有色散效果）、品牌包袋（展示内部分隔和五金件）。兴趣爱好：画笔、调色盘、书籍、乐器、运动装备、咖啡用具等。
+每件物品要求：渲染质量与角色同等级别。带有01-36的圆形编号徽章。应用PBR材质，投射逼真的软阴影。
+爆炸视图技术 (Exploded View Technique):
+连接线：使用优雅的虚线/实线将悬浮的服装部件连接到角色身上。
+引导箭头：使用装饰性箭头将物品指向其文字标签。
+技术注释：材质样本（展示织物、皮革等材质的微距特写方块）、材质标签、测量标尺。
+排版设计：主标题"THE ART OF DECONSTRUCTION"使用典雅衬线体，带金箔效果。副标题"角色本质·艺术拆解"。
+设计元素 (Design Elements):
+几何框架：装饰艺术(Art Deco)风格六边形/圆形细线框。
+测量标尺：沿画面左右边缘放置。
+十字准星：在画面四角和关键焦点处添加。
+材质样本：在底部展示一排面料/皮革/金属的微距特写方块。
+信息卡片：带优雅边框的卡片。
+雷达图：角色属性雷达图。
+背景与氛围 (Background & Atmosphere):
+背景渐变：从白色到奶油色/香槟色的暖色调渐变，或从浅灰到白色的冷色调渐变。
+图案叠加：低透明度装饰艺术几何网格或蓝图线条。
+暗角效果：轻柔边缘变暗。
+氛围粒子：柔和的金色散景(Bokeh)光斑和微妙的胶片颗粒。
+技术规格 (Technical Specifications):
+渲染参数：路径追踪(Path Tracing)引擎。采样数最低4096 SPP。光线弹射12次。开启焦散(Caustics)。模型面数200万以上。毛发超过10万根。
+PBR材质流程：皮肤三层SSS，毛发各向异性，织物微观编织法线，金属度1.0，玻璃折射率1.5/2.42。
+分辨率：4K (3840×2160)。
+后期处理：电影感LUT，S型曲线对比度，辉光(Bloom)，胶片颗粒，微量色差，锐化。
+特殊指令:单人角色约30件物品。情侣角色约36件物品（爱心连接）。孕妇角色包含孕期用品。必须根据参考照片匹配角色的年龄、职业和风格。`,
+    promptEn: `Core Instruction:
+Create a high-quality, cinematic 3D Pixar/Disney style character deconstruction art poster based on the reference photo. Transform the subject into a stylized realistic 3D animated character, displayed with a rigorous Knolling (organized arrangement) layout of their belongings.
+Aspect Ratio: 16:9 Landscape.
+Art Style: Pixar "Stylized Realism" - exaggerated cartoon proportions blended with photorealistic PBR materials and lighting. Benchmark: Coco, Turning Red, Luca official posters.
+Item Layout (Knolling Radial):
+Total Items: 30-36 items arranged radially or at 90-degree angles.
+1. Fashion Atelier (Champagne Gold tags): Floating deconstructed garment parts (sleeves, collars, lining), exploded shoe components (soles, laces), belts, bags, scarves.
+2. Beauty Collection (Rose Gold tags): Lipsticks with cut sections, eyeshadow palettes, powder, perfume bottles with clear liquid refraction, skincare bottles, beauty devices.
+3. Modern Essentials (Steel Blue tags): Smartphones with screen content, headphones, smartwatches, disassembled cameras. Metals and glass must have correct roughness and reflection.
+4. Luxury & Hobbies (24K Gold tags): Jewelry with gem dispersion, branded bags showing hardware, paintbrushes, instruments, sports gear, coffee sets.
+Item Details: High render quality, numbered badges (01-36), PBR materials, realistic soft shadows.
+Exploded View Technique:
+Elegant dashed/solid lines connecting floating parts to the character. Decorative arrows pointing to labels.
+Tech Annotations: Macro material swatches (fabric/leather), material labels, measurement rulers.
+Typography: Main title "THE ART OF DECONSTRUCTION" in elegant serif with gold foil effect. Subtitle "Character Essence Unveiled".
+Design Elements:
+Art Deco geometric frames (hexagonal/circular). Measurement rulers along edges. Crosshairs. Bottom row of macro material swatches. Info cards with borders. Character attribute radar chart.
+Background & Atmosphere:
+Warm champagne or cool white gradient. Low opacity geometric grid or blueprint overlay. Soft vignette. Golden bokeh and subtle film grain.
+Technical Specs:
+Render: Path Tracing engine, 4096 SPP, 12 light bounces, Caustics enabled. High poly count (>2M), 100k+ hair strands.
+Materials: SSS skin, anisotropic hair, micro-woven fabric normals, correct IOR for glass/diamond.
+Resolution: 4K Ultra HD.
+Post-Processing: Cinematic LUT, S-curve contrast, Bloom, Film Grain, Chromatic Aberration, Sharpening.`,
+    prompt: "3D Pixar style character deconstruction art poster, knolling layout...",
+  },
+  
 };
