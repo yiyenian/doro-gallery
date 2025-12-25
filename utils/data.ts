@@ -2017,5 +2017,32 @@ Soft low-saturation color palette (Morandi tones).
 Visuals: High information density but organized, clean, and easy for children to read.`,
     prompt: "Educational English vocabulary mind map poster, watercolor style...",
   },
-  
+
+    "dr-76": {
+    title: "圣诞特辑：冷艳甜酷时尚大片",
+    tags: ["Christmas", "Fashion", "Portrait", "Full Body", "High-End"],
+    promptCn: `主题：冷艳圣诞甜酷皆在方寸间（全身构图）。
+核心要求：保持精确的面部特征，保留原始脸部结构，角色完全一致。
+妆容设计：
+高级时尚感金属质感妆面。眼影香槟金渐变至玫瑰金，精致金色眼线，下眼睑点缀碎钻如冰晶。芭比娃娃般分明睫毛，野生眉。镜面光泽樱桃红唇，高光立体腮红。
+发型与头饰：
+时髦低盘发，点缀金色装饰球和圣诞铃铛，侧边垂落卷发。头顶斜戴设计感金属质感圣诞帽，镶嵌北极星。
+服装造型 (全身)：
+改良版现代圣诞服，不对称设计，露肩。红色天鹅绒混搭金色亮片，腰间夸张金色蝴蝶结，不规则下摆露出修长双腿。搭配毛绒围巾和镶钻针织手套。脚踩一双设计感十足的**红色绑带高跟鞋**或**金色长靴**，质感高级。
+姿态与神情：
+全身时尚大片姿势。站姿，一腿前伸展示鞋履细节，一手叉腰，另一手优雅托着奢华礼物盒。表情高冷又不失节日欢愉。
+场景与灯光：
+纯白摄影棚圣诞场景。巨大白色圣诞树（金饰）作为背景。地面铺满仿真雪花，摆放着精致的雪人雕塑、圣诞麋鹿装置。周围散落着高级糖果礼盒。
+多灯位布光（主光、轮廓光、发光分离），从头到脚照亮细节，营造杂志封面的高级质感。`,
+    promptEn: `High-end fashion editorial Christmas portrait, Full Body Shot.
+Consistency: Strict identity lock on facial features based on reference.
+Makeup: Metallic fashion makeup. Champagne to rose gold gradient eyeshadow, gold eyeliner, diamond under-eye accents. Defined lashes, wild brows. Glossy cherry red lips, highlighted cheekbones.
+Hair: Chic low bun with gold baubles and bells, loose curls. Metallic stylized Christmas hat with North Star accent.
+Outfit (Full Body): Asymmetrical modern Christmas dress. One shoulder off, red velvet mixed with gold sequins, exaggerated gold waist bow, irregular hem showing long legs. Plush scarf, diamond-encrusted knit gloves. Wearing stylish **red strappy high heels** or **gold boots**.
+Pose: Full body standing pose. One leg extended forward, hand on hip, holding a luxury gift box. Elegant and powerful stance.
+Setting: Pure white studio. Giant white Christmas tree with gold decor. Faux snow floor, snowman/elk art installations. Modern fireplace with blue flame. Scattered luxury sweets. Metal holly sculptures. Ice crystal chandelier.
+Lighting: Multi-light setup, rim lighting, high contrast, glossy magazine quality. 8k resolution. --ar 9:16`,
+    prompt: "High-fashion Christmas portrait, metallic makeup, red velvet dress, full body...",
+  },
+
 };
