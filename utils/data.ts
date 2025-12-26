@@ -2303,7 +2303,7 @@ Post-Processing: Cinematic LUT, S-curve contrast, Bloom, Kodak Portra 400 grain,
     prompt: "3D Pixar style character deconstruction art poster, knolling layout...",
   },
 
-      "dr-85": {
+       "dr-85": {
     title: "3D写实人物拆解艺术",
     tags: ["3D Render", "Photorealistic", "Knolling", "Deconstruction", "Portrait"],
     promptCn: `核心指令 (Core Instruction)：
@@ -2315,7 +2315,7 @@ Post-Processing: Cinematic LUT, S-curve contrast, Bloom, Kodak Portra 400 grain,
 分类2：美妆个护 (Beauty Collection) - 玫瑰金标签。彩妆：口红（带有颜料芯切面和色号标签）、眼影盘（每格颜色区分清晰）、粉饼、香水瓶（玻璃透明度、内部焦散和液体弯月面清晰可见）。护肤：精华液瓶、保湿霜罐、面部滚轮、刮痧板。示例：香水必须展示玻璃的通透感和瓶盖的金属反射。
 分类3：私密生活 (Private Sphere) - 柔粉色标签。内衣组件（罩杯、带子、扣环、肩带）、内衣布料样本。睡衣与家居服：丝绸睡衣套装、长袍系带、拖鞋、舒适袜子。个人卫生用品：带有残留牙膏的牙刷、带有头发的发刷、用过的化妆棉、纸巾上的护肤残留物、折叠的毛巾。环境元素：香薰蜡烛（带有熔化的蜡池）、精油滴管、扩散器芦苇、带有手写笔记的日记本。所有物品必须显得真实使用过——细微的磨损、自然的褶皱和生活痕迹。
 分类4：情绪表情画廊 (Human Faces) - 赤陶色标签。一系列6-8个悬浮的微距肖像特写，捕捉不同的情绪状态：宁静的微笑、深思熟虑的凝视、眼角带笑的大笑、含泪的脆弱感、阿黑颜 (Ahei Yan)（俏皮的假装生气，眯眼、鼓腮、微皱眉）、极度狂喜（脸红、张嘴、瞳孔放大、额头微汗）、咬唇表情（下唇轻咬在齿间，下颌微紧，颈部泛红）。每个面部都以极度特写呈现，可见毛孔、细微汗毛、唇部湿润感、动态皮肤微动和精准的眼神光。
-分类5：身体姿态与运动 (Physicality Zone) - 暖肤色标签 (#E0AC69)。1:10比例的**超写实微缩真人模型**（非素模/非炭灰），呈现真实的健康肤色、血管隐现与肌肉质感。展示关键姿势：跪姿（单膝跪地，手放在大腿上）、俯卧姿势（平趴，下巴托在手掌上）、向上伸展、盘腿打坐、动态行走步伐。每个姿势强调肌肉定义、关节清晰度、重量分布、受重力影响的布料垂坠感和自然的身体不对称性。
+分类5：身体姿态与运动 (Physicality Zone) - 暖肤色标签 (#E0AC69)。1:10比例的**超写实微缩真人模型**，呈现真实的健康肤色与自然体态，绝非素模或黏土。展示关键姿势：跪姿（单膝跪地，手放在大腿上）、俯卧姿势（平趴，下巴托在手掌上）、向上伸展、盘腿打坐、动态行走步伐。每个姿势强调真实的皮肤光泽、关节清晰度、重量分布、受重力影响的布料垂坠感和自然的身体不对称性。
 每件物品要求：
 渲染质量：与角色的照片级保真度匹配——零风格化。
 编号标签：带有01-36的圆形徽章，带有微妙的投影。
@@ -2358,13 +2358,13 @@ PBR 材质工作流：皮肤：三层 SSS，双高光叶，毛孔级置换，黑
     promptEn: `Core Instruction:
 Create an ultra-high-quality, cinematic 3D realistic deconstruction art poster based on the reference image. Style: Photorealistic Humanism. Authentic anatomy, skin texture (visible pores, sweat sheen), natural lighting. Zero stylization.
 Layout (Knolling Radial): 30-36 items arranged at 90-degree angles or radial symmetry.
-1. Fashion Atelier (Champagne Gold tags): Fully deconstructed outfit (floating sleeves, panels, lining), exploded footwear (sole, upper, laces). Example: Trench coat broken into lapels, belt, main body.
-2. Beauty Collection (Rose Gold tags): Makeup with cutaways (lipstick core), eyeshadow palettes, perfume bottles with clear liquid refraction and metallic caps.
-3. Intimate Private Life (Soft Blush tags): Undergarments (cups, straps), silk sleepwear, used toothbrush, melted candle, handwritten journal. Items show authentic wear and lived-in imperfections.
+1. Fashion Atelier (Champagne Gold tags): Fully deconstructed outfit (floating sleeves, panels, lining), disassembled footwear.
+2. Beauty Collection (Rose Gold tags): Makeup with cutaways, perfume bottles with internal caustics.
+3. Intimate Private Life (Soft Blush tags): Undergarments, sleepwear, personal hygiene items (used toothbrush), ambient elements (melted candle). Items show authentic wear and lived-in imperfections.
 4. Emotional Expression Gallery (Terracotta tags): 6-8 floating macro portrait close-ups capturing micro-expressions: Serene smile, Laughter, Tearful vulnerability, 'Ahei Yan' (playful mock anger), Peak Ecstasy (flushed, sweat), Bitten-Lip. Extreme close-up details showing pores and vellus hair.
-5. Body Posture & Movement (Warm Skin Tone tags #E0AC69): 1:10 scale **photorealistic human figures** (real skin tone/muscle texture, NOT clay). Depicting poses: Kneeling, Prone, Stretching, Meditation, Walking. Highlighting muscle definition and gravity.
-Tech Details: Elegant dashed connection lines, macro material swatches (fabric/leather), measurement rulers.
-Typography: "HUMAN REALITY UNVEILED", subtitle "Essence of Being · Anatomical Truth" (Bilingual). Art Deco geometric frames.
+5. Body Posture & Movement (Warm Skin Tone tags #E0AC69): 1:10 scale **hyper-realistic miniature human figures** (real skin tone, natural posture, NOT clay). Depicting poses: Kneeling, Prone, Stretching, Meditation, Walking. Highlighting realistic skin sheen, joint articulation and gravity.
+Tech Details: Elegant dashed connection lines, material swatches, measurement rulers.
+Typography: "HUMAN REALITY UNVEILED", subtitle "Essence of Being · Anatomical Truth".
 Atmosphere: Warm ivory or cool concrete gradient background. Blueprint grid overlay. Subtle bokeh and Kodak Portra 400 film grain.
 Render: Path Tracing, 4096 SPP, 12 bounces. Full PBR workflow (Triple-layer SSS skin). 8k resolution. --ar 16:9 --style raw`,
     prompt: "3D photorealistic character deconstruction art poster, knolling layout...",
