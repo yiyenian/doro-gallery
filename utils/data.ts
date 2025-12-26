@@ -2303,37 +2303,38 @@ Post-Processing: Cinematic LUT, S-curve contrast, Bloom, Kodak Portra 400 grain,
     prompt: "3D Pixar style character deconstruction art poster, knolling layout...",
   },
 
-       "dr-85": {
+    "dr-85": {
     title: "3D写实人物拆解艺术",
     tags: ["3D Render", "Photorealistic", "Knolling", "Deconstruction", "Portrait"],
     promptCn: `核心指令 (Core Instruction)：
 任务：基于参考图片，创作一张超高品质、电影级的3D写实角色拆解艺术海报。
 风格核心：照片级人文主义 (Photorealistic Humanism)。完全摒弃卡通风格，强调真实解剖结构、皮肤纹理（可见毛孔、汗光）、真实光影与情感共鸣。
-布局 (Knolling放射式)：总物品数30-36件，围绕角色呈90度直角或放射状有序排列。
-物品布局 (Item Layout)：
+关键要求：海报中的所有标签、标题和说明文字必须采用中英双语 (Chinese & English) 排版，汉字设计需具有现代宋体或黑体的优雅感。
+物品布局 (Item Layout) - Knolling放射式构图：
+总物品数30-36件，围绕角色呈90度直角或放射状有序排列。
 分类1：时尚工坊 (Fashion Atelier) - 香槟金标签。主服装拆解：衣袖、衣领、布料裁片、内衬、纽扣、拉链等全部分离悬浮，具有真实布料物理效果。鞋履拆解：鞋底、鞋面、鞋带、鞋跟、鞋垫分离。随身配饰：腰带、手提包、帽子、围巾、手套。示例：一件风衣可拆解为翻领、肩章、腰带、袖口束带和主衣身面板。
 分类2：美妆个护 (Beauty Collection) - 玫瑰金标签。彩妆：口红（带有颜料芯切面和色号标签）、眼影盘（每格颜色区分清晰）、粉饼、香水瓶（玻璃透明度、内部焦散和液体弯月面清晰可见）。护肤：精华液瓶、保湿霜罐、面部滚轮、刮痧板。示例：香水必须展示玻璃的通透感和瓶盖的金属反射。
 分类3：私密生活 (Private Sphere) - 柔粉色标签。内衣组件（罩杯、带子、扣环、肩带）、内衣布料样本。睡衣与家居服：丝绸睡衣套装、长袍系带、拖鞋、舒适袜子。个人卫生用品：带有残留牙膏的牙刷、带有头发的发刷、用过的化妆棉、纸巾上的护肤残留物、折叠的毛巾。环境元素：香薰蜡烛（带有熔化的蜡池）、精油滴管、扩散器芦苇、带有手写笔记的日记本。所有物品必须显得真实使用过——细微的磨损、自然的褶皱和生活痕迹。
 分类4：情绪表情画廊 (Human Faces) - 赤陶色标签。一系列6-8个悬浮的微距肖像特写，捕捉不同的情绪状态：宁静的微笑、深思熟虑的凝视、眼角带笑的大笑、含泪的脆弱感、阿黑颜 (Ahei Yan)（俏皮的假装生气，眯眼、鼓腮、微皱眉）、极度狂喜（脸红、张嘴、瞳孔放大、额头微汗）、咬唇表情（下唇轻咬在齿间，下颌微紧，颈部泛红）。每个面部都以极度特写呈现，可见毛孔、细微汗毛、唇部湿润感、动态皮肤微动和精准的眼神光。
-分类5：身体姿态与运动 (Physicality Zone) - 暖肤色标签 (#E0AC69)。1:10比例的**超写实微缩真人模型**，呈现真实的健康肤色与自然体态，绝非素模或黏土。展示关键姿势：跪姿（单膝跪地，手放在大腿上）、俯卧姿势（平趴，下巴托在手掌上）、向上伸展、盘腿打坐、动态行走步伐。每个姿势强调真实的皮肤光泽、关节清晰度、重量分布、受重力影响的布料垂坠感和自然的身体不对称性。
+分类5：身体姿态与运动 (Physicality Zone) - 暖肤色标签 (#E0AC69)。1:10比例的超写实微缩真人模型，呈现真实的健康肤色与自然体态，绝非素模或黏土。展示关键姿势：跪姿（单膝跪地，手放在大腿上）、俯卧姿势（平趴，下巴托在手掌上）、向上伸展、盘腿打坐、动态行走步伐。每个姿势强调真实的皮肤光泽、肌肉定义、关节清晰度、重量分布、受重力影响的布料垂坠感和自然的身体不对称性。
 每件物品要求：
 渲染质量：与角色的照片级保真度匹配——零风格化。
 编号标签：带有01-36的圆形徽章，带有微妙的投影。
 材质与阴影：完整的PBR工作流，具有物理准确的粗糙度、高光和法线贴图；投射在在自然表面上的柔和环境光遮蔽阴影。
-爆炸视图技术 (Exploded View Technique)：
+爆炸视图技术 (Exploded View Technique)
 连接线：优雅的细虚线或实线将悬浮的服装部件连接回角色的身体。
 引导箭头：极简装饰性箭头将每个对象链接到其描述标签。
-技术注释：材质样本：展示织物（丝绸、棉、羊毛）、皮革纹理、金属饰面的微距特写方块。材质标签：例如"100%桑蚕丝"、"全粒面意大利皮革"。测量标尺：沿边缘集成的双单位（厘米/英寸）标尺。
-排版设计：
-主标题：HUMAN REALITY UNVEILED。字体：中文使用优雅的衬线体（如方正宋刻本秀楷），英文使用Playfair Display——均带有哑光纸质纹理（无金属箔）。
-副标题：（主标题下方，流畅手写体）"Essence of Being · Anatomical Truth / 存在之核·形神解构"，双语排版，优雅而不突兀。
-分类标题：带图标的圆角矩形标签，" 私密生活" (柔粉色 #F8C8DC)，" 情绪表情画廊" (赤陶色 #E2725B)，" 身体姿态与运动" (暖肤色 #E0AC69)。
+技术注释：材质样本：展示织物（丝绸、棉、羊毛）、皮革纹理、金属饰面的微距特写方块。材质标签：例如 100%桑蚕丝 / Silk、全粒面意大利皮革 / Leather (必须双语)。测量标尺：沿边缘集成的双单位（厘米/英寸）标尺。
+排版设计 (Typography)：
+主标题：人形解构 · HUMAN REALITY UNVEILED。字体：中文使用优雅的衬线体（如方正宋刻本秀楷），英文使用Playfair Display——均带有哑光纸质纹理（无金属箔）。
+副标题：（主标题下方，流畅手写体） Essence of Being · Anatomical Truth / 存在之核·形神解构 ，双语排版，优雅而不突兀。
+分类标题：带图标的圆角矩形标签，必须双语：私密生活 · Intimate (柔粉色 #F8C8DC)，情绪表情 · Emotions (赤陶色 #E2725B)，身体姿态 · Posture (暖肤色 #E0AC69)。
 设计元素 (Design Elements)：
 几何框架：极简细线六边形或圆形（0.5–1pt 描边），采用柔和的灰色来组合物品群组——受装饰艺术影响但去饱和。
 测量标尺：沿左右边缘放置，增强技术真实感。
 十字准星：四角和焦点处的微弱瞄准标线。
 材质样本：底部条带显示织物/皮革/金属微观纹理瓷砖。
-信息卡片：带有物品详细信息（品牌、材质、产地）的优雅边框卡片。
+信息卡片：带有物品详细信息（品牌、材质、产地）的优雅边框卡片，中英双语。
 属性雷达图：封装在精致框架中，显示特征如：亲密感 ★★★★★, 真实感 ★★★★★, 脆弱感 ★★★★☆。
 连接线条：哑光银色或暖青铜色虚线，带有锥形箭头。
 背景与氛围 (Background & Atmosphere)：
@@ -2357,17 +2358,132 @@ PBR 材质工作流：皮肤：三层 SSS，双高光叶，毛孔级置换，黑
 关键要求：忠实匹配参考照片的年龄、种族、职业、体型、伤疤、纹身和个人风格——包括皮肤瑕疵、雀斑和独特的面部结构。`,
     promptEn: `Core Instruction:
 Create an ultra-high-quality, cinematic 3D realistic deconstruction art poster based on the reference image. Style: Photorealistic Humanism. Authentic anatomy, skin texture (visible pores, sweat sheen), natural lighting. Zero stylization.
+Text Strategy: Bilingual Typography (Chinese & English) is essential. All titles, headers, and labels must feature elegant Chinese characters paired with English.
 Layout (Knolling Radial): 30-36 items arranged at 90-degree angles or radial symmetry.
-1. Fashion Atelier (Champagne Gold tags): Fully deconstructed outfit (floating sleeves, panels, lining), disassembled footwear.
-2. Beauty Collection (Rose Gold tags): Makeup with cutaways, perfume bottles with internal caustics.
-3. Intimate Private Life (Soft Blush tags): Undergarments, sleepwear, personal hygiene items (used toothbrush), ambient elements (melted candle). Items show authentic wear and lived-in imperfections.
-4. Emotional Expression Gallery (Terracotta tags): 6-8 floating macro portrait close-ups capturing micro-expressions: Serene smile, Laughter, Tearful vulnerability, 'Ahei Yan' (playful mock anger), Peak Ecstasy (flushed, sweat), Bitten-Lip. Extreme close-up details showing pores and vellus hair.
-5. Body Posture & Movement (Warm Skin Tone tags #E0AC69): 1:10 scale **hyper-realistic miniature human figures** (real skin tone, natural posture, NOT clay). Depicting poses: Kneeling, Prone, Stretching, Meditation, Walking. Highlighting realistic skin sheen, joint articulation and gravity.
+1. Fashion Atelier (Tag: "时尚 · Fashion" - Champagne Gold): Fully deconstructed outfit (floating sleeves, panels, lining), disassembled footwear.
+2. Beauty Collection (Tag: "美妆 · Beauty" - Rose Gold): Makeup with cutaways (lipstick core), eyeshadow palettes, perfume bottles with internal caustics and metallic caps.
+3. Intimate Private Life (Tag: "私物 · Intimate" - Soft Blush): Undergarments (cups, straps), silk sleepwear, used toothbrush, melted candle, handwritten journal. Items show authentic wear and lived-in imperfections.
+4. Emotional Expression Gallery (Tag: "微表情 · Emotions" - Terracotta): 6-8 floating macro portrait close-ups capturing micro-expressions: Serene smile, Laughter, Tearful vulnerability, 'Ahei Yan' (playful mock anger), Peak Ecstasy (flushed, sweat), Bitten-Lip. Extreme close-up details showing pores and vellus hair.
+5. Body Posture & Movement (Tag: "体态 · Posture" - Warm Skin Tone #E0AC69): 1:10 scale **hyper-realistic living human figures** (real skin tone, veins, muscle texture, NOT clay). Depicting poses: Kneeling, Prone, Stretching, Meditation, Walking. Highlighting realistic skin sheen, joint articulation and gravity.
 Tech Details: Elegant dashed connection lines, material swatches, measurement rulers.
-Typography: "HUMAN REALITY UNVEILED", subtitle "Essence of Being · Anatomical Truth".
+Typography: Main Title "**人形解构 · HUMAN REALITY UNVEILED**". Subtitle "Essence of Being · 灵肉之实". Item Labels: Small floating text indicating material or name in Chinese/English.
 Atmosphere: Warm ivory or cool concrete gradient background. Blueprint grid overlay. Subtle bokeh and Kodak Portra 400 film grain.
 Render: Path Tracing, 4096 SPP, 12 bounces. Full PBR workflow (Triple-layer SSS skin). 8k resolution. --ar 16:9 --style raw`,
-    prompt: "3D photorealistic character deconstruction art poster, knolling layout...",
+    prompt: "3D photorealistic character deconstruction poster, bilingual Chinese/English typography...",
   },
-  
+
+    "dr-86": {
+    title: "九宫格潮流明星肖像",
+    tags: ["Portrait", "Fashion", "Grid", "Black and White", "Trendy"],
+    promptCn: `项目类型：九宫格潮流明星肖像拼贴。
+核心要求：所有9个画面中的人物面部特征必须与上传参考图完全一致。
+视觉风格：
+色调：黑白高调摄影，明亮灰阶，纯净白色，无黑色死角。
+背景：影棚无缝白纸背景，或浅灰混凝土墙，极简明亮空间。
+灯光：柔和正面光，蝴蝶光，美人碟布光，无背光，面部无强烈阴影。
+氛围：潮流、酷帅、自信、明星范儿、时尚杂志大片感、充满活力、前卫。
+人物造型：
+发型多样性：酷感凌乱底切(Undercut)、飞机头(Quiff)、纹理短发、现代背头。保留设计师款胡茬或精心修剪的络腮胡。
+穿搭风格：前卫街头风，皮夹克领口，设计师卫衣，极简叠穿，个性配饰（如单耳耳环）。
+表情与姿态：
+自信歪嘴笑、酷酷地看向画外、手抓头发、轻微咬肌紧绷、直视镜头的自信眼神、动态姿势。
+构图：
+3x3 网格拼贴，动态布局（非完全统一），特写与中景混合。
+技术规格：
+中画幅时尚相机质感，柯达 T-Max 400 胶片（细腻颗粒，锐利），8K分辨率，大师级画质，对焦锐利。`,
+    promptEn: `Nine-grid trendy star portrait collage, 3x3 layout.
+Subject: Same male model in all 9 panels, strict face consistency based on input reference.
+Visual Style: Black and white, Monochrome, High key, Bright grayscale. Background: Seamless white paper or light gray concrete wall, minimalist bright studio.
+Lighting: Soft frontal butterfly lighting, beauty dish, no harsh shadows.
+Mood: Trendy, Cool, Confident, Star quality, Edgy fashion editorial.
+Styling: Varied hairstyles (cool messy undercut, styled quiff, textured crop, slicked back), designer stubble. Streetwear vibe (leather jacket, hoodie, minimalist layers, single earring).
+Poses: Confident smirk, looking off-camera, hand in hair, jaw clench, dynamic poses. Mix of close-ups and medium shots.
+Tech: Medium format fashion camera, Kodak T-Max 400 film stock (fine grain), 8k resolution, sharp focus. --ar 3:4`,
+    prompt: "9-grid black and white trendy fashion portrait collage...",
+  },
+
+    "dr-87": {
+    title: "专业品牌IP形象设计开发看板",
+    tags: ["IP Design", "Brand Identity", "Character Design", "Layout", "Professional"],
+    promptCn: `生成一张影棚级质量的完整专业IP角色设计开发文档看板 (16:9)。
+[步骤1：LOGO分析]
+智能分析并提取品牌色彩、设计风格、视觉元素、字体特征和品牌性格特质。
+如果未提供logo，首先为[品牌名称/行业]设计一个专业现代的logo。
+[步骤2：设计参数]
+基础Logo：[上传图片分析结果 / 新设计的logo]
+形象灵感来源：[填入灵感]
+色彩系统：从logo自动提取
+品牌行业：自动检测
+[完整设计看板布局 - 超高信息密度]：
+1. 顶部行 - 品牌基础 (Brand Foundation)：
+左：品牌DNA分析（logo、色板HEX/RGB、品牌性格关键词、用户画像）。
+中：概念构思（灵感情绪板、参考图、设计方向箭头）。
+右：形态研究（logo解剖、拟人化探索、演变草图）。
+2. 第二行 - 草图开发 (Sketch Development)：
+左：概念探索（10-12个多样化草图、不同性格/风格测试）。
+中：精细线稿（3个最佳方案的三视图、构造网格、尺寸标注）。
+右：细节精修（解剖分解、模块化元素、特征特写）。
+3. 第三行 - 角色系统 (Character System)：
+左：表情设定表（8-12种面部表情展示情感范围）。
+中：姿势库（6-10个动态姿势展现性格）。
+右：转身视图（360度旋转图，保持模型一致）。
+4. 第四行 - 色彩与材质 (Color & Material)：
+左：色彩开发（主色/辅色/强调色板，变体方案）。
+中：材质规格（纹理细节、布料图案、制造工艺说明）。
+右：色彩应用（深/浅色模式，对比度检查）。
+5. 第五行 - 技术规格 (Technical Specs)：
+左：构造指南（尺寸图、比例、网格系统）。
+中：设计规范（最小尺寸、安全空间、正误用法）。
+右：资产变体（不同尺寸图标、线稿版）。
+6. 底部行 - 应用与成品 (Applications)：
+左：数字应用（App图标、头像、吉祥物UI、动图概念）。
+中：实物应用（毛绒玩具渲染、包装、周边样机）。
+右：最终主视觉渲染（超精致全彩插画，影棚光效，融入logo）。
+整体视觉风格：
+专业商业设计文档美学，超清晰网格布局，模块化区块，色彩编码分隔。
+简约无衬线字体，扁平化图标，充足留白，信息层次分明。
+8K超高分辨率，印刷就绪质量，Behance/Dribbble作品集标准。`,
+  },
+
+    "dr-88": {
+    title: "涂鸦速写艺术",
+    tags: ["Illustration", "Sketch", "Graffiti", "Dry Brush", "Minimalist"],
+    promptCn: `【指令】生成一张充满张力的涂鸦速写艺术插画。
+主题：[插入主题/主体]
+视觉风格 (核心)：
+线条：随手、快速、夸张的黑色墨线或炭笔线条。线条不求精准，但求生动和力度，带有涂鸦感 (Graffiti Sketch)。
+上色：使用粗糙的干刷 (Dry Brush) 笔触进行块面填色。颜色饱和度适中，保留笔触的飞白和纹理。拒绝完美平涂。
+构图与背景：大面积留白 (Negative Space)，背景保持干净的白色，突显主体。
+禁忌：不要使用透明水彩晕染、纸张纹理叠加或细腻的厚涂风格。保持干脆利落的速写感。
+画面内容：以 [插入主题/主体] 为核心，通过夸张的比例和动态的线条表现其特征。`,
+  },
+
+    "dr-89": {
+    title: "独立女装品牌型录",
+    tags: ["Fashion", "Lookbook", "Minimalist", "Photography", "Layout", "Commercial"],
+    promptCn: `一张高端独立女装品牌的时装型录海报，整体为纯白背景，干净留白，极简排版，呈现品牌官网线上Lookbook的视觉风格。
+画面左侧（主视觉）：
+一位中国女性模特（20–25岁），气质清冷。中景到全身构图，自然站立姿态，身体微微侧倾。表情克制放松，眼神平静。气质介于少女与成熟之间，干净不做作。头发自然垂落略带风感，妆容清透自然。模特穿着[学院风格穿搭]（可替换为其他风格），服装面料质感清晰可见（针织、羊毛、马海毛等），画面真实细腻，具有商业服装摄影质感。
+画面右侧：
+排列两到三位比例较小的全身模特，纵向整齐排布，分别展示同一系列中的不同搭配。单套穿搭风格有区分，但整体色系与气质统一，呈现标准时装型录陈列逻辑，人物之间留白均匀比例协调。
+右下区域：
+出现少量服装单品的小图陈列（如半身裙、下装），平铺或简洁立放，呈现为产品目录式展示，不抢主视觉。
+文字排版：
+画面顶部左侧小号文字“[品牌名] online”。顶部中间文字“[季节年份]”。顶部右侧文字“for spring & summer”。底部区域有一小段品牌理念英文说明文字，字体为现代无衬线字体，字重轻，字距舒展，像印刷在画面中，克制不像广告不夸张。
+整体风格：
+独立设计师女装气质，偏日韩小众品牌审美，年轻克制略带复古感，商业型录摄影风格。光线均匀柔和，无强烈阴影，画面高级干净真实。无戏剧化光效无夸张姿势。拒绝广告海报风格、霓虹色或高饱和色彩。`,
+    promptEn: `High-end independent women's fashion lookbook poster. Pure white background, clean negative space, minimalist layout, official brand website/online lookbook visual style.
+Left Side (Hero Visual):
+A Chinese female model (20-25 years old), cool temperament, occupying the main proportion. Medium to full shot, natural standing pose, slight lean, restrained and relaxed expression, calm eyes. Vibe between girlish and mature, clean and unpretentious. Hair naturally falling with a slight breeze, clear natural makeup. Wearing [Academy/Preppy Style] outfit. Fabric textures clearly visible (knit, wool, mohair). Realistic, delicate, commercial fashion photography quality.
+Right Side:
+2-3 smaller full-body models arranged vertically, displaying different outfits from the same collection. Distinct styles but unified color palette and vibe. Standard lookbook display logic, balanced spacing.
+Bottom Right:
+Small display of clothing items (skirts, bottoms), flat lay or simple standing, catalog style, not stealing focus.
+Typography:
+Top-left small text "[Brand Name] online", Top-center "[Season Year]", Top-right "for spring & summer". Bottom area with a small paragraph of brand philosophy in English. Modern sans-serif font, light weight, spacious tracking, print-like quality, restrained, non-advertising feel.
+Overall Style:
+Independent designer vibe, niche Japanese/Korean aesthetic, young, restrained, slightly retro. Commercial catalog photography style. Even soft lighting, no harsh shadows. High-end, clean, real. No dramatic lighting, no exaggerated poses. --ar 3:4 --style raw --v 6.0`,
+    prompt: "High-end independent fashion lookbook layout, minimalist white background...",
+  },
+
 };
