@@ -2303,32 +2303,50 @@ Post-Processing: Cinematic LUT, S-curve contrast, Bloom, Kodak Portra 400 grain,
     prompt: "3D Pixar style character deconstruction art poster, knolling layout...",
   },
 
-    "dr-85": {
+      "dr-85": {
     title: "3D写实人物拆解艺术",
     tags: ["3D Render", "Photorealistic", "Knolling", "Deconstruction", "Portrait"],
-    promptCn: `核心任务：基于参考图片，创作一张超高品质、电影级的3D写实角色拆解艺术海报。风格核心：照片级人文主义 (Photorealistic Humanism)。完全摒弃卡通风格，强调真实解剖结构、皮肤纹理（可见毛孔、汗光）、真实光影与情感共鸣。
-物品布局 (Knolling放射式构图)：总物品数30-36件，围绕角色呈90度直角或放射状有序排列。
-分类1：时尚工坊 (香槟金标签)。主服装拆解：衣袖、衣领、布料裁片、内衬等全部分离悬浮，具有真实布料物理效果。鞋履拆解：鞋底、鞋面、鞋带、鞋跟等分离。随身配饰：腰带、手提包、帽子、围巾、手套。
-分类2：美妆个护 (玫瑰金标签)。彩妆：口红（带有颜料芯切面和色号标签）、眼影盘（每格颜色区分清晰）、粉饼、香水瓶（玻璃透明度和液体折射清晰可见）。护肤：精华液瓶、保湿霜罐、面部滚轮、刮痧板。
-分类3：私密生活 (柔粉色标签)。内衣组件（罩杯、带子、扣环、肩带）、内衣布料样本。睡衣与家居服：丝绸睡衣套装、长袍系带、拖鞋、舒适袜子。个人卫生用品：带有残留牙膏的牙刷、带有头发的发刷、用过的化妆棉、纸巾上的护肤残留物、折叠的毛巾。环境元素：香薰蜡烛（带有熔化的蜡池）、精油滴管、扩散器芦苇、带有手写笔记的日记本。所有物品必须显得真实使用过——细微的磨损、自然的褶皱和生活痕迹。
-分类4：情绪表情画廊 (赤陶色标签)。一系列6-8个悬浮的微距肖像特写，捕捉不同的情绪状态：宁静的微笑、深思熟虑的凝视、眼角带笑的大笑、含泪的脆弱感、阿黑颜 (Ahei Yan)（俏皮的假装生气，眯眼、鼓腮、微皱眉）、极度狂喜（脸红、张嘴、瞳孔放大、额头微汗）、咬唇表情（下唇轻咬在齿间，下颌微紧，颈部泛红）。每个面部都以极度特写呈现，可见毛孔、细微汗毛、唇部湿润感、动态皮肤微动和精准的眼神光。
-分类5：身体姿态与运动 (炭灰色标签)。1:10比例的微缩全身手办，展示关键姿势：跪姿（单膝跪地，手放在大腿上）、俯卧姿势（平趴，下巴托在手掌上）、向上伸展、盘腿打坐、动态行走步伐。每个姿势强调肌肉定义、关节清晰度、重量分布、受重力影响的布料垂坠感和自然的身体不对称性。
-每件物品要求：渲染质量：与角色的照片级保真度匹配——零风格化。编号标签：带有01-36的圆形徽章，带有微妙的投影。材质与阴影：完整的PBR工作流，具有物理准确的粗糙度、高光和法线贴图；投射在在自然表面上的柔和环境光遮蔽阴影。
-爆炸视图技术 (Exploded View Technique)
-连接线：优雅的细虚线或实线将悬浮的服装部件连接回角色的身体。引导箭头：极简装饰性箭头将每个对象链接到其描述标签。
-技术注释：材质样本：织物（丝绸、棉、羊毛）、皮革纹理、金属饰面的微距特写方块。材质标签：例如"100%桑蚕丝"、"全粒面意大利皮革"。测量标尺：沿边缘集成的双单位（厘米/英寸）标尺。
-排版设计：主标题：THE ART OF DECONSTRUCTION · HUMAN REALITY UNVEILED。字体：中文使用优雅的衬线体（如方正宋刻本秀楷），英文使用Playfair Display——均带有哑光纸质纹理（无金属箔）。副标题：（主标题下方，流畅手写体）"Essence of Being · Anatomical Truth / 存在之核·形神解构"，双语排版，优雅而不突兀。分类标题：带图标的圆角矩形标签，" 私密生活" (柔粉色 #F8C8DC)，" 情绪表情画廊" (赤陶色 #E2725B)，" 身体姿态与运动" (炭灰色 #36454F)。
+    promptCn: `核心指令 (Core Instruction)：
+任务：基于参考图片，创作一张超高品质、电影级的3D写实角色拆解艺术海报。
+风格核心：照片级人文主义 (Photorealistic Humanism)。完全摒弃卡通风格，强调真实解剖结构、皮肤纹理（可见毛孔、汗光）、真实光影与情感共鸣。
+布局 (Knolling放射式)：总物品数30-36件，围绕角色呈90度直角或放射状有序排列。
+物品布局 (Item Layout)：
+分类1：时尚工坊 (Fashion Atelier) - 香槟金标签。主服装拆解：衣袖、衣领、布料裁片、内衬、纽扣、拉链等全部分离悬浮，具有真实布料物理效果。鞋履拆解：鞋底、鞋面、鞋带、鞋跟、鞋垫分离。随身配饰：腰带、手提包、帽子、围巾、手套。示例：一件风衣可拆解为翻领、肩章、腰带、袖口束带和主衣身面板。
+分类2：美妆个护 (Beauty Collection) - 玫瑰金标签。彩妆：口红（带有颜料芯切面和色号标签）、眼影盘（每格颜色区分清晰）、粉饼、香水瓶（玻璃透明度、内部焦散和液体弯月面清晰可见）。护肤：精华液瓶、保湿霜罐、面部滚轮、刮痧板。示例：香水必须展示玻璃的通透感和瓶盖的金属反射。
+分类3：私密生活 (Private Sphere) - 柔粉色标签。内衣组件（罩杯、带子、扣环、肩带）、内衣布料样本。睡衣与家居服：丝绸睡衣套装、长袍系带、拖鞋、舒适袜子。个人卫生用品：带有残留牙膏的牙刷、带有头发的发刷、用过的化妆棉、纸巾上的护肤残留物、折叠的毛巾。环境元素：香薰蜡烛（带有熔化的蜡池）、精油滴管、扩散器芦苇、带有手写笔记的日记本。所有物品必须显得真实使用过——细微的磨损、自然的褶皱和生活痕迹。
+分类4：情绪表情画廊 (Human Faces) - 赤陶色标签。一系列6-8个悬浮的微距肖像特写，捕捉不同的情绪状态：宁静的微笑、深思熟虑的凝视、眼角带笑的大笑、含泪的脆弱感、阿黑颜 (Ahei Yan)（俏皮的假装生气，眯眼、鼓腮、微皱眉）、极度狂喜（脸红、张嘴、瞳孔放大、额头微汗）、咬唇表情（下唇轻咬在齿间，下颌微紧，颈部泛红）。每个面部都以极度特写呈现，可见毛孔、细微汗毛、唇部湿润感、动态皮肤微动和精准的眼神光。
+分类5：身体姿态与运动 (Physicality Zone) - 暖肤色标签 (#E0AC69)。1:10比例的**超写实微缩真人模型**（非素模/非炭灰），呈现真实的健康肤色、血管隐现与肌肉质感。展示关键姿势：跪姿（单膝跪地，手放在大腿上）、俯卧姿势（平趴，下巴托在手掌上）、向上伸展、盘腿打坐、动态行走步伐。每个姿势强调肌肉定义、关节清晰度、重量分布、受重力影响的布料垂坠感和自然的身体不对称性。
+每件物品要求：
+渲染质量：与角色的照片级保真度匹配——零风格化。
+编号标签：带有01-36的圆形徽章，带有微妙的投影。
+材质与阴影：完整的PBR工作流，具有物理准确的粗糙度、高光和法线贴图；投射在在自然表面上的柔和环境光遮蔽阴影。
+爆炸视图技术 (Exploded View Technique)：
+连接线：优雅的细虚线或实线将悬浮的服装部件连接回角色的身体。
+引导箭头：极简装饰性箭头将每个对象链接到其描述标签。
+技术注释：材质样本：展示织物（丝绸、棉、羊毛）、皮革纹理、金属饰面的微距特写方块。材质标签：例如"100%桑蚕丝"、"全粒面意大利皮革"。测量标尺：沿边缘集成的双单位（厘米/英寸）标尺。
+排版设计：
+主标题：HUMAN REALITY UNVEILED。字体：中文使用优雅的衬线体（如方正宋刻本秀楷），英文使用Playfair Display——均带有哑光纸质纹理（无金属箔）。
+副标题：（主标题下方，流畅手写体）"Essence of Being · Anatomical Truth / 存在之核·形神解构"，双语排版，优雅而不突兀。
+分类标题：带图标的圆角矩形标签，" 私密生活" (柔粉色 #F8C8DC)，" 情绪表情画廊" (赤陶色 #E2725B)，" 身体姿态与运动" (暖肤色 #E0AC69)。
 设计元素 (Design Elements)：
-几何框架：极简细线六边形或圆形（0.5–1pt 描边），采用柔和的灰色来组合物品群组——受装饰艺术影响但去饱和。测量标尺：沿左右边缘放置，增强技术真实感。十字准星：四角和焦点处的微弱瞄准标线。材质样本：底部条带显示织物/皮革/金属微观纹理瓷砖。信息卡片：带有物品详细信息（品牌、材质、产地）的优雅边框卡片。属性雷达图：封装在精致框架中，显示特征如：亲密感 ★★★★★, 真实感 ★★★★★, 脆弱感 ★★★★☆。连接线条：哑光银色或暖青铜色虚线，带有锥形箭头。
+几何框架：极简细线六边形或圆形（0.5–1pt 描边），采用柔和的灰色来组合物品群组——受装饰艺术影响但去饱和。
+测量标尺：沿左右边缘放置，增强技术真实感。
+十字准星：四角和焦点处的微弱瞄准标线。
+材质样本：底部条带显示织物/皮革/金属微观纹理瓷砖。
+信息卡片：带有物品详细信息（品牌、材质、产地）的优雅边框卡片。
+属性雷达图：封装在精致框架中，显示特征如：亲密感 ★★★★★, 真实感 ★★★★★, 脆弱感 ★★★★☆。
+连接线条：哑光银色或暖青铜色虚线，带有锥形箭头。
 背景与氛围 (Background & Atmosphere)：
-背景渐变：暖色变体——象牙白 (#FFFFF0) 到柔和燕麦奶色 (#F5E9D7)；或冷色变体——浅混凝土色 (#EAEAEA) 到摄影棚白 (#FFFFFF)。覆盖图案：5–10% 不透明度的蓝图网格或微弱的建筑绘图线条。暗角效果：轻柔的边缘变暗以集中注意力。氛围粒子：微妙的金色散景光球和细腻的胶片颗粒（柯达 Portra 400 模拟），营造电影深度——绝不喧宾夺主。
-色彩方案 (Color Palette)：
-女性/亲密主题：香槟金 (#D4AF37), 玫瑰金 (#B76E79), 燕麦奶色 (#F5E9D7), 腮红粉 (#F8C8DC)。
-男性/真实主题：板岩灰 (#708090), 暖青铜 (#CD7F32), 混凝土白 (#F0F0F0)。
-中性/奢华主题：炭黑 (#2F2F2F), 象牙白 (#FFFFF0), 深勃艮第红 (#800020)。
-情侣主题：左侧冷色调，右侧暖色调——在中心混合，带有共享的亲密物品。
+背景渐变：暖色变体——象牙白 (#FFFFF0) 到柔和燕麦奶色 (#F5E9D7)；或冷色变体——浅混凝土色 (#EAEAEA) 到摄影棚白 (#FFFFFF)。
+覆盖图案：5–10% 不透明度的蓝图网格或微弱的建筑绘图线条。
+暗角效果：轻柔的边缘变暗以集中注意力。
+氛围粒子：微妙的金色散景光球和细腻的胶片颗粒（柯达 Portra 400 模拟），营造电影深度——绝不喧宾夺主。
 技术规格 (Technical Specifications)：
-渲染引擎：路径追踪 (Path Tracing) 等同于 Cycles/Arnold/RenderMan 级别。采样数：最低 4096 SPP 以获得无噪点输出。光线弹射：12 次以获得准确的全局光照。焦散：开启，用于玻璃和液体的真实感。几何体：角色网格 >200 万多边形；姿势手办 >50 万每个。毛发：每个角色 >10 万根发丝，经过物理模拟并与风互动。
+渲染引擎：路径追踪 (Path Tracing) 等同于 Cycles/Arnold/RenderMan 级别。
+采样数：最低 4096 SPP 以获得无噪点输出。
+光线弹射：12 次以获得准确的全局光照。
+焦散：开启，用于玻璃和液体的真实感。
+几何体：角色网格 >200 万多边形；姿势手办 >50 万每个。毛发：每个角色 >10 万根发丝，经过物理模拟并与风互动。
 PBR 材质工作流：皮肤：三层 SSS，双高光叶，毛孔级置换，黑色素变化。毛发：各向异性着色器，主/副高光，发根到发梢的颜色变化。织物：编织法线贴图，基于纤维方向的定向粗糙度，微皱褶。金属：金属度 1.0，粗糙度 0.1–0.4（拉丝或抛光视情况而定）。玻璃：折射率 1.5；水折射率 1.33，带弯月面细节。皮革：粗糙度 0.65，带有自然纹理变化的凹凸贴图。
 分辨率与输出：4K (3840×2160)，16:9。32 位浮点色深。16x MSAA 抗锯齿。
 后期处理：色彩分级：应用电影感 LUT；无纯黑（最低 RGB 15,15,15）。温和的 S 曲线用于对比度。根据主题调整色温 ±200K。全局饱和度降低 5%；关键颜色（如腮红、金色）提高 10%。特效：辉光：高光部分的柔和光晕。胶片颗粒：有机柯达 Portra 400 纹理。色差：几乎不可察觉的边缘条纹。暗角：中等强度。锐化：输出级自适应锐化。
@@ -2337,6 +2355,19 @@ PBR 材质工作流：皮肤：三层 SSS，双高光叶，毛孔级置换，黑
 情侣角色：约 36 件物品（每人 18 件），通过微妙的心形负空间连接，带有性别编码的调色板和共享的亲密物品（例如，一个枕头，共享日记）。
 孕妇角色：包含产前用品（托腹油、维生素、B超打印件）；在腹部附近添加半透明胎儿图标。
 关键要求：忠实匹配参考照片的年龄、种族、职业、体型、伤疤、纹身和个人风格——包括皮肤瑕疵、雀斑和独特的面部结构。`,
+    promptEn: `Core Instruction:
+Create an ultra-high-quality, cinematic 3D realistic deconstruction art poster based on the reference image. Style: Photorealistic Humanism. Authentic anatomy, skin texture (visible pores, sweat sheen), natural lighting. Zero stylization.
+Layout (Knolling Radial): 30-36 items arranged at 90-degree angles or radial symmetry.
+1. Fashion Atelier (Champagne Gold tags): Fully deconstructed outfit (floating sleeves, panels, lining), exploded footwear (sole, upper, laces). Example: Trench coat broken into lapels, belt, main body.
+2. Beauty Collection (Rose Gold tags): Makeup with cutaways (lipstick core), eyeshadow palettes, perfume bottles with clear liquid refraction and metallic caps.
+3. Intimate Private Life (Soft Blush tags): Undergarments (cups, straps), silk sleepwear, used toothbrush, melted candle, handwritten journal. Items show authentic wear and lived-in imperfections.
+4. Emotional Expression Gallery (Terracotta tags): 6-8 floating macro portrait close-ups capturing micro-expressions: Serene smile, Laughter, Tearful vulnerability, 'Ahei Yan' (playful mock anger), Peak Ecstasy (flushed, sweat), Bitten-Lip. Extreme close-up details showing pores and vellus hair.
+5. Body Posture & Movement (Warm Skin Tone tags #E0AC69): 1:10 scale **photorealistic human figures** (real skin tone/muscle texture, NOT clay). Depicting poses: Kneeling, Prone, Stretching, Meditation, Walking. Highlighting muscle definition and gravity.
+Tech Details: Elegant dashed connection lines, macro material swatches (fabric/leather), measurement rulers.
+Typography: "HUMAN REALITY UNVEILED", subtitle "Essence of Being · Anatomical Truth" (Bilingual). Art Deco geometric frames.
+Atmosphere: Warm ivory or cool concrete gradient background. Blueprint grid overlay. Subtle bokeh and Kodak Portra 400 film grain.
+Render: Path Tracing, 4096 SPP, 12 bounces. Full PBR workflow (Triple-layer SSS skin). 8k resolution. --ar 16:9 --style raw`,
+    prompt: "3D photorealistic character deconstruction art poster, knolling layout...",
   },
   
 };
