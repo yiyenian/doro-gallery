@@ -2458,14 +2458,17 @@ Tech: Medium format fashion camera, Kodak T-Max 400 film stock (fine grain), 8k 
 画面内容：以 [插入主题/主体] 为核心，通过夸张的比例和动态的线条表现其特征。`,
   },
 
-    "dr-89": {
-    title: "独立女装品牌型录",
+   "dr-89": {
+    title: "独立女装品牌型录：参考图定制",
     tags: ["Fashion", "Lookbook", "Minimalist", "Photography", "Layout", "Commercial"],
     promptCn: `一张高端独立女装品牌的时装型录海报，整体为纯白背景，干净留白，极简排版，呈现品牌官网线上Lookbook的视觉风格。
+核心指令：基于上传的人物参考图生成。
+人物一致性（最高优先级）：所有画面中的模特必须是同一个人（基于上传照片），保持面部特征、发型和气质的连贯性。
 画面左侧（主视觉）：
-一位中国女性模特（20–25岁），气质清冷。中景到全身构图，自然站立姿态，身体微微侧倾。表情克制放松，眼神平静。气质介于少女与成熟之间，干净不做作。头发自然垂落略带风感，妆容清透自然。模特穿着[学院风格穿搭]（可替换为其他风格），服装面料质感清晰可见（针织、羊毛、马海毛等），画面真实细腻，具有商业服装摄影质感。
+模特的半身或全身特写（占比最大）。自然站立姿态，身体微微侧倾。表情克制放松，眼神平静。气质介于少女与成熟之间，干净不做作。头发自然垂落略带风感，妆容清透自然。
+模特穿着[学院风格穿搭]（可替换为其他风格）。服装面料质感清晰可见（针织、羊毛、马海毛等），画面真实细腻，具有商业服装摄影质感。
 画面右侧：
-排列两到三位比例较小的全身模特，纵向整齐排布，分别展示同一系列中的不同搭配。单套穿搭风格有区分，但整体色系与气质统一，呈现标准时装型录陈列逻辑，人物之间留白均匀比例协调。
+排列两到三位比例较小的全身模特（同一人），纵向整齐排布，分别展示同一系列中的不同搭配或姿态。单套穿搭风格有区分，但整体色系与气质统一，呈现标准时装型录陈列逻辑，人物之间留白均匀比例协调。
 右下区域：
 出现少量服装单品的小图陈列（如半身裙、下装），平铺或简洁立放，呈现为产品目录式展示，不抢主视觉。
 文字排版：
@@ -2473,17 +2476,322 @@ Tech: Medium format fashion camera, Kodak T-Max 400 film stock (fine grain), 8k 
 整体风格：
 独立设计师女装气质，偏日韩小众品牌审美，年轻克制略带复古感，商业型录摄影风格。光线均匀柔和，无强烈阴影，画面高级干净真实。无戏剧化光效无夸张姿势。拒绝广告海报风格、霓虹色或高饱和色彩。`,
     promptEn: `High-end independent women's fashion lookbook poster. Pure white background, clean negative space, minimalist layout, official brand website/online lookbook visual style.
+Core Instruction: Generate based on the uploaded reference photo.
+Character Consistency (Top Priority): The model in all sections MUST be the same person as in the reference photo.
 Left Side (Hero Visual):
-A Chinese female model (20-25 years old), cool temperament, occupying the main proportion. Medium to full shot, natural standing pose, slight lean, restrained and relaxed expression, calm eyes. Vibe between girlish and mature, clean and unpretentious. Hair naturally falling with a slight breeze, clear natural makeup. Wearing [Academy/Preppy Style] outfit. Fabric textures clearly visible (knit, wool, mohair). Realistic, delicate, commercial fashion photography quality.
+A medium to full shot of the model occupying the main proportion. Natural standing pose, slight lean, restrained and relaxed expression, calm eyes. Vibe between girlish and mature, clean and unpretentious. Hair naturally falling with a slight breeze, clear natural makeup. Wearing [Academy/Preppy Style] outfit. Fabric textures clearly visible (knit, wool, mohair). Realistic, delicate, commercial fashion photography quality.
 Right Side:
-2-3 smaller full-body models arranged vertically, displaying different outfits from the same collection. Distinct styles but unified color palette and vibe. Standard lookbook display logic, balanced spacing.
+2-3 smaller full-body figures of the SAME model arranged vertically, displaying different outfits from the same collection. Distinct styles but unified color palette and vibe. Standard lookbook display logic, balanced spacing.
 Bottom Right:
 Small display of clothing items (skirts, bottoms), flat lay or simple standing, catalog style, not stealing focus.
 Typography:
 Top-left small text "[Brand Name] online", Top-center "[Season Year]", Top-right "for spring & summer". Bottom area with a small paragraph of brand philosophy in English. Modern sans-serif font, light weight, spacious tracking, print-like quality, restrained, non-advertising feel.
 Overall Style:
 Independent designer vibe, niche Japanese/Korean aesthetic, young, restrained, slightly retro. Commercial catalog photography style. Even soft lighting, no harsh shadows. High-end, clean, real. No dramatic lighting, no exaggerated poses. --ar 3:4 --style raw --v 6.0`,
-    prompt: "High-end independent fashion lookbook layout, minimalist white background...",
+    prompt: "High-end independent fashion lookbook layout, based on uploaded reference...",
   },
 
+    "dr-90": {
+    title: "高定露背花束人像",
+    tags: ["Fashion", "Portrait", "Haute Couture", "Floral", "Cinematic"],
+    promptCn: `创作一张高级时装杂志封面级别的肖像照 (时尚摄影师风格)。
+核心指令：使用上传的参考人物作为唯一主体。面部特征和自然肤质需100%匹配。
+发型：短发，发丝被风吹拂，飘散在脸上，以时尚的方式部分遮挡面部特征。
+背景：纯深红色工作室背景 (#a83b4f 色调)，干净无瑕。
+服装：极简主义高级定制礼服，颜色为黑色。深V露背设计，优雅的垂坠感沿着脊柱延伸到微露臀。面料为真丝。雕塑般的精致廓形。无过多蕾丝、亮片或婚纱头纱。
+姿势/构图：四分之三背部视角。露背部分完全展现；头部略微转动，露出侧脸。9:16 竖幅构图，包含腰部和上臀部，以优雅时尚的方式展现出自信、线条优美的背部与手臂轮廓 (无任何暴露)。
+道具：手捧一束大型时尚奢华花束，紧贴身体。花束硕大、繁密、色彩鲜艳——包含多种珍稀高档花卉，颜色丰富 (牡丹、兰花、玫瑰、红掌、毛莨、郁金香)，造型精致，非新娘捧花风格。
+相机：长焦人像镜头效果 (135mm)，浅景深，背景虚化效果强，面部细节清晰。
+灯光 (单光源，顶光)：光源来自顶部上方主光，通过控制高光勾勒出颧骨、肩膀和背部的线条。整体曝光保持低调，营造氛围感；阴影部分保留细节；无刺眼眩光。
+后期：杂志风格调色，精致的胶片质感，毛孔和皮肤细节清晰可见，高端时尚写实风格。`,
+    promptEn: `High-fashion magazine cover portrait (Fashion Photographer style).
+Subject: Strict identity lock on uploaded reference face and skin texture.
+Hair: Short hair, windblown strands partially obscuring face in a stylish way.
+Background: Solid deep red studio background (#a83b4f tone), clean and flawless.
+Outfit: Minimalist Haute Couture gown in Black. Deep V-backless design, elegant drape along the spine to lower back. Silk fabric. Sculptural silhouette. No lace/sequins/veil.
+Pose/Composition: 3/4 Back View. Back fully exposed. Head slightly turned to reveal profile. 9:16 vertical composition including waist and upper hips, showcasing elegant body lines confidently (non-explicit).
+Props: Holding a massive, luxurious fashion bouquet close to the body. Dense, vibrant, exotic flowers (Peony, Orchid, Rose, Anthurium, Ranunculus, Tulip). Exquisite styling, NOT a bridal bouquet.
+Camera: Telephoto portrait lens (135mm), shallow depth of field, strong bokeh, sharp facial details.
+Lighting: Single overhead source (Top Light). Highlights contouring cheekbones, shoulders, and spine. Low-key exposure, atmospheric shadows, no glare.
+Post-processing: Magazine color grading, refined film grain, visible pores and skin texture, hyper-realistic high fashion style. --ar 9:16`,
+    prompt: "High-fashion backless portrait with massive flower bouquet...",
+  },
+
+    "dr-91": {
+    title: "透明亚克力手绘信息牌",
+    tags: ["Signage", "Acrylic", "Chalk Sketch", "Product Display", "Information Design"],
+    promptCn: `【指令】生成一张超写实的透明亚克力信息牌专业摄影图。
+悬挂方式：由两条细金属缆绳从上方悬挂，置于 [环境类型] 中。
+主体材质：晶莹剔透的透明亚克力/玻璃，具有逼真的反射、边缘发光和折射效果。
+内容风格：手绘粉笔素描美学，线条略显粗糙不完美（非完美矢量）。
+内容布局：
+1.顶部：巨大的手写标题“[品牌名称]”，粗体粉笔字，带有 [颜色] 渐变和 [强调色] 边缘光晕。下方是优雅的小号双语标语。
+2.中心（30%区域）：手绘卡通风格的 [主体对象]，[视角描述]，比例可爱简化。线条干净但有轻微瑕疵。填充 [主色色值]，白色粉笔轮廓。底部有微妙的手绘阴影。
+3.环绕信息展示：
+左侧：[主题1] 图标 + 标题 + 关键信息 + 视觉元素。
+顶部：[主题2] 图标 + 标题 + 技术插图 + 指向主体的箭头。
+右侧：[主题3] 图标 + 标题 + 细节手绘 + 测量线。
+底部：[主题4] 图标 + 标题 + 徽章元素。
+4.连接元素：手绘箭头和虚线将所有部分连接到中心主体。散落的小装饰元素。
+5.底部品牌条：[背景色色值] 横条，包含金属光泽Logo、品牌标准字和产品规格。
+色彩方案：奶油白粉笔基线，主色填充，强调色高光，浅灰图标。
+环境与摄影：背景极度虚化（f/1.4大光圈），只可见柔和的 [色调1] 和 [色调2] 光斑（Bokeh），无所谓形状。专业聚光灯创造强烈的表面反射，边缘有戏剧性的AR发光效果。8K分辨率。`,
+    promptEn: `Ultra-realistic professional photography of a premium transparent acrylic signage panel suspended by two thin metal cables.
+Main Subject: Crystal-clear transparent acrylic/glass with realistic reflections, edge lighting glow, and refraction. Content is Hand-drawn chalk sketch aesthetic (imperfect lines).
+Layout:
+- Top: Huge hand-written title "[Brand Name]" in bold chalk-style with gradient and edge glow. Subtitle "[Slogan]" in elegant chalk text.
+- Center Illustration (30% space): Hand-drawn cartoon-style [Subject] in [Angle]. Clean line art, simplified cute proportions. Filled with [Main Color], white chalk outline. Subtle floating shadow.
+- Surrounding Info:
+  - Left: [Topic 1] Icon, Title, Hand-drawn details.
+  - Top: [Topic 2] Icon, Tech diagram, Connecting arrows to subject.
+  - Right: [Topic 3] Icon, Detail sketches, Measurement lines.
+  - Bottom: [Topic 4] Icon, Badge.
+- Connections: Hand-drawn arrows/dotted lines connecting all sections to the center.
+- Bottom Brand Strip: Horizontal bar with metallic Logo and specs.
+Color: Creamy white lines (#F5F5DC), [Main Color] illustration, [Accent Color] highlights.
+Environment: [Environment Type] background with EXTREMELY HEAVY BLUR (abstract bokeh balls). f/1.4 aperture. Professional spotlight, dramatic glowing edges. 8k resolution, photorealistic.`,
+    prompt: "Transparent acrylic signage with hand-drawn chalk sketch info...",
+  },
+
+    "dr-92": {
+    title: "包豪斯几何双重曝光插画",
+    tags: ["Bauhaus", "Geometric", "Illustration", "Double Exposure", "Vector Art"],
+    promptCn: `人物名称：[在此处插入著名人物名字]
+一幅包豪斯风格的几何双重曝光插画，呈现该人物的侧面剪影。
+背景：浅米色纯色背景。
+自适应色彩方案（AI自动生成）：
+根据人物的气质与成就生成包豪斯配色（例如：创新者=冷感科技蓝灰；艺术家=温暖鲜明原色）。此配色仅用于几何图案与字体。
+面部处理（关键）：
+面部特征（眼、鼻、嘴、下巴、脸颊）必须以接近人物自然肤色的纯色、平面矢量方式呈现。保持干净，无几何纹理，确保人物清晰可辨且庄重。与周围几何图案形成利落对比。
+几何叙事层次（集中在头发、后脑、颈部）：
+1. 底部区域（根源）：几何抽象元素，象征出身与早期奋斗。
+2. 中部区域（成就）：清晰可辨的包豪斯风格几何化抽象符号，代表其最具代表性的工具或产品（如特斯拉的线圈/电机），需具象可读。
+3. 顶部区域（愿景）：抽象的几何圆形、线条与飘逸形态，表现思想与未来。
+字体设计：
+下方展示人物全名，定制包豪斯风格字体。几何无衬线体，由基本形状构建。将代表性成就的抽象几何元素巧妙融合进字母结构中。
+整体风格：
+干净的矢量艺术风格，无缝整合。`,
+    promptEn: `Bauhaus style geometric double exposure illustration, profile silhouette of [Insert Famous Person Name]. Light beige solid background.
+Adaptive Color Scheme: AI generates a harmonious Bauhaus palette based on the person's vibe (e.g., cool tech blues/grays for innovators; warm primaries for artists). Applies to geometry and text only.
+Face (Critical): Facial features (eye, nose, mouth, chin, cheek) must be rendered in clean, flat vector skin tone matching the person. NO geometric texture on the face. High contrast between clean face and geometric surroundings.
+Geometric Narrative Layers (Hair/Back of head/Neck):
+1. Bottom (Roots): Abstract geometry symbolizing origins/foundation.
+2. Middle (Achievements): Distinct, readable Bauhaus-stylized symbols of their iconic tools/inventions/works, integrated into the silhouette texture.
+3. Top (Vision): Abstract circles/lines/flowing shapes representing mind/future vision.
+Typography: Custom Bauhaus-style geometric sans-serif font below the silhouette, spelling "[Insert Famous Person Name]". Letters built from basic shapes. Geometric elements from achievements integrated into letters. Same color palette.
+Style: Clean vector art, flat design, seamless integration. --ar 3:4`,
+    prompt: "Bauhaus geometric double exposure illustration of a famous person...",
+  },
+
+    "dr-93": {
+    title: "城市庆典烟花秀",
+    tags: ["Fireworks", "Cityscape", "Celebration", "Night Photography", "Realistic"],
+    promptCn: `一场位于 [插入城市名称] 的超写实、专业的夜间烟花表演。
+核心视觉：天空中央清晰地展示了“[插入主体]”形状，完全由烟花组成。该形状无缝地从浓密的火花轨迹、发光的余烬和耀眼的光辉爆发中浮现，轮廓平滑、精准，清晰明快。它自然融入周围的烟花表演，成为整体视觉盛宴的重要组成部分，视觉鲜艳且写实。
+背景氛围：在中央主体的后方及周围，一场宽广的庆祝烟花表演以层叠的放射状爆炸、瀑布火花和多级爆炸填满夜空，营造出令人印象深刻的深度与层次感。背景烟花亮度略低，以突出中央的主体形状。
+环境与光影：夜空纯净而深邃，从海军蓝到黑色，晴朗无云，薄雾和烟雾极少。烟花色彩包括金、银、白、红、蓝等精致的调色板，展现了物理精确的光晕效果、细腻的光晕效果、逼真的粒子动态以及自然的强度和时机变化。烟花轻柔地照亮周围的天空，带来柔和、电影级的光影衰减，营造出真实且沉浸式的庆祝氛围。
+底部细节：画面底部能看到 [插入城市名称] 的标志性建筑的剪影。
+画质：图像分辨率极高，细节清晰，具有摄影写实感，没有额外的文字或视觉元素，仅通过烟花清晰显示形状。`,
+    promptEn: `A hyper-realistic, professional night fireworks show in [Insert City Name].
+Core Visual:
+Clearly displaying the shape of "[Insert Subject]" formed entirely by fireworks in the center of the sky. The shape emerges seamlessly from dense spark trails, glowing embers, and dazzling bursts, with smooth, precise, and crisp contours. It naturally integrates into the surrounding fireworks display.
+Background Atmosphere:
+Behind and around the central subject, a broad celebratory fireworks display fills the night sky with layered radial explosions, waterfall sparks, and multi-stage bursts, creating impressive depth. Background fireworks are slightly dimmer to highlight the central subject.
+Environment & Lighting:
+The night sky is pure and deep, ranging from navy blue to black, clear and cloudless with minimal smoke. Firework colors include an exquisite palette of gold, silver, white, red, and blue, featuring physically accurate bloom effects and realistic particle dynamics. The fireworks gently illuminate the surrounding sky with soft, cinematic light falloff.
+Bottom Details:
+Silhouettes of [Insert City Name]'s iconic landmarks are visible at the bottom.
+Quality:
+Extremely high resolution, sharp details, photorealistic, no extra text, only the shape formed by fireworks.`,
+    prompt: "Hyper-realistic city fireworks show forming a specific shape...",
+  },
+
+    "dr-94": {
+    title: "美食解构：悬浮层叠海报",
+    tags: ["Food Photography", "Deconstruction", "Poster", "Commercial", "3D Render"],
+    promptCn: `一张高端中式美食海报，展示 [插入菜品名称] 的解构悬浮层叠效果。
+背景：纯黑背景 (#000000)，充满“镬气”和“灵魂美食”的氛围。浓厚的蒸汽和白烟从底部升起，穿过层叠的食材缝隙。
+顶部标题：画面顶部中央悬浮着巨大的奢华标题标签“[插入菜品名称] [English Name]”，采用富有表现力的手写毛笔字体。字体具有厚重的3D雕刻黄金金属质感，拉丝表面，暖金光泽，像是在空中锻造的金色笔触。
+五层结构（从上到下）：
+1. 顶层（配料层）：[插入顶部配料，如香菜/葱花/辣椒]，色彩鲜艳，散布在热气中。
+2. 第二层（肉类/主菜层）：[插入核心肉类或主菜]，切片或块状，展示纹理和汁水。
+3. 第三层（主食层）：[插入主食，如面条/米饭/饺子]，展示形态和热气腾腾的质感。
+4. 第四层（辅料层）：[插入辅助配菜]，透光或反光。
+5. 第五区（过渡区）：留出较大的空隙，充满旋转的香气蒸汽、烟雾和下落的水滴，强调热度和视觉呼吸感。
+6. 底层（成品层）：一碗完整的 [插入菜品名称] 放置在质朴的深色陶瓷碗中，位于底部。汤汁清澈/浓郁，覆盖着 [插入特色酱汁/红油]，看起来刚出锅，油光发亮，烟雾缭绕。
+右下角：第二个手写金色金属元素，风格与顶部标题一致，作为签名Logo：“[插入品牌名称]”。
+标签系统：中英双语标签带有优雅的箭头指向各组件。
+光影：45度角戏剧性影棚布光，暖色轮廓光强调纹理、闪亮的食材和金色文字。无底座，悬浮于虚空。暗调情绪美学，奢华商业美食摄影风格，超写实，9:16竖幅。`,
+    promptEn: `Premium Chinese restaurant food poster featuring deconstructed solid ingredient layers of [Insert Dish Name] floating in a vertical stack on a pure black background. Infused with intense 'Wok Hei' and soul food atmosphere. Thick swirling steam and wisps of white smoke rising dynamically.
+Typography: Top center floating title '[Insert Dish Name] [English Name]' in expressive handwritten Chinese brush calligraphy. Heavy 3D sculpted gold metal texture, brushed finish, warm golden sheen.
+Layers:
+1. Top layer: [Insert Top Garnish], vibrant colors, scattered in heat haze.
+2. Second layer: [Insert Key Protein/Meat], showing texture and grain, drifting in steam.
+3. Third layer: [Insert Main Carbs/Noodles], showing thickness and moisture sheen.
+4. Fourth layer: [Insert Side Ingredients], catching light.
+5. Transition Zone: Large empty space filled densely with swirling aromatic steam and moisture droplets.
+6. Bottom layer: A complete finished dish in a rustic dark ceramic bowl. Broth/Sauce visible, topped with [Insert Toppings], glistening with oil, heavy steam billowing.
+Bottom Right: Stylized signature logo '[Insert Brand Name]' in sculpted gold brushstroke calligraphy.
+Labels: Bilingual labels with elegant arrows pointing to components.
+Lighting: Dramatic studio lighting from 45-degree angle, warm rim lighting, star sparkle effects. Dark moody aesthetic, luxurious commercial food photography, 8k resolution. --ar 9:16`,
+    prompt: "Deconstructed food poster, floating layers, gold calligraphy...",
+  },
+
+    "dr-95": {
+    title: "3x3 角色百变贴纸包",
+    tags: ["Sticker Art", "Character Design", "Grid", "Fashion", "Cute"],
+    promptCn: `核心指令：基于上传照片生成一个3x3网格贴纸包。
+人物一致性：所有9个贴纸必须是同一个人物（严格锁定面部特征、相似度和比例）。
+视觉风格：
+活泼的现代贴纸设计。
+边缘干净裁剪，带有明显的粗线条轮廓（白边 Die-cut）。
+姿势富有表现力，生动有趣，仿佛在互动。
+质感：带有柔和阴影和光泽贴纸纸张质感 (Glossy Sticker Paper)。
+内容规划（9种风格）：
+包含多种服装风格，例如：教师装、传统服饰、护士制服、街头潮牌、奇幻风格等。
+文字标注：
+每个贴纸旁边配有时尚的中英文双语标注（如 "教师 Teacher"）。
+画质：
+高分辨率成品，适合社交分享。`,
+    promptEn: `A 3x3 sticker pack sheet featuring 9 different full-body stickers of the SAME character based on the uploaded photo.
+Consistency: Strict identity lock on facial features and proportions across all stickers.
+Style: Modern lively sticker art, die-cut aesthetic with thick white outlines and clean edges. Expressive and dynamic poses. High-resolution finish with soft drop shadows and glossy paper texture.
+Outfits: Varied fashion styles including Teacher uniform, Traditional attire, Nurse uniform, Streetwear, Fantasy/Cosplay, etc.
+Typography: Bilingual (Chinese & English) cute labels next to each sticker.
+Background: Clean solid color or subtle pattern to make stickers pop. --ar 1:1 --v 6.0`,
+    prompt: "3x3 character sticker pack, die-cut style, various outfits...",
+  },
+
+    "dr-96": {
+    title: "电影感三联画：多元随机风格",
+    tags: ["Triptych", "Cinematic", "Random Style", "Storytelling", "Romance", "Action"],
+    promptCn: `核心指令：基于真人实拍风格的竖向三联拼贴画 (Vertical Triptych)，描绘同一位女性的三个连续叙事瞬间。
+风格设定：**随机电影风格** (请AI从以下类型中随机选择一种并保持统一：纯爱爱情片、深沉剧情片、悬疑惊悚片、赛博朋克、复古港风、史诗奇幻、现代动作等)。
+人物造型：基于上传的参考图，自动适配所选电影风格的服装、妆容与发型。
+构图布局（自适应叙事流）：
+请根据所选风格自动设计三格画面的起承转合：
+顶格 (Top Panel - 铺垫)：交代环境氛围或人物情绪（如：爱情片的对视/雨中等待，动作片的备战）。
+中格 (Middle Panel - 高潮/破框)：视觉重心。**破框效果**：人物主体、肢体动作或关键道具（如雨伞、花束、武器、光效）冲破边框，形成强烈立体感。
+底格 (Bottom Panel - 余韵)：情绪的延伸或结局（如：背影、特写反应、空镜留白）。
+整体质感：
+超写实电影剧照质感，光影、色调、胶片颗粒感均需完美契合所选电影类型。8K分辨率。`,
+    promptEn: `A vertical triptych collage composition depicting a real-life woman in three consecutive narrative moments.
+Style: **Random Cinematic Style** (AI selects one: Romance/Drama, Thriller/Noir, Cyberpunk, Fantasy, Retro, Action, etc.). High-budget movie aesthetic.
+Subject: Consistent identity based on reference. Outfit and makeup adapted to the chosen theme.
+Layout (Adaptive Storytelling):
+1. Top Panel (Setup): Establishing shot or emotional buildup appropriate to the genre.
+2. Middle Panel (Climax/Pop-out): The visual focal point. **Pop-out Effect:** The subject or a key prop intentionally breaks through the frame borders, creating a 3D layered effect.
+3. Bottom Panel (Resolution): Aftermath, reaction, or fading emotion.
+Tech: 2:3 aspect ratio, photorealistic, cinematic lighting, deep depth of field, 8k resolution.`,
+    prompt: "Cinematic triptych collage with random genre and pop-out effects...",
+  },
+
+    "dr-97": {
+    title: "建筑设计汇报展板",
+    tags: ["Architecture", "Presentation Board", "Blueprint", "3D Render", "Layout"],
+    promptCn: `专家级建筑插画师的汇报展板，展示一个 [插入风格] 住宅，具有 [插入关键建筑元素]。
+画面布局（从左到右流动）：
+左侧：黑白 2D 图纸（总平面图、平面图），精细的线稿风格。
+中间：立面图和剖面图，展示结构细节。
+右侧：[插入时间/光照] 下的超写实 3D 渲染图，展现真实材质与光影。
+统一美学：画面从左至右自然过渡，融合 [线条风格] 与 [材质/纹理]。色调从 [技术图纸色调] 渐变到 [渲染调色板]。
+标题栏：清晰显示“[插入项目名称]”。
+整体风格：专业、现代、高信息密度，兼具技术精确性与艺术感染力。8K分辨率。`,
+    promptEn: `An expert architectural illustrator's presentation board for a [Insert Style] residence featuring [Insert Key Elements].
+Layout Flow (Left to Right):
+- Left: Black and white 2D drawings (Site Plan, Floor Plans).
+- Center: Elevations and Cross-Section details.
+- Right: A photorealistic 3D render at [Insert Time/Lighting].
+Aesthetic:
+Unified aesthetic blending [Linework Style] with [Texture/Material].
+Visual transition from [Technical Drawing Tones] to [Render Color Palette].
+Title block reads '[Insert Project Name]'.
+High resolution, professional architectural visualization. --ar 16:9 --v 6.0`,
+    prompt: "Architectural presentation board, 2D plans to 3D render transition...",
+  },
+
+    "dr-98": {
+    title: "城市剪纸书签：旅行打卡",
+    tags: ["Paper Art", "Bookmark", "Travel", "Cityscape", "Photography", "Creative"],
+    promptCn: `【指令】生成一张唯美的旅行打卡摄影图。
+核心主体：
+一只手（写实、细节丰富）拿着一枚精致的长条形**镂空剪纸书签**。
+书签设计：
+风格：错综复杂的分层剪纸插画，具有3D景深感和奇幻艺术风格。
+内容：书签内部精细地刻画了 **[插入城市名称]** 的标志性地标和符号，部分元素巧妙地“破框而出”（模切效果）。
+细节：细腻的纸张纹理，鲜艳的色彩，微缩建筑细节。
+背景环境：
+场景：真实的 **[插入城市名称]** 天际线和风景的电影感广角镜头。
+景深：背景柔和虚化（Bokeh），以突出前景清晰聚焦的书签。
+时间与光影：[插入时间段，如：日出/日落/璀璨夜景]，光线充满氛围感（如黄金时刻的辉光或城市灯火）。
+构图与氛围：
+垂直居中构图，特写手部和书签。
+整体氛围怀旧、唯美、充满旅行灵感和诗意。
+书签的艺术色彩与现实背景的色调和谐呼应。
+画质：8K超高清，照片级真实的手部细节，书签对焦锐利。`,
+    promptEn: `A person's hand holding a long, narrow vertical die-cut bookmark against a blurred background.
+Bookmark Design: Intricate layered paper-cut illustration with 3D depth and whimsical artistic style. Inside the bookmark frame, iconic landmarks and symbols of **[Insert City Name]** are depicted, with some elements slightly popping out of the edges (die-cut). Delicate textures, vibrant colors, miniature architectural details.
+Background: A romantic, cinematic wide shot of the actual **[Insert City Name]** skyline and scenery. Soft bokeh, blurred to emphasize the bookmark.
+Lighting & Time: Atmospheric lighting matching **[Insert Time of Day]** (e.g. Golden hour glows, Night with city lights, Bright daylight).
+Composition: Close-up on the hand and bookmark, centered vertically. Harmonized colors between the bookmark's art and the real-world background.
+Vibe: Nostalgic, aesthetic, travel-inspired, poetic.
+Tech Specs: 8k resolution, highly detailed, photorealistic hand, sharp focus on bookmark. --ar 3:4`,
+    prompt: "Paper-cut city bookmark held in hand against real background...",
+  },
+
+    "dr-99": {
+    title: "分屏时尚：标本与真人的对话",
+    tags: ["Fashion", "Split Screen", "3D Effect", "Creative Photography", "Surreal", "Reference Based"],
+    promptCn: `核心指令：基于上传的人物参考图生成。
+垂直分屏创意产品摄影，背景为干净白墙。高分辨率，超写实，商业广告级画质。
+上半部分（标本盒）：
+一个精致的浅橡木影盒框架悬挂在墙上。里面像艺术博物馆的标本一样，整齐平铺展示着一套特定的服装（需与下方模特穿着一致）。衣物被整齐地固定。周围环绕着小型主题装饰道具：[插入道具，如：干玫瑰、复古香水瓶、丝带]。哑光纸背景上有优雅的书法文字：**[基于画面内容自适应的诗意标题，如“午夜优雅”或“丝绸与秘密”]**。柔和的影棚灯光突出了织物的丰富质感和垂坠感。
+下半部分（裸眼3D现实）：
+营造出超写实的“裸眼3D”错觉。一个矩形画框边框直接位于顶部盒子的正下方。
+**人物锁定：** 画面中的模特必须严格基于**上传的参考图**（面部特征、发型100%还原）。
+她穿着与上方标本盒中完全相同的服装。她随意地斜靠在画框的底部边缘——一条腿弯曲，脚放在画框内，另一条腿优雅地伸出到观众的空间中（破框效果）。她的躯干微微后倾，手肘靠在抬起的膝盖上，手指轻轻抚摸锁骨附近的布料。身体形成柔和、性感的S形曲线。她带着平静、会意的微笑直视镜头。
+核心对比：
+这种充满活力的逼真姿态与上方静止的档案展示形成强烈的对比，在现实与展示之间制造视觉张力。
+技术规格：
+柔和自然阴影，环境光遮蔽，明亮通透但具有电影感的灯光，8K分辨率，Octane渲染，生动而精致的色调，超精细的织物纹理，浅景深，《Vogue》编辑风格，胶片颗粒感，专业时尚摄影。`,
+    promptEn: `Core Instruction: Generate based on the uploaded reference photo.
+A vertical split-screen creative product photography composition on a clean white wall background.
+Top Section (The Specimen Box):
+An exquisite light oak wooden shadow box frame mounted on the wall. Inside, a specific outfit (matching the model below) is displayed as an artistic flat-lay museum specimen. The garments are neatly pinned in place. Surrounding them are small thematic decorative props: [Insert Props]. Elegant calligraphy on the matte paper backdrop reads: **[Adaptive poetic title based on visual content, e.g., "Midnight Elegance"]**. Soft studio lighting accentuates the rich texture and drape of the fabric.
+Bottom Section (Naked-Eye 3D Reality):
+Creates a hyperrealistic "naked-eye 3D" illusion. A rectangular picture-frame border sits directly beneath the top box.
+**Subject Consistency:** The model MUST be the same person as in the uploaded reference photo (strict face identity lock).
+She wears the exact same outfit as displayed above. She lounges casually on the bottom edge of the frame—one leg bent inside, the other leg elegantly dangling out into the viewer's space (pop-out). Her torso leans back, creating a sensual S-curve. She looks directly at the camera with a knowing smile.
+Contrast: Dynamic lifelike pose vs static archival display.
+Tech Specs: Soft natural shadows, cinematic lighting, 8K resolution, Octane Render, ultra-detailed fabric textures, shallow depth of field, Vogue editorial style.`,
+    prompt: "Split-screen fashion photography, specimen box vs 3D real model based on reference...",
+  },
+
+    "dr-100": {
+    title: "圣诞奢华系列产品摄影",
+    tags: ["Product Photography", "Christmas", "Luxury", "Commercial", "Festive"],
+    promptCn: `【指令】生成一张高端圣诞主题的产品摄影图。
+核心主体：
+将上传的产品图片作为画面主角，直立于中央。
+**严格约束**：产品必须保持形状、尺寸、材质、颜色、标签设计、字体、Logo和所有可见文字**完全不变**。禁止修改、重绘、翻译或风格化产品上的任何文字。
+场景与背景：
+节日氛围的 [环境类型 - 如：温馨窗边 / 影棚背景 / 雪地景观]。
+背景细节包含 [季节元素 - 如：飘落的雪花 / 虚化的圣诞树灯光 / 冬日村庄光斑]。
+前景自然点缀 [节日道具 - 如：冬青、丝带、装饰球、串灯]，但绝不遮挡产品主体。
+造型细节：
+可选：在产品上搭配节日配饰（如：迷你圣诞帽 / 围巾 / 蝴蝶结），需完美贴合且不改变产品结构或遮挡标签。
+光影与摄影：
+暖金色的圣诞光线与冷色调冬日氛围形成对比。柔和漫射光，温柔的轮廓光增加深度，避免在产品文字上产生眩光或强烈反光。
+浅景深，背景柔和虚化。单反相机拍摄，85mm镜头感，专业产品摄影。
+画质与氛围：
+超高分辨率，照片级真实纹理，高级节日广告美学，构图干净优雅，温馨、奢华、充满节日气息。`,
+    promptEn: `A luxury Christmas-themed product photoshoot set in a [COZY / STUDIO / OUTDOOR] environment. Place the uploaded product image as the hero object, standing upright at the center of the frame.
+CRITICAL CONSTRAINT: The product must remain EXACTLY unchanged in shape, size, material, colors, label design, typography, logos, and all visible text. Do not modify, recreate, translate, enhance, or stylize any product text.
+Scene & Background: A festive [BACKGROUND TYPE] with [SEASONAL DETAILS — e.g. softly falling snow, blurred Christmas tree lights]. Foreground includes subtle holiday accents such as [FESTIVE PROPS — e.g. holly, ribbons, ornaments, fairy lights], placed naturally and never covering the product.
+Styling: Optional festive accessory on the product such as [HAT / SCARF / RIBBON], perfectly fitted without altering the product’s structure or covering the label.
+Lighting & Camera: Warm golden Christmas lighting contrasted with cool winter tones. Soft diffused light, gentle rim lighting for depth, no glare or harsh reflections on the product text. Shallow depth of field with a softly blurred background. Shot on DSLR, 85mm lens, professional product photography.
+Quality & Mood: Ultra-high resolution, photorealistic textures, premium holiday advertising aesthetic, clean editorial composition, cozy, elegant, and festive.`,
+    prompt: "Luxury Christmas product photography, strictly unchanged product label...",
+  },
+  
 };
