@@ -2793,5 +2793,65 @@ Lighting & Camera: Warm golden Christmas lighting contrasted with cool winter to
 Quality & Mood: Ultra-high resolution, photorealistic textures, premium holiday advertising aesthetic, clean editorial composition, cozy, elegant, and festive.`,
     prompt: "Luxury Christmas product photography, strictly unchanged product label...",
   },
+
+    "dr-101": {
+    title: "元旦特辑：复古旗袍名媛风",
+    tags: ["New Year", "Portrait", "Cheongsam", "Vintage", "Cinema Style"],
+    promptCn: `核心指令：基于上传参考图生成，保持精确的面部特征和原始脸部结构，角色完全一致。
+主题：元旦特辑-复古旗袍名媛风。
+人物造型：
+精致工作室立姿肖像。人物肌肤如凝脂般细腻白皙，淡雅妆容，通透感底妆，裸粉唇妆。
+服饰：身着传统红色凤凰刺绣旗袍，高开叉设计展现修长美腿，袖口和领口绣满金线祥云纹样。外搭金色薄纱长披风，从肩部垂落至地面。
+发型与头饰：典雅的侧边低盘发。装饰金色凤凰步摇、红色珠花和长长的金色流苏，发饰随动作轻微摇曳。一侧留出波浪卷发修饰脸型。
+姿态：站在红色地毯上呈经典旗袍站姿，一条腿从开叉处露出。一只手叉腰展现自信，另一只手拿着金色烟斗式长杆烟嘴优雅置于唇边。头部微侧展现精致侧颜，眼神冷艳高贵。
+环境背景：
+深红色天鹅绒幕布背景。中央悬挂金色“元旦快乐”书法大字和“2026”立体装置。两侧对称布置红色立柱、金色花瓶插梅花、复古留声机。
+光影与质感：
+伦勃朗光营造经典好莱坞氛围，强调明暗对比和戏剧张力。Phase One拍摄系统，色彩浓烈复古，顶级工作室vintage大片质感。`,
+    promptEn: `New Year Special - Vintage Cheongsam Socialite Portrait.
+Core: Strict face identity lock based on uploaded reference.
+Subject: Elegant standing portrait. Porcelain white skin, translucent natural makeup, nude pink lips.
+Outfit: Traditional Red Cheongsam with gold Phoenix embroidery. High slit revealing long legs. Gold cloud patterns on collar/cuffs. Wearing a floor-length sheer Gold Cape.
+Hair: Elegant low side bun with retro waves. Adorned with gold phoenix hairpin (Buyao), red bead flowers, and long swaying gold tassels.
+Pose: Classic cheongsam stance on a red carpet. One hand on hip, the other holding a long golden cigarette holder to lips. Head tilted, cool and noble expression.
+Background: Deep red velvet curtains. Center: Golden calligraphy "Happy New Year" and 3D "2026" text. Sides: Red columns, gold vase with plum blossoms, vintage gramophone.
+Lighting & Style: Rembrandt lighting, Classic Hollywood atmosphere, dramatic chiaroscuro. Phase One camera system, rich retro colors, premium vintage studio aesthetic. 8k resolution.`,
+    prompt: "Vintage Cheongsam portrait, New Year theme, Hollywood lighting...",
+  },
+
+    "dr-102": {
+    title: "都市一瞥：笔触下的微缩城市",
+    tags: ["Cityscape", "Art Style", "Miniature", "Poster Design", "Creative"],
+    promptCn: `【指令】生成一张融合特定画风与微缩城市景观的艺术海报。
+城市：[插入城市名称，如：京都/巴塞罗那]
+画风：[插入画风，如：浮世绘/毕加索立体主义]
+核心构图：
+一种合适的艺术工具（例如：画笔、调色刀、触控笔，取决于画风），仿佛正处于创作之中，从左下角向右上角勾勒出一条精致、优雅的曲线。
+笔触内部：
+笔触之中包含著名的 [插入城市名称] 地标的微缩景观。精选一组标志性地点，融合当地特有的历史与现代建筑、自然元素以及城市生活气息。
+整体风格：
+结合 [插入画风] 与学院派海报设计。多样化的笔触与痕迹营造出三维空间感，呈现出立体的微缩景观与浅浮雕质感。以该城市的主色调为主，点缀传统美学元素。
+视角与背景：
+极简的俯视视角。背景为具有纹理的纸张（高质量纤维质感），色调明亮、干净、清新（如纯白、天蓝、浅黄），与画面主体形成清晰对比，大面积留白。
+文字排版 (大师级)：
+主标题：[城市英文名]（与绘画风格匹配的艺术字体，高对比度）。
+副标题：关于城市特质的描述。
+装饰文案：河流/地标名称，分段排列，形成节奏感。
+底部签名：[基于城市气质生成一句简短的艺术标语或感悟，如 "Eternal City", "Dream in Blue" 等，作为手写风格签名]。
+细节控制：
+绘画工具的笔尖应在笔触末端（右上角）停住。微缩景观仅存在于笔触内部，细节密集但不显杂乱。8K分辨率，超写实效果。`,
+    promptEn: `A creative artistic poster featuring a suitable art tool (e.g., paintbrush, palette knife, stylus) drawing an elegant curve from bottom-left to top-right.
+Subject: The brushstroke itself transforms into a 3D miniature landscape of [Insert City Name].
+Content: Iconic landmarks, historical and modern architecture, and natural elements of the city, rendered in [Insert Art Style] (e.g., Ukiyo-e, Cubism, Impressionism). The texture looks like a relief or 3D miniature embedded in the paint.
+Composition: Minimalist top-down view. The art tool tip rests at the end of the stroke (top-right). Generous negative space around the stroke.
+Background: High-quality textured paper (fiber texture), bright and clean color (White/Light Blue/Yellow) creating contrast.
+Typography: Master-level layout.
+- Main Title: "[City Name]" in an artistic font matching the style.
+- Subtitle: A phrase describing the city's atmosphere.
+- Decorative Text: Names of districts or landmarks, arranged rhythmically.
+- Signature/Slogan at bottom: [Auto-generated short poetic phrase capturing the city's soul, handwritten style].
+Style: Fusion of [Insert Art Style] and Academic Poster Design. High detail, photorealistic tool, 8k resolution, HDR. --ar 4:3`,
+    prompt: "Artistic poster, paintbrush drawing a 3D miniature city landscape...",
+  },
   
 };
