@@ -3015,7 +3015,7 @@ Quality: 8k resolution, vector crispness, matte glass effects, soft shadows. --a
     "dr-108": {
     title: "冬日街头电影感肖像",
     tags: ["Portrait", "Fashion", "Cinematic", "Winter", "Street Photography", "Motion Blur"],
-    promptCn: `超逼真的电影感肖像，高端时尚9:16画幅杂志风格摄影。
+    promptCn: `超逼真的电影感肖像，高端时尚16:9画幅杂志风格摄影。
 核心指令：仅使用上传的面部参考图像作为主要拍摄对象。面部特征、骨骼结构和自然肤质（可见毛孔）需100%匹配。不得改变种族或性别特征。
 人物造型：
 发型：短发，发丝被风吹拂，飘散在脸上，以时尚的方式部分遮挡面部特征。
@@ -3037,6 +3037,248 @@ Dynamic Action: Foreground features a passerby moving fast, creating strong MOTI
 Photography: Low angle shot (Worm's eye view), 24mm wide-angle lens, bust portrait. Shallow depth of field.
 Lighting: Soft cinematic warm lighting, atmospheric. High quality skin texture, subtle film look.`,
     prompt: "Cinematic fashion portrait, winter street, motion blur foreground...",
+  },
+
+    "dr-109": {
+    title: "极简水果百科信息图",
+    tags: ["Infographic", "Fruit", "Museum Style", "Minimalist", "Layout"],
+    promptCn: `【指令】生成一张博物馆展品级别的 [插入水果名称] 品种百科信息图。
+风格：极简主义美学，留白充足，呼吸感强。采用网格系统布局，黄金比例分割。
+配色：米白色背景（纸质纹理，5-10%透明度）+ [水果主题色] + 深灰文字。
+布局架构：
+1. 标题区：超大字号中文名（思源黑体/苹方）+ 拉丁学名 + 所属科目。
+2. 主视觉：高质量摄影顶视图，去背 [插入水果名称] 特写，微阴影，极简高级。
+3. 信息模块（细线条分隔）：
+品种分类：列出4-6个主要商业品种的矢量轮廓或小图。
+产地地图：极简地图标注3-5个核心产区。
+时令日历：可视化展示最佳食用月份（线条图表）。
+选购指南：4-6个图标展示挑选要点。
+营养成分：关键营养素含量的细线条图表。
+储存方法：温度/湿度/保鲜期建议图标。
+美食搭配：2-3种经典食用方式图示。
+视觉元素：
+极简图标系统（日历、地图针、购物袋等）。半透明色块叠加（不超过3种配色）。线条粗细0.5-1pt。
+整体质感：
+高级、克制、信息丰富。无衬线字体，字距合理。阴影克制使用，仅用于层次区分。3:4尺寸。`,
+  },
+
+    "dr-110": {
+    title: "Bento网格磨砂玻璃产品展示",
+    tags: ["Product Design", "Bento Grid", "Frosted Glass", "UI Design", "3D Render"],
+    promptCn: `现代Bento网格布局产品展示设计,采用磨砂亚克力透明玻璃材质。适用于任何产品类型(食物/药品/科技产品/元素等)。
+【布局结构】8个模块,非对称Bento网格排列,横向landscape格式:
+模块1: 【3D玻璃产品主体展示】(中等尺寸1x1,占20-25%空间)
+- 3D透明玻璃/亚克力材质的[产品名称]雕塑
+- [产品特色]:
+* 食物 → 展示切面/内部结构(如番茄种子腔室、胡萝卜横切面)
+* 药品 → 药片/胶囊的透明玻璃形态
+* 科技产品 → 产品外观的玻璃艺术化呈现
+- 材质效果: 透明红橙/蓝色/绿色等[产品主色]玻璃,光泽表面,光线折射,真实反射
+- 正下方文字标注: "[中文产品名] / [English Name]"
+- 不占用过多空间,为信息模块留足展示区域
+模块2: 【核心功效/特点】(标准卡片1x1)
+标题: "核心功效" 或 "核心特点" 或 "主要功能"
+内容: 4个核心卖点,用 "/" 分隔
+- 食物 → "抗氧化延缓衰老 / 保护心血管健康 / 美白护肤养颜 / 促进消化吸收"
+- 药品 → "解热镇痛 / 抗炎消肿 / 抗血小板聚集 / 预防心血管疾病"
+- 科技 → "主动降噪 / 空间音频 / 自适应均衡 / 20小时续航"
+配合简洁图标
+模块3: 【使用方法/应用场景】(标准卡片1x1)
+标题: "食用方法" 或 "使用方法" 或 "应用场景"
+内容: 4种使用方式/场景
+- 食物 → "生食: 沙拉凉拌 / 熟食: 炒蛋炖汤 / 加工: 酱料榨汁 / 搭配: 鸡蛋牛肉"
+- 药品 → "口服: 餐后温水送服 / 剂量: 成人100mg / 频次: 每日1-2次 / 疗程: 遵医嘱"
+- 科技 → "音乐欣赏 / 通勤降噪 / 居家办公 / 观影娱乐"
+配合场景图标
+模块4: 【关键数据/参数】(标准卡片1x1)
+标题: "营养价值" 或 "技术参数" 或 "产品规格"
+内容: 5个关键数据点
+- 食物 → "热量 [X]千卡/100克 / 维生素C [X]毫克 / [特色成分] 丰富 / 膳食纤维 [X]克 / 钾 [X]毫克"
+- 药品 → "成分: [化学式] / 规格: [X]mg / 起效时间: [X]分钟 / 半衰期: [X]小时 / 代谢途径: [途径]"
+- 科技 → "芯片: [型号] / 续航: [X]小时 / 重量: [X]克 / 驱动单元: [规格] / 充电: [X]小时"
+配合简洁数据可视化图表
+模块5: 【适用人群/目标用户】(标准卡片1x1)
+标题: "适合人群" 或 "目标用户" 或 "适用场景"
+内容: 分为推荐(✓)和警示()两部分
+- 食物 → "✓ 心血管疾病患者 / ✓ 美容养颜需求者 / ✓ 减肥瘦身人群 / ✓ 便秘消化不良 / 慎用: 肾功能不全 / 胃酸过多 / 空腹食用"
+- 药品 → "✓ 发热患者 / ✓ 轻中度疼痛 / ✓ 炎症性疾病 / 禁忌: 孕妇 / 哮喘患者 / 胃溃疡"
+- 科技 → "✓ 音乐发烧友 / ✓ 商务人士 / ✓ 通勤人群 / ✓ 内容创作者"
+用绿色✓和琥珀色区分
+模块6: 【注意事项/使用指南】(标准卡片1x1)
+标题: "食用注意" 或 "使用注意" 或 "重要提示"
+内容: 4条重要提醒事项
+- 食物 → "不宜空腹食用以免刺激胃黏膜 / 未成熟[产品]含[有毒物质]禁食 / 不宜长时间高温烹煮保留营养 / [特殊人群]需控制摄入量"
+- 药品 → "需餐后服用避免胃部不适 / 不可与[禁忌药物]同服 / 服药期间避免饮酒 / 出现过敏反应立即停药就医"
+- 科技 → "首次使用需配对设备 / 避免极端温度环境 / 定期清洁保养 / 长期不用请充电保存"
+配合警示图标
+模块7: 【特殊指标】(标准卡片1x1)
+标题: 根据产品类型调整
+- 食物 → "嘌呤含量" 显示 "[X]毫克/100克" + "低嘌呤食物 ✓" + "痛风患者友好"
+- 药品 → "不良反应" 列举常见副作用
+- 科技 → "兼容性" 显示支持的系统/设备
+配合指示器或图标
+模块8: 【趣味知识/产品洞察】(标准卡片1x1)
+标题: "冷知识" 或 "产品故事" 或 "有趣事实"
+内容: 2-3条有趣的知识点
+- 食物 → "[产品]加热后[成分]吸收率提升X倍 / [产品]原产[地区]已有[X]年历史 / 未成熟[产品]含[有害物质]"
+- 药品 → "[产品]是世界上使用最广泛的[类别]之一 / 每年全球生产超过[X]吨 / [发明年份]年由[人名]发明"
+- 科技 → "[产品]采用[技术]专利技术 / [品牌]首次将[功能]应用于消费级产品 / 全球销量突破[X]万台"
+【磨砂亚克力材质规格】(CRITICAL 核心灵魂):
+卡片材质效果:
+- 透明度: 80-85% 半透明(TRANSLUCENT),可以看穿卡片看到背景
+- 磨砂效果: 柔和的frosted glass blur模糊,backdrop-filter风格
+- 底色调: 轻微白色/奶油色霜化效果(15-20%不透明度),提升可读性但保持透明
+- 边框: 细致的发光边框,捕捉光线反射
+- 阴影: 柔和的分层阴影,营造浮空深度感
+- 玻璃物理: 真实的玻璃边缘高光、光线折射、表面反射效果
+- 视觉特征: 背景渐变可以透过卡片清晰看见,像真实的磨砂亚克力板
+重要: 卡片必须保持TRANSLUCENT透明质感,不能变成不透明白卡片!
+【色彩方案】:
+基础色彩配比: 90% 中性色 + 10% 产品主题色点缀
+- 基础层: 透明玻璃、浅灰色、米白色
+- 文字色: 中等深灰 #3A3A3A (柔和但清晰,适合透明背景)
+- 主题色点缀(10%使用):
+* 食物 → 产品天然色(番茄红橙、胡萝卜橙、菠菜绿等)
+* 药品 → 医疗蓝、药品白、红十字标志色
+* 科技 → 品牌主色(Apple银灰蓝、小米橙、华为红等)
+- 点缀位置: 仅用于关键图标、重要数字、警示符号、3D主体
+- 警示色: 琥珀橙 #FF9800 用于警告内容
+- 肯定色: 绿色 #4CAF50 用于✓推荐内容
+【背景设置】:
+- 类型: 柔和渐变,2-3个相近色过渡
+- 产品色调适配:
+* 食物 → 奶油白-淡桃红-浅橙色(温暖色调)
+* 药品 → 浅灰白-淡蓝-医疗白(清洁专业)
+* 科技 → 太空灰-银白-淡蓝(科技感)
+- 装饰元素: 极度柔和的抽象形状,可透过玻璃卡片隐约看见
+- 重要: 背景要柔和不抢眼,通过透明卡片可见但不干扰阅读
+【排版布局】:
+- 格式: 横向 landscape 16:9 或类似比例
+- 网格类型: 非对称Bento网格,卡片大小不一
+- 空间分配:
+* 3D玻璃主体: 20-25% (中等尺寸,不过度占用)
+* 信息卡片: 75-80% (7个标准卡片)
+- 卡片间距: 适度留白,不拥挤,呼吸感良好
+- 视觉层次: 通过卡片大小、位置、色彩点缀建立信息优先级
+- 阅读流: 从左上3D主体开始,自然流向各信息卡片
+【文字规范】:
+- 语言: 全中文内容(产品名可双语标注)
+- 字体层级:
+* 模块标题: 粗体,大号
+* 正文内容: 常规体,中号
+* 数据数字: 粗体,突出显示
+- 可读性: 中等深灰文字在磨砂玻璃上清晰易读
+- 单位规范:
+* 重量: 克、千克、毫克
+* 能量: 千卡、卡路里
+* 时间: 分钟、小时、天
+* 容量: 毫升、升
+【图标风格】:
+- 类型: 极简线条图标 (line icons)
+- 尺寸: 小巧不喧宾夺主
+- 颜色: 浅灰线条,关键图标用主题色点缀
+- 用途: 辅助说明,增强视觉识别
+【使用方法】:
+1. 将 [产品名称] 替换为实际产品
+2. 根据产品类型(食物/药品/科技)选择对应的内容示例
+3. 填充8个模块的具体信息
+4. 调整主题色为产品代表色
+5. 确保保持磨砂亚克力的透明质感
+【质量标准】:
+✓ 透明度正确(80-85%,可看穿)
+✓ 磨砂模糊效果明显但不过度
+✓ 背景可透过卡片看见
+✓ 3D主体占比适中(20-25%)
+✓ 信息完整(8个模块内容齐全)
+✓ 全中文显示清晰
+✓ 色彩克制优雅(90%中性+10%点缀)
+✓ 排版舒适不拥挤
+✓ 玻璃质感真实(边缘高光、反射、折射)`,
+    promptEn: `Modern Bento Grid Layout Product Display Design. Material: Frosted Acrylic/Transparent Glass. Suitable for any product (Food/Medicine/Tech).
+Layout: 8 modules, Asymmetrical Bento grid, Landscape 16:9.
+Module 1: [3D Glass Hero Product] (20-25% space). 3D transparent glass sculpture of [Product Name] showing internal structure or artistic form. Material: Transparent colored glass matching product theme. Glossy, refractive. Label: "[Product Name CN] / [English Name]".
+Module 2: [Core Benefits]. 4 key selling points separated by slash. Icons included.
+Module 3: [Usage/Scenarios]. 4 methods or scenes. Icons included.
+Module 4: [Key Data/Specs]. 5 data points (Calories/Ingredients/Tech Specs). Visual charts.
+Module 5: [Target Audience]. Recommended (✓) vs Caution (). Color coded.
+Module 6: [Warnings/Guide]. 4 important safety/usage tips. Warning icons.
+Module 7: [Special Index]. Specific metric based on product type (e.g., Purine content, Side effects, Compatibility).
+Module 8: [Trivia/Insight]. 2-3 interesting facts or history.
+Material Specs (CRITICAL):
+- Transparency: 80-85% Translucent, background visible through cards.
+- Frosted Effect: Soft blur, backdrop-filter style.
+- Base: Slight white/cream tint (15-20% opacity) for readability.
+- Border: Fine glowing edge.
+- Shadow: Soft layered shadow for floating depth.
+Color Scheme: 90% Neutral (Glass/Grey/White) + 10% Theme Color Accent (Product representative color). Text: Medium Dark Grey #3A3A3A.
+Background: Soft gradient matching product tone, abstract shapes visible through glass cards.
+Typography: All Chinese content (Product name bilingual). Hierarchy: Bold Title > Regular Body > Bold Data.
+Quality: 8k resolution, photorealistic glass texture, clean UI layout, breathable spacing.`,
+    prompt: "Modern Bento grid product display, frosted glass acrylic style...",
+  }, 
+
+    "dr-111": {
+    title: "极简理性营养科普图",
+    tags: ["Infographic", "Nutrition", "Food", "Swiss Style", "Minimalist"],
+    promptCn: `以 [插入食材名称] 为唯一主题，生成一张极简、理性、高信息密度的专业营养信息图，整体为纵向构图，遵循清晰的三层信息结构与严格网格系统。
+整体构图结构（强制）：
+第一层｜核心食材锚点区（顶部 30%）
+•核心食材以大比例呈现
+•食材直接放置在纯色背景上
+•居中或偏左构图
+•中文主标题清晰、克制
+•仅保留最必要的信息，不放数据图表
+第二层｜烹饪方式 × 成品菜肴矩阵区（中部 45–50%）
+•使用 2×2 或 3×2 模块化矩阵
+•每个模块尺寸、比例、结构完全一致
+•每个模块包含：
+•成品菜肴（单一餐盘，俯拍，直接放在背景上）
+•烹饪方式 + 菜名（简体中文）
+•搭配食材列表（中文）
+•无场景、无道具、无装饰
+第三层｜营养数据与禁忌分析区（底部 20–25%）
+•纯理性信息区域
+•不出现任何食物图片
+•使用条形图、圆环图、雷达图进行数据可视化
+•所有图表、坐标、指标均为简体中文
+•并列展示适宜人群与食用禁忌说明
+背景与留白：
+•单一中性色背景
+•大留白
+•模块间距明显
+排版与视觉语言：
+•瑞士国际主义网格
+•包豪斯功能主义
+•Dieter Rams 设计哲学
+•无印良品 × Kinfolk 的克制编辑感
+•Apple / Google 风格的信息层级
+强制限制：
+•不出现任何场景
+•不出现人物
+•不出现英文或拼音
+•不出现装饰性元素
+输出质量：
+出版级分辨率，中文渲染准确，信息秩序清晰，适合专业营养科普与高端品牌使用。`,
+  },
+
+    "dr-112": {
+    title: "全明星人物矩阵拼图：随机多样性",
+    tags: ["Portrait", "Grid", "Celebrity Style", "6x6 Matrix", "Photography"],
+    promptCn: `这是一张极具视觉冲击力的“全明星”人物矩阵拼图，包含 36 位风格各异的中国女星形象（AI随机生成，互不重复）。
+画面采用严格的 6x6 网格化排版设计，每个单元格内均为一张标准的胸部以上肖像照（证件照风格）。
+【人物多样性 (核心要求)】
+请随机生成 36 张**完全不同**的面孔，涵盖中国当代女星的各种典型气质：
+- 风格：温婉甜美、高冷御姐、清纯初恋、复古港风、时尚前卫等。
+- 发型：长直发、大波浪、丸子头、短发、盘发等多样化设计。
+- 着装：西装、礼服、衬衫、针织衫、旗袍等丰富搭配。
+【名字标签 (强制去重)】
+每个单元格底部正中央叠加清晰的中文姓名标签。
+**关键：** 必须使用 36 个**完全不同、互不重复**的随机中文名字（例如：安娜、梦洁、紫萱、雨桐、晓雯、思思...等），严禁出现重复或相同的名字。
+【视觉统一性】
+所有人物均面向镜头，神态生动。
+光线：专业影棚布光，均匀柔和，突出五官立体感与皮肤质感。
+背景：纯白、浅灰、深蓝及黑色中性色调交错，保持整体和谐。
+文字字体：现代无衬线黑体，白色或金色。`,
   },
   
 };
