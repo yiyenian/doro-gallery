@@ -2853,5 +2853,190 @@ Typography: Master-level layout.
 Style: Fusion of [Insert Art Style] and Academic Poster Design. High detail, photorealistic tool, 8k resolution, HDR. --ar 4:3`,
     prompt: "Artistic poster, paintbrush drawing a 3D miniature city landscape...",
   },
+
+    "dr-103": {
+    title: "科学发现立体典籍",
+    tags: ["Science", "History", "Book Art", "Diorama", "3D Render"],
+    promptCn: `角色：科学史学家 + 视觉提示词工程师。
+任务：根据用户输入的 [科学发现]，自动推断发现者、年份、地点、核心时刻和科学符号，生成一张高规格的摄影图。
+输入：[在此输入科学发现，如：牛顿发现万有引力 / 青霉素的发现]
+画面场景：
+一张超写实的4:5微距照片。一本古老的科学典籍平铺在深色天鹅绒博物馆展台上。书本具有裂纹皮革装订、镀金边缘和厚重的手工羊皮纸质感。
+左页 —— “鲜活的历史瞬间”：
+左页被挖空成一个深邃的 3D 立体微缩模型 (Diorama)。
+内部展示了该发现诞生的标志性历史时刻。
+一位栩栩如生的 **3D 真人模型 (发现者)** 正在行动（身穿符合时代的服装，表情自然）。
+环境精确还原历史时间和地点。
+微弱的发光科学符号（方程、结构、隐喻）悬浮其中，代表核心概念。
+从书页内部散发出温暖的琥珀色光芒。
+右页 —— “科学记录”：
+平整的陈旧羊皮纸页面，可见纸纤维和凸起的墨迹。
+顶部：清晰书写 [发现名称 (中英)]、[发现者姓名]、[年份]。
+中间：一句清晰、简单的中文科学原理解释。
+底部：一张复古风格的小地图或图表，作为科学注释。
+所有文字必须是清晰、优雅的中文手写体，具有学术感。
+风格与摄影：
+博物馆藏品摄影。85mm 微距镜头。浅景深。冷色调画廊聚光灯与暖色内部光芒结合。极致写实（皮革、纸张纹理、墨水压痕、灰尘）。`,
+  },
+ 
+    "dr-104": {
+    title: "东方神兽数字百科",
+    tags: ["Mythology", "Infographic", "UI Design", "3D Render", "Creature Design"],
+    promptCn: `【指令】生成一张“东方神兽数字百科”跨页设计图 (16:9)。
+风格：现代信息图鉴，未来数字百科全书美学，全息UI元素。
+左侧面板 (55%) · 视觉艺术：
+主体：[插入神兽名称] 呈现 [插入动态] 姿态。
+材质：从二维传统水墨扫描线过渡到三维超写实 [插入材质描述]。
+背景：深色板岩渐变，微妙的六边形网格，古篆字集成电路板纹理。
+氛围：悬浮数据点，全息分析环，[插入元素特效] 粒子消散，微小的解剖标注线。
+光效：冷蓝科技底光，[插入主题光] 体积轮廓光。
+右侧面板 (45%) · 信息图文排版：
+材质：深色磨砂玻璃拟态卡片，几何边框包含六边形蜂巢图案和 [插入主题纹样]。
+页头：粗体双语标题“[中文名] · [English Name]”，古篆印章全息图。
+属性面板：
+元素：[插入元素]
+方位：[插入方位]
+季节：[插入季节]
+力量值：[插入数值]%
+稀有度：[插入稀有度]
+视觉数据区：六边形雷达图 (力/智/速/防/灵)，圆形元素图标，体型对比剪影。
+装饰：角标框，悬浮微型六边形群。
+整体融合：
+[插入桥接元素] 穿过分割线消散为数字粒子，全息扫描线横跨整个跨页。
+色调：深海军蓝底色，[插入主色]，[插入辅色]，电光青色科技点缀。
+画质：8K分辨率，Octane渲染，Behance特以此级别 UI/UX 设计。`,
+  },
+
+    "dr-105": {
+    title: "树上奇景写实画作",
+    tags: ["Chinese Painting", "Tree Scene", "Minimalist", "Song Aesthetic", "Surreal"],
+    promptCn: `【指令】生成一张宋代美学风格的“树上奇景”写实画作。
+核心主体：
+[插入主体描述，如：一支唐代宫廷乐队 / 一群可爱的猫咪 / 赛博朋克乐手] 在阿干树 (Agan tree) 的枝干上 [插入动作，如：演奏乐器 / 嬉戏玩耍 / 聚会]。
+姿态与布局：
+主体姿态各异（有的站立，有的坐着），随意但疏密有致地散落在古朴的树枝上。
+树枝上还可以点缀一些 [插入装饰元素，如：鸟儿 / 灯笼 / 飘带]，画面自然生动。
+背景与光影：
+背景为驼色 (camel-brown) 的舞台画布背景 (类似 #E7B5C3D 色调)。
+光线柔和均匀，营造出温暖静谧的氛围。
+整体风格：
+宋代美学，极简主义，写实风格。画面构图精致，留白得当，具有古画般的雅致韵味。`,
+  },  
+
+   "dr-106": {
+    title: "3D新年马年贺卡",
+    tags: ["3D Render", "New Year", "Felt Art", "Chinese Style", "Year of the Horse"],
+    promptCn: `核心指令：生成一张极具视觉冲击力的大师级3D新年贺卡海报。
+主题：[插入IP名称] 的马年新春主题。
+构图：竖构图，中央有一个深邃的窗口式凹槽设计，贺卡仿佛悬浮在云端。
+材质风格：
+毛毡与粗毛线编织质感 (Felt and coarse knitting wool)，真实细腻，盲盒玩具质感。
+角色设定：
+核心角色：一只可爱的Q版毛毡小马 (代表马年)，表情憨态可掬，身穿红色喜庆马甲和虎头帽，站立在中央作为节日使者。
+次要角色：[插入IP经典角色] (Q版毛毡风格)，身穿传统唐装或汉服，与场景互动。
+场景元素：
+建筑：IP标志性建筑的Q版毛毡模型，有景深层次。
+地面：厚实的奶油色针织雪地。
+植被：挂满红灯笼、中国结和祈福牌的桃树或金桔树。
+道具：散落的毛毡鞭炮、金元宝、积雪灌木。
+标题设计：
+主标题："Happy New Year" (3D流体艺术字体，厚玻璃体积感)。
+副标题："新年快乐" (中国书法，3D挤压笔触)。
+材质：哑光磨砂玻璃，深红到浅红渐变，半透明，投射出梦幻的彩色焦散阴影到下方的毛毡场景上。
+背景环境：
+东方水墨虚空环境，流动的光雾。色调为优雅的淡香槟金或高级柔雾红。
+外部装饰：空中飞舞的红丝绒绸带、流动的金线、盛开的红梅枝、发光的金铜钱串、晶莹的几何雪花。
+光影与渲染：
+C4D / Octane 渲染，8K分辨率。微距摄影视角，浅景深 (背景虚化)。光线柔和均匀，有呼吸感，大气纵深。
+整体氛围：
+喜庆、东方、温暖、精致、欢乐。高端商业设计，萌趣与优雅并存。`,
+    promptEn: `Masterpiece 3D New Year's greeting card poster based on [Insert IP Name], vertical composition with a deep central window groove.
+Material: Realistic felt and coarse knitting wool texture, blind box toy aesthetic.
+Characters:
+- Center: A cute Q-version felt Pony (Year of the Horse), naive and charming, wearing red festive vest and tiger-head hat.
+- Others: Classic [IP Name] characters in Q-version felt style, wearing traditional Tang suits/Hanfu, interacting.
+Scene: Q-version felt architecture, thick creamy knitted snow ground. Peach/Kumquat trees with red lanterns and Chinese knots. Scattered felt firecrackers and gold ingots.
+Typography (Floating 3D):
+- "Happy New Year" in 3D fluid art font (thick glass volume).
+- "新年快乐" in Bold Chinese Calligraphy (3D extruded).
+- Material: Matte Frosted Glass (Deep red to light red gradient), casting dreamy colorful caustics onto the felt scene.
+Background: Oriental ink wash void with flowing light mist. Pale champagne gold or soft mist red. Decorated with red velvet ribbons, gold lines, blooming plum branches, glowing copper coins.
+Tech: C4D, Octane Render, 8K. Macro perspective, shallow depth of field. Soft breathing light.
+Vibe: Festive, Oriental, Warm, Exquisite. High-end commercial design. --ar 3:4 --v 6.0`,
+    prompt: "3D felt style New Year greeting card, Year of the Horse theme...",
+  }, 
+
+    "dr-107": {
+    title: "极简食材百科卡片",
+    tags: ["Infographic", "Food", "Minimalist", "Design", "Educational"],
+    promptCn: `【指令】生成一张极简艺术风格的 [插入食材名称] 百科全书式信息卡片。
+博物馆展品级别的设计品质，信息丰富但视觉克制。
+画面比例：2:3竖版 或 3:4方形。
+三大视觉区域：
+1. 顶部展示区 (30%)：大尺寸食材摄影 + 优雅标题排版。包含超大字号食材名称（细线体/宋体）、拉丁学名（斜体）、分类标签、去背景食材特写（工作室灯光）、原产地地图、当季时间轴。
+2. 中部核心信息区 (60%)：9大模块网格系统。
+营养成分详解：圆环图/条形图展示卡路里、蛋白质等。
+健康功效地图：人体轮廓图标注受益部位。
+烹饪方法矩阵：8-10种图标网格，温度时间参数。
+四季食用指南：圆形时间轮盘。
+黄金搭配矩阵：9宫格搭配食材图标，连线图。
+适宜人群画像：人群图标与推荐色彩编码。
+禁忌与注意事项：红色警示框。
+选购与储存指南：新鲜度判断与储存数据。
+趣味知识扩展：历史起源与数据可视化。
+3. 底部注释区 (10%)：来源标注 + 设计细节。
+视觉系统：
+配色：主色提取自食材本身，辅以大地色系（米白/燕麦/灰），克制使用强调色。背景纯白或极浅灰。
+字体：超细线条无衬线标题，现代几何正文，等宽数据字体。
+布局：12列网格系统，8pt基准对齐，充足留白（呼吸感）。
+风格关键词：瑞士国际主义平面设计、日本侘寂美学、包豪斯功能主义、极简主义。8K分辨率。`,
+    promptEn: `A minimalist artistic encyclopedia information card for [Insert Food Name], museum-grade design quality, information-rich but visually restrained.
+Layout: 2:3 vertical or 3:4 square.
+Top Section (30%): Large-scale product photography + Elegant typography. Huge fine-line title, italic Latin name, minimalist category tag. Main image: Isolated food close-up, studio lighting, micro-shadows. Origin map and seasonal timeline.
+Middle Section (60%): 9-Module Grid System.
+1. Nutrition Breakdown: Donut charts/Bar charts for calories, protein, etc.
+2. Health Benefit Map: Human body outline with benefit markers.
+3. Cooking Matrix: 8-10 icon grid for cooking methods with temp/time.
+4. Seasonal Guide: Circular time wheel.
+5. Pairing Matrix: 9-grid ingredient icons with connection lines.
+6. Target Audience: User icons with color coding.
+7. Contraindications: Red alert box.
+8. Selection & Storage: Freshness guide and storage data graphs.
+9. Trivia: History and global stats visualization.
+Bottom Section (10%): Source notes.
+Visual Style: Swiss International Style, Japanese Wabi-sabi, Bauhaus Functionalism.
+Color: Main color extracted from the food, Earth tone aux colors (Beige/Oat/Grey), White or very pale grey background. Dark grey text.
+Typography: Ultra-light sans-serif titles, geometric body text, monospaced data.
+Graphics: Stroke-based icons, consistent corner radius, negative space utilization.
+Quality: 8k resolution, vector crispness, matte glass effects, soft shadows. --ar 3:4`,
+    prompt: "Minimalist food encyclopedia infographic card, Swiss design style...",
+  },
+
+    "dr-108": {
+    title: "冬日街头电影感肖像",
+    tags: ["Portrait", "Fashion", "Cinematic", "Winter", "Street Photography", "Motion Blur"],
+    promptCn: `超逼真的电影感肖像，高端时尚9:16画幅杂志风格摄影。
+核心指令：仅使用上传的面部参考图像作为主要拍摄对象。面部特征、骨骼结构和自然肤质（可见毛孔）需100%匹配。不得改变种族或性别特征。
+人物造型：
+发型：短发，发丝被风吹拂，飘散在脸上，以时尚的方式部分遮挡面部特征。
+服装：黑色复古皮夹克搭配红色高领细线针织（堆叠领口），佩戴金色项链，优雅现代的造型。
+姿态：拍摄对象静止沉静，位于画面的右侧。轻微仰头，看着镜头，一只手拉着高领毛衣的领子扯着挡住下颌线和嘴唇（时尚杂志模特的pose）。
+场景与动态：
+环境：冬天的欧洲风格街道，街上有供暖热蒸汽。背景是一个复古公寓的门，门打开着，里面黑漆漆，增加神秘感。
+动态模糊（关键）：前景有人快速移动穿过，形成强烈的动态模糊（长曝光效果），艺术性地挡住部分画面和镜头边缘，营造抓拍感。
+摄影与光影：
+相机：24mm广角镜头，低角度仰拍视角（Low Angle），胸部以上竖幅肖像。
+光照：柔和的电影感光照，暖色调，营造氛围感。高光控制得当，阴影保留细节。
+质感：浅景深，电影感虚化效果。自然的肤质纹理，微妙的胶片感（无明显颗粒）。无文字、无徽标。`,
+    promptEn: `Hyper-realistic cinematic portrait, high-end 9:16 fashion editorial style.
+Subject Consistency: Strict identity lock on uploaded face reference (100% match on bone structure/skin texture).
+Look: Short windblown hair partially obscuring face stylishly. Wearing a vintage black leather jacket over a red turtleneck fine knit sweater (stacked collar), gold necklace. Modern elegant styling.
+Pose: Subject is static and calm, positioned on the RIGHT side of the frame. Slight head tilt back, looking at the lens. One hand pulling the turtleneck collar up to cover the jawline and lips (high fashion pose).
+Scene: Winter European street with heating steam vents. Background features an open vintage apartment door with a dark void interior.
+Dynamic Action: Foreground features a passerby moving fast, creating strong MOTION BLUR (long exposure effect) that partially blocks the frame/lens, contrasting with the sharp subject.
+Photography: Low angle shot (Worm's eye view), 24mm wide-angle lens, bust portrait. Shallow depth of field.
+Lighting: Soft cinematic warm lighting, atmospheric. High quality skin texture, subtle film look.`,
+    prompt: "Cinematic fashion portrait, winter street, motion blur foreground...",
+  },
   
 };
