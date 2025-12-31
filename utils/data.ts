@@ -3301,5 +3301,28 @@ Background: Clean studio backdrop in a matching theme color.
 Lighting: Soft studio lighting, commercial fashion aesthetic. 8k resolution. --ar 3:4 --v 6.0`,
     prompt: "Fashion photoshoot with giant 3D cartoon character...",
   }, 
+
+  "dr-114": {
+    title: "3D动漫巨物合影：时尚大片",
+    tags: ["Fashion", "3D Render", "Anime Character", "Portrait", "Collaboration"],
+    promptCn: `核心指令：基于上传的人物参考图生成。严格保持面部特征不变。
+画面主题：真人模特与**巨型3D动漫IP角色** [插入角色名] 的跨次元时尚合影。
+人物装扮：
+身穿时尚潮流服饰，风格需与动漫角色搭配。姿态放松、时尚、俏皮，与身边的巨型角色自然互动。
+动漫角色设定：
+**[插入角色名]** 以超写实 3D 渲染风格呈现（保留原设特征但材质真实化），体型巨大（比人高大），材质细腻，表情友好俏皮。
+环境与光影：
+干净的极简影棚背景。柔和的影棚布光，电影感，光影、阴影和反射在真人与3D角色之间完美匹配，融合度极高。
+画质：8K 超高清，商业时尚摄影质感。`,
+    promptEn: `Hyper-realistic professional fashion photoshoot.
+Subject Consistency: Strict face identity lock based on uploaded reference.
+Theme: Real person posing with a GIANT 3D [Insert Anime Character Name] fashion collaboration.
+Model: Standing casually, interacting naturally with the character. Expression is relaxed, stylish, and playful. Outfit coordinates with the character's style.
+Character: A massive, photorealistic 3D render of [Insert Anime Character Name], high fidelity to original design, larger than human scale, friendly interaction.
+Environment: Clean minimal studio backdrop.
+Lighting: Soft studio lighting, cinematic, consistent shadows and reflections blending the real and 3D elements perfectly.
+Tech: 35mm lens, eye-level, 8k resolution, ultra-sharp detail. --ar 9:16`,
+    prompt: "Real person posing with giant 3D anime character...",
+  },
   
 };
