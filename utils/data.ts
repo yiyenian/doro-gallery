@@ -11,7 +11,7 @@ export const localData: Record<string, DataRecord> = {
     title: "全景式角色深度概念分解图",
     tags: ["Character Design", "Concept Art", "Game Art", "2.5D"],
     promptCn: `Role (角色设定)
-你是一位顶尖的游戏与动漫概念美术设计大师 (Concept Artist)，擅长制作详尽的角色设定图（Character Sheet）。你具备“像素级拆解”的能力，能够透视角色的穿着层级、捕捉微表情变化，并将与其相关的物品进行具象化还原。你特别擅长通过女性角色的私密物品、随身物件和生活细节来侧面丰满人物性格与背景故事。
+你是一位顶尖的游戏与动漫概念美术设计大师 (Concept Artist)，擅长制作详尽的角色设定图（Character Sheet）。你具备“像素级拆解”的能力，能够透视角色的穿着层级、捕捉微表情变化，并将与其相关的物品进行具象化还原。你特别擅长通过女性角色的私密物品、随身物件和生活细节来侧面丰满人物性格与背景故事.
 Task (任务目标)
 根据用户上传的主体形象（若没有具体着装，系统必须主动接管设计），生成一张“全景式角色深度概念分解图”。该图片必须包含中心人物全身立绘，并在其周围环绕展示该人物的服装分层、不同表情、核心道具、材质特写，以及极具生活气息的私密与随身物品展示。
 Visual Guidelines (视觉规范)
@@ -3268,13 +3268,38 @@ Quality: 8k resolution, photorealistic glass texture, clean UI layout, breathabl
 核心指令：**严格基于上传的人物参考图生成**。所有 16 个格子中的人物必须是**同一个人**（面部特征、五官结构 100% 锁定），但发型、妆造、表情和环境必须**极度多样化**。
 【4x4 网格内容规划 (16种人生状态)】
 请随机组合以下元素，确保没有重复的画面：
-- **情绪：** 大笑、痛哭、发呆、惊讶、愤怒、害羞、微醺、疲惫、自信、挑逗、沉思...
-- **场景：** 刚起床(牙刷)、暴雨中(撑伞)、地铁通勤、海边度假、健身房流汗、晚宴红毯、便利店吃面、书店一角...
-- **造型：** 凌乱居家服、干练西装、奢华礼服、运动Bra、日系校服、复古旗袍...
+**情绪：** 大笑、痛哭、发呆、惊讶、愤怒、害羞、微醺、疲惫、自信、挑逗、沉思...
+**场景：** 刚起床(牙刷)、暴雨中(撑伞)、地铁通勤、海边度假、健身房流汗、晚宴红毯、便利店吃面、书店一角...
+**造型：** 凌乱居家服、干练西装、奢华礼服、运动Bra、日系校服、复古旗袍...
 【视觉风格】
 胶片摄影质感（Film Look），色彩真实，光影富有电影感。
 构图：以人像为主，景别在特写到半身之间切换，不要全是证件照大头。
 **无文字：** 画面保持纯净，没有任何文字标签。`,
   },
+
+    "dr-113": {
+    title: "3D卡通巨物合影：时尚互动",
+    tags: ["Fashion", "3D Cartoon", "Portrait", "Creative", "Interaction"],
+    promptCn: `核心指令：基于上传的人物参考图生成。严格保持面部特征不变。
+画面主题：真人模特与**巨型3D卡通角色** [插入角色名，如：皮卡丘 / 猫和老鼠 / 粉红顽皮豹] 的时尚合影。
+人物装扮：
+身穿与卡通角色配色呼应的高级针织毛衣（例如：皮卡丘=电光黄，粉红豹=柔粉色，Tom&Jerry=浅灰色）。搭配高腰牛仔裤和时尚板鞋。
+人物姿态：
+自信站立，自然地与身边的巨型角色互动（如：手臂搭在角色肩膀上、背靠角色、与角色对视互动）。表情生动、有趣或酷飒。
+卡通角色设定：
+**[插入角色名]** 以超写实 3D 渲染风格呈现，体型巨大（真人大小或更大），材质细腻（真实的毛发或皮肤质感），表情与模特呼应。
+环境与光影：
+干净的纯色或渐变影棚背景（颜色匹配角色主题）。专业时尚摄影布光，立体感强，无杂乱背景。
+画质：8K 超高清，商业广告摄影质感。`,
+    promptEn: `Hyper-realistic professional fashion photoshoot.
+Subject Consistency: Strict face identity lock based on uploaded reference.
+Theme: Model posing with a GIANT 3D [Insert Cartoon Character Name].
+Outfit: Color-coordinated knitted sweater (matching the character's theme color), high-waisted jeans, sneakers.
+Pose: Standing confidently, interacting naturally with the giant 3D character (arm resting on it, leaning against it, or striking a pose together). Fun/Cool expression.
+Character: A massive, photorealistic 3D render of [Insert Cartoon Character Name] with exquisite textures and lively expression.
+Background: Clean studio backdrop in a matching theme color.
+Lighting: Soft studio lighting, commercial fashion aesthetic. 8k resolution. --ar 3:4 --v 6.0`,
+    prompt: "Fashion photoshoot with giant 3D cartoon character...",
+  }, 
   
 };
