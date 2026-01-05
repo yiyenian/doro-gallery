@@ -3359,5 +3359,114 @@ AI智能填充：请根据职业特性，自动匹配场景、道具和细节。
 环境与光影：电影级布光，柔和的阳光反射在 iPhone 玻璃屏幕上。景深自然，对焦锐利。
 画质：8K/4K 分辨率，获奖级摄影风格，色彩鲜艳（手机屏幕），素描质感真实。`,
   },
+
+  "dr-117": {
+    title: "80S新中式水墨绘本",
+    tags: ["Chinese Painting", "Ink Wash", "Illustration", "Retro", "Shanghai Animation Style"],
+    promptCn: `新中式水墨绘本，致敬80年代上美影风格。
+核心风格：
+强调“大巧若拙”的毛笔触感与真实的宣纸纹理。
+色彩采用低饱和矿物色（石青、赭石、淡墨）。
+构图极简，大量留白，意境深远。
+主体视觉：
+[插入主体描述]，人物造型古朴生动，线条简练而富有神韵。
+比例：3:4。
+艺术参考：
+中国水墨动画，上海美术电影制片厂经典风格（如《小蝌蚪找妈妈》、《山水情》）。`,
+    promptEn: `New Chinese ink wash picture book illustration, paying homage to the 1980s Shanghai Animation Film Studio style.
+Style: Emphasizing "clumsy yet skillful" brush strokes and realistic rice paper texture.
+Colors: Low saturation mineral colors (mineral blue, ochre, pale ink).
+Composition: Minimalist with generous negative space (Liu Bai), creating profound artistic conception.
+Subject: [Insert Subject Description]. Character design is primitive yet vivid, with concise lines full of spirit.
+Aspect Ratio: 3:4.
+Art Reference: Chinese ink wash animation, classic Shanghai Animation Film Studio style (e.g., "Where is Mama" or "Feeling from Mountain and Water").`,
+    prompt: "New Chinese ink wash illustration, Shanghai Animation Film Studio style...",
+  },
+
+    "dr-118": {
+    title: "Vogue级人物拆解封面",
+    tags: ["Fashion", "Magazine", "Knolling", "Deconstruction", "Vogue"],
+    promptCn: `指令：一键将人物照片转化为《Vogue》级时尚杂志封面 + 深度拆解图。
+核心功能：根据人物穿搭风格，自动生成“爆炸图”式的单品陈列，并脑补隐藏的私密物品。
+画面布局：
+主视觉：人物的高级时尚大片（Vogue封面质感）。保留面部特征，姿态自信，眼神与镜头交流。
+物品拆解：围绕人物有序排列的“装备库” (Knolling风格)。
+外装拆解：外套、鞋履、配饰的悬浮展示。
+内层脑补：根据外装风格推测的内衣/贴身衣物（如：蕾丝、运动、极简棉质），展示质感。
+私密小物：符合人物设定的随身物品（如：雪茄/复古打火机、香水、口红、甚至避孕套/药盒等增加张力的小物）。
+杂志排版：顶部巨大的 "VOGUE" 或 "FASHION" 刊头。每个物品旁有细引线，标注：[名称] + [作用] + [RMB 估价]。
+风格自适应：若人物是商务大佬，匹配雪茄、威士忌、钢笔、高定西装拆解。若人物是街头潮人，匹配滑板零件、喷漆罐、潮玩、限量球鞋拆解。
+画质：8K超高清，商业摄影布光，奢侈品广告质感。`,
+    promptEn: `Vogue magazine cover style, high-end fashion photography with a Knolling Deconstruction twist.
+Subject: The character from the uploaded photo, posing like a supermodel in the center. Strict face identity lock.
+Layout:
+Center: The character in a stylish pose.
+Surroundings: An organized, floating exploded view of their outfit and inferred personal items.
+Outerwear: Floating jackets, shoes, accessories.
+Inferred Inner Layers: AI-imagined matching undergarments/lingerie consistent with the style (e.g., lace for elegant, sporty for casual).
+Private Items: Atmospheric small objects (e.g., cigar/lighter for a boss, lipstick/perfume for a lady, gadgets for a geek).
+Typography: Bold VOGUE masthead. Thin leader lines pointing to items with text labels: Item Name | Function | RMB Price.
+Lighting: Editorial studio lighting, sharp focus, luxury texture. --ar 3:4 --v 6.0`,
+    prompt: "Vogue magazine cover with character outfit deconstruction and private items...",
+  },
+
+    "dr-119": {
+    title: "时尚写真：专业摄影师",
+    tags: ["Fashion", "Portrait", "4-Panel", "Studio", "Photorealistic"],
+    promptCn: `核心指令：基于上传的人物参考图生成一张4格拼贴时尚海报。
+人物一致性：所有画面必须是同一位女性（面部特征100%锁定上传图）。
+风格与画质：超写实摄影，8K分辨率，光线追踪级影棚布光。皮肤具有真实毛孔纹理（水光肌效果），妆容精致自然（粉嫩唇彩）。
+造型设定：发型为长卷发，蓬松自然，几缕发丝修饰脸型。服装为紧身迷你裙，柔软的圈绒/针织材质（Boucle），柔和的淡紫色或灰褐色。
+四格画面内容：
+1. 左上：极度特写（微距）。动作是正在吃草莓，手指纤细，嘴唇微张。焦点在嘴唇光泽和草莓的水珠上。
+2. 右上：大腿以上中景。姿态是正面站立，身体微微前倾，直视镜头，表情迷人嘟嘴。强调锁骨阴影和针织裙质感。
+3. 左下：侧面视角全身坐姿。姿态是抱膝而坐（类似胎儿姿势变体），脸颊靠在膝盖上。氛围亲密。
+4. 右下：侧躺在地板上全身侧卧。姿态是单肘支撑头部，手插入发丝中，头微歪，直视镜头。
+环境：干净的米色/灰白色无缝背景纸。氛围温暖、私密、高级。`,
+    promptEn: `High-end 4-panel fashion photography collage.
+Subject Consistency: Strict face identity lock based on uploaded reference.
+Aesthetic: Ultra-photorealistic, 8k, Ray-traced studio lighting. Porous skin texture, dewy glass-skin finish.
+Look: Long loosely wavy hair. Bodycon mini dress in soft textured knit/boucle (mauve/taupe).
+Panel Layout:
+1. Top-Left: Extreme close-up of face. Eating a strawberry, delicate finger hold, glossy lips. Focus on moisture and details.
+2. Top-Right: Thigh-up medium shot. Standing straight, leaning forward slightly. Direct gaze, alluring pout. Visual anchor: Dress texture and collarbone.
+3. Bottom-Left: Side profile on floor. Knees to chest (fetal variation), cheek resting on knee. Intimate mood.
+4. Bottom-Right: Lying on side, propped on elbow, hand in hair. Direct gaze.
+Setting: Seamless off-white/beige studio background. Softbox lighting with specular highlights. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "4-panel high-end fashion photography collage, studio lighting...",
+  },
+
+    "dr-120": {
+    title: "竖屏工程蓝图海报",
+    tags: ["Engineering", "Blueprint", "Product Design", "Vertical", "Technical Drawing"],
+    promptCn: `【指令】生成一张竖屏工程海报 (9:16)。
+布局比例：顶部 30% [写实摄影] / 底部 70% [高密度蓝图]。
+区域 1 (顶部 1/3)：
+[插入产品名称] 的高端电影感影棚摄影。
+光影：戏剧性的影棚光，深色背景，与下方的纸张形成对比，展示成品的真实质感。
+区域 2 (底部 2/3)：
+陈旧米色纸张上的复杂、密集的技术图纸阵列。
+必须包含：
+- 主体线框结构
+- 内部组件爆炸图
+- 侧面立面图
+- 顶视剖面图
+- 机械部件特写 (齿轮、电机、铰链等)
+- 密集的文字注释、尺寸标注和网格线
+风格：达芬奇手稿遇上现代 CAD。拥挤、错综复杂、富有远见。`,
+    promptEn: `A vertical 9:16 poster layout.
+Top 1/3: A hyper-realistic color photograph of [Insert Product Name] against a dark background. Cinematic studio lighting.
+Bottom 2/3: A highly detailed, vintage technical blueprint on aged beige paper.
+The blueprint section is densely packed with multiple diagrams:
+- Main wireframe structure
+- Exploded view of internal components
+- Side profile elevation
+- Top-down cutaway view
+- Specific zoom-ins on mechanical parts
+- Dense textual annotations, dimensions, and grid lines.
+Contrast: High contrast between the modern photo top and the retro-industrial drawing bottom.
+Style: Da Vinci notebook meets modern CAD. Crowded, intricate, and visionary. --ar 9:16 --v 6.0`,
+    prompt: "Vertical engineering poster, realistic photo top, dense blueprint bottom...",
+  },
   
 };
