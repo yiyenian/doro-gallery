@@ -3468,5 +3468,116 @@ Contrast: High contrast between the modern photo top and the retro-industrial dr
 Style: Da Vinci notebook meets modern CAD. Crowded, intricate, and visionary. --ar 9:16 --v 6.0`,
     prompt: "Vertical engineering poster, realistic photo top, dense blueprint bottom...",
   },
+
+    "dr-121": {
+    title: "果树种植科普展板",
+    tags: ["Infographic", "Agriculture", "Fruit Tree", "Museum Style", "Education"],
+    promptCn: `果树种植科普展板 | 9:16 竖版 | 博物馆级信息设计
+【核心指令】根据所选果树品种（如：苹果树/柠檬树/蓝莓），自动填充真实、准确的农业数据。
+【主标题】「××果树种植与结果管理指南」。字体：思源黑体 / 思源宋体混排。
+【副标题】学名 · 科属 · 原产地 · 主要栽培区 · 结果年限。
+【中央视觉 (25%)】
+成熟健康的果树实物形态（盆栽 / 幼树 / 结果期枝条），写实自然博物馆标本风格，细节清晰。
+背景：浅色极简底（米白 / 浅灰），淡雅农业几何纹样 / 年轮 / 叶脉底纹（透明度 15–20%）。
+【信息布局】
+左侧（蓝绿色系 · 生长环境）：水分管理（浇水频率、需水差异、灌溉方式、土壤含水量）。光照需求（全日照/半日照、时长、影响对比图）。通风与间距（行距株距、环境禁忌）。
+右侧（黄绿色系 · 营养与土壤）：施肥管理（基肥/追肥、NPK比例、频率禁忌）。温度与湿度（生长曲线、低温风险、湿度病害）。土壤条件（类型、pH、改土方案）。
+【中部横条】
+12个月果树生长与管理时间轴（图标化呈现：修剪、萌芽、开花、坐果、膨果、采收、休眠）。
+【下方病虫害专区 (30% · 红紫警示色)】
+10项常见病虫害识别卡片（3行网格）：
+- 生理性（落花落果、畸形、黄化）
+- 病菌性（炭疽、褐斑、根腐）
+- 虫害（蚜虫、红蜘蛛、果实蝇、介壳虫）
+每张卡片含：症状特写图、识别要点、具体防治方案（药剂名称+稀释倍数+频次）、应急处理流程。
+【底部信息栏】果实可食性说明、农药安全间隔期、安全提示。
+【设计规范】
+高信息密度（留白25%），极细连接线，色彩编码系统（蓝水、黄光、绿肥、红病、紫虫）。
+中文排版紧凑易读。4K超高清，真实农业摄影级细节。`,
+    promptEn: `Fruit tree cultivation guide poster, high-density agricultural infographic, 9:16 vertical layout.
+Visual Style: Museum exhibition style, minimalist background (off-white/light grey) with subtle botanical patterns.
+Center Visual: Realistic fruit tree specimen (bonzai or branch with fruit), photorealistic details.
+Layout Structure:
+- Header: Bold Chinese title "[Insert Fruit Name] Planting Guide".
+- Left Column (Blue/Green): Growth environment, water management, light requirements, ventilation.
+- Right Column (Yellow/Green): Nutrition, soil conditions, fertilizer NPK charts, temperature curves.
+- Middle Strip: 12-month growth timeline with icons (pruning, blooming, harvest).
+- Bottom Section (Red/Purple): Pest and disease identification cards (grid layout). Close-ups of symptoms (anthracnose, aphids, etc.) with treatment protocols.
+- Footer: Safety and edibility info.
+Design Elements: Swiss grid system, high information density, fine connector lines, color-coded sections (Blue=Water, Yellow=Light, Green=Nutrients, Red=Disease).
+Typography: Clean Chinese fonts (Source Han Sans/Serif).
+Quality: 4K ultra-high resolution, macro photography details, professional horticulture data visualization. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "Fruit tree cultivation guide infographic, museum style...",
+  },
+
+    "dr-122": {
+    title: "油画写生：参考图定制",
+    tags: ["Portrait", "Oil Painting", "Art", "Studio", "Realistic", "Reference Based"],
+    promptCn: `【核心指令】基于上传的人物参考图生成。
+画面主题：现场油画写生场景。
+人物主体：
+**严格基于上传的参考图**（面部特征、发型100%还原）。作为写生模特坐在自然光充足的工作室中。
+姿态：姿态轻柔，表情柔和梦幻。自然漫射光从侧面大窗户射入，照亮她的五官和周围的鲜花布置（柔和色调的樱花、绣球花）。
+绘画风格（写实油画）：
+前景画架上展示着一幅**正在创作中的画布**，画面内容正是眼前这位模特的肖像。
+绷在亚麻画布上的大师级写实油画，可见画布编织纹理。颜料质感丰富油润，高光和衣物处有微妙的厚涂（Impasto），肤色则采用极致平滑的晕染（Sfumato）和罩染技法，呈现发光感。
+画架上的画作接近完成，精准还原模特的容貌。
+环境与道具：
+前景是画家的木制画架。旁边是专业的油画工具：堆满颜料的大木调色板、猪鬃和貂毛画笔、刮刀、松节油瓶、颜料管和沾满油彩的抹布。
+色彩：
+柔和而精致的调色板：柔和玫瑰色、鼠尾草绿、淡紫、蜜桃色、暖赭石色和奶油色。
+签名：
+画布右下角用细貂毛笔写着低调的静谧色调签名 "by doro"。`,
+    promptEn: `Masterful realistic oil painting session scene.
+Core Instruction: Generate based on the uploaded reference photo.
+Subject: The model (Strict identity lock to reference) posing gently with a soft, dreaming expression in a sunlit studio. Natural diffused light from a large window illuminates her and surrounding floral arrangements.
+The Painting (On Easel): A realistic oil painting on stretched linen canvas, visible weave. Rich buttery paint texture, subtle impasto on highlights. Incredible smooth luminous blending for skin (sfumato, glazing). The painting on the easel is nearly finished, showing an exact likeness of the model.
+Environment: Wooden easel in foreground. Large wooden palette with mixed oil colors, hog hair/sable brushes, palette knives, turpentine jars, paint tubes, oil-stained rags.
+Palette: Muted rose, sage green, soft violet, peach, warm ochre, cream.
+Signature: Artist signature "by doro" painted discreetly in the lower right corner of the canvas. --ar 3:4`,
+    prompt: "Live oil painting session based on uploaded reference, masterful art style...",
+  },
+
+    "dr-123": {
+    title: "极简手部产品展示",
+    tags: ["Product Photography", "Hand Model", "Close-up", "Minimalist", "Commercial"],
+    promptCn: `【指令】生成一张超写实的女性手部特写产品摄影图。
+核心主体（手部）：
+一只纤细修长的女性手部，骨节分明但不突兀，皮肤白皙如玉。指甲修剪为精致的方圆形，涂有透透的裸粉色指甲油，指尖带有微妙的珍珠光泽。
+动作与互动：
+单手自然优雅地握持并展示 [插入具体产品名称，如：哑光黑色蓝牙耳机充电盒 / 玫瑰金口红 / 极简玻璃香水瓶 / 精致礼盒 / 珠宝盒]。
+手部动作自然流畅，手指位置合理（如：轻轻推开盖子 / 轻握并微转瓶身 / 轻拉丝带）。
+可选：基于上传的产品参考图进行高保真渲染。
+光影与环境：
+自然侧逆光或柔和侧光，强调手部皮肤纹理和产品材质质感。
+背景干净极简 [插入背景描述，如：浅灰渐变 / 大理石桌面 / 柔白影棚 / 自然光窗边]。
+画质：
+8K超高清，照片级真实感，极致细节，无畸变，专业产品摄影风格。`,
+    promptEn: `Close-up of a woman's hand, slender fingers with delicate non-protruding joints, fair jade-like skin, nails trimmed into refined square-round shape, coated with sheer nude pink nail polish, fingertips with subtle pearl sheen.
+Action: Single hand naturally and elegantly holding and showcasing **[Insert Product Name & Description]** (e.g., a matte black wireless earbuds case / rose gold lipstick / minimalist glass perfume bottle).
+Interaction: **[Insert Interaction]** (e.g., gently pushing the lid / lightly gripping and rotating / pulling a ribbon). Highlighting the product's minimalist premium design.
+Lighting: Natural slanting light, soft sidelight emphasizing skin texture and product material.
+Background: Clean minimalist background **[Insert Background]** (e.g., light gray gradient / marble tabletop / soft white studio).
+Quality: 8K ultra-high definition, photographic realism, extreme detail, perfect physical interaction, professional product photography style. --ar 3:4`,
+    prompt: "Close-up of a woman's hand holding a product, minimalist style...",
+  },
+
+   "dr-124": {
+    title: "奢侈品拍摄-三段式海报",
+    tags: ["Fashion", "Triptych", "Editorial", "Brand", "Photography"],
+    promptCn: `角色设定：严格的时尚编辑排版总监与高端时尚摄影师。
+核心任务：将输入转换为一张垂直的三联画（上、中、下三个横向面板）。
+输入变量：
+- [人物] (缪斯)
+- [品牌] (美学/色调)
+- [场景/道具] (语境)
+布局结构：
+单张垂直图像，被白色分割线分为上、中、下三个相等的横向面板。
+[顶部面板]：[人物] 的电影感面部特写，强烈的眼神交流，[品牌] 风格妆容，戏剧性布光。
+[中部面板]：手部持有 [场景/道具] 的中景裁剪，或在 [场景] 中的身体剪影，展示 [品牌] 时尚造型，带有动态模糊。
+[底部面板]：[品牌] 产品纹理或来自 [场景/道具] 的材质细节的极致微距摄影，超写实。
+美学定调：
+35mm 胶片拍摄，8k 分辨率，照片级真实感，[品牌] 色调板，高端时尚杂志美学。`,
+  },
   
 };
