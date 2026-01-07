@@ -3608,5 +3608,156 @@ Quality: 8K ultra-high definition, photographic realism, extreme detail, perfect
 底部右侧："创作者: Doro"。
 画质：4K超高清，极简、优雅、精致。`,
   },
+
+  "dr-126": {
+    title: "专业品牌VI设计展示板",
+    tags: ["Brand Identity", "Graphic Design", "VI System", "Minimalist", "Layout"],
+    promptCn: `[doro] 专业品牌视觉识别系统设计展示板，以杂志级排版呈现完整设计系统。
+行业属性：[个人IP / 插入行业]
+核心包含元素：
+1. 主标志展示区 (顶部 1/3)：
+- 简约永恒的符号，核心元素为 [插入字母/图形，如：Y]。抽象几何形态，留白强烈，线条简洁。
+- 品牌名称 [插入中文品牌名，如：沐阳]：采用小巧低调的无衬线字体，位于符号下方或旁边。视觉柔和，字间距精致。
+2. 配色与网格：
+- 配色方案：[主色]、[配色]、[背景色]。扁平矢量风格，高对比度。
+- 设计网格：展示标志的几何构造线和黄金比例参考线，体现数学精准性。
+3. 过程与灵感：
+- 概念草图：3-4张手绘风格探索草图，浅色铅笔质感，米色纸张底纹。
+- 灵感情绪板：4-6张极简建筑、自然形态、抽象几何图案，雅致网格排列。
+4. 创意理念说明：整洁的中文排版，阐述设计哲学、色彩心理学。
+5. 品牌应用样机 (真实场景)：
+- 名片、信纸信封、APP图标、网站页眉、包装袋、店面门头、社交头像。
+6. 规范展示：色块编号、字体层级、最小尺寸、安全留白。
+整体风格：
+纯白色或 [背景色] 背景，充足留白。瑞士/包豪斯风格网格系统。元素组织清晰不拥挤。现代编辑设计美学 (Behance/站酷风格)。
+技术规格：
+8K分辨率，超高细节，清晰锐利。实物样机采用平铺摄影风格，完美光照。标志本身无渐变阴影（样机除外），纯矢量美学。`,
+    promptEn: `Professional Brand Visual Identity System Design Board for [Insert Brand Name]. Magazine-grade layout, clean and modern. Industry: [Insert Industry].
+Core Elements:
+1. Main Logo Showcase (Top 1/3, Centered): Minimalist timeless symbol featuring [Insert Letter/Element]. Abstract geometric form, strong negative space, clean lines. Typography: Brand name "[Insert Chinese Name]" in understated sans-serif font, precise kerning.
+2. Design Grid & Color: Geometric construction lines and Golden Ratio guides. Palette: [Main Color], [Accent Color], [Background Color]. Flat vector style.
+3. Process: 3-4 hand-drawn concept sketches on beige paper texture. Moodboard: Minimalist architecture, nature forms, abstract geometry in elegant grid.
+4. Philosophy: Clean typography explaining Design Philosophy and Color Psychology.
+5. Brand Mockups (Real-world Application): Business cards, Letterhead, App icons, Website header, Packaging, Signage, Social media avatar.
+6. Guidelines: Color blocks with values, Typography hierarchy, Safe zones.
+Layout Style: Pure white or [Insert Background Color] background, generous whitespace, Swiss/Bauhaus grid system. Organized, hierarchical. Modern editorial aesthetic (Behance portfolio style).
+Tech Specs: 8k resolution, ultra-high detail, sharp. Flat lay photography style for mockups, perfect lighting. Logo is flat vector, mockups are photorealistic.`,
+    prompt: "Professional brand identity design board, logo, grid, mockups...",
+  },
+
+    "dr-127": {
+    title: "高密度3D信息图：盲盒风",
+    tags: ["3D Render", "Infographic", "C4D", "Data Visualization", "Blind Box Style"],
+    promptCn: `【指令】基于 [插入主题] 创作一张高密度的中文 3D 信息图。
+风格要求：
+1. 顶部主标题区：居中展示该主题的 3D 艺术字标题，字体圆润可爱或极具设计感。
+2. 中间核心视觉：展示相关物品或者抽象内容的 3D 微缩模型。
+- 造型：极其复杂华丽、体积庞大、细节丰富。
+- 材质：类似于“盲盒玩具”与“产品渲染”的结合，既可爱又有极高的物理真实感（如发光、透明玻璃、镀金金属）。
+- 特效：带有炫酷的光晕或悬浮粒子。
+3. 信息叠加层 (Smart UI)：
+- 悬浮标签：在每个模型组件上方，悬浮一个 3D 气泡或磨砂玻璃卡片，写上名称。
+4. 底部数据矩阵区：
+- 生成一个整齐的多列数据表。
+- 自动生成参数：根据主题自动选择最关键参数，并以图形化进度条、仪表盘或数字形式展示。
+5. 渲染参数：
+- 视角：正面平视或 30 度等轴测视角，确保物品排列有序。
+- 引擎：C4D / Octane Render，光影柔和，质感细腻。
+- 背景：干净的纯色摄影棚背景（如柔粉、淡蓝或高级灰），带有柔和的投影。`,
+    promptEn: `High-density 3D Infographic for [Insert Theme].
+Layout & Composition:
+- Top: Centered 3D Art Text Title of the theme.
+- Middle: Intricate 3D miniature models representing the theme. Complex forms, premium materials (glowing, transparent glass, gold plating), massive volume, cool lighting effects. Aesthetic combines "Blind Box Toy" cuteness with "High-end Product Rendering" realism.
+- Overlay (Smart UI): Floating 3D bubble labels or frosted glass cards above each model element.
+- Bottom: Data Matrix Zone. Organized multi-column data table. Auto-generated key parameters displayed with graphical progress bars, dials, or digital numbers.
+Render Specs:
+- View: Front eye-level or 30-degree isometric.
+- Engine: C4D, Octane Render, hyper-realistic physics, soft studio lighting.
+- Background: Clean solid color studio backdrop (pastel or neutral) with soft contact shadows.
+- Quality: 8k resolution, vivid colors, sharp details. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "3D infographic with blind box toy style models and data matrix...",
+  },
+
+   "dr-128": {
+    title: "职业一周穿搭指南：角色定制",
+    tags: ["Fashion", "OOTD", "Infographic", "Commercial", "Lifestyle", "Adaptive"],
+    promptCn: `【指令】生成一张 [瑞士/日式/北欧/法式] 简约设计风格的“一周穿搭指南”信息图。
+核心输入：
+1. 人物基准：基于【上传的人物参考图】，保持面部特征、发型、身材比例严格一致。
+2. 职业设定：[插入职业名称，如：金融分析师/广告创意总监/花艺师/健身教练]。
+3. 风格偏好：[插入风格，如：极简商务/日系工装/美式复古/韩系休闲]。
+画面布局与设计：
+极简时尚杂志风格，横向长图排列 (Panorama)。画面分为七个独立展示区（周一至周日），每个区域包含：
+- 主体：同一位模特在不同场景下的全身穿搭展示。
+- 细节：侧边悬浮的单品特写（面料纹理、配饰细节）。
+- 排版：极简中文说明文字（思源黑体/苹方），包含场景标签、Pantone色卡条、五星评级（正式度/舒适度）。
+背景：高级冷灰/米白/奶茶色，留白充足。
+一周穿搭方案 (AI基于 [插入职业] 自动推演)：
+- 周一 (重要节点)：[该职业的正式/重要场合装束]。体现专业度与气场。
+- 周二 (日常工作)：[该职业的标准工作装]。注重舒适与效率。
+- 周三 (团队协作)：商务休闲 (Smart Casual) 或 行业特有混搭。
+- 周四 (外勤/拜访)：[该职业的外出场景装束]。得体大方，适应移动。
+- 周五 (放松办公)：Relaxed fit，[该职业的休闲风格]。准备迎接周末。
+- 周六 (个人兴趣)：[该职业从业者的典型周末装束]。
+- 周日 (彻底休息)：柔软材质，棉麻/羊绒，松弛感。
+技术渲染：
+Unreal Engine 5渲染级画质，光线追踪，面料微距细节清晰可见（羊毛纹理、皮革毛孔）。电影级调色，高动态范围HDR。8K超清分辨率。`,
+  },
+
+    "dr-129": {
+    title: "历史文化图谱：万物可视化拆解",
+    tags: ["Infographic", "History", "Culture", "Visual Encyclopedia", "Ancient Style"],
+    promptCn: `【指令】创建一个“[插入主题]品级制度/演变史可视化拆解”的历史图谱风格信息图。
+适用主题：[古代官服/发饰/帽子/交通工具/货币/兵器等]。
+构图：16:9 横向构图。采用古代典章图式美学，使用古籍插图风格绘制（工笔画/木刻版画质感）。
+1. 核心视觉（中央）：
+[插入主题] 的差异对比展示。从左到右按品级/年代排列 5-9 个代表性样式。
+例如：一品至九品官服、各朝代发型、不同等级的马车。
+每个样式旁配有：
+- “放大镜特写”：展示核心细节（如刺绣纹样、材质纹理、铸造工艺）。
+- 详细标注：材质（东珠/丝绸/青铜）、图案含义（飞禽/走兽/花鸟）、等级象征。
+2. 顶部：识别速查表
+用表格对比不同品级/类型在 3-5 个维度上的差异。每格用“小图标+文字”标注。
+3. 底部：历史冷知识 & 演变时间轴
+- 历史冷知识：标注该主题背后的政治/文化含义（如“为何文官用飞禽”、“颜色禁令”）。
+- 时间轴：展示该主题在汉、唐、宋、元、明、清的风格演变缩略图。
+4. 视觉风格与文字：
+所有文字使用中文：顶部用小篆/隶书字体“[插入主题]图谱：[副标题]”。底部标注文化内涵。
+配色：使用中国传统色（朱红、藤黄、靛蓝、赭石）。
+整体呈现历史制度和物质文化，适合历史教育和文化研究。`,
+  },
+
+    "dr-130": {
+    title: "天使光影五连拍：情绪光谱",
+    tags: ["Portrait", "Collage", "Angelic", "Ethereal", "5-Panel", "Cinematic"],
+    promptCn: `核心指令：基于上传的人物参考图生成。
+画面形式：超写实竖向拼贴，包含 5 个并排的人物肖像条 (Portrait Strips)。
+人物锁定：所有画面必须是**同一位天使般的少女**（严格锁定上传图的面部特征），拥有精致的五官、发光的肌肤和飘逸的长发。
+情绪递进：
+五个条幅分别展示不同的情绪与光影状态，从左至右：
+1. **宁静 (Serene)**：平静如水，眼神柔和。
+2. **喜悦 (Joyful)**：淡淡的微笑，充满希望。
+3. **沉思 (Contemplative)**：低头或侧脸，光影略深。
+4. **神秘 (Mystical)**：眼神深邃，带有神性。
+5. **光化 (Radiance)**：面部逐渐消融在耀眼的光芒中，神圣而不可方物。
+造型与环境：
+身穿空气感十足的白色/浅色薄纱长裙，极简配饰。
+背景在暖金、珠光白和粉蓝之间无缝渐变。
+光影风格：
+高调摄影 (High-key)，柔和的轮廓光 (Rim lights)，微妙的发光效果 (Glow)，营造神圣的天使氛围。
+构图：面部特写为主，对焦锐利，电影级质感，带有柔和的胶片颗粒。`,
+    promptEn: `Ultra-realistic vertical collage of an angelic girl in five portrait strips, side by side.
+**Subject Consistency:** Strict face identity lock based on the uploaded reference. Delicate features, luminous skin, flowing hair.
+**Emotional Spectrum (Left to Right):**
+1. Serene: Calm and peaceful.
+2. Joyful: Subtle, hopeful smile.
+3. Contemplative: Deep thought, soft shadows.
+4. Mystical: Ethereal gaze, divine aura.
+5. Radiance: Fading into blinding radiant light.
+**Styling:** Soft, flowing garments in airy fabrics (tulle/chiffon), minimal accessories.
+**Atmosphere:** Cinematic soft lighting. Background fading seamlessly between warm gold, pearlescent white, and pastel blue. Gentle rim lights, subtle angelic glow.
+**Tech:** Close-up framing, tight on face, hyper-detailed, cinematic clarity, soft film grain. Poster-like composition, timeless. --ar 3:4 --v 6.0`,
+    prompt: "5-panel vertical collage of an angelic girl, emotional transition...",
+  },
   
 };
