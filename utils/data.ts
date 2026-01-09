@@ -3846,5 +3846,45 @@ Unreal Engine 5渲染级画质，光线追踪，面料微距细节清晰可见�
 【高端撞色系设计】：枣红背景 + 白色文字 + 黑白斑马形成强烈对比。画面色彩鲜艳、喜庆、干净，高级商业摄影质感，构图中心突出，整体洋溢着新年的喜庆氛围。
 技术参数：3x3 网格，等距排列，主体居中，中景到全身，正面平视，50mm f/2.8，明亮柔光棚拍，4K超高清。`,
   },
-  
+ 
+    "dr-135": {
+    title: "蔚蓝天空时尚九宫格",
+    tags: ["Fashion", "Grid", "Blue Sky", "Dynamic Pose", "Commercial"],
+    promptCn: `【核心指令】基于上传的人物参考图生成一张高分辨率 3x3 网格拼贴海报。
+人物一致性：严格锁定面部特征，所有 9 个画面均为同一位女性。
+环境与光影：
+背景是充满活力的蔚蓝天空，点缀朵朵白云。
+强烈的自然阳光直射，形成清晰明快的阴影（Hard Light），画面通透洁净。
+造型：身穿质感针织衫，搭配半身裙，佩戴纤细银项链。
+【九宫格姿态规划 (多种焦距切换)】：
+1. **有力姿势**：全身/切膝。双腿分开站立，双手抱头，自信张扬。
+2. **透视互动**：广角镜头。一只手掌直指镜头，形成强烈的近大远小透视感。
+3. **俏皮特写**：85mm特写。一只手做“OK”手势放在眼睛上，透过手指孔看镜头。
+4. **欢快中景**：双手托腮，笑容灿烂，眼神明亮。
+5. **忧郁情绪**：近景。一只手遮住半张脸/嘴唇，眼神深邃。
+6. **动态抓拍**：侧身回眸，发丝被风吹起，裙摆飘动。
+7. **低角度仰拍**：从低处向上拍摄，人物与蓝天互动，极具张力。
+8. **自然行走**：正面或侧面行走的瞬间，肢体舒展。
+9. **闭眼享受**：面部特写。仰头闭眼，享受阳光洒在脸上的感觉。
+【画质细节】
+8K 分辨率，超逼真效果。细腻的肌肤纹理（可见毛孔），次表面散射（SSS），逼真的衣物针织褶皱，根根分明的发丝。
+高端商业时尚画册或生活方式宣传片美学。`,
+    promptEn: `High-resolution 3x3 grid photo collage featuring the SAME female model (Strict identity lock).
+**Environment:** Vibrant azure sky with fluffy white clouds. Strong, high-contrast natural sunlight with distinct shadows.
+**Outfit:** Textured knitted sweater, skirt, delicate silver necklace.
+**Camera:** Mix of 35mm wide-angle (full body) and 85mm portrait (close-up) lenses.
+**9 Dynamic Poses:**
+1. **Power:** Legs apart, hands behind head, confident stance.
+2. **Perspective:** Hand/Palm reaching directly towards the camera lens (foreshorterning).
+3. **Playful:** "OK" hand sign frame over one eye (Close-up).
+4. **Joy:** Hands cupping cheeks, bright smile (Medium shot).
+5. **Melancholy:** Hand covering half face, moody expression.
+6. **Dynamic:** Looking back over shoulder, hair and skirt blowing in wind.
+7. **Low Angle:** Worm's-eye view looking up at subject against the sky.
+8. **Motion:** Walking forward casually.
+9. **Savoring:** Head tilted back, eyes closed, soaking in the sunlight.
+**Quality:** 8k, hyper-realistic, subsurface scattering, detailed knit texture, individual hair strands, high-end commercial fashion lookbook aesthetic. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "3x3 grid fashion collage, blue sky background, dynamic poses...",
+  },
+
 };
