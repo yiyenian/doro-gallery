@@ -3887,4 +3887,98 @@ Unreal Engine 5渲染级画质，光线追踪，面料微距细节清晰可见�
     prompt: "3x3 grid fashion collage, blue sky background, dynamic poses...",
   },
 
+    "dr-136": {
+    title: "中式新娘剪纸肖像：参考图定制",
+    tags: ["Portrait", "Chinese Style", "Paper Art", "Photography", "Tradition", "Reference Based"],
+    promptCn: `【核心指令】基于上传的人像参考图生成一张传统中式新娘肖像摄影作品 (4:5 竖版)。
+**人物锁定：** 严格基于上传参考图的面部特征，保持五官、脸型和神态的一致性。
+核心主体：
+一位气质优雅的女性，盘着精致的发髻。
+装饰细节：发型上装饰着精美的红色剪纸花朵和蝴蝶（非平面贴图，而是实物剪纸发饰），与传统的红色服饰相得益彰。佩戴白色光泽珍珠耳环，点缀细节。
+服装材质：
+身穿红色缎面旗袍 (Cheongsam)，展现光滑的高级丝绸质感。
+剪纸元素：红色的剪纸装饰作为前景虚化或头部装饰，纸张质感细腻，纹理清晰可见。
+光影与氛围：
+光照：柔和的侧光 (Soft side lighting)，营造出温暖、优雅且略带神秘的传统东方氛围，阴影柔和自然。
+构图：平视视角 (Eye-level)，面部特写或胸像，背景简洁（如红纸或深色背景），突出主体与剪纸艺术的互动。
+画质：
+50mm 镜头感，真实的人物比例，超写实摄影质感，皮肤纹理真实。`,
+    promptEn: `Traditional Chinese bridal portrait photography based on the uploaded reference.
+**Subject Consistency:** Strict identity lock on the uploaded face. The facial features must remain unchanged.
+Styling: Elegant updo hairstyle adorned with intricate **red paper-cut flowers and butterflies** (actual paper texture props, not just a pattern).
+Attire: Wearing a red satin cheongsam with smooth, premium silk texture. Small white glossy pearl earrings.
+Details: Delicate red paper-cut ornaments integrated into the styling and foreground, creating a festive and artistic look.
+Lighting & Atmosphere: Soft side lighting creating gentle shadows. Warm, elegant, traditional Chinese festive atmosphere.
+Camera: 50mm lens, eye-level perspective, close-up portrait.
+Quality: Photorealistic, high resolution, sharp focus on face and paper textures, authentic skin details. --ar 4:5 --v 6.0`,
+    prompt: "Traditional Chinese bridal portrait with red paper-cut decorations...",
+  },
+
+    "dr-137": {
+    title: "韩系甜酷风时尚画报",
+    tags: ["Fashion", "K-pop Style", "Sweet & Cool", "Portrait", "Studio"],
+    promptCn: `视觉风格分析：韩系甜酷风(Sweet & Cool)时尚摄影，K-pop偶像画报质感。
+色彩搭配：
+- 主色：亮粉色/洋红色 (#D64C86) 的外套，充满活力与视觉冲击。
+- 辅色：深邃黑 (#0F0F0F) 的吊带裙、丝袜与头发，神秘性感。
+- 背景色：浅玫瑰/迷雾粉 (#EAD5D9)，柔和梦幻少女感。
+- 肤色：冷白皮，哑光带微光。
+- 对比度：黑色与粉色的强烈反差 (High Contrast)。
+光影与氛围：
+- 影棚布光：柔光箱正面补光，面部光线均匀。背景使用圆形聚光灯/光束效果 (Vignette)。
+- 阴影：柔和受控，集中在人物下方。
+- 情绪：时髦 (Chic)、迷人 (Alluring)、精致 (Polished)。
+构图：
+中心构图，稳固的三角形构图（蹲姿）。全身画面，底部视觉重心较重。
+主体与造型：
+- 服装：廓形大衣 (Oversized Coat) 披肩穿法，缎面吊带裙 (Slip Dress)，蕾丝长筒袜，细高跟鞋。
+- 材质：毛呢/毛毡质感外套，丝绸光泽裙子，透视纹理丝袜，光泽感秀发。
+- 妆发：黑长直+空气刘海。韩式妆容，强调腮红与唇色，清晰眼线。
+后期与排版：
+- 修图：精修美颜，五官立体，高锐度纹理清晰。数码洁净感（无噪点）。`,
+  },
+
+    "dr-138": {
+    title: "成分引力场：产品摄影",
+    tags: ["Product Photography", "Ingredients", "Solar System Composition", "Commercial", "Creative"],
+    promptCn: `【指令】生成一张展现产品成分的创意商业摄影图。
+核心主体：
+[插入产品名称] 悬浮在画面正中央，作为视觉核心（如同太阳）。
+成分轨道：
+相关成分（如：植物提取物、水果切片、水滴、矿物颗粒、花瓣）围绕产品呈轨道状运行，形成类似太阳系的构图。
+布局要求：
+展示成分与产品的关系，排列平衡且富有动态感，层次分明，不仅是装饰，更是成分展示。
+背景与光影：
+干净的渐变背景（颜色与产品协调）。专业影棚布光，强调材质质感、透光感和立体感。
+画质：
+8K超高清，商业广告级摄影，极度锐利，无噪点。`,
+    promptEn: `Creative commercial product photography featuring **[Insert Product Name]** floating at the center.
+**Composition:** "Ingredient Orbit" / Solar System style. Related ingredients (e.g., fruit slices, water droplets, botanical extracts, minerals) orbit around the product in dynamic, balanced circular paths.
+**Visuals:** Relationship visualization, component showcase. High-end commercial aesthetic. Elements are arranged with depth and flow.
+**Background:** Clean gradient background matching the product theme.
+**Lighting:** Professional studio lighting, sharp focus, hyper-realistic textures, volumetric feel. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "Product floating at center with ingredients orbiting like a solar system...",
+  },
+
+    "dr-139": {
+    title: "现实与插画：自我对话",
+    tags: ["Portrait", "Mixed Media", "Illustration", "Street Photography", "Surreal"],
+    promptCn: `核心指令：基于上传的人物参考图生成。
+画面主题：现实与插画的对话。
+主体：真人模特坐在安静的街道水泥路牙上，姿态沉思自然。**严格保持参考图的面部特征、发型和服装**。
+创意元素：
+在真人旁边，坐着一个**缩小版的手绘卡通形象**。这个卡通形象也是她本人，拥有相同的五官特征、表情和服装，但采用柔和的动画风格绘制，线条干净，色彩温暖低饱和。
+环境与氛围：
+有质感的鹅卵石路面，柔和色调的建筑立面，柔和的自然日光。
+风格：
+混合媒介构图（街头摄影 + 手绘插画），探讨身份与自我反思的主题。电影级写实，Octane渲染质感，64K单反画质。`,
+    promptEn: `Analyze the uploaded reference image and create a 64K DSLR resolution urban street portrait.
+**Subject Consistency:** Use the exact same facial features, appearance, hair style, and clothing from the reference image.
+**Scene:** Recreate this person sitting contemplatively on a concrete curb in a quiet city street, maintaining their natural expression and pose.
+**Creative Element:** Next to them, place a **smaller hand-drawn cartoon version** of the same person with identical facial features, expression, and clothing. Drawn in a soft animation style with clean outlines and warm muted colors.
+**Background:** Textured cobblestone pavement, building facade with muted tones, soft natural daylight.
+**Style:** Mixed-media composition blending street photography with illustration, evoking themes of identity and self-reflection. Cinematic realism, Octane render quality. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "Street portrait of a real person sitting next to their small cartoon self...",
+  },
+  
 };
