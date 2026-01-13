@@ -3976,5 +3976,36 @@ Quality: Photorealistic, high resolution, sharp focus on face and paper textures
 **Style:** Mixed-media composition blending street photography with illustration, evoking themes of identity and self-reflection. Cinematic realism, Octane render quality. --ar 3:4 --v 6.0 --style raw`,
     prompt: "Street portrait of a real person sitting next to their small cartoon self...",
   },
+
+    "dr-140": {
+    title: "极简美食食谱：步骤解构",
+    tags: ["Food", "Infographic", "Recipe", "Knolling", "Flat Lay"],
+    promptCn: `【指令】为 [插入菜品名称] 生成一张分步骤菜谱信息图。
+画面比例：2:3 竖幅。视角：正俯视 (Flat Lay)。
+风格：极简主义美学，白色背景，IKEA 说明书式的清晰逻辑与高端美食摄影的结合。
+【内容布局】
+1. 顶部：居中显示菜品中文名称，字体优雅现代。
+2. 上半部 (食材陈列 - Knolling)：
+- 将该菜品所需的原材料（自动推断）整齐排列。
+- 每个食材旁有细引线标注：中文名称 + 精确用量 + 热量 (kcal)。
+3. 中部 (烹饪逻辑)：
+- 使用极简的黑色虚线和线性图标连接食材与成品。
+- 图标展示关键步骤（如：刀切、火焰翻炒、汤锅炖煮、搅拌）。
+4. 底部 (成品展示)：
+- 最终烹饪完成的 [插入菜品名称]，摆盘精美，色泽诱人，热气腾腾。
+【视觉质感】
+食材与成品为超写实摄影画质，纹理清晰。
+辅助图形（线条、图标、文字）为扁平化矢量风格。
+整体干净、清爽、高食欲感。`,
+    promptEn: `A minimalist step-by-step recipe infographic for [Insert Dish Name].
+Format: 2:3 Vertical, Top-down Flat Lay view. Pure white background.
+Structure:
+1. Header: Elegant Chinese title of the dish.
+2. Upper Section (Ingredients Knolling): Raw ingredients arranged neatly and artistically. Labeled with thin lines showing Name, Quantity, and Calories.
+3. Middle Section (Process Flow): Dashed guide lines and minimalist vector icons indicating cooking steps (chopping, frying, boiling) connecting ingredients to the final dish.
+4. Bottom Section (The Result): The finished, beautifully plated dish, photorealistic and appetizing.
+Style: Fusion of high-end food photography and clean instructional design. High-key lighting, sharp details, organized layout. --ar 2:3 --v 6.0`,
+    prompt: "Minimalist recipe infographic, knolling ingredients and finished dish...",
+  },
   
 };
