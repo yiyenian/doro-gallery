@@ -180,8 +180,8 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      {/* --- 严格网格列表 (16:9 横版统一比例) --- */}
-      {/* 🔴 核心修改：强制 aspect-[16/9] (即 aspect-video) */}
+      {/* --- 严格网格列表 (3:4 竖版统一比例) --- */}
+      {/* 🔴 核心修改：强制 aspect-[3/4] 以展示人像和海报的最佳效果 */}
       <div className="w-full px-4 sm:px-6 pb-20 pt-6 min-h-[100vh]">
         {filteredImages.length > 0 ? (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 min-[1800px]:grid-cols-7">
@@ -189,7 +189,7 @@ export default function Gallery({ images }: { images: any[] }) {
                 <div 
                 key={image.id}
                 onClick={() => setSelectedId(image.id)}
-                className="group relative aspect-video w-full cursor-zoom-in overflow-hidden rounded-xl bg-slate-800/20 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-900/20 hover:border-white/10 backdrop-blur-sm"
+                className="group relative aspect-[3/4] w-full cursor-zoom-in overflow-hidden rounded-xl bg-slate-800/20 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-900/20 hover:border-white/10 backdrop-blur-sm"
                 >
                 <img 
                     src={getThumbnailUrl(image.url)} 
