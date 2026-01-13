@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { X, Copy, Check, Search, Sparkles, Terminal, ExternalLink, ChevronLeft, ChevronRight, Hash, Languages, ChevronDown, ChevronUp } from 'lucide-react';
+import { X, Copy, Check, Search, Terminal, ExternalLink, ChevronLeft, ChevronRight, Languages, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
-// --- 提示词组件 (固定高度 + 滚动) ---
+// --- 提示词组件 (紧凑排版 + 深色背景 + 滚动) ---
 const PromptBox = ({ title, content, icon: Icon }: { title: string, content: string, icon: any }) => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -29,9 +29,11 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
           {isCopied ? <Check size={14}/> : <Copy size={14}/>} {isCopied ? "Copied" : "Copy"}
         </button>
       </div>
-      <div className="relative group w-full rounded-xl border border-white/5 bg-slate-900/50 overflow-hidden hover:border-white/10 transition-colors">
-        <div className="px-4 py-4 text-sm leading-7 text-slate-300 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-transparent">
-            <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} /> }}>
+      
+      {/* 深色背景增强对比度 bg-black/40 */}
+      <div className="relative group w-full rounded-xl border border-white/5 bg-black/40 overflow-hidden hover:border-white/10 transition-colors">
+        <div className="px-4 py-3 text-xs sm:text-sm leading-6 text-slate-300 font-mono select-text whitespace-pre-wrap break-words max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-transparent">
+            <ReactMarkdown components={{ p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} /> }}>
                 {content.replace(/\n/g, '  \n')}
             </ReactMarkdown>
         </div>
@@ -42,11 +44,11 @@ const PromptBox = ({ title, content, icon: Icon }: { title: string, content: str
 
 export default function Gallery({ images }: { images: any[] }) {
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const [copiedCn, setCopiedCn] = useState(false);
-  const [copiedEn, setCopiedEn] = useState(false);
-  const [copiedDefault, setCopiedDefault] = useState(false);
   const [search, setSearch] = useState("");
   const [isTagsExpanded, setIsTagsExpanded] = useState(false);
+
+  // 本地图片模式：直接返回 url
+  const getThumbnailUrl = (url: string) => url;
 
   const allTags = useMemo(() => {
     const tags = new Set<string>();
@@ -87,42 +89,28 @@ export default function Gallery({ images }: { images: any[] }) {
     else document.body.style.overflow = 'unset';
   }, [selectedId]);
 
-  const copyToClipboard = (text: string, type: 'cn' | 'en' | 'default') => {
-    navigator.clipboard.writeText(text);
-    if (type === 'cn') { setCopiedCn(true); setTimeout(() => setCopiedCn(false), 2000); }
-    if (type === 'en') { setCopiedEn(true); setTimeout(() => setCopiedEn(false), 2000); }
-    if (type === 'default') { setCopiedDefault(true); setTimeout(() => setCopiedDefault(false), 2000); }
-  };
-
-  // 生成列表页缩略图 (w_720)
-  const getThumbnailUrl = (url: string) => {
-    if (!url) return '';
-    return url.replace('w_1920', 'w_720');
-  };
-
   const defaultTags = ['Portrait', 'Cyberpunk', 'Anime', '3D Render', 'Logo Design', 'Chinese Style', 'Architecture', 'Sci-Fi'];
   const displayTags = allTags.length > 0 ? allTags : defaultTags;
 
   return (
-    <>
+    <div className="min-h-screen bg-[#020617] text-slate-200 selection:bg-indigo-500/30">
       {/* --- 吸顶头部 (Sticky Header) --- */}
-      <div className="sticky top-0 z-40 w-full bg-[#0f172a]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all">
+      <div className="sticky top-0 z-40 w-full bg-[#020617]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all">
          
-         {/* 背景光效 (仅在 Header 内部) */}
+         {/* 背景光效 */}
          <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-40">
-            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/20 rounded-full blur-[100px] animate-pulse"></div>
-            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/20 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
+            <div className="absolute top-0 left-[20%] w-96 h-96 bg-purple-900/30 rounded-full blur-[100px] animate-pulse"></div>
+            <div className="absolute top-0 right-[20%] w-96 h-96 bg-indigo-900/30 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
-        {/* 全宽布局 */}
         <div className="w-full px-4 sm:px-8 pt-5 pb-3">
             
             {/* 第一行：Logo + 标题 + 搜索 */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-left">
                     {/* Logo */}
-                    <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer">
+                    <div className="flex items-center gap-2 shrink-0 select-none group cursor-pointer" onClick={() => window.location.reload()}>
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-md">
                              <path d="M15 12H9V16H15C17.2091 16 19 14.2091 19 12C19 9.79086 17.2091 8 15 8H9V12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
@@ -146,7 +134,7 @@ export default function Gallery({ images }: { images: any[] }) {
                     </div>
                 </div>
 
-                {/* 右侧：搜索框 */}
+                {/* 搜索框 */}
                 <div className="w-full sm:w-auto lg:w-[300px] relative group shrink-0">
                     <div className="relative flex items-center bg-slate-900/50 rounded-lg border border-white/5 focus-within:border-indigo-500/50 focus-within:ring-1 focus-within:ring-indigo-500/50 transition-all h-9">
                         <div className="pl-2.5 text-slate-500"><Search className="w-3.5 h-3.5" /></div>
@@ -192,21 +180,21 @@ export default function Gallery({ images }: { images: any[] }) {
         </div>
       </div>
 
-      {/* --- 瀑布流列表 (7列适配) --- */}
-      {/* 🔴 核心修改：在超大屏(>1800px)时显示 7 列 */}
+      {/* --- 严格网格列表 (16:9 横版统一比例) --- */}
+      {/* 🔴 核心修改：强制 aspect-[16/9] (即 aspect-video) */}
       <div className="w-full px-4 sm:px-6 pb-20 pt-6 min-h-[100vh]">
         {filteredImages.length > 0 ? (
-            <div className="columns-1 gap-4 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 2xl:columns-6 min-[1800px]:columns-7">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 min-[1800px]:grid-cols-7">
             {filteredImages.map((image) => (
                 <div 
                 key={image.id}
                 onClick={() => setSelectedId(image.id)}
-                className="group relative mb-4 block w-full cursor-zoom-in overflow-hidden rounded-xl bg-slate-800/20 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-900/20 hover:border-white/10 backdrop-blur-sm break-inside-avoid"
+                className="group relative aspect-video w-full cursor-zoom-in overflow-hidden rounded-xl bg-slate-800/20 border border-white/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-900/20 hover:border-white/10 backdrop-blur-sm"
                 >
                 <img 
                     src={getThumbnailUrl(image.url)} 
                     alt={image.title || "AI Art"} 
-                    className="w-full h-auto object-cover transform transition will-change-auto"
+                    className="absolute inset-0 h-full w-full object-cover transform transition will-change-auto"
                     loading="lazy"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/90 via-slate-950/60 to-transparent pt-12 pb-3 px-3">
@@ -231,9 +219,9 @@ export default function Gallery({ images }: { images: any[] }) {
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md transition-opacity" onClick={() => setSelectedId(null)} />
           
-          <div className="relative w-full max-w-4xl bg-[#0f172a] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
+          <div className="relative w-full max-w-4xl bg-[#020617] shadow-2xl ring-1 ring-white/10 rounded-2xl flex flex-col my-auto animate-in zoom-in-95 duration-200 overflow-hidden z-50 max-h-[95vh]">
             
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#0f172a]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#020617]/95 backdrop-blur-md shrink-0 z-20 sticky top-0">
                 <div className="flex items-center gap-2 text-sm font-bold text-slate-400">
                     <span className="text-indigo-400">Doro Gallery</span> / Preview
                 </div>
@@ -274,6 +262,6 @@ export default function Gallery({ images }: { images: any[] }) {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
