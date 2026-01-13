@@ -3939,25 +3939,21 @@ Quality: Photorealistic, high resolution, sharp focus on face and paper textures
   },
 
     "dr-138": {
-    title: "成分引力场：产品摄影",
-    tags: ["Product Photography", "Ingredients", "Solar System Composition", "Commercial", "Creative"],
-    promptCn: `【指令】生成一张展现产品成分的创意商业摄影图。
+    title: "微缩写实手办：自定义动作",
+    tags: ["3D Render", "Miniature", "Figurine", "Isometric", "Realistic"],
+    promptCn: `【核心指令】制作一个基于人物的微缩写实手办。
 核心主体：
-[插入产品名称] 悬浮在画面正中央，作为视觉核心（如同太阳）。
-成分轨道：
-相关成分（如：植物提取物、水果切片、水滴、矿物颗粒、花瓣）围绕产品呈轨道状运行，形成类似太阳系的构图。
-布局要求：
-展示成分与产品的关系，排列平衡且富有动态感，层次分明，不仅是装饰，更是成分展示。
-背景与光影：
-干净的渐变背景（颜色与产品协调）。专业影棚布光，强调材质质感、透光感和立体感。
-画质：
-8K超高清，商业广告级摄影，极度锐利，无噪点。`,
-    promptEn: `Creative commercial product photography featuring **[Insert Product Name]** floating at the center.
-**Composition:** "Ingredient Orbit" / Solar System style. Related ingredients (e.g., fruit slices, water droplets, botanical extracts, minerals) orbit around the product in dynamic, balanced circular paths.
-**Visuals:** Relationship visualization, component showcase. High-end commercial aesthetic. Elements are arranged with depth and flow.
-**Background:** Clean gradient background matching the product theme.
-**Lighting:** Professional studio lighting, sharp focus, hyper-realistic textures, volumetric feel. --ar 3:4 --v 6.0 --style raw`,
-    prompt: "Product floating at center with ingredients orbiting like a solar system...",
+基于[上传人物参考图]制作的微缩模型，全身展示。面部特征需保留参考图神韵，但材质处理为写实手办质感。
+造型设定：
+穿着 [插入服装描述]，正在 [插入动作描述]。
+视角与构图：
+等距视角 (Isometric)，全身完整展示。
+背景与风格：
+纯净白色背景，极简主义风格，无干扰元素。
+材质与画质：
+逼真的手办质感（树脂/PVC），细节锐利，光影柔和，4K高分辨率。`,
+    promptEn: `Make a miniature, full-body, isometric, realistic figurine of this person (based on uploaded image), wearing [Insert Outfit], doing [Insert Action], on a white background, minimal, 4K resolution. --ar 3:4 --v 6.0`,
+    prompt: "Miniature realistic figurine of a person, isometric view...",
   },
 
     "dr-139": {
