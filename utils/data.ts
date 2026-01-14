@@ -4007,5 +4007,95 @@ Structure:
 Style: Fusion of high-end food photography and clean instructional design. High-key lighting, sharp details, organized layout. --ar 2:3 --v 6.0`,
     prompt: "Minimalist recipe infographic, knolling ingredients and finished dish...",
   },
+
+    "dr-141": {
+    title: "3x3 摩托骑士拼贴",
+    tags: ["Portrait", "Biker", "Grid", "Fashion", "Cinematic"],
+    promptCn: `【核心指令】创建一个 3x3 网格照片拼贴，具有摩托车骑士美学。
+人物一致性：严格保留面部，使用上传的参考图获得精确面部特征，九个画格中的面部完全一致。
+人物造型：与参考图相同。穿着黑色皮夹克、破洞牛仔裤、摩托靴、头巾、银戒指。整体气质：公路战士、反叛自由。
+九宫格画面规划：
+1. 坐在复古摩托车上，霸气侧漏。
+2. 掀开头盔露出头发的瞬间。
+3. 戴着飞行员墨镜的面部特写。
+4. 高速骑行的动感模糊镜头。
+5. 靠在油箱上休息，神情放松。
+6. 调整皮手套的细节特写。
+7. 与车队的编队骑行远景。
+8. 在复古加油站停留。
+9. 夕阳下的骑行剪影。
+环境与光影：
+场景：开放公路、摩托车路线、无尽的沙漠公路或山景。
+光照：强烈阳光与镀铬金属反射，画质粗糙、温暖、具有电影感。
+画质：8K 超写实，哈雷戴维森生活方式宣传片质感。`,
+    promptEn: `3x3 grid photo collage, Biker aesthetic.
+**Subject Consistency:** Strict face identity lock based on uploaded reference. The character in all 9 panels MUST be the same person.
+**Look:** Black leather jacket, ripped jeans, biker boots, bandana, silver rings. Vibe: Road warrior, rebellious, free.
+**Grid Content:**
+1. Sitting on a vintage motorcycle.
+2. Taking off helmet, hair shaking out.
+3. Close-up wearing aviator sunglasses.
+4. High-speed riding action shot (motion blur).
+5. Leaning casually on the gas tank.
+6. Detail shot adjusting leather gloves.
+7. Formation riding with a pack (wide shot).
+8. Stop at a vintage gas station.
+9. Riding silhouette against a sunset.
+**Environment:** Open highway, endless desert road, mountains.
+**Lighting:** Harsh sunlight, chrome reflections, gritty warm cinematic tone.
+**Style:** Harley-Davidson lifestyle campaign, 8k hyper-realistic, raw texture. --ar 1:1 --v 6.0 --style raw`,
+    prompt: "3x3 grid biker portrait collage, leather jacket, open road...",
+  },
+
+    "dr-142": {
+    title: "真实与迷你皮克斯自我互动",
+    tags: ["Portrait", "Pixar Style", "Interaction", "Miniature", "Creative"],
+    promptCn: `【核心指令】创作一幅影棚肖像，将真实人类与迷你皮克斯风格3D卡通版自身融合，在俏皮、异想天开的互动中呈现。
+人物细节：
+- 主体（真人）：基于上传照片，穿着休闲灰色毛衣或T恤，表情惊讶且欣喜。姿势：一只手托着迷你角色，另一只手指向它。保留逼真肌肤纹理。
+- 次要主体（迷你3D版）：静置在人类手掌中的微缩尺寸。皮克斯风格3D角色，夸张可爱比例，圆润造型。大而富表现力的眼睛，友善顽皮的表情。**与真人保持同款发型与装束**。
+构图与光影：
+- 构图：中景特写影棚肖像，清晰展现人类与迷你角色间的视觉关联。浅景深，两张面孔均极度清晰锐利。
+- 灯光：柔和电影感影棚灯光，平滑高光伴随柔和阴影过渡。微弱轮廓光分离主体与背景。
+- 背景：深蓝色渐变影棚背景。
+风格与氛围：
+- 风格融合：无缝融合逼真人类肖像摄影与高质量皮克斯风格3D角色渲染。
+- 氛围：异想天开、有趣、轻松愉快，充满俏皮的惊喜。
+- 画质：高端电影级真实感，高分辨率、干净锐利。`,
+    promptEn: `Studio portrait merging a real human with a miniature Pixar-style 3D cartoon version of themselves in a playful interaction.
+**Subject A (Real Human):** Casual grey sweater/T-shirt. Expression: Surprised and delighted. Pose: Holding the mini character in one hand, pointing at it with the other. Realistic skin texture.
+**Subject B (Mini 3D Self):** Miniature scale sitting in the palm. Pixar-style 3D render, exaggerated cute proportions, round shapes. Big expressive eyes, friendly playful expression. **Consistency:** Matching hairstyle and outfit with the real human.
+**Composition:** Mid-shot close-up, focus on the interaction linkage. Shallow depth of field but both faces sharp.
+**Lighting & Background:** Soft cinematic studio lighting, smooth highlights. Deep blue gradient studio backdrop. Rim light for separation.
+**Style:** Seamless fusion of photorealistic photography and high-end 3D rendering. Whimsical, fun, lighthearted mood. High resolution 8k. --ar 2:3`,
+    prompt: "Real human holding miniature Pixar version of themselves...",
+  },
+
+    "dr-143": {
+    title: "施工中的巨人：都市奇观",
+    tags: ["Surreal", "Giantess", "Construction", "Urban Fantasy", "Cinematic", "General"],
+    promptCn: `【核心指令】生成一张超写实电影感都市奇幻海报。
+画面主题：一位矗立在城市街道上的“巨大化”人物，仿佛正在“施工中”，身体周围环绕着脚手架。
+主体特征：
+人物：[插入人物名称或描述] 的完美写实形象。若有参考图，请严格锁定面部特征。
+服饰：[插入服装描述，如：华丽礼服 / 战甲 / 休闲装]。
+超现实细节：
+- 施工现场：复杂的金属建筑脚手架围绕着手臂、躯干和腿部搭建，顺应身体轮廓。
+- 微缩工人：无数戴着黄色安全帽和高光背心的微型建筑工人在身上的脚手架攀爬工作。
+- 地面破坏：脚下的柏油马路因巨大的重量而龟裂破碎，形成陨石坑图案。
+比例与姿态：
+约 50 层楼高，与周围摩天大楼相当。高耸站立，略微对立式平衡。正面朝向，眼神平静直视镜头。
+环境与光影：
+地点：大都会大道（类似芝加哥或纽约）。两侧摩天大楼林立，下方是繁忙的交通和微型黄色出租车。
+光照：自然日光，柔和漫射。主体向下方城市街道投射巨大的长阴影。
+摄影参数：35mm广角镜头，f/11深景深，8K高保真纹理。`,
+    promptEn: `Hyper-realistic composite, cinematic urban fantasy. A colossal [Insert Character Name/Description], standing in a major metropolis avenue, appearing to be 'under construction'.
+Subject: [Insert Character Details] (Strict identity lock if reference provided). Wearing [Insert Outfit Details].
+Surreal Details: Intricate metal construction scaffolding built around the arms, torso, and legs. Tiny construction workers in hard hats climbing the scaffolding. Asphalt street cracking under feet. Scale: 50 stories tall.
+Pose: Standing tall, contrapposto. Front-facing, towering over the city. Direct calm gaze.
+Environment: Skyscrapers, busy miniature traffic below. Aerial view relative to city, eye-level relative to giantess.
+Tech: 35mm wide angle, f/11 deep depth of field, 8k resolution. Soft diffused sunlight, massive shadows cast on streets. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "Colossal character under construction in city street, surreal giantess...",
+  },
   
 };
