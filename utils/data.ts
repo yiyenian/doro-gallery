@@ -4097,5 +4097,93 @@ Environment: Skyscrapers, busy miniature traffic below. Aerial view relative to 
 Tech: 35mm wide angle, f/11 deep depth of field, 8k resolution. Soft diffused sunlight, massive shadows cast on streets. --ar 9:16 --v 6.0 --style raw`,
     prompt: "Colossal character under construction in city street, surreal giantess...",
   },
+
+    "dr-143": {
+    title: "施工中的巨人：都市奇观",
+    tags: ["Surreal", "Giantess", "Construction", "Urban Fantasy", "Cinematic", "General"],
+    promptCn: `【核心指令】生成一张超写实电影感都市奇幻海报。
+画面主题：一位矗立在城市街道上的“巨大化”人物，仿佛正在“施工中”，身体周围环绕着脚手架。
+主体特征：
+人物：[插入人物名称或描述] 的完美写实形象。若有参考图，请严格锁定面部特征。
+服饰：[插入服装描述，如：华丽礼服 / 战甲 / 休闲装]。
+超现实细节：
+- 施工现场：复杂的金属建筑脚手架围绕着手臂、躯干和腿部搭建，顺应身体轮廓。
+- 微缩工人：无数戴着黄色安全帽和高光背心的微型建筑工人在身上的脚手架攀爬工作。
+- 地面破坏：脚下的柏油马路因巨大的重量而龟裂破碎，形成陨石坑图案。
+比例与姿态：
+约 50 层楼高，与周围摩天大楼相当。高耸站立，略微对立式平衡。正面朝向，眼神平静直视镜头。
+环境与光影：
+地点：大都会大道（类似芝加哥或纽约）。两侧摩天大楼林立，下方是繁忙的交通和微型黄色出租车。
+光照：自然日光，柔和漫射。主体向下方城市街道投射巨大的长阴影。
+摄影参数：35mm广角镜头，f/11深景深，8K高保真纹理。`,
+    promptEn: `Hyper-realistic composite, cinematic urban fantasy. A colossal [Insert Character Name/Description], standing in a major metropolis avenue, appearing to be 'under construction'.
+Subject: [Insert Character Details] (Strict identity lock if reference provided). Wearing [Insert Outfit Details].
+Surreal Details: Intricate metal construction scaffolding built around the arms, torso, and legs. Tiny construction workers in hard hats climbing the scaffolding. Asphalt street cracking under feet. Scale: 50 stories tall.
+Pose: Standing tall, contrapposto. Front-facing, towering over the city. Direct calm gaze.
+Environment: Skyscrapers, busy miniature traffic below. Aerial view relative to city, eye-level relative to giantess.
+Tech: 35mm wide angle, f/11 deep depth of field, 8k resolution. Soft diffused sunlight, massive shadows cast on streets. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "Colossal character under construction in city street, surreal giantess...",
+  },
+
+    "dr-144": {
+    title: "涂鸦墙合影：真实与漫画",
+    tags: ["Portrait", "Street Art", "Graffiti", "Caricature", "Mixed Media", "Urban"],
+    promptCn: `【核心指令】基于上传的人物参考图，创作一张自然的街头人像。
+画面主题：真实人物站在一面充满涂鸦的墙面前。墙上有一幅**基于该人物面部特征的手绘喷漆漫画（Caricature）**，风格潦草、生动、带有街头艺术的飞溅和滴落感，绝非数码打印质感。
+墙面文字：必须包含自适应中文涂鸦。
+风格与场景（AI自适应选择）：
+1. **新春庆典**：黄昏老街，深红与金色主调，远处有灯笼，涂鸦带有节日气息。
+2. **赛博地下**：昏暗的行人隧道，霓虹蓝紫光，墙面有裸露电线，工业质感。
+3. **民国复古**：历史砖墙弄堂，大地色系/炭黑，旧木窗框。
+4. **传统禅意**：静谧庭院石墙，水墨黑与鼠尾草绿，斑驳光影。
+人物主体（前景）：
+- **一致性**：严格镜像参考图的性别与五官特征。
+- **穿搭**：继承参考图的主色调，但根据所选风格调整服装款式（如赛博风穿机能外套）。
+- **构图**：位于画面右下角，半身或四分之三侧身。
+- **姿态**：自然抓拍感（靠墙、整理头发、大笑插兜、看向别处）。
+- **光影**：自然光或环境光，人物在墙面上投下柔和阴影，与背景深度融合。
+画质：4:3比例，真实的墙面风化纹理，裂缝与水渍自然有机。`,
+    promptEn: `Natural street portrait of a real person standing in front of a layered, messy graffiti wall.
+**Wall Art:** Features a spontaneous, hand-painted aerosol caricature of the person. Visible paint splatters, drips, soft sprayed edges. Layered over faint background tags.
+**Graffiti Text:** Prominent Chinese text "**月入百万**" and number "**2026**".
+**Style Variants (Auto-Select One):**
+1. **New Year Festive:** Old city street at dusk, deep reds/gold, faint lanterns.
+2. **Cyberpunk Underground:** Dim tunnel, neon blue/violet, industrial textures.
+3. **Vintage Republican:** Historic brick alley, muted earth tones/sepia.
+4. **Traditional Zen:** Quiet courtyard stone wall, ink black/sage green, bamboo shadows.
+**Subject (Foreground):**
+- Mirror gender/facial features of reference.
+- Outfit: Inherits dominant colors from reference but adapts to the chosen style theme.
+- Position: Bottom right, waist-up.
+- Pose: Candid (leaning, adjusting hair, laughing, looking away).
+**Tech:** Naturally weathered textures (cracks, stains), dynamic natural lighting casting soft shadows. 4:3 aspect ratio, authentic urban vibe. --ar 4:3 --v 6.0 --style raw`,
+    prompt: "Street portrait, real person vs graffiti caricature on wall...",
+  },
+
+    "dr-145": {
+    title: "极简静奢风人像",
+    tags: ["Fashion", "Portrait", "Minimalist", "Quiet Luxury", "Cinematic", "Sunlight"],
+    promptCn: `【核心指令】基于上传的人物参考图生成一张超写实电影感时尚海报。
+**人物锁定：** 严格保留参考图人物的面部特征、身份、年龄、骨相、肤色和自然表情（100%一致）。不做美化或改变。
+**画面主题：** 一位时尚成年女性随意倚靠在温暖的米色纹理墙上。身体微侧，一肩轻靠墙面，传递松弛的自信、优雅与静谧的力量感。
+**服装造型：**
+身穿宽松的淡蓝色纽扣衬衫，袖口随意卷起。搭配剪裁合体的白色休闲长裤，自然垂坠。脚踩极简设计的白色或淡蓝白运动鞋，保持现代、低调的奢华感（静奢风）。
+**姿态与神情：**
+姿态自然——一只手插在裤兜里，另一只手优雅地拿着一朵小白雏菊。表情平静、自信、从容，眼神柔和地看向镜头外侧（编辑视角）。情绪自信而温柔。
+**妆发：**
+发型自然现代（柔和波浪、低马尾或慵懒发髻）。妆容极简精致——干净的皮肤、淡腮红、裸色唇，无浓重修容。
+**光影与氛围：**
+温暖的自然阳光从侧面射入，在脸部和衣物上形成柔和的高光，温柔的阴影增加了墙面的层次感。氛围通透、阳光充足、电影感。
+**画质：**
+高端时尚杂志审美，真实的皮肤纹理，清晰的面料细节，精致的中性色调，优雅构图。8K超写实，浅景深。`,
+    promptEn: `High-end fashion editorial portrait based on uploaded reference.
+**Subject Consistency:** Strict identity lock on the uploaded face. 100% match on facial structure, skin tone, and age.
+**Pose:** Leaning casually against a warm beige textured wall, body slightly angled, one shoulder resting. One hand in pocket, the other delicately holding a small white daisy.
+**Outfit:** Loose pastel blue button-down shirt with rolled-up sleeves. Tailored white relaxed-fit trousers. Minimalist white sneakers. Modern understated luxury style.
+**Expression:** Calm, self-assured, serene, soft editorial gaze looking slightly away.
+**Lighting:** Warm natural sunlight streaming from the side, soft highlights, gentle shadows. Airy and cinematic atmosphere.
+**Style:** Professional fashion photography, shallow depth of field, 8k ultra-realistic, sharp focus, refined neutral palette. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "Minimalist quiet luxury fashion portrait, sunny beige wall...",
+  },
   
 };
