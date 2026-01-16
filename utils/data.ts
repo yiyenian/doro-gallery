@@ -4185,5 +4185,36 @@ Tech: 35mm wide angle, f/11 deep depth of field, 8k resolution. Soft diffused su
 **Style:** Professional fashion photography, shallow depth of field, 8k ultra-realistic, sharp focus, refined neutral palette. --ar 9:16 --v 6.0 --style raw`,
     prompt: "Minimalist quiet luxury fashion portrait, sunny beige wall...",
   },
+
+    "dr-146": {
+    title: "红毯低角度自拍：东方高定",
+    tags: ["Fashion", "Red Carpet", "Low Angle", "Oriental Aesthetics", "Photography"],
+    promptCn: `【核心指令】基于上传的人物图片，生成一张融入东方美学的红毯现场高端摄影图。
+**人物锁定：** 100%与参考照片中的肖像和面容完全相同。长波浪黑发（或其他发色），皮肤白皙如玉，自信微笑。
+**服装造型 (东方高定)：**
+- 风格：现代新中式高定礼服 (Modern Oriental Haute Couture)。
+- 上身：改良式旗袍领口或云肩设计，结合闪亮的银白色亮片，深V或镂空剪裁，展现东方韵味与现代性感的结合。
+- 下身：长而戏剧性的拖尾裙摆，饰有奢华的白色羽毛或立体白鹤刺绣，如水墨晕染般铺开。
+- 细节：手微微提裙展示，露出裸露的修长美腿。
+- 鞋履：银色绸缎或镶嵌珍珠的优雅尖头高跟鞋。
+**构图与视角：**
+- 视角：极低角度（虫眼视角），从接近地面水平俯视主体。
+- 透视：强调主体身高、长腿和女王般气场的戏剧性透视。
+- 构图：全身镜头，前景强烈展示鞋子和如云般的裙摆。
+**环境背景：**
+地点：亚洲电影节或时尚盛典红毯。背景为深朱红或墨色，带有隐约的东方窗棂纹样或书法字体的品牌Logo。地面为经典红毯。
+**光影与质感：**
+专业活动闪光灯与环境光混合。亮片、羽毛、皮肤上有细腻的光泽高光。高对比度，保留东方女性的肤质美感。
+8K分辨率，照片级逼真，面料细节极致清晰。`,
+    promptEn: `High-end celebrity red carpet portrait based on uploaded reference, Oriental Aesthetics style.
+**Identity:** Strict 100% face match. Glowing porcelain skin, confident smile.
+**Outfit (Oriental Couture):** Modernized Cheongsam-inspired Haute Couture gown. Shimmering silver-white sequins, Mandarin collar or Cloud Shoulder elements mixed with a deep V-neck. Dramatic long train skirt featuring luxury white feathers or 3D crane embroidery, resembling ink wash painting flow.
+**Details:** Hand gently lifting the skirt to reveal bare legs. Elegant silver satin or pearl-encrusted stiletto heels.
+**Composition:** Extreme low angle (Worm's-eye view), looking up from ground level. Dramatic perspective emphasizing long legs and aura. Foreground dominated by shoes and feather textures.
+**Setting:** Asian Film Festival red carpet. Deep vermilion or ink-black backdrop with subtle Chinese lattice patterns or Calligraphy logos.
+**Lighting:** Professional flash photography mixed with soft oriental aesthetics lighting. Glossy highlights on sequins and skin. High contrast.
+**Quality:** 8k photorealistic, sharp focus on fashion details. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "Oriental aesthetic red carpet fashion photography, low angle worm's-eye view...",
+  },
   
 };
