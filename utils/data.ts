@@ -4098,33 +4098,6 @@ Tech: 35mm wide angle, f/11 deep depth of field, 8k resolution. Soft diffused su
     prompt: "Colossal character under construction in city street, surreal giantess...",
   },
 
-    "dr-143": {
-    title: "施工中的巨人：都市奇观",
-    tags: ["Surreal", "Giantess", "Construction", "Urban Fantasy", "Cinematic", "General"],
-    promptCn: `【核心指令】生成一张超写实电影感都市奇幻海报。
-画面主题：一位矗立在城市街道上的“巨大化”人物，仿佛正在“施工中”，身体周围环绕着脚手架。
-主体特征：
-人物：[插入人物名称或描述] 的完美写实形象。若有参考图，请严格锁定面部特征。
-服饰：[插入服装描述，如：华丽礼服 / 战甲 / 休闲装]。
-超现实细节：
-- 施工现场：复杂的金属建筑脚手架围绕着手臂、躯干和腿部搭建，顺应身体轮廓。
-- 微缩工人：无数戴着黄色安全帽和高光背心的微型建筑工人在身上的脚手架攀爬工作。
-- 地面破坏：脚下的柏油马路因巨大的重量而龟裂破碎，形成陨石坑图案。
-比例与姿态：
-约 50 层楼高，与周围摩天大楼相当。高耸站立，略微对立式平衡。正面朝向，眼神平静直视镜头。
-环境与光影：
-地点：大都会大道（类似芝加哥或纽约）。两侧摩天大楼林立，下方是繁忙的交通和微型黄色出租车。
-光照：自然日光，柔和漫射。主体向下方城市街道投射巨大的长阴影。
-摄影参数：35mm广角镜头，f/11深景深，8K高保真纹理。`,
-    promptEn: `Hyper-realistic composite, cinematic urban fantasy. A colossal [Insert Character Name/Description], standing in a major metropolis avenue, appearing to be 'under construction'.
-Subject: [Insert Character Details] (Strict identity lock if reference provided). Wearing [Insert Outfit Details].
-Surreal Details: Intricate metal construction scaffolding built around the arms, torso, and legs. Tiny construction workers in hard hats climbing the scaffolding. Asphalt street cracking under feet. Scale: 50 stories tall.
-Pose: Standing tall, contrapposto. Front-facing, towering over the city. Direct calm gaze.
-Environment: Skyscrapers, busy miniature traffic below. Aerial view relative to city, eye-level relative to giantess.
-Tech: 35mm wide angle, f/11 deep depth of field, 8k resolution. Soft diffused sunlight, massive shadows cast on streets. --ar 9:16 --v 6.0 --style raw`,
-    prompt: "Colossal character under construction in city street, surreal giantess...",
-  },
-
     "dr-144": {
     title: "涂鸦墙合影：真实与漫画",
     tags: ["Portrait", "Street Art", "Graffiti", "Caricature", "Mixed Media", "Urban"],
