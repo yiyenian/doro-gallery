@@ -4189,5 +4189,88 @@ Tech: 35mm wide angle, f/11 deep depth of field, 8k resolution. Soft diffused su
 **Quality:** 8k photorealistic, sharp focus on fashion details. --ar 9:16 --v 6.0 --style raw`,
     prompt: "Oriental aesthetic red carpet fashion photography, low angle worm's-eye view...",
   },
+
+    "dr-147": {
+    title: "3D风格化萌系角色：百变穿搭",
+    tags: ["3D Render", "Character Design", "Pixar Style", "Fashion", "Cute", "Reference Based"],
+    promptCn: `【核心指令】基于上传的人物参考图生成 3D 风格化角色插画（灵感来自皮克斯但原创设计）。
+**人物锁定：** 严格基于上传参考图的面部特征进行风格化转换。保留人物的神态、五官比例，但转化为光滑的 3D 质感（柔和圆润脸部、大眼睛、小鼻子、舒适美感）。
+背景：纯色充满活力的背景（粉色、黄色、红色、桃色）。
+材质：街头潮流与舒适质感混合（针织、羊毛绒、羊毛）。
+多样化造型（随机呈现）：
+1. 酷盖风：粉色蓬松夹克配运动裤和运动鞋，戴圆形眼镜和耳机，冷静时尚姿态。
+2. 活力风：亮黄色开衫配波点裤，欢乐表情，双臂上举，欢快能量。
+3. 舒适风：红色超大连帽衫配粗体字体，闭眼、双臂张开、平和快乐氛围。
+4. 优雅风：柔和时尚风格，短夹克和裙子，优雅姿态，超大圆形眼镜，梦幻表情。
+技术参数：
+棚内灯光、柔和阴影、全局光照、次表面散射 (SSS)。
+干净构图、全身和中景镜头、高细节纹理、电影灯光、景深、超光滑渲染。
+8K分辨率、Octane/Arnold渲染风格、温暖可爱现代美感。`,
+    promptEn: `High-quality 3D stylized character illustration, Pixar-inspired original design based on uploaded reference.
+**Subject Consistency:** Strict face identity lock based on the uploaded photo, translated into a cute 3D aesthetic. Smooth plastic-like skin, soft round face, big eyes, small nose, soft blush.
+**Variations (Outfit & Mood):**
+- Pink fluffy jacket, sweatpants, sneakers, round glasses, headphones. Cool fashion pose.
+- Bright yellow cardigan, polka dot pants. Joyful expression, arms raised, energetic.
+- Cozy red oversized hoodie with bold text. Eyes closed, arms open, peaceful happy vibe.
+- Soft fashion style, short jacket, skirt. Elegant pose, oversized round glasses, dreamy expression.
+**Hair:** Fluffy buns, soft updos, stylized volume.
+**Textures:** Mix of streetwear and cozy fabrics (knit, fleece, wool).
+**Background:** Solid vibrant colors (pink, yellow, red, peach).
+**Lighting:** Studio lighting, soft shadows, global illumination, subsurface scattering (SSS).
+**Tech:** Clean composition, full body/medium shot, high detail, cinematic lighting, depth of field, ultra-smooth render, 8K, Octane/Arnold render aesthetic.`,
+    prompt: "3D stylized cute character illustration, Pixar style, various outfits based on reference...",
+  },
+
+    "dr-148": {
+    title: "巨物互动：时尚活力大片",
+    tags: ["Fashion", "Portrait", "Giant Object", "Commercial", "Studio", "Fun"],
+    promptCn: `核心指令：基于上传的人物参考图生成一张超写实商业时尚摄影海报。
+人物锁定：严格保留参考图人物的面部特征和衣着特征（100%一致）。
+画面主题：人物与超大尺寸产品/物品（作为主要道具）进行活泼有趣的互动。物品上不体现具体品牌Logo，强调纯粹的形态美感。
+姿势与动作：人物摆出充满活力的时尚姿势，例如：坐在、站在、靠在或者抱住巨大的物品。表情生动，充满感染力。
+摄影风格：视角采用广角低视角（Low Angle Wide Lens），增强视觉冲击力。光影采用高调影棚布光（High-key lighting），营造柔和清晰的阴影，画面明亮通透。背景为简洁干净的纯色或渐变背景，突出主体。
+画质：8K分辨率，超逼真商业摄影效果，焦点清晰，细节锐利。1:1 方形构图。`,
+    promptEn: `Hyper-realistic commercial fashion photography.
+**Subject Consistency:** Strict identity lock on the uploaded person's face and outfit.
+**Concept:** The subject is interacting with a **GIANT-SIZED object/product** (as a main prop). No brand logos on the object.
+**Vibe:** Energetic, fun, lively, high-fashion editorial style.
+**Pose:** Dynamic pose—sitting on, standing on, or leaning against the giant object. Expressive and engaging.
+**Photography:** Wide-angle lens, low angle shot for dramatic effect.
+**Lighting:** High-key studio lighting, soft distinct shadows, bright and airy.
+**Background:** Clean, minimalist studio backdrop.
+**Quality:** 8k resolution, ultra-sharp focus, photorealistic, commercial aesthetic. --ar 1:1 --v 6.0 --style raw`,
+    prompt: "Fashion photography, interacting with giant object, high-key lighting...",
+  }, 
+
+    "dr-149": {
+    title: "多视角服装分解：工业设计风",
+    tags: ["Fashion", "Industrial Design", "Layout", "Minimalist", "Deconstruction"],
+    promptCn: `核心指令：基于上传的全身穿搭照，生成一张极简、高端的多视角服装分解展示图。
+风格灵感：高端工业设计文档与现代时尚Lookbook的结合。
+背景：纯白干净，无干扰。
+画面布局：
+1. 左上角：品牌名称（现代无衬线字体，微妙优雅）。
+2. 左侧栏（辅助视图）：垂直排列的辅助视图，包含正面、侧面、背面以及面料/拉链/袖口/接缝的特写细节。
+3. 右侧主图（Hero Shot）：模特的全身主视觉，大尺寸超写实。光线优化以突显面料纹理和轮廓清晰度。
+标注系统 (核心特征)：
+视觉分析：识别面料面板、闭合方式、边缘、接缝、层级和表面处理。
+连线风格：极细的浅灰矢量线条，精准指向服装组件。
+标签内容：使用中性、描述性的工业术语（如外层面板、领口结构、侧缝线、调节扣），避免营销词汇。排版在轮廓外，整齐对齐。
+字体：极简技术无衬线体。
+整体氛围：
+现代斯堪的纳维亚风格，冷静、精确、专业。中性色调，让服装颜色脱颖而出。
+画质：超高分辨率，真实阴影，面料物理属性（垂坠感、体积感）精准还原。`,
+    promptEn: `Minimal, premium fashion presentation layout inspired by high-end industrial design documentation. Based on uploaded reference.
+Layout:
+- Top Left: Brand name in modern sans-serif.
+- Left Column: Vertically stacked auxiliary views (Front, Side, Rear, Macro Detail of fabric/zipper/seam).
+- Right Section: Large hero shot of the model wearing the garment. Soft studio lighting optimized for texture.
+Annotations:
+- Visual analysis of garment construction (panels, seams, closures).
+- Hairline-thin grey vector lines pointing to specific components.
+- Labels: Technical, factual descriptions (e.g., "Outer Shell Panel", "Hidden Zipper Closure", "Reinforced Stitching"). Minimalist typography aligned outside the silhouette.
+Style: Modern Scandinavian aesthetic, calm and professional. Neutral palette. Ultra-realistic rendering with accurate fabric physics and texture. --ar 4:3 --v 6.0 --style raw`,
+    prompt: "Industrial design style fashion presentation, multi-view with technical annotations...",
+  },
   
 };
