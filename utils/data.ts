@@ -4243,34 +4243,36 @@ Tech: 35mm wide angle, f/11 deep depth of field, 8k resolution. Soft diffused su
   }, 
 
     "dr-149": {
-    title: "多视角服装分解：工业设计风",
-    tags: ["Fashion", "Industrial Design", "Layout", "Minimalist", "Deconstruction"],
-    promptCn: `核心指令：基于上传的全身穿搭照，生成一张极简、高端的多视角服装分解展示图。
-风格灵感：高端工业设计文档与现代时尚Lookbook的结合。
-背景：纯白干净，无干扰。
+    title: "多视角服装分解：时尚杂志风",
+    tags: ["Fashion", "Editorial", "Layout", "Magazine", "Deconstruction"],
+    promptCn: `【核心指令】基于上传的全身穿搭照，生成一张高端时尚杂志内页风格的“多视角服装分解”展示图。
+风格灵感：《Vogue》或《Kinfolk》的高级排版美学，而非工业图纸。
+**背景与环境：**
+采用 **柔和的高级灰调或米色调艺术纸纹理背景**，营造温暖、优雅的阅读氛围。光影自然，带有艺术感的阴影投射。
 画面布局：
-1. 左上角：品牌名称（现代无衬线字体，微妙优雅）。
-2. 左侧栏（辅助视图）：垂直排列的辅助视图，包含正面、侧面、背面以及面料/拉链/袖口/接缝的特写细节。
-3. 右侧主图（Hero Shot）：模特的全身主视觉，大尺寸超写实。光线优化以突显面料纹理和轮廓清晰度。
-标注系统 (核心特征)：
-视觉分析：识别面料面板、闭合方式、边缘、接缝、层级和表面处理。
-连线风格：极细的浅灰矢量线条，精准指向服装组件。
-标签内容：使用中性、描述性的工业术语（如外层面板、领口结构、侧缝线、调节扣），避免营销词汇。排版在轮廓外，整齐对齐。
-字体：极简技术无衬线体。
+1. **左上角**：品牌名称（优雅的衬线字体，如Didot）。
+2. **左侧栏（穿搭细节）**：垂直排列的“宝丽来”风格或圆形剪切的局部特写（面料纹理、配饰、纽扣细节、背部设计）。
+3. **右侧主图（Hero Shot）**：模特的全身主视觉，占据画面主体。姿态放松自信，光线柔和，强调服装的垂坠感和轮廓美。
+标注系统 (杂志化处理)：
+- **排版方式**：不再使用生硬的引线，而是使用**优雅的悬浮文字块**，配合极细的直线或装饰性符号进行指引。
+- **文案内容**：侧重于**设计语言与材质描述**（如“进口羊绒触感”、“法式浪漫领口”、“手工刺绣细节”），而非纯技术参数。
+- **字体**：纤细的非衬线体与手写体结合，营造编辑感。
 整体氛围：
-现代斯堪的纳维亚风格，冷静、精确、专业。中性色调，让服装颜色脱颖而出。
-画质：超高分辨率，真实阴影，面料物理属性（垂坠感、体积感）精准还原。`,
-    promptEn: `Minimal, premium fashion presentation layout inspired by high-end industrial design documentation. Based on uploaded reference.
+松弛、高级、充满叙事感。像是在阅读一本昂贵的时尚画册，而非产品说明书。
+画质：8K分辨率，杂志级修图，面料质感细腻真实。`,
+    promptEn: `High-end fashion magazine editorial layout showing multi-view garment breakdown. Based on uploaded reference.
+**Background:** Soft premium beige or warm grey art paper texture. Natural, artistic lighting with soft shadows. NOT clinical white.
 Layout:
-- Top Left: Brand name in modern sans-serif.
-- Left Column: Vertically stacked auxiliary views (Front, Side, Rear, Macro Detail of fabric/zipper/seam).
-- Right Section: Large hero shot of the model wearing the garment. Soft studio lighting optimized for texture.
+- Top Left: Brand name in elegant Serif font (e.g. Didot).
+- Left Column: Vertically stacked artistic detail shots (Polaroid style or circular crops) showing fabric texture, buttons, back view.
+- Right Section: Large Hero Shot of the model. Relaxed, confident pose. Lighting emphasizes drape and silhouette.
 Annotations:
-- Visual analysis of garment construction (panels, seams, closures).
-- Hairline-thin grey vector lines pointing to specific components.
-- Labels: Technical, factual descriptions (e.g., "Outer Shell Panel", "Hidden Zipper Closure", "Reinforced Stitching"). Minimalist typography aligned outside the silhouette.
-Style: Modern Scandinavian aesthetic, calm and professional. Neutral palette. Ultra-realistic rendering with accurate fabric physics and texture. --ar 4:3 --v 6.0 --style raw`,
-    prompt: "Industrial design style fashion presentation, multi-view with technical annotations...",
+- **Style:** Elegant floating text blocks with fine decorative lines. No harsh technical arrows.
+- **Content:** Descriptive fashion language (e.g., "Cashmere Texture", "French Collar Design", "Hand-stitched detail").
+- **Typography:** Mix of ultra-thin Sans-serif and calligraphic Script fonts.
+Atmosphere: Relaxed, luxury, storytelling. Like a page from Vogue or Kinfolk.
+Quality: 8k resolution, magazine retouching, realistic fabric fidelity. --ar 4:3 --v 6.0 --style raw`,
+    prompt: "Fashion editorial layout, multi-view garment breakdown, magazine style...",
   },
-  
+
 };
