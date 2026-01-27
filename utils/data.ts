@@ -4275,4 +4275,39 @@ Quality: 8k resolution, magazine retouching, realistic fabric fidelity. --ar 4:3
     prompt: "Fashion editorial layout, multi-view garment breakdown, magazine style...",
   },
 
+    "dr-150": {
+    title: "Z世代未来感电影拼贴：VHS界面",
+    tags: ["Portrait", "Collage", "Cinematic", "Z-Gen", "VHS Overlay", "Fashion", "Grid", "Reference Based"],
+    promptCn: `【核心指令】严格基于上传的人物参考图生成。保持面部特征、五官构造及神态与参考图100%完全一致。
+画面形式：电影感六宫格拼贴（6-Panel Grid Collage），由特写和中景肖像组成。
+整体美学：Z世代未来美学，梦幻空灵，带有轻微的艺术感晃动模糊（Motion Blur）。每帧都叠加复古数码摄像机/VHS录制界面UI。
+人物造型：统一佩戴粉色圆镜片太阳镜与珍珠耳环。
+【六帧画面规划 (时间正序排列)】
+每帧界面元素：电池图标、红色“REC”字样、特定白色计时器、分钟计数。
+1. [中景肖像] 侧身或带有手部动作。计时：00:00:22 / 203min (起始)。
+2. [紧致肖像] 略微仰拍或动态捕捉瞬间。计时：00:00:37 / 203min。
+3. [紧致肖像] 面部微侧，神态梦幻。计时：00:00:47 / 204min。
+4. [正面中景] 直视镜头，姿态冷静。计时：00:00:49 / 204min。
+5. [极特写] 嘴唇或下颌线局部，带有动态模糊。计时：00:01:02 / 205min。
+6. [极特写] 眼部与墨镜细节。计时：00:02:17 / 206min (结束)。
+环境与光影：
+干净影棚布光，中性浅灰背景，柔和阴影。
+画质质感：
+时尚大片摄影美学，超写实电影质感。尽管有氛围感的晃动模糊，但模特主体对焦极度锐利清晰。`,
+    promptEn: `6-panel grid cinematic fashion collage based on uploaded reference.
+**Subject Consistency:** STRICT face identity lock on the reference person (100% feature and expression match).
+**Aesthetic:** Z-Gen futuristic, dreamy, ethereal vibe with slight artistic motion blur. Each frame features a retro digital camcorder/VHS recording overlay (Red REC, Battery icon, unique timers).
+**Styling:** Pink round-lens sunglasses and pearl earrings in all frames.
+**Frame Content (Chronological Order):**
+- Frame 1 (MS): Side profile/hand gesture. Timer: 00:00:22 / 203min.
+- Frame 2 (CU): Slight low angle/dynamic. Timer: 00:00:37 / 203min.
+- Frame 3 (CU): Angled face, dreamy. Timer: 00:00:47 / 204min.
+- Frame 4 (MS): Frontal gaze, calm. Timer: 00:00:49 / 204min.
+- Frame 5 (ECU): Lips/Jawline, blurred motion. Timer: 00:01:02 / 205min.
+- Frame 6 (ECU): Eyes/Sunglasses details. Timer: 00:02:17 / 206min.
+**Setting:** Clean studio lighting, neutral light grey background, soft shadows.
+**Quality:** Hyper-realistic cinematic texture, high-fashion editorial. Subject is sharply focused despite the atmospheric blur. 8k resolution. --ar 2:3 --v 6.0 --style raw`,
+    prompt: "Z-Gen cinematic fashion collage, 6-panel grid, retro VHS interface overlay, specific person with pink sunglasses..."
+  },
+  
 };
