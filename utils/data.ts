@@ -4309,5 +4309,37 @@ Quality: 8k resolution, magazine retouching, realistic fabric fidelity. --ar 4:3
 **Quality:** Hyper-realistic cinematic texture, high-fashion editorial. Subject is sharply focused despite the atmospheric blur. 8k resolution. --ar 2:3 --v 6.0 --style raw`,
     prompt: "Z-Gen cinematic fashion collage, 6-panel grid, retro VHS interface overlay, specific person with pink sunglasses..."
   },
+
+    "dr-151": {
+    title: "现代汉服：静谧力量感高定特写",
+    tags: ["Fashion Portrait", "Editorial", "Modern Hanfu", "Close-up", "Cinematic Lighting", "Luxury", "Reference Based", "Quiet Power"],
+    promptCn: `【核心指令】严格基于上传参考图生成。人物年龄、面部特征与参考图保持一致。
+画面主题：一张高端杂志社论级的近景时尚特写。捕捉一位女性现代汉服Coser的“静谧力量”感。
+画面构图与姿态：
+紧凑的胸部以上构图（Near-field perspective），轻微低角度的三分之四侧视，增强权威感与深度。
+主体微微前倾，抬起一只流动的宽袖轻拂身旁的浅色木屏风，指尖掠过表面，袖口面料因动作而产生真实的压缩感与重量感。
+下巴微收，目光向上直视镜头，保持坚定、控制的眼神接触。表情冷静沉着，眉宇间带有微弱的张力。
+人物造型与妆发：
+华丽的当代汉服重构：结构感立领外袍，叠穿对襟上衣和高腰裙。奢华细节包括云鹤刺绣、金线织锦镶边、复杂提花、半透明欧根纱层次、丝缎光泽、天鹅绒缎带和捕捉轮廓光的精细金属流苏。
+发型：精致半扎发，装饰华丽发簪和随动作轻微摇曳的步摇（带流苏珠串）。
+妆容：现代高定妆容（非传统舞台妆）。缎面光泽底妆，保留真实皮肤纹理与微瑕；柔和雕塑感修容与提升感古铜粉；野生眉，精致内眼线，中性冷调灰褐眼影（眼中和内眼角微闪），分离式羽毛睫毛；提升颧骨的柔和腮红；哑光T区，高光仅在颧骨、鼻梁、唇峰；柔润的玫瑰木色唇妆。佩戴自然透亮的玉灰色美瞳（无动漫夸张感）。
+光影与环境：
+专业的雕塑感布光：45度柔光箱主光勾勒颧骨和鼻梁，柔和反光板填充阴影，小范围边缘光勾勒下颌与发丝。眼中含有干净眼神光。
+环境：极简现代中式内景，浅色木屏风、水墨纹理墙面和石材地面柔和反光并虚化入背景。
+风格与细节：
+奢华杂志摄影，克制的低饱和度调色，极致的面料微观细节，电影级清晰度。
+【专属元素】“VoxCat”仅作为世界观内的高定细节出现：腰带上挂着刻有“VoxCat”的小玉坠，袖口附近绣有微小的红色印章风格“VoxCat”刺绣（优雅、非Logo化）。`,
+    promptEn: `High-end editorial close-up fashion portrait based on uploaded reference.
+**Subject Consistency:** Strict identity lock on the uploaded face; age and features follow the reference.
+**Subject:** A female modern-Hanfu coser with a "quiet power" presence.
+**Composition & Pose:** Intimate near-field (tight chest-up) framing, mildly low-angle 3/4 view. She leans forward, lifting a flowing sleeve to brush a pale wooden screen, fingertips grazing the surface showing fabric weight and motion. Chin lowered, eyes lifted to meet camera in direct, controlled contact. Calm, composed expression.
+**Attire:** Opulent contemporary Hanfu reinterpretation. Structured stand-collar robe with widened sleeves over duijin jacket and high-waist skirt. Lavish details: cloud-and-crane embroidery, gold-thread brocade borders, intricate jacquard, translucent organza, silk-satin luster, velvet ribbons, fine metal tassels catching rim light. Crisp seams and fabric weave.
+**Hair & Makeup:** Refined half-up hairstyle with ornate hairpins and swaying step-shakes. Modern high-fashion makeup: Lightweight satin-finish foundation, realistic skin texture, soft sculpt contour, feathered brows, tightline, neutral-cool taupe eyeshadow, diffused blush lifted on cheekbones, matte T-zone, luminous high points, muted satin rosewood lip. Natural translucent jade-gray contact lenses.
+**Lighting:** Explicitly sculpted. Diffused softbox key (45° front-side), gentle bounce fill, small grid/rim kicker for jawline/hair, clean catchlights. Matte T-zone, luminous high points.
+**Setting & Style:** Minimalist modern Chinese interior (pale wood screens, ink-wash walls) blurred in background. Luxury magazine photography, restrained low-saturation grading, extreme textile micro-detail, cinematic clarity.
+**Signature Details:** Small "VoxCat" engraved jade pendant on waist sash; tiny red seal-style "VoxCat" embroidery near cuff.
+**Constraints:** No plastic skin, no heavy filters, no big anime eyes, no glossy 3D, no busy background.`,
+    prompt: "High-end editorial close-up portrait of a modern Hanfu coser with 'quiet power', brushing a wooden screen. Based on reference."
+  },
   
 };
