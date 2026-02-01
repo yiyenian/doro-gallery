@@ -4328,7 +4328,7 @@ Quality: 8k resolution, magazine retouching, realistic fabric fidelity. --ar 4:3
 环境：极简现代中式内景，浅色木屏风、水墨纹理墙面和石材地面柔和反光并虚化入背景。
 风格与细节：
 奢华杂志摄影，克制的低饱和度调色，极致的面料微观细节，电影级清晰度。
-【专属元素】“VoxCat”仅作为世界观内的高定细节出现：腰带上挂着刻有“VoxCat”的小玉坠，袖口附近绣有微小的红色印章风格“VoxCat”刺绣（优雅、非Logo化）。`,
+【专属元素】“Doro”仅作为世界观内的高定细节出现：腰带上挂着刻有“Doro”的小玉坠，袖口附近绣有微小的红色印章风格“Doro”刺绣（优雅、非Logo化）。`,
     promptEn: `High-end editorial close-up fashion portrait based on uploaded reference.
 **Subject Consistency:** Strict identity lock on the uploaded face; age and features follow the reference.
 **Subject:** A female modern-Hanfu coser with a "quiet power" presence.
