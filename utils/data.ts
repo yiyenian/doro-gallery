@@ -4341,5 +4341,23 @@ Quality: 8k resolution, magazine retouching, realistic fabric fidelity. --ar 4:3
 **Constraints:** No plastic skin, no heavy filters, no big anime eyes, no glossy 3D, no busy background.`,
     prompt: "High-end editorial close-up portrait of a modern Hanfu coser with 'quiet power', brushing a wooden screen. Based on reference."
   },
+
+    "dr-152": {
+    title: "俯拍光影：超现实静谧人像",
+    tags: ["Portrait", "Top-down", "Overhead", "Surrealism", "Cinematic", "Shadow Play", "High-Fashion", "Reference Based"],
+    promptCn: `【核心指令】严格基于上传的人物参考图生成。保持面部特征与参考图100%完全一致。
+画面风格：高级时尚电影感超现实主义。
+构图视角：90度垂直俯拍 (Top-down overhead shot)。
+光影艺术（核心）：柔和的自然直射阳光，在人物面部、锁骨和裸露的肩膀上投射出复杂的网格状和垂直艺术阴影图案 (intricate gridded and vertical artistic shadow patterns)。光影交织形成超现实的视觉效果。
+人物特征：参考图中的女性。拥有无瑕的瓷肌，带有光泽感饰面和微妙的自然腮红。长黑发向后整齐扎起，几缕精致的碎发柔和地框住脸庞。姿态优雅，肩膀裸露。
+氛围与质感：纯粹的优雅与宁静。梦幻般的视角，背景柔焦。超写实的皮肤纹理细节，8K分辨率。`,
+    promptEn: `High-fashion cinematic surrealism portrait based on uploaded reference.
+**Subject Consistency:** Strict face identity lock on the woman from the uploaded image.
+**Perspective:** 90-degree top-down overhead shot looking down at the subject.
+**Lighting & Shadow Play:** Soft, direct natural sunlight casting intricate artistic shadow patterns (gridded and vertical lines) across her facial planes, clavicle, and bare shoulders.
+**Subject Details:** Flawless porcelain skin with a radiant finish and subtle natural blush. Long black hair neatly tied back, with delicate loose strands softly framing her face. Posed gracefully with bare shoulders exposed.
+**Atmosphere & Tech:** Pure grace and tranquility. Dreamy perspective, soft-focus background, hyper-realistic skin textures, 8k resolution. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "Top-down overhead portrait of a woman with artistic gridded sun shadows, cinematic surrealism..."
+  },
   
 };
