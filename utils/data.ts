@@ -4359,5 +4359,31 @@ Quality: 8k resolution, magazine retouching, realistic fabric fidelity. --ar 4:3
 **Atmosphere & Tech:** Pure grace and tranquility. Dreamy perspective, soft-focus background, hyper-realistic skin textures, 8k resolution. --ar 3:4 --v 6.0 --style raw`,
     prompt: "Top-down overhead portrait of a woman with artistic gridded sun shadows, cinematic surrealism..."
   },
+
+    "dr-153": {
+    title: "敦煌岩彩：盛世神女肖像",
+    tags: ["Portrait", "Dunhuang", "Rock Color", "Tang Dynasty", "Chinese Style", "Cinematic", "Reference Based"],
+    promptCn: `【核心指令】基于上传的人物参考图生成。严格保持面部特征、五官构造及神态与参考图100%完全一致。
+风格基调：敦煌壁画岩彩美学 (Dunhuang Mural & Rock Color Aesthetic)。
+人物造型：
+肤质：大唐盛世红润瓷肌 (Radiant Tang-style Porcelain Skin)，在琥珀烛光下呈现细腻微观细节，眼睫湿润有力。
+妆容：额间装饰精美的**金色三叶草花钿 (Golden Clover Huadian)**。
+发型：双环望仙髻 (Double-loop Wang-xian Bun)，缀以金丝累丝发簪 (Gold Filigree Hairpins)，重现盛唐皇家雍容。
+光影与氛围：
+光影：石窟神性丁达尔光 (Divine God Rays in Cavern) 穿透幽暗。强烈的琥珀色侧面烛光 (Amber Candlelight) 与飘带上的勾边轮廓光 (Backlit Ribbons) 形成极致反差。
+场景：古老石窟深处，背景为经年风化的千佛壁画 (Weathered Murals)，空气中涌动着金沙尘埃 (Golden Sand Dust)。
+色彩与质感：
+调色：大唐极繁配色方案 (Opulent Gold & Lapis Lazuli)，金色与青金石蓝交相辉映。高对比度的暖色阴影渲染出史诗级的宗教神圣感。
+材质：画面整体叠加**岩彩画颗粒质感 (Rock Color Texture)**，矿物颜料的粗粝与皮肤的细腻形成对比。`,
+    promptEn: `Cinematic portrait in Dunhuang Mural & Rock Color Aesthetic based on uploaded reference.
+**Subject Consistency:** Strict face identity lock on the uploaded person.
+**Appearance:** Radiant Tang-style Porcelain Skin, detailed micro-texture under amber light, moist eyelashes. Golden Clover Huadian on forehead.
+**Hair:** Double-loop Wang-xian Bun adorned with intricate Gold Filigree Hairpins.
+**Attire & Motion:** Opulent Gold & Lapis Lazuli color palette. Dynamic Backlit Ribbons floating in the air.
+**Environment:** Deep inside an ancient grotto. Background of weathered Thousand Buddha murals. Air filled with floating Golden Sand Dust.
+**Lighting:** Divine God Rays (Tyndall effect) piercing the darkness. Strong Amber Candlelight from the side creating dramatic chiaroscuro.
+**Texture & Style:** Rock Color Texture (mineral pigment grain). Epic religious atmosphere. High contrast warm shadows. 8k resolution, masterpiece. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "Dunhuang mural style portrait, rock color texture, Tang dynasty aesthetic, golden clover huadian..."
+  },
   
 };
