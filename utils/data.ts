@@ -4375,7 +4375,7 @@ Quality: 8k resolution, magazine retouching, realistic fabric fidelity. --ar 4:3
 色彩与质感：
 调色：大唐极繁配色方案 (Opulent Gold & Lapis Lazuli)，金色与青金石蓝交相辉映。高对比度的暖色阴影渲染出史诗级的宗教神圣感。
 材质：画面整体叠加**岩彩画颗粒质感 (Rock Color Texture)**，矿物颜料的粗粝与皮肤的细腻形成对比。`,
-    promptEn: `Cinematic portrait in Dunhuang Mural & Rock Color Aesthetic based on uploaded reference.
+     promptEn: `Cinematic portrait in Dunhuang Mural & Rock Color Aesthetic based on uploaded reference.
 **Subject Consistency:** Strict face identity lock on the uploaded person.
 **Appearance:** Radiant Tang-style Porcelain Skin, detailed micro-texture under amber light, moist eyelashes. Golden Clover Huadian on forehead.
 **Hair:** Double-loop Wang-xian Bun adorned with intricate Gold Filigree Hairpins.
@@ -4383,7 +4383,32 @@ Quality: 8k resolution, magazine retouching, realistic fabric fidelity. --ar 4:3
 **Environment:** Deep inside an ancient grotto. Background of weathered Thousand Buddha murals. Air filled with floating Golden Sand Dust.
 **Lighting:** Divine God Rays (Tyndall effect) piercing the darkness. Strong Amber Candlelight from the side creating dramatic chiaroscuro.
 **Texture & Style:** Rock Color Texture (mineral pigment grain). Epic religious atmosphere. High contrast warm shadows. 8k resolution, masterpiece. --ar 3:4 --v 6.0 --style raw`,
-    prompt: "Dunhuang mural style portrait, rock color texture, Tang dynasty aesthetic, golden clover huadian..."
+     prompt: "Dunhuang mural style portrait, rock color texture, Tang dynasty aesthetic, golden clover huadian..."
+  },
+
+    "dr-154": {
+    title: "静谧时刻：自然日光下的私密肖像",
+    tags: ["Lifestyle Photography", "Candid", "Intimate", "Natural Light", "Indoor", "Realism", "Smartphone Photography", "Reference Based", "Ultra-High Resolution", "8K"],
+    promptCn: `【核心指令】基于上传人物参考图生成，人物年龄与面部特征严格跟随参考图。捕捉一位年轻女子在卧室的安静私密时刻。
+人物与神态：她留着柔和的冷调浅棕色直发，自然中分，头顶略塌，带有碎发。她随意地坐在床上，重心略偏，一条腿弯曲，另一条伸展。目光柔和地直视镜头，表情平静、内敛、毫无防备，嘴唇微微放松张开。妆容极简自然，保留真实的皮肤纹理和微小的瑕疵。
+服装与身体：身穿深灰色带柔和绿色基调的极细吊带真丝薄衫（silk camisole）和配套的轻薄居家短裤，领口带有隐约的精致蕾丝饰边。轻薄的面料在日光下自然贴合身体曲线并泛着柔和的丝缎光泽。大面积展现的肩颈、锁骨与修长的双腿，在柔和的侧面日光下显现出逼真的肌肤质感、平滑的阴影和淡淡的高光。
+摄影风格：智能手机生活方式摄影，轻微高角度的中全身景。自然锐度，带有微妙的数码颗粒感。光线为窗户侧面的柔和定向自然光。中等景深，背景略微柔化。
+环境与氛围：现代卧室，柔和浅绿色墙壁。床上铺着白色用品和米色针织毯，背景可见木质床架和极简电视柜。房间充满宁静的午后光线，氛围低能量、亲密、真实，仿佛一个未经摆拍的即兴时刻。
+画质与参数：9:16，超高分辨率（ultra-high resolution），8K，极其精致的纹理细节（extremely detailed textures），无损画质（lossless quality），RAW照片美学（RAW photo）。`,
+  },
+  
+    "dr-155": {
+    title: "珐琅彩琉璃地标冰箱贴生成器",
+    tags: ["Enamel Style","Glaze Art","Fridge Magnet","Template","Landmark Souvenir","Product Photography"],
+    promptCn: `【指令】请根据用户输入的地名和相关元素，生成一枚珐琅彩琉璃艺术风格的冰箱贴。
+画面描述：珐琅彩琉璃艺术风格，强烈的金属质感，一枚精致的冰箱贴。
+基底外形采用 [最具代表性的建筑/地形轮廓] 造型，边缘由厚重的 [金色/银色/古铜色] 金属边框包边。
+正面中心位置写有“[地名·景点名称]”金属字样。
+画面内部以掐丝珐琅工艺描绘核心风景：前景是 [地标元素1]；中景有 [地标元素2] 和 [地标元素3]；远景是 [地标元素4(可选)]。
+整体氛围点缀 [具有当地特色的植物或季节性元素]。
+边缘装饰：左侧/底部点缀 [当地特产符号1] 图案，右侧/顶部装饰 [当地特产符号2(可选)]。
+工艺细节：采用珐琅彩填色工艺，[特定区域，如水面/天空] 部分呈现 [颜色] 的半透明琉璃质感，金属线勾勒出纹理细节。
+背景与摄影：[纯色/虚化] 背景，正面微距产品摄影，所有元素严格控制在基底轮廓范围内，布局美观协调，光影体现出珐琅和玻璃的通透与金属的光泽，8K级超精细细节。`,
   },
   
 };
