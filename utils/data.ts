@@ -4410,5 +4410,83 @@ Quality: 8k resolution, magazine retouching, realistic fabric fidelity. --ar 4:3
 工艺细节：采用珐琅彩填色工艺，[特定区域，如水面/天空] 部分呈现 [颜色] 的半透明琉璃质感，金属线勾勒出纹理细节。
 背景与摄影：[纯色/虚化] 背景，正面微距产品摄影，所有元素严格控制在基底轮廓范围内，布局美观协调，光影体现出珐琅和玻璃的通透与金属的光泽，8K级超精细细节。`,
   },
+
+    "dr-156": {
+    title: "阶梯群像：高定西装分身大片",
+    tags: ["Portrait", "Group Portrait", "Clones", "Fashion", "Editorial", "Cinematic", "Reference Based"],
+    promptCn: `【核心指令】基于上传的人物参考图生成。画面中出现四位女性模特（面部特征严格锁定为上传图中的人物，呈现为同一人的四个时尚分身），在宽敞的现代室内楼梯上错落有致地排布，呈现对称而强大的时尚大片构图。
+服装统一设定：所有分身均穿着深V定制西装式连体衣（搭配乳胶T字前胸设计），佩戴相配的银色小圈形耳环和带有小圆吊坠的细银链。
+人物与造型布局（从上到下）：
+- 顶层分身：位于最高台阶。保留参考图的自然长发，表情优雅宁静。身穿宝蓝色 (Royal Blue) 西装连体衣，搭配黑色亮面漆皮细高跟鞋。
+- 中左分身：坐在下一级台阶。身体微微前倾，眼神充满张力与野性。身穿深红色 (Crimson Red) 西装连体衣，搭配红色细高跟鞋。
+- 中右分身：与中左相邻。侧面轮廓空灵，坐姿舒展。身穿柔和的淡粉色 (Pastel Pink) 西装连体衣，搭配裸色细高跟鞋。
+- 底层分身：位于较低台阶。大而富有表现力的眼睛直视镜头。身穿炭灰色 (Charcoal Gray) 西装连体衣，搭配银色细高跟鞋。
+姿态与互动：双腿巧妙摆放或交叉，展现高级感鞋履与楼梯的建筑线条。手部优雅地放在膝盖上、触碰阶梯或轻抚脸庞。
+环境与光影：极简现代室内宽楼梯，宽阔的浅橡木踏板，纯白色的踢脚板和无暇的白墙。光影采用柔和漫射的影棚级照明，高级时尚的色调平衡了鲜艳的西装色彩与中性的木质及白色背景。8K分辨率，超写实编辑级摄影。`,
+    promptEn: `Photorealistic group portrait of four female models—all featuring the EXACT same face based on the uploaded reference image (strict identity lock, acting as four clones)—posed together in a staggered, symmetrical fashion editorial arrangement across a wide modern indoor staircase. 
+**Outfit Theme:** They are dressed in a coordinated high-fashion theme of plunging tailored blazers styled as bodysuits with latex t-fronts and glossy patent leather stiletto pumps. Everyone wears matching silver hoop earrings and thin silver chains with small round pendants.
+**Positions & Colors:**
+- Model 1 (Top step): Elegant serene expression, wearing a royal blue blazer bodysuit and black pumps.
+- Model 2 (Middle step left): Leaning slightly forward with fierce eyes, wearing a crimson red blazer bodysuit and red pumps.
+- Model 3 (Middle step right): Slim ethereal profile, wearing a soft pastel pink blazer bodysuit and nude pumps.
+- Model 4 (Lower step): Expressive eyes looking at the lens, wearing a charcoal gray blazer bodysuit and silver pumps.
+**Pose:** Legs parted or angled gracefully to showcase footwear and architecture. Hands placed elegantly on knees or touching the stairs.
+**Environment:** Minimalist modern staircase with wide light oak wooden treads, clean white painted risers, and pristine white walls.
+**Lighting & Quality:** Soft, diffused studio-quality lighting. High-fashion color grading balancing vibrant blazers with neutral wood/white tones. 8k resolution, ultra-detailed, cinematic editorial. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "Photorealistic group portrait of four female models (clones of the same person based on reference) on a wide indoor staircase, wearing color-coordinated blazer bodysuits..."
+  },
+
+    "dr-157": {
+    title: "东方古典群像：对立式S曲线",
+    tags: ["Portrait", "Composition", "Group", "Oriental", "Hanfu", "Close-up", "Sheer"],
+    promptCn: `核心指令：生成一张展现东方古典群像构图的超写实艺术作品。采用对立式S曲线多人编排逻辑，画面以近景（Medium Close-up）呈现三位优雅的东方古代仕女。
+体态与构图：三位人物的半身近景以错落的深度排列。每个人物都展现出明显的对立式平衡体态，从头部、颈部到躯干形成优美的上半身S型曲线。相邻人物的S曲线开口方向相反，形成视觉上的对立与呼应。每个人物都有明显的肩颈倾斜与腰部扭转，制造出古典舞蹈般的视觉节奏。
+人物细节与互动：三位人物的肩部和躯干朝向不同的角度，但均正视镜头，与观者产生直接的视线交流与叙事张力。重点刻画极其精致的五官、真实的皮肤毛孔纹理、微距级别的发丝与清透的古典妆容。为了防止特征混淆，三人的服装颜色必须明确区分，分别穿着青瓷绿、朱红和黛紫的极其轻薄透视的古典薄纱裙，款式清凉，大面积展露白皙的肩颈、锁骨与手臂肌肤，仅以少量丝绸披帛半遮半掩。服饰需带有清晰可见的金银丝线刺绣、华丽的步摇发簪与通透的玉石配饰，拒绝任何模糊。
+环境与光影：背景为极简的高级感东方环境，例如中式古典宫廷、水墨屏风前或敦煌神庙遗址。光影采用经典的伦勃朗光或侧逆光，强调人体上半身的肌肤质感曲线美和透视薄纱面料的垂坠感。
+画质与氛围：具有敦煌飞天群像或唐宫仕女图的东方古典韵律感。8K超高分辨率，微距特写级别对焦，超高保真度，电影级镜头，画质极致细腻锐利。`,
+    promptEn: `Core Instruction: Generate a hyper-realistic artwork featuring an ancient Eastern classical group composition with opposing S-curve choreography. The scene is a medium close-up of three elegant ancient Chinese court ladies.
+Composition and Posture: Three figures arranged in staggered depth in a close-up view. Each figure displays a distinct contrapposto S-curve running from head through neck to torso, with heads, shoulders, and torsos oriented at different angles. Adjacent figures have opposing S-curve orientations, creating a visual counterpoint. Evident shoulder tilt and waist twist in all figures, establishing a classical dance rhythm.
+Details and Interaction: The figures have their shoulders and torsos angled differently, but all are looking directly at the camera, creating a narrative tension through direct eye contact with the viewer. Focus on extremely exquisite facial features, realistic skin pores and textures, macro-level visible hair strands, and clear classical makeup. To avoid blending, their clothing colors are distinctly separated: they wear extremely sheer, translucent silk gauze dresses in celadon green, vermilion red, and indigo purple. The garments feature a revealing design that extensively exposes their fair shoulders, collarbones, and arms, partially covered only by thin silk ribbons. Garments must feature highly detailed gold and silver thread embroidery, gorgeous dangling hairpins, and translucent jade accessories with absolutely no blur.
+Environment and Lighting: Minimalist premium Eastern background such as an ancient Chinese palace courtyard, in front of ink-wash screens, or Dunhuang temple ruins. Classic Rembrandt lighting or rim lighting to emphasize the skin texture and curves of the upper bodies and the drape of the sheer silk fabrics.
+Quality and Mood: Evokes the Oriental classical rhythm of Dunhuang Apsaras frescoes or Tang Dynasty court paintings. 8k ultra-high resolution, macro close-up focus, ultra-high fidelity, cinematic lens, exceptionally detailed and crystal clear sharp. --ar 16:9 --v 6.0 --style raw`,
+    prompt: "Medium close-up shot, ancient Eastern classical group composition, opposing S-curve choreography, contrapposto, three elegant court ladies in sheer translucent silk gauze dresses, looking directly at the camera...",
+  },
+
+    "dr-158": {
+    title: "经典结婚登记照",
+    tags: ["Portrait", "Wedding", "ID Photo", "Couple", "Studio"],
+    promptCn: `核心指令：基于上传的人物参考图生成一张标准的结婚登记照（两寸证件照，3:2比例）。
+人物锁定：严格保持原图男女双方的五官特征（100%一致），不做改变。
+背景与构图：经典深红色纯色背景（#8B0000），色彩饱满均匀。女左男右，女性在前，男性略侧后。女性两侧肩膀齐平，男性肩膀在女性肩膀后侧并略贴紧。女性正脸朝前，男性头部稍微偏向中间。平视正面半身照拍摄，从胸部上方到头顶。
+女性造型：长发过胸轻度蓬松，一侧长发在前，露出额头眉毛和双耳。身穿纯白色法式轻奢缎面无袖礼服裙。清透底妆，红唇，佩戴简约珍珠吊坠耳环。露齿微笑，温柔大方。
+男性造型：侧分商务短发，干练利落。身穿蓝黑色现代双排扣西装，内搭纯白色标准领衬衫，系带有金色或浅色小圆点图案的蓝黑色领带。露齿微笑，儒雅稳重。
+光影与画质：正面柔和打光，无明显阴影，光线均匀。正式、优雅、温馨的经典结婚登记照风格，画质极度清晰，8K超写实。`,
+    promptEn: `Standard Chinese marriage registration photo, 2-inch ID photo format, 3:2 aspect ratio.
+Subject Consistency: Strictly preserve the facial features of both the man and the woman from the uploaded reference image.
+Background and Composition: Solid dark red background, hex #8B0000. Woman on the left in the foreground, man on the right slightly behind. Woman faces forward with level shoulders. Man stands slightly behind her shoulder, his head tilted slightly towards the center. Frontal half-body framing.
+Female styling: Long black hair, slightly fluffy, one side resting in front, exposing forehead and ears. Wearing a pure white French luxury satin sleeveless dress. Clean makeup, red lips, simple pearl drop earrings. Smiling showing teeth, elegant and gentle.
+Male styling: Neat side-parted short black hair. Wearing a modern navy blue double-breasted suit, white shirt, and a navy tie with subtle gold/light polka dots. Smiling showing teeth, confident and mature.
+Lighting and Quality: Soft frontal studio lighting, even illumination with no harsh shadows. Formal, elegant, and warm atmosphere. 8k resolution, ultra-realistic, highly detailed. --ar 3:2 --v 6.0 --style raw`,
+    prompt: "Standard Chinese marriage registration photo, dark red background, couple smiling...",
+  },
+
+    "dr-159": {
+    title: "动漫角色设定图：专业多视图",
+    tags: ["Anime", "Character Design", "Concept Art", "Cel-shading", "Reference"],
+    promptCn: `核心指令：基于上传的人物参考图生成一张干净、专业、详细且信息丰富的动漫角色设定图与概念艺术。整体呈现结合柔和过渡的赛璐璐平涂技法，散发出优雅、自信与解析感。
+画面布局：采用以中心为焦点的网格化模块结构。中心区域展示角色的全身坐姿，端坐于木椅上，占据主要的垂直空间。
+四周分布详细拆解，左上角为表情集，包含四个头部特写。右上角为装备品分解图，展示连衣裙、高跟鞋与配饰。左下角为动作与动态图，包含一个用于喜剧与风格对比的Q版SD角色进行踢腿动作。右下角展示内衣及功能层。背景必须大量留白使用纯白色，以突出元素并保持清晰的可读性。
+角色与材质：深灰棕色头发带有柔和的低饱和度棕色高光，头顶有动漫风格的光环高光。白皙的蜜桃肤色，脸颊带有柔和红晕。穿着柔和的深黑色衣物，带有细节丰富且半透明的深灰色风格化蕾丝图案。细节配色包含鲜艳的红色鞋底以及浅青蓝色宝石首饰。金属和宝石具有高对比度反光和纯白高光。
+艺术技法：干净、纤细且均匀的矢量感线条。肤色与头发使用深棕色线稿，衣物使用纯黑色线稿。肤色采用极简赛璐璐阴影，衣物使用一到两层硬边缘阴影表现褶皱和体积感。
+排版与视觉设计：包含英文和日文双语。主标题使用无衬线粗体全大写并带有简单的黑色下划线，下方紧跟无衬线中字体的日文副标题。带有简单开放式箭头的黑色细指示线，将说明文本与特定细节连接起来。包含白底黑边的椭圆或圆角矩形漫画对话框，内有垂直排列的日文。
+画质与焦点：8K超高分辨率，结构严谨，强调动作幅度及服装设计的实用功能性。`,
+    promptEn: `Core Instruction: Generate a clean, professional, highly detailed, and informative Anime Manga Character Reference Sheet and Concept Art. Utilize cel-shading with soft gradients to convey an elegant, confident, and analytical mood.
+Composition and Layout: Grid-based modular layout with a central focal point. The center vertical space is occupied by a full-body character pose seated on a wooden chair. Surrounding sections include Top Left showing four expression headshots, Top Right detailing equipment breakdown like dress, heels, and accessories, Bottom Left featuring motion and action including an SD Chibi character in a dynamic kick pose for stylistic contrast, and Bottom Right displaying innerwear and functional layers. Use a generous pure white background to make elements pop and maintain readability.
+Subject and Materials: Dark ash brown hair with soft desaturated brown highlights and anime-style halo highlight on the crown. Fair peach skin with warm light pink shading and soft blush on cheeks. Soft black clothing featuring detailed but stylized semi-transparent dark grey lace. Accent colors include vibrant red shoe soles and light cyan aqua jewelry gemstones. High contrast reflections with stark white highlights for metal and gems.
+Art Techniques: Clean, thin, consistent vector-like line art. Use dark brown lines for skin and hair, pure black lines for clothing. Minimal cel-shading under hair and chin, one to two levels of hard-edged shadows on clothing to define folds and volume.
+Typography and Graphic Elements: English and Japanese typography. Bold sans-serif all caps main titles with simple black underlines, followed by medium gothic Japanese subtitles. Thin black callout lines with simple open arrowheads pointing from regular text to specific details. Manga style white speech bubbles with thin black borders containing vertical Japanese text.
+Quality and Focus: 8k resolution, crisp, highly detailed concept art highlighting range of motion and practical functionality of the clothing design. --ar 16:9 --niji 6`,
+    prompt: "Professional Anime Manga Character Reference Sheet, grid-based layout, cel-shading...",
+  },
   
 };
