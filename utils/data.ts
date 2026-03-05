@@ -4488,5 +4488,16 @@ Typography and Graphic Elements: English and Japanese typography. Bold sans-seri
 Quality and Focus: 8k resolution, crisp, highly detailed concept art highlighting range of motion and practical functionality of the clothing design. --ar 16:9 --niji 6`,
     prompt: "Professional Anime Manga Character Reference Sheet, grid-based layout, cel-shading...",
   },
+
+    "dr-160": {
+    title: "新中式暗调人像：束光与银饰",
+    tags: ["Portrait", "New Chinese Style", "Cinematic", "Dark Aesthetic", "Close-up"],
+    promptCn: `核心指令：基于上传的人物参考图生成一张超高清的新中式高级电影感唯美全身人像摄影。严格保留原图人物的面部特征（100%一致），整体气质高贵、优雅且具有叙事感。
+画面构图与背景：采用全身深景深构图，展示完整的站立或生动姿态。背景完全自适应上传图片的氛围，转化为具有东方美学的高级场景（如柔和的影棚、写意的中式庭院或雅致的屏风前），打破沉闷，色彩通透。
+光影特效：采用自适应电影级柔和布光，根据人物着装自动调整色调与对比度。光线立体通透，使得肌肤焕发自然细腻的光泽，画面明亮且富有层次感，摒弃过度的暗调压抑感。
+人物妆发与造型：保留原图人物的发型与妆容基础，自动优化为精致的新中式高级感妆造。白皙清透的底妆，搭配自然灵动的眼妆与唇色。发饰可根据整体造型智能点缀低调华丽的东方元素（如玉石、点翠或简约银饰）。
+服装与动态：完全自适应着装，完美还原或高级升华原参考图的服装款式，将其与新中式高定质感结合（如飘逸的轻纱、细腻的真丝、隐约的暗纹刺绣）。肢体动作自然舒展、优雅灵动，呈现极具生命力的时尚大片表现力。
+画质与质感：8K分辨率，时尚杂志封面级写实摄影质感。面料垂坠感逼真，细节配饰剔透，发丝与皮肤毛孔清晰可见，画面色彩丰富且高级。`,
+  },
   
 };
