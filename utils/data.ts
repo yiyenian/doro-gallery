@@ -4490,7 +4490,7 @@ Quality and Focus: 8k resolution, crisp, highly detailed concept art highlightin
   },
 
     "dr-160": {
-    title: "新中式暗调人像：束光与银饰",
+    title: "新中式唯美大片：自适应全身",
     tags: ["Portrait", "New Chinese Style", "Cinematic", "Dark Aesthetic", "Close-up"],
     promptCn: `核心指令：基于上传的人物参考图生成一张超高清的新中式高级电影感唯美全身人像摄影。严格保留原图人物的面部特征（100%一致），整体气质高贵、优雅且具有叙事感。
 画面构图与背景：采用全身深景深构图，展示完整的站立或生动姿态。背景完全自适应上传图片的氛围，转化为具有东方美学的高级场景（如柔和的影棚、写意的中式庭院或雅致的屏风前），打破沉闷，色彩通透。
