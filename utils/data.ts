@@ -4499,5 +4499,23 @@ Quality and Focus: 8k resolution, crisp, highly detailed concept art highlightin
 服装与动态：完全自适应着装，完美还原或高级升华原参考图的服装款式，将其与新中式高定质感结合（如飘逸的轻纱、细腻的真丝、隐约的暗纹刺绣）。肢体动作自然舒展、优雅灵动，呈现极具生命力的时尚大片表现力。
 画质与质感：8K分辨率，时尚杂志封面级写实摄影质感。面料垂坠感逼真，细节配饰剔透，发丝与皮肤毛孔清晰可见，画面色彩丰富且高级。`,
   },
+
+    "dr-161": {
+    title: "极致透视：黑天鹅高定芭蕾",
+    tags: ["Portrait", "Balletcore", "Wide Angle", "Dark Swan", "Extreme Foreshortening", "Haute Couture"],
+    promptCn: `核心指令：基于上传的人物参考图，生成一张极具视觉张力的黑天鹅高定芭蕾风（Dark Swan Balletcore）超写实广角摄影。人物面部特征必须100%严格锁定为上传参考图中的人物，展现优雅、高贵且充满暗黑戏剧力量的舞者体态，下颌线轮廓分明。
+面部与肌肤细节：带有烟熏玫瑰冷调的舞台感妆容，佩戴精致的黑天鹅羽毛头饰。眼部特征与肤色完全还原参考人物，瞳孔反射出舞台追光灯的光芒，展现真实的表皮微孔与细腻微光的肌肤物理质感。
+身材与姿态：展现极致的柔韧与优雅。人物在古典剧院的抛光木质舞台上呈现低重心的蹲踞姿态。采用极端的透视缩短法，前伸的脚部（穿着绑带芭蕾高跟鞋）靠近镜头并呈现微距对焦，另一条腿优雅收拢，脊椎呈现优美的S型拱起，犹如即将展翅的黑天鹅。神态孤傲、眼神极具穿透力。
+服装与配饰：身穿极致奢华的高级定制黑色芭蕾Tutu裙，采用层层叠叠的暗黑薄纱、天鹅绒与精致的黑钻蕾丝镶嵌。腿部穿着带有微光的黑色透明丝袜，脚踩具有光泽感的黑色缎面绑带细高跟芭蕾舞鞋。双手佩戴黑色丝绒长手套。
+环境与光影：背景为宏大复古的古典剧院舞台，深邃的暗红色天鹅绒幕布作为背景。采用极具戏剧张力的顶级舞台聚光灯（Spotlight）自斜上方打在人物身上，空气中漂浮着被照亮的微尘。高定蕾丝和水钻上有明亮的镜面高光，光洁的木地板有真实的反射倒影。
+画质与镜头：8K分辨率，Raw格式直出。模拟索尼A7R V相机搭配24mm广角G大师镜头，f/11.0光圈。9:16竖版全身构图，同时保持面部和前景芭蕾舞鞋的极致清晰。拒绝任何解剖结构错误、多余肢体或文字水印。`,
+    promptEn: `Core Instruction: Generate an ultra-realistic, high-tension Dark Swan Haute Couture ballet style fashion photography based on the uploaded character reference. The facial features must strictly and exactly match the uploaded reference, featuring an elegant, noble, and powerful dark dramatic dancer build with a structured jawline.
+Face and Skin: Theatrical makeup with cool smoky rose undertones, adorned with a delicate black swan feather headpiece. Eye features and skin tone perfectly match the reference character. Macro-definition pupillary zones reflecting the stage spotlight, visible epidermal micro-pores, and physically accurate glowing skin texture.
+Body and Pose: Emphasize extreme flexibility and elegance. The subject is in a low-centered crouching pose on a polished wooden stage of a classical theater. Utilize extreme foreshortening with a 24mm wide-angle lens, the leading foot (wearing lace-up ballet heels) extended toward the lens in macro-focus, the secondary leg elegantly tucked, and the spine gracefully arched like a dark swan about to take flight. Proud, intense, and focused gaze.
+Wardrobe: Wearing an exquisitely luxurious haute couture black ballet tutu, featuring cascading layers of dark tulle, velvet, and intricate black diamond lace embroidery. Wearing sheer glowing black pantyhose and high-luster black satin lace-up stiletto ballet heels. Long black velvet gloves on the hands.
+Environment and Lighting: Grand vintage classical theater stage with deep dark red velvet curtains in the background. Highly dramatic top-tier stage spotlight shining down diagonally on the subject, illuminating floating dust motes in the air. Specular highlights on the haute couture lace and rhinestones, 100 percent reflection integrity on the polished wooden floor.
+Quality and Camera: 8k resolution, raw photo format. Shot on Sony A7R V with a 24mm wide-angle G-Master lens at f/11.0. 9:16 vertical full-body composition with a mutual focal plane keeping both the magnified leading ballet shoe and facial features sharp. Strictly no anatomical errors, fused fingers, text, or logos. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "Extreme foreshortening wide-angle photography, 24mm lens, Dark Swan Haute Couture ballet dancer in a low crouch, luxurious black tutu with black diamonds, lace-up stiletto ballet heels, grand classical theater stage, dramatic spotlight, floating dust, highly detailed skin texture, based on reference...",
+  },
   
 };
