@@ -4517,5 +4517,25 @@ Environment and Lighting: Grand vintage classical theater stage with deep dark r
 Quality and Camera: 8k resolution, raw photo format. Shot on Sony A7R V with a 24mm wide-angle G-Master lens at f/11.0. 9:16 vertical full-body composition with a mutual focal plane keeping both the magnified leading ballet shoe and facial features sharp. Strictly no anatomical errors, fused fingers, text, or logos. --ar 9:16 --v 6.0 --style raw`,
     prompt: "Extreme foreshortening wide-angle photography, 24mm lens, Dark Swan Haute Couture ballet dancer in a low crouch, luxurious black tutu with black diamonds, lace-up stiletto ballet heels, grand classical theater stage, dramatic spotlight, floating dust, highly detailed skin texture, based on reference...",
   },
+
+    "dr-162": {
+    title: "职业与人生进阶",
+    tags: ["Storyboard", "Career", "Progression", "Multi-panel", "2D Illustration", "Editorial"],
+    promptCn: `核心指令：基于上传的人物参考图，生成一个由 5 个垂直面板组成的现代高级2D商业插画（非写实风格）。展示那位女性在不同职业/人生阶段的积极变化。每个面板都有不同的背景颜色，并配有中文文本。
+面板 1 (粉色背景): 人物（穿着专业的棕色上衣和银色耳环，表情专注）在她的第一张办公桌前。叠加中文文本：“初次步入职场：在初级职位上开始工作，表情认真，对未来充满期待。”
+面板 2 (红色背景): 人物（表情更加自信，穿着精致的黑色蕾丝装饰衬衫）在进行项目演示。叠加中文文本：“初步成长：主导关键项目，表情自信，展现出色的执行力。”
+面板 3 (紫色背景): 人物（表情坚定，穿着剪裁考究的深色西装裙，配有金色配饰）在接受晋升通知。叠加中文文本：“获得晋升：因卓越表现而获得提拔，表情坚定，接受新的挑战。”
+面板 4 (蓝色背景): 人物（表情沉稳且富有领导力，穿着时尚的黑色皮革外套和复杂的银色项链）在领导团队会议。叠加中文文本：“成为领袖：带领团队达成目标，表情沉稳，实现职业生涯的重要里程碑。”
+面板 5 (黑色背景): 人物（表情满足且平静，穿着优雅的定制晚礼服，配有精致的金色项链，背景是一个高端颁奖典礼）在接受年度最佳企业家奖。叠加中文文本：“巅峰时刻：达到职业巅峰，表情满足，享受成功带来的自由与荣耀。”
+画质要求：精致的2D扁平风插画（Flat Editorial Illustration），色彩鲜明，线条流畅，高级时尚绘本或杂志内页插图质感，绝不要写实摄影风格。`,
+    promptEn: `Core Instruction: Generate a modern, elegant 2D editorial illustration (strictly NON-photorealistic) of a 5-panel vertical storyboard based on the uploaded character reference. Showcasing the woman's positive career and life progression across 5 distinct stages. Each panel has a different background color and specific superimposed Chinese text.
+Panel 1 (Pink background): The woman (wearing a professional brown top and silver earrings, focused expression) at her first desk. Chinese text: '初次步入职场：在初级职位上开始工作，表情认真，对未来充满期待。'
+Panel 2 (Red background): The woman (more confident expression, wearing a delicate black lace-trimmed shirt) giving a project presentation. Chinese text: '初步成长：主导关键项目，表情自信，展现出色的执行力。'
+Panel 3 (Purple background): The woman (determined expression, wearing a well-tailored dark suit skirt with gold accessories) receiving a promotion notice. Chinese text: '获得晋升：因卓越表现而获得提拔，表情坚定，接受新的挑战。'
+Panel 4 (Blue background): The woman (calm and commanding expression, wearing a stylish black leather jacket and complex silver necklace) leading a team meeting. Chinese text: '成为领袖：带领团队达成目标，表情沉稳，实现职业生涯的重要里程碑。'
+Panel 5 (Black background): The woman (satisfied and peaceful expression, wearing an elegant custom evening gown with a delicate gold necklace, at a high-end award ceremony) accepting the Entrepreneur of the Year award. Chinese text: '巅峰时刻：达到职业巅峰，表情满足，享受成功带来的自由与荣耀。'
+Quality: Exquisite 2D flat editorial illustration, vibrant colors, smooth stylized lines, premium fashion magazine illustration aesthetic, absolutely no photorealism. --ar 1:2 --niji 6`,
+    prompt: "5-panel vertical storyboard, modern 2D flat editorial illustration, career progression of a woman, distinct panel colors (pink, red, purple, blue, black) with corresponding professional outfits and expressions, Chinese subtitles superimposed on each panel, non-photorealistic...",
+  },
   
 };
