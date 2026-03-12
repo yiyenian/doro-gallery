@@ -4537,5 +4537,35 @@ Panel 5 (Black background): The woman (satisfied and peaceful expression, wearin
 Quality: Exquisite 2D flat editorial illustration, vibrant colors, smooth stylized lines, premium fashion magazine illustration aesthetic, absolutely no photorealism. --ar 1:2 --niji 6`,
     prompt: "5-panel vertical storyboard, modern 2D flat editorial illustration, career progression of a woman, distinct panel colors (pink, red, purple, blue, black) with corresponding professional outfits and expressions, Chinese subtitles superimposed on each panel, non-photorealistic...",
   },
+
+    "dr-163": {
+    title: "极简木质：高定泳衣全身人像",
+    tags: ["Portrait", "Swimwear", "Full-body", "Photorealistic", "Cinematic", "Avant-garde"],
+    promptCn: `核心指令：基于上传的人物参考图生成一张超高清写实全身人像摄影。严格保留原图人物的面部特征（100%一致），呈现出平静放松的神情。
+人物妆发与动态：人物留着乌黑的长卷发。她全身斜靠在暖色调垂直纹理木质墙面上，左手置于胯部，右手自然垂下。
+服装与细节：穿着极具个性的前卫不对称单肩高定连体泳衣，采用带有微光的高级纯黑面料。腰腹部带有大胆的几何镂空设计，并以精致的金色金属环扣巧妙连接，高开叉剪裁完美拉长腿部线条。裸足踏在木地板上，踝关节与脚部细节清晰可见。
+构图与背景：采用较宽的全身构图，完整展示人物的双腿和全身比例。背景由暖色调的垂直木质墙面延伸至匹配的木地板，极简而高级。
+光影与画质：柔和、散射的自然光线照亮全身，呈现超写实的皮肤毛孔纹理和细腻的光影过渡。8K超高分辨率，极高细节，电影级质感。`,
+    promptEn: `Core Instruction: Generate an ultra-high-definition hyper-realistic full-body portrait photography based on the uploaded character reference image. Strictly preserve the facial features of the uploaded reference (100% match), exuding a calm and relaxed expression.
+Subject and Pose: Long black curly hair. The character is leaning diagonally against a warm-toned vertical slatted wooden wall, with her left hand resting on her hip and right hand hanging down naturally.
+Wardrobe and Details: Wearing a bold, avant-garde asymmetric one-shoulder haute couture one-piece swimsuit made of shimmering premium black fabric. Featuring dramatic geometric midriff cutouts cleverly connected by exquisite gold metallic ring accents, with a high-cut leg design to perfectly elongate the legs. Barefoot on the wooden floor with clearly visible ankle joints and foot details.
+Composition and Environment: Wide full-body composition, completely displaying her legs and body proportions. The background features a minimalist and premium warm-toned vertical wooden wall extending to a matching wooden floor.
+Lighting and Quality: Soft, diffused natural light illuminating the entire body, showcasing hyper-realistic skin pores, textures, and delicate lighting transitions. 8k ultra-high resolution, highly detailed, cinematic texture. --ar 4:5 --v 6.0 --style raw`,
+    prompt: "Hyper-realistic full-body portrait photography, leaning against a warm wooden wall, bold asymmetric one-shoulder haute couture swimsuit with gold ring accents and cutouts, barefoot, soft natural lighting, highly detailed skin texture, based on reference...",
+  },
+
+    "dr-164": {
+    title: "极简木质：3x3多角度姿势网格",
+    tags: ["Grid", "Multi-view", "Poses", "Swimwear", "Photorealistic", "Layout"],
+    promptCn: `核心指令：基于上传的人物参考图生成一张超高清的 3x3 网格（共9个面板）摄影排版图。每个单元格的宽高比应为 2:3。必须在所有单元格中保持相同的人物特征（100%一致）、相同的服装和一致的场景，但每个单元格需从不同角度展示角色，且姿势完全随机不重复。
+人物妆发与服装：人物留着乌黑的长卷发。穿着极具个性的前卫不对称单肩高定连体泳衣，高级纯黑面料，带有大胆的几何镂空设计、金色金属环扣与高开叉剪裁。赤足。
+构图与场景控制：3x3 网格无缝布局。背景统一为暖色调的垂直木质墙面与匹配的木地板，极简而高级。各单元格需包含不同的镜头角度（正面、侧面、背影、特写、俯拍、仰拍等）和丰富的非重复肢体动作（站立、斜靠、坐姿、伸展、回眸等）。
+光影与画质：柔和、散射的自然光线，呈现超写实的皮肤毛孔纹理和细腻的光影过渡。8K超高分辨率，极高细节，照片级真实感与电影级质感。`,
+    promptEn: `Core Instruction: Generate an ultra-high-definition 3x3 grid photography layout (9 panels in total) based on the uploaded character reference. Each individual cell should have a 2:3 aspect ratio. Show the exact same character (100% facial match), same outfit, and same consistent scene across all panels, but display the character from different camera angles with random, non-repeating poses in each cell.
+Subject and Wardrobe: Long black curly hair. Wearing a bold, avant-garde asymmetric one-shoulder haute couture one-piece swimsuit made of premium black fabric, featuring geometric cutouts, gold metallic ring accents, and a high-cut leg. Barefoot.
+Composition and Scene: Seamless 3x3 grid layout. The background in all cells must be a consistent, minimalist warm-toned vertical slatted wooden wall extending to a matching wooden floor. The 9 panels must capture varying dynamic camera angles (front, profile, back, close-up, high angle, low angle) and rich, non-repeating body poses (standing, leaning, sitting, stretching, looking back).
+Lighting and Quality: Soft, diffused natural light showcasing hyper-realistic skin pores and delicate lighting transitions. 8k ultra-high resolution, photorealistic, highly detailed, cinematic texture. --v 6.0 --style raw`,
+    prompt: "3x3 grid photography layout, 9 panels of the same character from different angles and random non-repeating poses, leaning against a warm wooden wall, bold asymmetric black haute couture swimsuit, barefoot, soft natural lighting, based on reference...",
+  },
   
 };
