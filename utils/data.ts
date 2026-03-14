@@ -4567,5 +4567,21 @@ Composition and Scene: Seamless 3x3 grid layout. The background in all cells mus
 Lighting and Quality: Soft, diffused natural light showcasing hyper-realistic skin pores and delicate lighting transitions. 8k ultra-high resolution, photorealistic, highly detailed, cinematic texture. --v 6.0 --style raw`,
     prompt: "3x3 grid photography layout, 9 panels of the same character from different angles and random non-repeating poses, leaning against a warm wooden wall, bold asymmetric black haute couture swimsuit, barefoot, soft natural lighting, based on reference...",
   },
+
+    "dr-165": {
+    title: "极简北欧绘本风",
+    tags: ["Illustration", "Cartoon", "Children's Book", "Minimalist", "Flat Colors", "Nordic"],
+    promptCn: `核心指令：生成一张极简手绘卡通插画，采用北欧儿童绘本风格，带有一点涂鸦感和童趣。
+人物与造型：人物比例夸张可爱，采用大头搭配极小五官的设计，神态轻松幽默。展现充满生活气息的日常动作或场景。
+艺术技法：使用明显的粗黑色线条勾勒轮廓，内部采用扁平化色块上色，无需复杂的立体光影过渡。
+色彩与环境：整体采用柔和但高饱和的配色方案，以薄荷绿和芥末黄为主色调。背景极度简洁，留白充分，避免杂乱的元素，展现出生活化的场景与氛围。
+画质与氛围：画面充满轻松、治愈与幽默感，完美结合矢量插画的干净与手绘涂鸦的随性，犹如高级儿童插画书的精美内页。`,
+    promptEn: `Core Instruction: Generate a minimalist hand-drawn cartoon illustration in a Nordic children's picture book style, featuring a slight doodle feel and childlike innocence.
+Subject and Styling: Exaggerated and cute character proportions, featuring a large head with tiny facial features, conveying a relaxed and humorous expression. Depicting a slice-of-life daily action or scene.
+Art Techniques: Bold, thick black outlines for the contours, filled with flat color blocks, without complex 3D lighting or shading gradients.
+Color and Environment: A soft yet high-saturation color palette, dominated by mint green and mustard yellow. The background is extremely simple, with generous negative space, avoiding cluttered elements, and depicting a relaxed daily environment.
+Quality and Mood: The image should feel relaxing, healing, and humorous, perfectly blending the cleanliness of vector illustration with the spontaneity of hand-drawn doodles, resembling a beautiful page from a premium children's illustration book. --ar 4:3 --niji 6`,
+    prompt: "Minimalist hand-drawn cartoon illustration, Nordic children's picture book style, thick black lines, flat colors, cute exaggerated character, big head small features, mint green and mustard yellow, simple background...",
+  },
   
 };
