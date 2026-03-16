@@ -4583,5 +4583,15 @@ Color and Environment: A soft yet high-saturation color palette, dominated by mi
 Quality and Mood: The image should feel relaxing, healing, and humorous, perfectly blending the cleanliness of vector illustration with the spontaneity of hand-drawn doodles, resembling a beautiful page from a premium children's illustration book. --ar 4:3 --niji 6`,
     prompt: "Minimalist hand-drawn cartoon illustration, Nordic children's picture book style, thick black lines, flat colors, cute exaggerated character, big head small features, mint green and mustard yellow, simple background...",
   },
+
+    "dr-166": {
+    title: "写实角色设定卡：多变风格",
+    tags: ["Portrait", "Character Design", "Model Sheet", "Turnaround", "Photorealistic", "Multiple Styles"],
+    promptCn: `核心指令：基于上传的参考图生成一张3:2横版角色设定卡/转面板（turnaround sheet / model sheet），纯白干净棚拍背景。以参考图人物为唯一身份锚点：脸型轮廓、眼型、眉形、鼻梁、嘴唇、年龄气质必须严格一致；只允许同一个角色，禁止换脸与五官漂移。
+服装与造型（多风格随机）：请为该角色随机生成一种极具设计感与张力的着装风格（例如：现代都市丽人风、东方古典汉服/武侠风、赛博朋克未来重装或极简高级时尚高定）。全身正面与侧面的服装结构、配饰、材质必须保持严格的三维逻辑一致性，充满对应风格的极致细节（如绑带、丝绸刺绣、金属机械、复古皮革等）。
+版式布局（单张合成图，干净网格，统一光影与色彩）：左侧（约占60%宽度）包含两张大图上下排列：1）全身正视站姿（中性站姿，展现正面服装设计）；2）全身90度侧视站姿（展现侧面服装结构）。右侧（约占40%宽度）为2x3网格的六张头部小图：1）头部正面（中立神态）；2）头部背面（展示发型与头型一致性）；3）头部左45度；4）头部右45度；5）表情特写：开心/愉悦；6）表情特写：生气/愤怒。
+质感与画质：高端写实棚拍/电影级人像质感，真实皮肤微观质感（可见毛孔与细纹，绝对不磨皮），全图各分区曝光与色彩一致，8K细节，轻胶片颗粒，超干净白底，脚下带有干净柔和的投影。
+强约束（必须严格遵守）：画面内绝对不允许任何可读文字（不要FRONT/SIDE等标签），不要字母、不要logo、不要UI叠层、不要水印块。不要卡通二次元。不要多余人物。不要畸形多肢体。六张小图必须是同一张脸。8K,超高质量。`,
+  },
   
 };
