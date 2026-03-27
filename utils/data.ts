@@ -4593,5 +4593,52 @@ Quality and Mood: The image should feel relaxing, healing, and humorous, perfect
 质感与画质：高端写实棚拍/电影级人像质感，真实皮肤微观质感（可见毛孔与细纹，绝对不磨皮），全图各分区曝光与色彩一致，8K细节，轻胶片颗粒，超干净白底，脚下带有干净柔和的投影。
 强约束（必须严格遵守）：画面内绝对不允许任何可读文字（不要FRONT/SIDE等标签），不要字母、不要logo、不要UI叠层、不要水印块。不要卡通二次元。不要多余人物。不要畸形多肢体。六张小图必须是同一张脸。8K,超高质量。`,
   },
+
+    "dr-167": {
+    title: "智感美式职业证件照",
+    tags: ["Portrait", "Headshot", "Business", "Professional", "American Style"],
+    promptCn: `核心指令：基于上传的人物参考图生成一张智感职业证件照，整体风格参考美式高级证件照。
+画面构图与背景：采用中景人像，人物居中且大小适中，头肩比例正常舒适。使用从淡淡的灰色到白色的柔和渐变摄影背景。
+光影与画质：低对比度，灯光柔和自然，呈现出专业肖像摄影的精致感。画面清晰高质，面部保持精准对焦。
+人物状态与细节：突出真实的肤色与层次感，皮肤质感通透、气色极佳。整体气质现代且优雅，神情放松自然、自信大方，眼神明亮有神。适合作为高端商务与职业形象照。`,
+    promptEn: `Core Instruction: Generate a smart and professional ID photo/headshot based on the uploaded reference image, inspired by premium American-style corporate headshots.
+Composition and Background: Medium portrait shot, character centered and appropriately sized with a natural and comfortable head-to-shoulder ratio. Features a soft gradient photography background transitioning from light gray to pure white.
+Lighting and Quality: Low contrast, soft and natural studio lighting, delivering the refined elegance of professional portrait photography. High-definition and crystal clear, with the face perfectly in focus.
+Subject and Details: Highlights authentic skin tones and depth, featuring a translucent skin texture and excellent complexion. The overall aura is modern and elegant, with a relaxed, naturally confident expression and bright, engaging eyes. Ideal for high-end business and professional profiles. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "Smart American style professional corporate headshot, medium portrait shot, light gray to white gradient background, soft natural lighting, confident and elegant expression, translucent skin, highly detailed business portrait, based on reference...",
+  },
+
+    "dr-168": {
+    title: "专业老照片修复：佳能R6 II级人像",
+    tags: ["Restoration", "Portrait", "Canon EOS R6 II", "Photorealistic", "High Detail"],
+    promptCn: `核心指令：基于上传的老照片，执行专业级的图像复原和增强，使其达到Canon EOS R6 II单反相机的画质水平。
+画质与细节：应用先进的AI放大和细节增强算法，彻底消除噪点、划痕、折痕和模糊。重建极致清晰真实的皮肤纹理、发丝细节、眼睛神采和衣物材质，达到微距级别的锐度。
+色彩与光影：进行专业级的色彩校正和分级，恢复自然、丰富且准确的肤色和环境色彩。重建柔和、立体、真实的光影效果，赋予照片深度和现代感。
+面部特征：严格保留并精确还原人物的原始面部特征、表情和神态，确保结果极其自然，毫无“塑料感”或过度磨皮的痕迹。
+最终效果：一张看起来像是用现代高端单反相机拍摄的全新人像照片，细节锐利，色彩生动，质感真实，完美捕捉了原始瞬间的神韵。`,
+    promptEn: `Core Instruction: Perform a professional-grade restoration and enhancement of the uploaded old photo, achieving the image quality of a Canon EOS R6 II DSLR camera.
+Quality and Details: Apply advanced AI upscaling and detail enhancement algorithms to eliminate noise, scratches, creases, and blur. Reconstruct ultra-sharp and authentic skin texture, individual hair strands, eye details, and fabric materials to macro-level sharpness.
+Color and Lighting: Execute professional color correction and grading to restore natural, rich, and accurate skin tones and environmental colors. Rebuild soft, three-dimensional, and realistic lighting and shadows, giving the photo depth and a modern feel.
+Facial Features: Strictly preserve and precisely restore the original facial features, expressions, and demeanor of the subject, ensuring the result is extremely natural with absolutely no "plastic" or over-smoothed look.
+Final Result: A brand-new looking portrait that appears to have been taken with a modern high-end DSLR, with sharp details, vivid colors, and realistic textures, perfectly capturing the essence of the original moment. --v 6.0 --style raw`,
+    prompt: "Professional old photo restoration to Canon EOS R6 II quality, photorealistic portrait, advanced AI upscaling, highly detailed skin texture and hair, natural color grading, precise facial feature preservation, sharp focus, realistic lighting...",
+  },
+
+    "dr-169": {
+    title: "3D卡通风：治愈系手工针织穿搭",
+    tags: ["3D Render", "Cartoon", "Pixar Style", "Fashion", "Cozy", "Whimsical"],
+    promptCn: `核心指令：生成一张具有皮克斯风格（Pixar-inspired）的3D卡通动画女孩角色插画。角色比例略微夸张（修长的腿、小巧的躯干），展现出迷人的卡通童趣魅力。
+面部与发型：拥有极具表现力的大眼睛、玫瑰色的红晕和俏皮的微笑。头发略微凌乱且蓬松，扎成发髻或散落着发丝的短波波头。
+服装与材质：身穿超大号的舒适街头服饰，突出手工针织的物理纹理感。包括一件色彩斑斓的拼接开衫或彩色袖子毛衣，搭配柔软的围巾和宽松的休闲裤/工装裤。色调包含芥末黄、活力橙、鼠尾草绿和柔和的粉彩色系，脚踩休闲运动鞋。
+姿态与动态：呈现生动活泼的姿态——例如俏皮的手势、微微倾斜的头部，或充满个性的行走/跳舞姿势。
+环境与光影：背景为梦幻般模糊的浅景深（散景效果），采用日落橙或中性户外街道的暖色调，确保视觉焦点集中在角色身上。采用柔和、温暖的电影级布光。
+画质与风格：超高画质3D渲染，平滑的材质表现。高度细腻的面料纹理（羊毛、粗针织、软棉）。异想天开的美学，温馨的现代独立时尚风格（Indie style）。`,
+    promptEn: `A stylized 3D animated girl character with a soft, Pixar-inspired look, big expressive eyes, rosy cheeks, and a playful smile. She has slightly messy, voluminous hair styled in a bun or short bob with loose strands. 
+The character is wearing oversized, cozy streetwear with a handmade knitted texture — including a colorful patchwork cardigan or sweater with multicolor sleeves, a soft scarf, and relaxed baggy pants or cargo trousers. Outfit includes vibrant tones like mustard yellow, orange, sage green, and muted pastels, paired with casual sneakers. 
+The pose is dynamic and lively — playful hand gestures, slightly tilted head, or a dancing/walking stance with personality. The proportions are slightly stylized (long legs, small torso, cartoonish charm). 
+Lighting is soft, warm, and cinematic with a shallow depth of field. Background is dreamy and blurred (bokeh effect), with warm tones like sunset orange or neutral outdoor streets, keeping focus on the character. 
+Highly detailed fabric textures (wool, knit, soft cotton), realistic lighting, smooth rendering, ultra high quality, 3D render, whimsical aesthetic, cozy fashion, modern indie style. --ar 3:4 --v 6.0`,
+    prompt: "A stylized 3D animated girl character, Pixar-inspired, cozy oversized streetwear, colorful patchwork knitted cardigan, dynamic playful pose, shallow depth of field, blurred warm background, highly detailed fabric textures, ultra high quality 3D render...",
+  },
   
 };
