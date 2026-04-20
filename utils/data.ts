@@ -4608,20 +4608,19 @@ Subject and Details: Highlights authentic skin tones and depth, featuring a tran
     prompt: "Smart American style professional corporate headshot, medium portrait shot, light gray to white gradient background, soft natural lighting, confident and elegant expression, translucent skin, highly detailed business portrait, based on reference...",
   },
 
-    "dr-168": {
-    title: "专业老照片修复：佳能R6 II级人像",
-    tags: ["Restoration", "Portrait", "Canon EOS R6 II", "Photorealistic", "High Detail"],
-    promptCn: `核心指令：基于上传的老照片，执行专业级的图像复原和增强，使其达到Canon EOS R6 II单反相机的画质水平。
-画质与细节：应用先进的AI放大和细节增强算法，彻底消除噪点、划痕、折痕和模糊。重建极致清晰真实的皮肤纹理、发丝细节、眼睛神采和衣物材质，达到微距级别的锐度。
-色彩与光影：进行专业级的色彩校正和分级，恢复自然、丰富且准确的肤色和环境色彩。重建柔和、立体、真实的光影效果，赋予照片深度和现代感。
-面部特征：严格保留并精确还原人物的原始面部特征、表情和神态，确保结果极其自然，毫无“塑料感”或过度磨皮的痕迹。
-最终效果：一张看起来像是用现代高端单反相机拍摄的全新人像照片，细节锐利，色彩生动，质感真实，完美捕捉了原始瞬间的神韵。`,
-    promptEn: `Core Instruction: Perform a professional-grade restoration and enhancement of the uploaded old photo, achieving the image quality of a Canon EOS R6 II DSLR camera.
-Quality and Details: Apply advanced AI upscaling and detail enhancement algorithms to eliminate noise, scratches, creases, and blur. Reconstruct ultra-sharp and authentic skin texture, individual hair strands, eye details, and fabric materials to macro-level sharpness.
-Color and Lighting: Execute professional color correction and grading to restore natural, rich, and accurate skin tones and environmental colors. Rebuild soft, three-dimensional, and realistic lighting and shadows, giving the photo depth and a modern feel.
-Facial Features: Strictly preserve and precisely restore the original facial features, expressions, and demeanor of the subject, ensuring the result is extremely natural with absolutely no "plastic" or over-smoothed look.
-Final Result: A brand-new looking portrait that appears to have been taken with a modern high-end DSLR, with sharp details, vivid colors, and realistic textures, perfectly capturing the essence of the original moment. --v 6.0 --style raw`,
-    prompt: "Professional old photo restoration to Canon EOS R6 II quality, photorealistic portrait, advanced AI upscaling, highly detailed skin texture and hair, natural color grading, precise facial feature preservation, sharp focus, realistic lighting...",
+      "dr-168": {
+    title: "博物馆图鉴：中文拆解信息图",
+    tags: ["Infographic", "Museum", "Cultural", "Deconstruction", "Layout", "Chinese Style"],
+    promptCn: `核心指令：生成一张关于 [请填写主题，例如：明制汉服/唐代金银器/故宫建筑] 的“国家博物馆级图鉴式中文拆解信息图”。以极其严谨的模块化排版、超写实的中央主视觉和极高清晰度的中文标注为核心。
+画面构图与背景：背景采用米白色仿古宣纸或带有细腻纹理的浅茶色纸张，四周带有极简的中式复古角花边框（如回字纹）。中央放置高度写实、全景对焦的核心主体（如真实穿着的全身人像或高精度器物），光影立体柔和。
+极致还原版式设计（固定6大区块）：
+1. 左上角（标题与导语）：深色加粗的大字号中文主标题（如“XXX拆解图”），下方配有横线修饰的副标题（“形制、材质与寓意”），以及一段排版整齐的中文背景导语。
+2. 左侧列（结构拆解-自上而下）：深色标题框“结构拆解”。从中央主体引出带有深色圆点的极细直线，连接到左侧的一组垂直列表。列表中包含多个【正方形微距特写小图】，每个小图右侧紧跟加粗的中文部件名称及两行解释文本。
+3. 右上角（材质与质感）：包含4个横向排列的【方形真实材质特写样片】（展示织物经纬或金属纹理），每个样片下方有居中的中文材质名称与说明。
+4. 右中侧（常见纹样与色彩）：上半部分展示6个【圆形纹样切片小图】（如云纹、牡丹纹等），下附中文寓意；下半部分为“色彩与含义”区，展示5条【横向长条形纯色色卡】，色卡右侧紧跟中文色号名称与文化解释。
+5. 右下角（定位与总结）：包含两个浅色背景的文本框，分别是“历史定位”和“核心特征”，内有带圆点符号（Bullet points）的条目式中文总结。
+6. 底部横排（构成顺序-由内而外）：一条横向的图文流程带。包含一排独立的单体部件插图，插图之间使用向右的箭头（➡️）连接，下方附带精准的中文步骤名称。
+画质与排版要求：8K分辨率，网格排版（Grid System）对齐完美。字号层级分明（大标题、中标题、正文），必须是绝对清晰、合乎排版规范的纯正简体中文。坚决避免：乱码拼音、模糊字迹、引线交叉错乱、廉价海报感或动漫感。`,
   },
 
     "dr-169": {
@@ -4639,6 +4638,22 @@ The pose is dynamic and lively — playful hand gestures, slightly tilted head, 
 Lighting is soft, warm, and cinematic with a shallow depth of field. Background is dreamy and blurred (bokeh effect), with warm tones like sunset orange or neutral outdoor streets, keeping focus on the character. 
 Highly detailed fabric textures (wool, knit, soft cotton), realistic lighting, smooth rendering, ultra high quality, 3D render, whimsical aesthetic, cozy fashion, modern indie style. --ar 3:4 --v 6.0`,
     prompt: "A stylized 3D animated girl character, Pixar-inspired, cozy oversized streetwear, colorful patchwork knitted cardigan, dynamic playful pose, shallow depth of field, blurred warm background, highly detailed fabric textures, ultra high quality 3D render...",
+  },
+
+    "dr-170": {
+    title: "2026城市宣传海报：红绸山水",
+    tags: ["Poster", "Cityscape", "Double Exposure", "National Trend", "Minimalist", "Typography"],
+    promptCn: `核心指令：生成一张充满新春喜庆氛围但不失高雅格调的 2026 [请填写城市名称，例如：广州/北京/上海] 城市宣传海报。采用国潮（Guochao）风格与双重曝光（Double exposure）技法。
+画面构图与背景：采用纯白的质感纹理背景，大面积的留白让画面显得清新脱俗。整体构图延续优美流畅的S型流动感。
+主体与特效：在画面右下角，一个身穿中国传统服饰的微缩人物正在挥舞着一条长长的红色丝绸舞带。红绸在空中向左上方飘动，展现出丝绸的柔顺质感，并在飘动过程中奇幻地变形成了一条壮丽的山脉与河流。
+城市融合（自适应核心）：在这条变幻的“山水河流”中，利用双重曝光叠加[该城市]的标志性全景手绘图。必须自动匹配并精确融合该城市最具代表性的地标建筑（如广州的广州塔与珠江新城、北京的故宫与天坛、上海的东方明珠与外滩等）、自然景观以及古建筑。景色尽在眼底，壮阔雄伟，云雾环绕，仙气缥缈。色彩丰富，结构复杂且细节细腻。
+排版与文字：在左下角进行优美大方的版式设计，包含清晰的英文“SPRING 2026”以及竖排的中文宣传语（如“千年商都，魅力广州”或自动生成符合该城市气质的标语）。文字字迹必须清晰完整无乱码。尺寸比例为9:16。`,
+    promptEn: `Core Instruction: Generate an elegant and festive 2026 city promotional poster for [Fill in City Name, e.g., Guangzhou/Beijing/Shanghai]. Use Guochao (National Trend) style and Double Exposure techniques.
+Composition and Background: Pure white textured paper background with generous minimalist negative space, creating a fresh and refined look. The overall composition follows a graceful, flowing S-shape.
+Subject and Effects: In the bottom right corner, a miniature figure in traditional Chinese clothing is waving a long red silk ribbon. The silk flows towards the top left, displaying a soft texture, and magically morphs into a magnificent mountain and river landscape.
+City Integration (Adaptive Core): Within this silk-transformed 'river', use double exposure to overlay a hand-drawn panoramic view of [the specified city]. Automatically match and precisely blend the city's iconic landmarks (e.g., Canton Tower for Guangzhou, Forbidden City for Beijing), natural landscapes, and ancient architecture. Epic, majestic, surrounded by ethereal clouds and mist, rich in colors, and complex in details.
+Typography: Elegant and generous typography in the bottom left corner, including clear English text 'SPRING 2026' and a vertical Chinese promotional slogan matching the city's vibe. Text must be perfectly clear and legible. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "2026 [City Name] promotional poster, double exposure, miniature person waving red silk ribbon transforming into majestic mountains and rivers, overlay of iconic city landmarks, Guochao style, clouds and mist, pure white textured background, minimalist negative space, typography SPRING 2026 and vertical Chinese slogan, highly detailed, 8k...",
   },
   
 };
