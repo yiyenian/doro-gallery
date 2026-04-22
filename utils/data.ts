@@ -4608,7 +4608,7 @@ Subject and Details: Highlights authentic skin tones and depth, featuring a tran
     prompt: "Smart American style professional corporate headshot, medium portrait shot, light gray to white gradient background, soft natural lighting, confident and elegant expression, translucent skin, highly detailed business portrait, based on reference...",
   },
 
-      "dr-168": {
+    "dr-168": {
     title: "博物馆图鉴：中文拆解信息图",
     tags: ["Infographic", "Museum", "Cultural", "Deconstruction", "Layout", "Chinese Style"],
     promptCn: `核心指令：生成一张关于 [请填写主题，例如：明制汉服/唐代金银器/故宫建筑] 的“国家博物馆级图鉴式中文拆解信息图”。以极其严谨的模块化排版、超写实的中央主视觉和极高清晰度的中文标注为核心。
@@ -4654,6 +4654,43 @@ Subject and Effects: In the bottom right corner, a miniature figure in tradition
 City Integration (Adaptive Core): Within this silk-transformed 'river', use double exposure to overlay a hand-drawn panoramic view of [the specified city]. Automatically match and precisely blend the city's iconic landmarks (e.g., Canton Tower for Guangzhou, Forbidden City for Beijing), natural landscapes, and ancient architecture. Epic, majestic, surrounded by ethereal clouds and mist, rich in colors, and complex in details.
 Typography: Elegant and generous typography in the bottom left corner, including clear English text 'SPRING 2026' and a vertical Chinese promotional slogan matching the city's vibe. Text must be perfectly clear and legible. --ar 9:16 --v 6.0 --style raw`,
     prompt: "2026 [City Name] promotional poster, double exposure, miniature person waving red silk ribbon transforming into majestic mountains and rivers, overlay of iconic city landmarks, Guochao style, clouds and mist, pure white textured background, minimalist negative space, typography SPRING 2026 and vertical Chinese slogan, highly detailed, 8k...",
+  },
+
+    "dr-171": {
+    title: "模块化科普：百科图鉴信息图",
+    tags: ["Infographic", "Educational", "Modular Layout", "Encyclopedia", "Clean Design", "UI"],
+    promptCn: `核心指令：请根据 [请填写主题] 生成一张高质量竖版「科普百科图」。这张图不是普通商业宣传海报，也不是单纯插画，而是一张兼具“图鉴感、百科感、信息结构感、收藏感”的模块化科普信息图。突出“知识整理 + 模块信息 + 图鉴式展示”的特征。
+风格灵感：高级博物图鉴、现代百科全书书页、生活方式知识卡和社交媒体高传播信息图的完美结合。
+画面构成（必须包含）：1）一个清晰漂亮的主题主视觉；2）若干局部特征放大细节；3）多个圆角模块化信息分区；4）清楚的标题层级与重点标签；5）简洁但丰富的百科内容；6）可视化评分、要点总结或 Top 5 模块。
+内容栏目（智能适配）：请根据【主题】自动适配，优先从以下方向中选择并合理组合：基础档案、分类信息、外观特征、习性/生态、形成机制/结构组成、生长或使用条件、养护或维护建议、风险与注意事项、适合人群或适用场景、优缺点对比、快速评分卡。
+视觉要求：浅色干净背景，柔和配色，搭配轻柔阴影。使用精致小图标和圆角信息框（UI面板风格）。整洁排版，信息密度高但不拥挤，阅读体验极佳。整体必须像真正可以发布、阅读、收藏、系列化生产的科普百科卡，绝不能像普通广告海报。`,
+    promptEn: `Core Instruction: Generate a high-quality vertical "Popular Science Encyclopedia Graphic" based on [Subject]. This is not a standard promotional poster or a simple illustration, but a modular popular science infographic that combines the feel of an illustrated field guide, an encyclopedia, structured information, and a collectible item. Emphasize the characteristics of "Knowledge Organization + Modular Information + Illustrated Guide Display".
+Style Inspiration: A perfect blend of high-end natural history field guides, modern encyclopedia pages, lifestyle knowledge cards, and highly viral social media infographics.
+Visual Composition (Must Include): 1) A clear and beautiful central main visual of the subject; 2) Several magnified macro details of local features; 3) Multiple modular information sections with rounded corners; 4) Clear title hierarchies and key highlight tags; 5) Concise yet rich encyclopedic content; 6) Visual scoring, key point summaries, or a Top 5 module.
+Content Sections (Adaptive): Automatically adapt columns based on the [Subject], prioritizing and logically combining: Basic profile, classification info, appearance features, habits/ecology, formation mechanism/structural composition, growth or usage conditions, maintenance/care advice, risks and precautions, suitable demographics or scenarios, pros and cons comparison, and a quick scorecard.
+Visual Requirements: Light clean background, soft color palette, and soft drop shadows. Delicate minimalist icons and rounded info boxes (UI panel style). Neat typography, high information density but uncrowded, delivering an excellent reading experience. The overall result must look like a genuine educational publication ready for serialization, reading, and collecting, NOT an advertisement. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "High-quality vertical popular science encyclopedia infographic about [Subject], modular knowledge card layout, high-end natural history field guide aesthetic, modern encyclopedia page, highly viral social media infographic. Clear beautiful central main visual of the subject, magnified macro details of local features. Multiple modular information sections with rounded corners, clear title hierarchies, key highlight tags, concise text. Visual scoring panel, Top 5 module, radar chart. Light clean background, soft color palette, soft drop shadows, delicate minimalist icons, neat typography. High information density but uncrowded, excellent reading experience, genuine educational publication style, NOT an advertisement, knowledge organization, illustrated guide display, 8k resolution, highly detailed --ar 9:16 --v 6.0 --style raw",
+  },
+
+    "dr-172": {
+    title: "3D硬核立体科普：手绘知识图谱",
+    tags: ["Infographic", "Encyclopedia", "3D Pop-out", "Retro", "Calligraphy", "Scientific"],
+    promptCn: `角色：世界级科学百科插画师与知识图谱架构师。
+任务：生成一张极其详细、错综复杂且视觉震撼的“全能图解百科科学信息图”，采用经典且无品牌标志（不要Logo）的科学百科全书风格。
+特定主题：[请填写主题，例如：大王乌贼 / 达芬奇 / 巨杉 / 蜜蜂]。
+风格：复古做旧米色纸张背景上的精细科学插画。细腻的线稿，错综复杂且极其专业。
+关键视觉要求：
+1. 逼真的3D效果（中心主体）：位于“C位”的中心主体必须以非凡的写实感和动态感呈现。营造强烈的空间纵深感，角色、植物或动物仿佛打破了画框，从平面的纸上跃出或冲向观者（类似变形3D或动态弹出效果，具有高精度写实感）。
+2. 布局与战略性留白：
+- 中心主体：占据中心，周围有意留出“战略性留白”，以增强跃出效果并使主体成为明确的视觉焦点。
+- 周围模块：四周区域（上下左右及角落）必须填充6-8个独立、高度组织化的知识模块（根据主题而定）。应该有一种有组织的密集感，而不是随机的杂乱无章。模块本身必须有清晰的边界、标题和详尽丰富的内容。
+3. 连接线：使用由极细的引线、箭头、括号、虚线和小连接点组成的复杂逻辑网络，将中心主体与所有周围模块连接起来，并将模块本身相互交织成一个内聚的知识网。
+4. 文字与标注（硬性要求 - 必须是清晰的中文）：
+- 主标题：关于特定主题名称的大型、醒目、书写优美的【中文书法体】。
+- 书法点缀：散布在主要内容和模块标题中，对重要术语使用优美、清晰的中文书法。
+- 标准中文文本：所有其他描述性文本、手写笔记（大量清晰中文手写注释）、模块内容和标注必须是清晰、可读的简体中文字符，不要乱码或无法辨认的符号。确保优先考虑文本清晰度。
+- 引线标注：模块内的每一个微小部件、细节、子模块、图表或插图都必须有指向它的详细引线标注（拟解剖图），以实现最大的专业性和教育价值。每个部分都应有标签。
+总体排版：信息极度密集，被组织成6-8个结构化的模块，但通过中心周围战略性的空余取得平衡，让写实的中心主体脱颖而出。硬核、专业、学术，同时通过动态3D中心主体保持视觉吸引力。无任何百科品牌标志。`,
   },
   
 };
