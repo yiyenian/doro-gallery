@@ -4704,5 +4704,47 @@ Visual Requirements: Light clean background, soft color palette, and soft drop s
 下半部分要求（关键）：必须是纯正的黑白可涂色线稿，彻底去除所有颜色与阴影，仅保留与上半部分完全相同的清晰轮廓线，完美适合打印。
 输出要求：A4竖版比例（5:7），高清分辨率，边缘清晰，无多余文字，无水印，确保中文文字正确。`,
   },
+
+    "dr-174": {
+    title: "史诗对冲海报：黑神话 × 自适应",
+    tags: ["Poster", "Double Exposure", "Epic", "Mythology", "Contrast", "Cinematic"],
+    promptCn: `核心指令：生成一张高完成度、收藏级、史诗叙事感的艺术海报，主题为【黑神话 × [填写对比人物/主题，例如：古代文人/柔美女性/现代旅人]】。
+核心构图：采用“双重曝光式剪影叙事构图 + 双人物对照结构”。画面由两位人物的侧脸剪影共同构成整体轮廓，呈对称或交错构图。左侧为：神话战斗体系人物（类黑神话风格的妖神/斗战者），轮廓刚硬、破碎、燃烧感强，气质桀骜、野性、压迫感强；右侧为：[填写对比人物特征，例如：轮廓柔和、清冷克制，气质孤独、温婉而哀伤]。两人之间形成强烈对比：神性 vs 人性、暴烈 vs 克制、战斗 vs 情感、毁灭 vs 记忆。人物发丝、衣袍在中间区域产生交汇或破碎融合，形成视觉张力核心。
+剪影内部世界（重点）：
+左侧（黑神话世界）内部自动生长：残破佛像、妖魔轮廓、燃烧的古庙、地狱火光；战场废墟、断裂石柱、锁链、金箍、兵器残骸；火焰、烟尘、黑云、雷电、血色天空；持棍战斗的身影、妖怪、扭曲生物。整体氛围：压抑、神秘、暴烈、毁灭感强。
+右侧（对比人物世界）内部自动生长：[填写内部世界元素，例如：江南水乡、细雨、小桥流水、庭院、楼阁；残灯、孤舟、落花、竹林、书案、古琴；女子独立窗前、纸伞、书卷、风吹花瓣]。整体氛围：[填写氛围，例如：清冷、孤寂、柔美、哀愁]。
+融合区域（关键设计）：两侧世界在中轴处发生“世界侵蚀与融合”。火焰逐渐化为[右侧对应元素，如落花/数据流]；烟尘转为水雾；战场碎片融入[右侧场景]；乌鸦飞入雨中化为花瓣或墨点。形成强烈“梦境/记忆交错”效果（非硬拼接）。
+情绪表达：整体核心情绪：宿命、孤独、破碎与温柔共存、战斗与[诗意/现代]对冲、人间与神话的撕裂与交织。
+视觉风格与色彩：电影级光影（强对比 + 体积光），梦幻水彩 + 水墨晕染，中国古风写意 + 黑暗神话质感，细节极高但整体克制统一。左侧色彩：黑 / 金 / 火橙 / 暗红；右侧色彩：[填写对比色彩，例如：青灰 / 月白 / 淡粉 / 水墨]。中间过渡：烟灰 + 水雾渐变融合。
+画面要求：A4竖版比例（5:7），高细节、超清、电影海报质感，双人物比例协调不拥挤，强叙事，不拼贴。`,
+    promptEn: `Core Instruction: Generate a highly finished, collectible, epic narrative art poster with the theme [Black Myth vs. Adaptive Character/Theme, e.g., Ancient Poetess/Modern Traveler].
+Core Composition: Double-exposure silhouette narrative composition with a dual-character contrast structure. The overall silhouette is formed by the profile silhouettes of two figures, symmetrical or interlaced. Left side: Mythological combat figure (Black Myth style warrior/demon god), silhouette is hard, shattered, burning, with a rebellious, wild, and oppressive aura. Right side: [Adaptive character description, e.g., soft, cold, restrained silhouette, lonely, gentle, and sorrowful aura]. Strong contrast: Divinity vs. Humanity, Violence vs. Restraint. Hair and robes intersect or shatter and blend in the middle, creating a core of visual tension.
+Inner Silhouette Worlds (Crucial):
+Left (Black Myth World) grows internally: Ruined Buddha statues, demon outlines, burning ancient temples, hellish hellfire; battlefield ruins, broken pillars, chains, weapon debris; flames, smoke, dark clouds, lightning, blood-red sky; fighting figures, monsters, twisted creatures. Vibe: Oppressive, mysterious, violent, destructive.
+Right (Adaptive World) grows internally: [Adaptive world elements, e.g., Jiangnan water town, drizzle, small bridges, courtyards, pavilions; dim lamps, lone boat, falling petals, bamboo forest, desk, guqin; woman standing alone, paper umbrella, scrolls]. Vibe: [Adaptive vibe, e.g., cold, lonely, soft, sorrowful].
+Blending Zone: The two worlds experience "erosion and fusion" along the central axis. Flames gradually turn into [Adaptive element, e.g., falling petals]; smoke turns into mist; battlefield debris blends into [Adaptive scene]; crows fly into the rain and turn into petals or ink drops. Creates a strong "dream/memory intertwining" effect (no hard seams).
+Emotional Expression: Fate, loneliness, brokenness coexisting with gentleness, combat clashing with [poetry/modernity], the tearing and intertwining of the mortal realm and mythology.
+Visual Style & Colors: Cinematic lighting (high contrast + volumetric light), dreamy watercolor + ink wash blending, Chinese ancient freehand brushwork + dark mythological texture, extremely high detail but cohesive. Left Colors: Black / Gold / Fire Orange / Dark Red. Right Colors: [Adaptive colors, e.g., Cyan / Moon White / Pale Pink / Ink]. Transition: Ash + mist gradient fusion.
+Requirements: A4 vertical aspect ratio (5:7), high detail, ultra-clear, movie poster quality, well-proportioned dual figures, strong narrative, no patchwork.`,
+    prompt: "Epic narrative art poster, double-exposure silhouette composition, dual-character contrast: Black Myth vs. [Adaptive Character]. Left side: Black Myth warrior silhouette enclosing a world of ruined Buddha statues, burning temples, battlefield debris, flames, dark clouds. Right side: [Adaptive Character] silhouette enclosing a world of [Adaptive World Elements, e.g., Jiangnan water town, rain, lonely boat, falling petals]. Center: Worlds eroding and blending, flames turning into [petals], smoke into mist, dream memory crossing effect. Cinematic lighting, volumetric light, dreamy watercolor and ink wash blended with dark mythological texture. Colors: Left (black, gold, fire orange, dark red), Right ([cyan, moon white, pale pink]), ash and mist gradient transition. A4 vertical aspect ratio (5:7), ultra-detailed, movie poster quality, masterpiece --ar 5:7 --v 6.0 --style raw",
+  },
+
+    "dr-175": {
+    title: "史诗剪影：自适应电影级叙事海报",
+    tags: ["Poster", "Epic", "Silhouette", "Cinematic", "Double Exposure", "Narrative"],
+    promptCn: `核心指令：根据主题【[填写主题/IP名称，例如：红楼梦]】自动生成一张收藏版史诗叙事海报。
+核心构图：以巨大优雅的【[填写核心人物，例如：林黛玉]】人物侧脸剪影作为外轮廓。剪影内部自动生长出最契合该主题的完整世界观、标志性场景、角色关系、象征符号、关键建筑、生物、道具与氛围。
+视觉风格与特效：整体不是普通拼贴，而是高级的剪影轮廓填充式叙事合成，带有双重曝光式联想，但强化为电影级叙事表达与空间调度。电影海报风格与东方现实主义（或最匹配该主题的写实美学）融合。
+光影与材质：强调真实物理光影、镜头语言、空间纵深与叙事层级。光影采用电影级侧逆光与局部暖光点缀，冷暖对比克制真实，加入体积光与轻雾增强空间感。材质表现为极高真实感（如建筑、丝绸、肌肤、石材），严格避免纯绘画笔触感。
+镜头与氛围：保留柔和的空气透视，优化为电影级景深与焦点控制。轻微胶片颗粒，边缘飞白与刷痕改为电影式柔和融合过渡。大面积留白，版式克制高级，呈现出安静、宏大、克制、宿命感强的史诗叙事感。
+负面避免：所有元素必须强绑定主题，一眼识别，不要杂乱，不要硬拼贴，不要模板化背景，不要廉价奇幻素材。`,
+    promptEn: `Core Instruction: Automatically generate a collectible epic narrative movie poster based on the theme [Fill in Subject/IP, e.g., Dream of the Red Chamber].
+Core Composition: Use a giant, elegant profile silhouette of [Fill in Core Character, e.g., Lin Daiyu] as the outer contour. Inside the silhouette, organically grow a complete worldview, iconic scenes, character relationships, symbolic motifs, key architecture, creatures, props, and atmosphere that perfectly match the theme.
+Visual Style & Effects: Not a simple collage, but an advanced silhouette-filling narrative composite. It features double-exposure associations but is elevated with cinematic narrative expression and spatial choreography. A fusion of movie poster style and Oriental realism aesthetics (or the realism aesthetics best suited for the theme).
+Lighting & Textures: Emphasize real physical lighting, lens language, spatial depth, and narrative hierarchy. Use cinematic side-backlight and local warm light accents, with restrained and realistic warm-cool contrast. Add volumetric lighting and light mist to enhance spatial depth. Textures must be highly realistic (e.g., architecture, silk, skin, stone), strictly avoiding a pure brushstroke painted feel.
+Lens & Atmosphere: Maintain soft aerial perspective, optimized with cinematic depth of field and focus control. Light film grain, with edges utilizing soft cinematic blending transitions instead of brush marks. Generous negative space, restrained and premium layout design. Conveys a quiet, grand, restrained, and deeply fateful epic cinematic narrative atmosphere.
+Constraints: All elements must strongly bind to the theme, instantly recognizable. No clutter, no hard patchwork, no templated backgrounds, no cheap fantasy assets. --ar 5:7 --v 6.0 --style raw`,
+    prompt: "Collectible epic narrative movie poster for [Subject], giant elegant profile silhouette of [Core Character] as the outer contour. Inside the silhouette: an organically growing complete worldview, iconic scenes, symbolic motifs, key architecture, and atmosphere perfectly matching the theme. Advanced silhouette-filling narrative composite, double-exposure effect, cinematic spatial choreography. Oriental realism aesthetics, real physical lighting, cinematic side-backlight, volumetric light, light mist, realistic textures (silk, stone, architecture). Cinematic depth of field, light film grain, soft blending transitions. Generous negative space, restrained premium layout, quiet, grand, fateful epic atmosphere. Masterpiece, 8k resolution, highly detailed, no hard patchwork, no cheap fantasy assets --ar 5:7 --v 6.0 --style raw",
+  },
   
 };
