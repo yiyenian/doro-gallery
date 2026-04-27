@@ -4798,5 +4798,55 @@ Typography & Signature: Large areas of natural negative space. Vertical Chinese 
 Negative Prompt: photorealism, 3D render, Western fantasy concept art, over-detailing, commercial cinematic lighting, mechanical collage, modern fonts, cheap watercolor filters. --ar 5:7 --v 6.0 --style raw`,
     prompt: "Highly collectible Oriental narrative hand-drawn poster about [Subject]. Premium traditional Chinese paper illustration, ink wash light-color painting. Giant elegant profile silhouette of the core character, acting as a continuous stroke of Qi. Inside the silhouette: scroll-like episodic Oriental narrative rhythm, emerging scenes, architecture, and motifs like clouds and mountains. Semi-freehand (Xieyi), non-realistic, focus on artistic conception, solid vs. void, negative space. Authentic antique paper texture, restrained ink wash bleeding, dry brush marks, flying white edges. Low-saturation Oriental antiquity color palette: off-white, light ink gray, ochre, smoky gold. Vertical Chinese calligraphy title, small marginal notes. Exclusive signature 'xxd' naturally integrated as an artist seal or colophon in the corner. Quiet, elegant, masterpiece, drawn by a master illustrator, no 3D render, no photorealism --ar 5:7 --v 6.0 --style raw",
   },
+
+    "dr-179": {
+    title: "概念文字：自适应排版海报",
+    tags: ["Typography", "Poster", "Conceptual", "Minimalist", "Metaphor", "Exhibition"],
+    promptCn: `核心指令：生成一张竖版（比例 3:4）的高级概念海报。核心内容为【[填写输入文字，如：宿命 / 刺客 / 繁花 / 孤岛]】。
+深度自适应解析：请先深度理解【[输入文字]】的表层含义、深层寓意、情绪气质、文化联想、人物命运感与隐含张力，并据此自动决定最适合它的画面风格（冷峻、诗意、悲剧、锋利、温柔或庄严）、构图方式、色彩气质和视觉隐喻。拒绝机械套用模板。
+主体构图与排版：巨大中文主标题“【[输入文字]】”必须是绝对的视觉主体，占据画面的绝大部分空间。字形要求极度清晰、完整，无错字无缺笔，形成最强的第一视觉冲击。
+视觉隐喻（第二视觉）：提炼一个最准确、最有代表性的视觉隐喻元素（如人物、物体、空间或象征物），让其与巨大的中文字体发生互动或结构上的穿插关系。让观者一眼感受到这个词背后的深意。不要做成普通的人像插画。
+极致克制的小字排版（第三视觉）：
+1. 左上角：横排 2 到 4 个与主题强相关的精简关键词。
+2. 右侧：竖排一句充满命运感的短句。
+3. 左下角：横排一句具有传播力的总结句。
+画质与氛围要求：整体气质必须高级、极简、克制、具有展览级艺术感。色彩根据词义自动调整，保持节制。大面积留白。强排版、强隐喻、强情绪、强记忆点。
+负面避免：不要拥挤，不要廉价广告感，不要多余英文，不要解释性长文案，不要喧宾夺主的背景。`,
+    promptEn: `Core Instruction: Generate a high-end conceptual vertical poster (3:4 aspect ratio) centered around the core text: [[Fill in Input Text, e.g., Fate / Assassin / Blossoms / Island]].
+Deep Adaptive Analysis: Deeply understand the surface meaning, hidden allegory, emotional aura, cultural associations, and underlying tension of the [[Input Text]]. Automatically derive the most suitable visual style (e.g., stark, poetic, tragic, sharp, gentle, or solemn), composition, color palette, and visual metaphors. Do NOT use mechanical templates.
+Main Subject & Typography (1st Visual Level): The giant Chinese main title "[[Input Text]]" MUST be the absolute main subject, occupying most of the canvas. The typography must be flawlessly clear, complete, with no missing strokes, creating an overwhelmingly strong initial visual impact.
+Visual Metaphor (2nd Visual Level): Extract the most accurate and representative visual metaphor (a figure, object, space, or symbolic element) and have it physically interact or intertwine with the giant typography. Let the viewer instantly feel the profound meaning behind the word. Do NOT just draw a standard character portrait.
+Restrained Small Text Layout (3rd Visual Level, Strictly 3 places):
+1. Top-Left: 2 to 4 highly condensed, relevant keywords.
+2. Right Side: A vertical short sentence conveying a sense of fate.
+3. Bottom-Left: A viral, impactful summary short sentence.
+Vibe & Quality: The overall aura must be premium, minimalist, restrained, and exhibition-grade. Colors dynamically adjust to the text's meaning but remain sophisticated and restrained. Generous negative space. Strong typography, strong metaphor, strong emotion.
+Negative Prompt: No crowding, no cheap commercial ad feel, no extra English text, no long explanatory copy, no distracting backgrounds. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "High-end conceptual exhibition poster, giant flawless Chinese typography '[[Input Text]]' as the absolute main subject, dominating the canvas. Adaptive visual style based on the profound meaning of the text. A striking visual metaphor interacting flawlessly with the giant Chinese characters. Premium, minimalist, highly restrained color palette. Generous negative space. Minimalist text layout: Top-left keywords, Right-side vertical fate-driven short sentence, Bottom-left impactful summary sentence. No extra English, no crowded elements, no cheap commercial feel, masterpiece, emotional tension, 8k resolution, exhibition grade --ar 3:4 --v 6.0 --style raw",
+  },
+
+    "dr-180": {
+    title: "角色设定图：多维度参考面板",
+    tags: ["Character Design", "Concept Art", "Reference Sheet", "Expression Sheet", "Anime Style"],
+    promptCn: `核心指令：基于上传的图像参考，创建一个高完成度、排版专业的「角色设计设定图」（Character Reference Sheet）。
+画面布局与内容（必须包含以下6个模块）：
+1. 大型主肖像：占据画面的主要位置，清晰展示角色的全身或大半身标准立绘设计。
+2. 面部表情集：在侧边或上方排列多个角色的面部表情特写，包括开心、生气、困倦、惊讶等生动情绪。
+3. 动作与姿势：根据角色个性，绘制1-2个能够展现其性格的动态姿势（如跑步、玩耍、战斗或慵懒状态）。
+4. 专属物品图标：绘制若干个与该角色背景或生活方式相关的小型物件、道具或饰品图标。
+5. 配色方案区：在画面边缘排列一组提取自角色设计的标准色彩调色板（Color Palette）。
+6. 简介文本区：预留出设计精美的文本排版空间，用于标注角色名称、个性特征等简介信息。
+视觉风格：专业动画美术或游戏原画设定集风格。排版整洁有序，各元素互不干扰。背景采用干净的中性色（如浅灰或纯白底色），以便于凸显角色设计细节。整体视觉效果精致、结构清晰。`,
+    promptEn: `Core Instruction: Create a highly finished, professionally laid out "Character Reference Sheet" based on the uploaded image reference.
+Layout & Content (Must include the following 6 modules):
+1. Large Main Portrait: Occupying a prominent position, clearly displaying a full-body or 3/4-body standard design of the character.
+2. Expression Sheet: Multiple facial close-ups arranged on the side or top, showing vivid emotions such as happy, angry, sleepy, and surprised.
+3. Action Poses: 1-2 dynamic poses that reflect the character's personality (e.g., running, playing, fighting, or resting).
+4. Object Icons: Small illustrations of personal items, props, or accessories related to the character's background or lifestyle.
+5. Color Palette Section: A set of standard color swatches extracted from the character's design, neatly arranged near the edge.
+6. Profile Text Area: A beautifully designed text layout space reserved for the character's name, personality traits, and brief background.
+Visual Style: Professional anime concept art or game art style. Clean, organized, and uncluttered layout. Use a clean, neutral background (like light gray or pure white) to highlight the design details. Highly detailed, structurally clear, masterpiece. --ar 16:9 --v 6.0 --style raw`,
+    prompt: "Character reference sheet based on uploaded image, professional anime concept art. Large main portrait, expression sheet (happy, angry, sleepy, surprised), dynamic action poses (running, playing). Small object icons and personal props. Color palette swatches section. Profile text area layout for name and personality. Clean white or neutral background, highly organized grid layout, highly detailed, character design showcase, game art --ar 16:9 --v 6.0 --style raw",
+  },
   
 };
