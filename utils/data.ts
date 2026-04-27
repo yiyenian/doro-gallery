@@ -4848,5 +4848,17 @@ Layout & Content (Must include the following 6 modules):
 Visual Style: Professional anime concept art or game art style. Clean, organized, and uncluttered layout. Use a clean, neutral background (like light gray or pure white) to highlight the design details. Highly detailed, structurally clear, masterpiece. --ar 16:9 --v 6.0 --style raw`,
     prompt: "Character reference sheet based on uploaded image, professional anime concept art. Large main portrait, expression sheet (happy, angry, sleepy, surprised), dynamic action poses (running, playing). Small object icons and personal props. Color palette swatches section. Profile text area layout for name and personality. Clean white or neutral background, highly organized grid layout, highly detailed, character design showcase, game art --ar 16:9 --v 6.0 --style raw",
   },
+
+    "dr-181": {
+    title: "蜡笔画插图：童趣故事",
+    tags: ["Crayon", "Illustration", "Storybook", "Hand-drawn", "Children"],
+    promptCn: `核心指令：生成一张蜡笔画风格的插图，用来描绘一个故事：【[填写故事内容，例如：一只戴着红帽子的小熊在森林里迷路了 / 两个小朋友在星空下分享一块巨大的西瓜]】。
+视觉风格与材质：纯手绘蜡笔画风格。质地柔软如蜡，保留清晰可见的涂鸦痕迹与不均匀的着色感。充满童趣，刻意保留孩童绘画般的不完美之处，彰显朴拙的魅力。蜡笔笔触层叠，给人温暖、怀旧的感觉。
+色彩与背景：色彩鲜艳明亮，使用干净的背景（如纯白、浅黄或米色画纸质地），以突出故事的主体。`,
+    promptEn: `Core Instruction: Generate a crayon illustration depicting a story: [Fill in the story, e.g., A little bear in a red hat lost in the forest / Two kids sharing a giant watermelon under the starry sky].
+Visual Style & Texture: Pure hand-drawn crayon style. Soft waxy texture, with visible scribble marks and uneven coloring. Full of childlike innocence, intentionally keeping charming imperfections resembling children's art. Layered crayon strokes providing a warm, nostalgic feeling.
+Color & Background: Bright and vivid colors, clean background (like pure white, light yellow, or beige paper texture) to highlight the main subject of the story. --ar 4:3 --v 6.0 --style raw`,
+    prompt: "Crayon illustration, depicting a story about [Story content], hand-drawn, soft waxy texture, visible scribble marks, uneven coloring, full of childishness, charming imperfections, layered crayon strokes, warm nostalgic feeling, bright colors, clean background, children's storybook style, naive art --ar 4:3 --v 6.0 --style raw",
+  },
   
 };
