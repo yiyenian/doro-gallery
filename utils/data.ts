@@ -4860,5 +4860,99 @@ Visual Style & Texture: Pure hand-drawn crayon style. Soft waxy texture, with vi
 Color & Background: Bright and vivid colors, clean background (like pure white, light yellow, or beige paper texture) to highlight the main subject of the story. --ar 4:3 --v 6.0 --style raw`,
     prompt: "Crayon illustration, depicting a story about [Story content], hand-drawn, soft waxy texture, visible scribble marks, uneven coloring, full of childishness, charming imperfections, layered crayon strokes, warm nostalgic feeling, bright colors, clean background, children's storybook style, naive art --ar 4:3 --v 6.0 --style raw",
   },
+
+  "dr-182": {
+    title: "新中式极简：东方美学海报",
+    tags: ["Poster", "Neo-Chinese", "Minimalist", "Oriental", "Editorial", "Negative Space"],
+    promptCn: `核心指令：扮演高端东方美学视觉生成系统，为【[填写主题名称，例如：白梅 / 孤石 / 观音 / 城市游走]】生成一张 9:16 竖版新中式高级海报。整体视觉方向必须是：极简（minimal）、克制（restrained）、留白（不少于40%）、东方意境（oriental poetic atmosphere）与高端商业视觉（luxury oriental editorial），呈现高级感、呼吸感、东方韵律与视觉张力。
+画面结构与主体：主体为画面视觉中心（占比40%–65%），需具备真实质感与艺术提炼（写实×意境），材质可信（如丝绸/石/水/雾/金属/宣纸）。光影采用电影级侧逆光、体积光与柔和轮廓光。可克制地加入云气、水纹、金线、飘带、花瓣等元素，允许极简承托物（如石、舟、枝），禁止复杂背景。构图优先使用S型流动构图或对角线构图。画面“少即是多”，所有元素需“自然生长”，强调气韵而非单纯写实，新中式水墨融合。
+标题与点缀排版（非UI信息结构）：
+1. 顶部标题区：包含主标题（大字号稳重宋/黑体）、具有东方意境的副标题短句、极细浅灰横线与极简英文。不居中堆叠，顺应构图走势排布。
+2. 意境型点缀（2-4个轻量元素）：极简朱红印章、单双行小字题注、细线图形或抽象金线符号。不规则分布，不可对齐成UI模块，必须“像画的一部分”。
+3. 底部留白区：仅保留一句东方哲思的灰色小字总结，字距略宽，居中或偏侧，不可抢视觉。整体排版“呼吸感优先”。
+色彩规范与质感：主背景采用宣纸白（#F5F0E6）或极浅暖白渐变，带极轻微纸张肌理。主色为墨黑、深灰；点缀色（仅少量使用）为鎏金、朱砂红、青绿或靛蓝。遵循低饱和+局部提亮原则，避免大面积纯色块。8K超清，物理真实材质表现，无塑料感贴图与畸形结构。
+负面避免（绝对禁止）：绝不要现代UI卡片、边框圆角、信息图结构排版、信息堆叠拼贴感、大面积渐变炫光、廉价国潮纹样、过度金色堆叠、文案过多或主体过小。克制大于炫技。`,
+    promptEn: `Core Instruction: Act as a high-end Oriental aesthetics visual system to generate a 9:16 vertical Neo-Chinese premium poster for the theme [[Fill in Subject Name]]. The style must be strictly minimal, restrained, utilizing large negative space (40%+), oriental poetic atmosphere, and luxury oriental editorial visuals, delivering a sense of premium breathing space, oriental rhythm, and visual tension.
+Composition & Main Subject: The core subject is the visual center (40%-65% coverage), combining physical realism with artistic refinement (e.g., silk, stone, water, mist, metal, rice paper). Lighting: cinematic side/backlighting, volumetric light, soft rim light. Restrained inclusion of mist, water ripples, gold threads, or petals. Allow minimal supporting elements (stone, boat, branch), NO complex backgrounds. Prioritize S-curve or diagonal flow composition. Elements must "grow naturally," emphasizing spirit resonance (Qiyun) over pure realism, blending modern rendering with ink wash.
+Typography & Accents (Non-UI format): 
+1. Top Title Area: Main title, oriental poetic subtitle, ultra-thin dividing line, and minimal English. Do not center-stack; typography must follow the composition's natural flow. 
+2. Poetic Accents (2-4 lightweight elements): Minimalist cinnabar seals, 1-2 lines of small annotations, fine line graphics. Irregularly distributed, MUST NOT align into UI modules, must look like part of the painting. 
+3. Bottom Area: A single restrained gray text line of oriental philosophy, wide letter spacing. Prioritize "breathing space" in layout.
+Colors & Textures: Background must be off-white rice paper (#F5F0E6) or very light warm white gradient with subtle texture. Main colors: ink black, dark gray. Extremely minimal accent colors (fine gold, cinnabar red, cyan-green, indigo). Low saturation with local highlights; no large solid color blocks. 8k ultra-detailed, physically accurate materials, no plastic or low-res feel.
+Negative Prompt: Absolutely NO UI cards, rounded borders, infographic structures, information stacking, patchwork feel, large glare gradients, cheap trendy patterns, excessive gold, heavy text, or small subjects. Restraint > showing off. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "Neo-Chinese minimalist premium poster of [[Subject Name]], luxury oriental editorial style. Off-white rice paper background with subtle texture, large negative space (40%+). S-curve or diagonal flow composition. Core subject with physical realism and artistic refinement (silk, stone, water, mist). Cinematic side-backlighting, volumetric light, rim light. Restrained elegant typography following the composition flow, minimal cinnabar seal, fine gold threads, small marginal annotations. Low saturation, ink black, dark gray, off-white base with subtle gold or cinnabar accents. Poetic storytelling, 'Qiyun' spirit resonance, physically accurate materials, masterpiece, 8k resolution, highly detailed. No UI cards, no complex background, restrained --ar 9:16 --v 6.0 --style raw",
+  },
+
+    "dr-183": {
+    title: "角色卡：全维度三视图与表情动作(写实)",
+    tags: ["Character Design", "Reference Sheet", "3-Views", "Photorealistic", "Realistic", "Cinematic"],
+    promptCn: `核心指令：基于上传的人物参考图，生成一张极具专业水准的高完成度「全维度角色设定卡」（Character Reference Sheet）。必须严格保持参考图中人物的五官特征、气质与发型绝对一致，且呈现高度逼真的真人写实感（Photorealistic）。
+角色档案区：在画面边缘或顶部留出优美的排版空间，标注角色信息：姓名【[填写姓名]】，年龄【[填写年龄]】岁，身高【[填写身高]】cm，体重【[填写体重]】，体型特征：【[填写体型，如：前凸后翘，腰细腿长，结实匀称]】。
+核心三视图：画面中央排布标准的人物三视图，包含完整的正面（Front view）、侧面（Side view）和背面（Back view）全身展示，完美展现其体型特征与服装的真实物理质感。
+面部表情集：在画面一侧密集且整齐地排列真人面部特写表情包，精确传达不同情绪：微笑、露齿笑、大笑、平静、失望、哭泣、沮丧、生气、愤怒、坚毅、打哈欠。要求在不同表情下严格保持五官一致性，皮肤纹理、毛发与微表情极度真实。
+动态姿势区：在下方或四周加入能展现角色个性与物理张力的全身动作（呈现真人动态捕捉感）：战斗准备（Fighting）、奔跑（Running）、坐下（Sitting）、跳跃（Jumping）。
+多角度透视区：穿插几个带有强烈透视感的镜头局部或半身特写，包括仰视（Low angle）、俯视（High angle）和侧视（Profile view），展现电影级摄影质感。
+视觉风格与排版：顶级3D写实角色建模展示或电影美术设定排版风格，超写实主义（Hyper-realism），照片级逼真。排版必须高度整洁、模块化，各部分元素互不干扰。背景使用干净的中性灰或纯白色，以最大程度凸显真实的角色设计本身。`,
+    promptEn: `Core Instruction: Generate a highly professional "Full-Dimension Character Reference Sheet" based on the uploaded reference image. Strictly maintain absolute consistency in facial features, aura, and hairstyle from the reference, ensuring a highly photorealistic and lifelike human appearance.
+Character Profile Area: Reserve elegant layout space for text annotations: Name [[Name]], Age [[Age]], Height [[Height]]cm, Weight [[Weight]], Body Type: [[Body Type, e.g., curvy, slim waist, long legs, toned and well-proportioned]].
+Core 3-Views: Center the canvas with a standard 3-view full-body character design: Front view, Side view, and Back view, perfectly showcasing the specified body proportions and highly realistic clothing textures.
+Expression Sheet: Neatly arrange a dense grid of photorealistic facial close-ups on one side, accurately conveying various emotions: smile, grin, laugh, calm, disappointed, crying, depressed, mad, angry, determined, yawning. Maintain strict facial consistency, with highly realistic skin textures, pores, and hair details across all expressions.
+Dynamic Action Poses: Include full-body action shots showing lifelike human physical tension and motion capture quality: fighting, running, sitting, and jumping.
+Multi-Angle Perspectives: Intersperse close-ups or half-body shots with strong cinematic perspective camera angles: low angle, high angle, and profile view.
+Visual Style & Layout: Top-tier 3D realistic character showcase or cinematic art book layout style, hyper-realism, photorealistic portrait photography. The layout must be highly organized, modular, and uncluttered. Use a clean neutral gray or pure white background to highlight the lifelike character design. --ar 16:9 --v 6.0 --style raw`,
+    prompt: "Photorealistic character reference sheet based on uploaded image, strict facial and hairstyle consistency, lifelike human features, realistic skin texture and pores. Text layout area for Name [[Name]], Age [[Age]], Height [[Height]], Weight [[Weight]], Body Type [[Body Type]]. Center: Standard 3-view full-body photorealistic showcase (Front view, Side view, Back view). Side: Dense photorealistic facial expression sheet (smile, grin, laugh, calm, disappointed, crying, depressed, mad, angry, determined, yawning). Bottom: Lifelike dynamic action poses (fighting, running, sitting, jumping). Accents: Cinematic multi-angle perspective close-ups (low angle, high angle, profile view). Cinematic art book layout, highly organized modular grid, clean neutral white/gray background, 8k resolution, masterpiece, hyper-realistic, highly detailed photography --ar 16:9 --v 6.0 --style raw",
+  },
+
+    "dr-184": {
+    title: "职业哲学：人生电影海报",
+    tags: ["Poster", "Cinematic", "Profession", "Double Exposure", "Philosophy", "Realism"],
+    promptCn: `核心指令：请根据输入的【[填写职业名称，例如：程序员/医生/外卖员/建筑师]】，生成一张竖版 9:16「人生电影海报」。这不是一张普通职业工作照，而是一张关于该职业精神世界的哲学海报。请深度理解这个职业群体：他们每天面对什么压力，真正喜欢什么，关注什么，期待什么，害怕什么，又靠什么获得意义感。画面要表现他们在现实职责、专业秩序、个人理想和人生出口之间的拉扯。
+主体人物：一个该职业从业者的背影或半侧脸，处在真实工作场景中。人物不要摆拍，不要成功学姿势，要安静、克制、孤独、专注。神情像是在处理一个职业问题，也像是在处理自己的人生问题。人物周围加入与该职业相关的真实生活细节、工具、文件、设备、习惯物品和情绪线索。
+哲学构图：采用电影海报 + 多重曝光。把该职业的工作现场、专业工具、城市环境、个人生活空间、抽象符号和远方出口融合在一起。画面一半表现现实压力：任务、责任、期限、噪音、重复、评判、疲惫；另一半表现内心向往：自由、创造、尊严、成长、安定、清晨、开阔空间。不要把画面做成单纯职业宣传照，要像一部关于普通人的人生电影。
+职业精神符号：请自动提炼 3-5 个只有该职业群体能一眼理解的文字、符号、物件或隐喻。它们要非常克制，像电影海报设计的一部分，不要铺满画面，不要乱码。可以包含：一句英文短句，表达这个职业的底层精神；一张便签，写出这个职业最真实的内心状态；一个屏幕、文件、草稿、工具或票据上的小字；一个象征职业困境的物件；一个象征“人生出口”或“希望”的远景元素。
+标题生成与排版：请根据该职业自动生成一句中文主标题。这句标题必须贴合该职业的精神处境，不能使用固定模板，不能空泛励志，不能成功学。它应该像电影片名一样短、有诗意、有刺痛感，让这个职业的人一眼产生共鸣。副标题可以是「该职业的人生电影」。
+色彩光影与风格：电影级摄影感 + 精致概念海报，真实质感但带诗意，浅景深。整体使用符合该职业气质的主色调，现实压力部分使用冷色、暗色或低饱和色；希望与出口部分使用一束温暖光线（清晨、夕阳或远处天光）。画面高级、克制。
+负面避免：不要畸形人物，不要错误文字/乱码，不要平台 UI，不要搞笑风，不要成功学海报，不要豪车豪宅，不要夸张胜利姿势，不要卡通/3D，不要油腻职场摆拍。`,
+    promptEn: `Core Instruction: Based on the inputted profession [[Fill in Profession Name]], generate a vertical 9:16 "Life Movie Poster". This is not a standard corporate photo, but a philosophical poster exploring the inner world of this profession—their pressures, passions, fears, and search for meaning. Show the tension between real-world duties and personal ideals.
+Main Subject: A back or half-profile view of a professional in their authentic workspace. No posed or "success" gestures. Quiet, restrained, lonely, and focused. Expression reflects dealing with both professional and life issues. Surround with authentic details, tools, and emotional cues.
+Philosophical Composition: Cinematic poster + double exposure. Blend the workspace, tools, urban environment, personal space, and a distant "way out". One half represents reality/pressure (tasks, deadlines, noise, fatigue); the other half represents inner desires (freedom, dignity, growth, open spaces, warm morning light).
+Professional Symbols: Automatically extract 3-5 restrained symbols, objects, or metaphors only this group would instantly understand (e.g., a sticky note with an authentic inner thought, tiny text on a screen/draft, an object symbolizing their dilemma, a distant element symbolizing hope).
+Typography & Title: Automatically generate a short, poetic, and poignant Chinese main title that resonates with the profession's spiritual situation. Subtitle can be 'The Life Movie of [Profession]'. Include minimal, clear text integrating into the design.
+Visual Style & Lighting: Cinematic photography + exquisite concept poster. Realistic texture with poetic double exposure, shallow depth of field. Colors match the profession's vibe: cold/dark for pressure, paired with a warm ray of light for hope.
+Negative Prompt: No 3D, no cartoon, no cheap motivational styles, no greasy posed shots, no gibberish text, no luxury cars/mansions, no exaggerated victory poses. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "Cinematic life movie poster for the profession of [[Profession Name]]. Double exposure composition. Main subject: back or half-profile view of a professional in an authentic workspace, quiet, restrained, lonely, highly focused. Half of the image depicts real-world pressure (tasks, noise, cold low-saturation colors), the other half blends into inner desires and hope (open spaces, freedom, a warm ray of morning or sunset light). Authentic professional tools, details, and subtle symbolic metaphors embedded in the scene. A short poetic Chinese main title and an English tagline acting as movie poster typography. Cinematic photography, shallow depth of field, poetic realism, highly detailed, premium exhibition grade, no 3D, no posed corporate shots, masterpiece, 8k resolution --ar 9:16 --v 6.0 --style raw",
+  },
+
+    "dr-185": {
+    title: "瑜伽宣传：拼贴海报与视频分镜",
+    tags: ["Yoga", "Poster", "Collage", "Multi-Panel", "Magazine", "Workflow"],
+    promptCn: `核心指令：生成一张（基于上传参考人物图如果有的话，没有就随机）的瑜伽宣传海报拼贴总图。
+整体要求：在一张大画面中，随机分隔出 N 张彼此独立的瑜伽宣传海报。每张卡面尺寸随机设计铺满整张图。卡面之间用清晰的留白、细边框、拼贴切割线或杂志式分隔结构隔开。
+视觉效果：整体像一次抽出了 N 张不同风格的高质量瑜伽宣传海报。每张海报都要明显不同，具有"随机抽卡"的新鲜感和丰富变化。所有海报统一保持高级、专业、吸引人，适合瑜伽课程宣传、社媒推广、品牌视觉展示。
+【附加工作流提示词（供参考图/视频工具使用）】
+分镜摆姿势提示词：将图一的女性改为图二的4，5姿势，生成图片。
+视频提示词：根据首尾帧生成丝滑的，就是专业瑜伽演示的视频，要求运镜丝滑。`,
+    promptEn: `Core Instruction: Generate a master collage of yoga promotional posters (based on an uploaded reference character image if provided, otherwise random).
+Overall Requirements: Within one large canvas, randomly divide it into N independent yoga promotional posters. The dimensions of each card/poster should be randomized to fill the entire image. The cards must be separated by clear negative space, thin borders, collage_cut lines, or magazine-style grid layouts. 
+Visual Effect: The overall effect should feel like drawing N different styles of high-quality yoga promo posters at once. Each poster must be distinctly different, providing a fresh and richly varied "random card draw" feel. All posters must maintain a unified sense of premium quality, professionalism, and attractiveness, suitable for yoga class promotion, social media marketing, and brand visual display.
+[Additional Workflow Prompts for other tools]
+Pose Transfer: Change the female in image 1 to poses 4 and 5 from image 2.
+Video Generation: Based on the first and last frames, generate a smooth, professional yoga demonstration video with silky camera movements. --ar 3:4 --v 6.0 --style raw`,
+    prompt: "A master collage of N independent high-quality yoga promotional posters within one large canvas. Randomly sized and divided panels filling the entire image, separated by clear negative space, thin borders, or magazine-style grid layouts. Each poster features a uniquely styled, premium, and professional yoga pose or lifestyle shot. Suitable for yoga class promotion and social media. Elegant, professional, attractive, visually diverse yet cohesive in high aesthetic quality. Magazine editorial style, collage art, random card draw feel, ultra-detailed, 8k resolution --ar 3:4 --v 6.0 --style raw",
+  },
+
+    "dr-186": {
+    title: "极简时尚：Lookbook穿搭图鉴",
+    tags: ["Fashion", "Lookbook", "Collage", "Minimalist", "Editorial", "OOTD"],
+    promptCn: `核心指令：基于上传的人物参考图，生成一张极简时尚 Lookbook 穿搭拼贴图鉴。画面中包含 8 位全身出镜的模特（面部与气质参考上传图像），展示优雅、中性色调的现代经典穿搭。
+构图与布局：采用严谨的整齐排版构图，画面分为上下两层（双排），每排 4 位模特，共计 8 位独立展示。模特们站立在温暖的米色（warm beige）纯色摄影棚背景前。排列整齐，画面构图干净，带有柔和微妙的自然阴影。
+服装与配饰：服装包括真丝衬衫、羊绒衫、亚麻衬衫、针织Polo衫、开衫、修身/阔腿/褶皱西装裤、A字中长裙等。外套包含千鸟格西装外套和长款风衣。配饰包括挺括的手提包、托特包、腰带、腕表和丝巾。鞋履搭配芭蕾舞鞋、乐福鞋、拼接平底鞋、露跟平底鞋和高跟鞋。
+视觉风格与排版：色调高度统一的纯净中性色系（奶油色、米色、黑色、棕色）。核心亮点是：每件单品旁边都有【手写体风格的标签和指示线】直接指向衣物进行标注。整体呈现柔和光影、时尚杂志内页的排版美学，极高细节，8K分辨率。`,
+    promptEn: `Core Instruction: Based on the uploaded character reference image, generate a minimalist fashion lookbook collage featuring 8 full-body models (maintaining facial and aura consistency with reference) showcasing elegant, neutral-toned outfits in a modern classic aesthetic.
+Composition & Layout: Structured grid composition arranged in two horizontal rows, with 4 models on the top row and 4 models on the bottom row, totaling 8 models. Models stand against a clean, warm beige studio background with soft lighting and subtle, natural shadows.
+Wardrobe & Accessories: Clothing includes silk blouses, cashmere sweaters, linen shirts, knit polos, cardigans, tailored/pleated/wide-leg/slim trousers, and A-line midi skirts. Outerwear features a houndstooth blazer and a long trench coat. Accessories include structured handbags, tote bags, top-handle bags, belts, wristwatches, and silk scarves. Footwear includes ballet flats, loafers, cap-toe flats, slingback flats, and pumps.
+Visual Style & Layout: A highly unified neutral color palette (cream, beige, black, brown). Key design element: Handwritten-style labels with thin leader lines pointing to and describing each specific clothing item. High detail, fashion magazine editorial aesthetic, 4k resolution. --ar 16:9 --v 6.0 --style raw`,
+    prompt: "Minimalist fashion lookbook collage based on uploaded reference, featuring 8 full-body female models arranged in two horizontal rows (4 models on top, 4 models on bottom). Warm beige studio background, modern classic neutral-toned outfits. Structured handbags, loafers, silk blouses. Clean composition, soft lighting. Handwritten-style labels and leader lines pointing to each clothing item. Neutral palette (cream, beige, brown, black). Fashion magazine aesthetic, highly detailed, 8k resolution --ar 16:9 --v 6.0 --style raw",
+  },
   
 };
