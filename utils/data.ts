@@ -5003,5 +5003,44 @@ Visual Specs: 16:9 horizontal ultra-wide composition, 4K Ultra HD. Independent c
 Core Requirements: Character facial consistency ≥ 95% | Natural garment fitting | Unified 4-panel visual style | Ready-to-use commercial-grade imagery. --ar 16:9 --v 6.0 --style raw`,
     prompt: "Professional 16:9 4-panel fashion reference sheet. Panel 1: Original character portrait, clear facial features, light gray studio background. Panel 2: Flat lay clothing set (outfit, shoes, bags) on beige background, commercial product lighting. Panel 3: Same character wearing the outfit, realistic fit and drape, high-fashion editorial style. Panel 4: 6-grid pose reference (back view, profile, squatting, dynamic movement). 4k resolution, cinematic studio lighting, Vogue editorial aesthetic, extreme detail on fabric textures, leather and metal reflections, consistent lighting across panels --ar 16:9 --v 6.0 --style raw",
   },
+
+    "dr-189": {
+    title: "AI内衣套装风格提案：品牌提案板",
+    tags: ["Lingerie", "Styling Board", "Fashion", "Editorial", "Infographic", "Lookbook"],
+    promptCn: `请根据用户输入的【内衣主题 / 色系 / 风格方向】，创作一张横向 4:3 的高完成度中文版「AI内衣套装风格提案 / AI Innerwear Set Styling Board」。
+【输入规则】
+用户可输入：主题名称、主色调、风格关键词、适用场景、材质方向等。若提供 Image A 则参考其配色与设计；若提供 Image B 则参考人物气质，无则生成符合中国审美的大方成年中国女性模特。
+【任务定位】
+目标是展示审美在线、真实可存在的女性内衣方案。通过模特展示、产品拆解、材质分析与外搭建议构成完整风格提案。视觉需高级、精致、女性向、轻熟、非色情化。
+【标题与副标题】
+主标题：AI内衣套装风格提案
+英文副标题：AI Innerwear Set Styling Board
+小标题：根据主题自动生成，如“Signature Innerwear Concept”或“Style Direction”。
+副标题说明：“从色彩、材质、版型与场景出发，拆解一套更完整的女性内衣搭配方案。”
+【整体版式要求】
+横向 4:3 比例，时尚提案板/Lookbook 风格。
+布局逻辑：顶部标题区；左侧模特主视觉区；中部产品拆解区；右侧专业信息模块区；底部外搭建议区 + 总结区。
+背景：奶白、浅灰等高级浅色系，带细线框、模块编号、中文手写风注释等元素。
+【各板块详细要求】
+① 顶部标题区：清晰呈现主副标题、自动生成的主题名及一句话概括说明。
+② 左侧模特主视觉区：展示穿着完整套装的成年中国女性模特。长相耐看、气质温柔。姿势优雅克制，无情色感。背景干净。可配丝袜/高跟鞋等形成完整搭配。
+③ 中部产品拆解区：展示文胸、内裤、袜带等单品平铺图，及蕾丝、刺绣、扣件的局部材质放大特写。需与模特所穿完全一致。
+④ 右侧专业信息模块区：
+   A. 风格主题：提炼如“法式优雅”等方向并配说明。
+   B. 色彩系统：展示 5-6 个审美化命名的小色块（如：柔雾裸色、烟灰纱黑）。
+   C. 材质构成：标注材质的功能说明。
+   D. 版型功能标签：如轻支撑、贴合舒适。
+   E. 场景适配：评分条展示场景适配度。
+⑤ 中文手写风种草标注区：适量手写注、箭头、圈注，语气温和，与排版融合。
+⑥ 底部外搭建议区：横向展示 3 个建议（如：+丝质睡袍、+白衬衫、+西装外套），配极简缩略图。
+⑦ 底部总结区：右下角加入一句总结单套方案整体魅力的文字。
+最终效果应具有高级品牌提案板的专业感与收藏价值。`,
+    promptEn: `Generate a 4:3 horizontal "AI Innerwear Set Styling Board" based on the user's input of [[Lingerie Theme / Color / Style]].
+[Mission] Show aesthetic, realistic innerwear solutions via model showcasing, product breakdown, and styling suggestions. Visuals must be premium, feminine, and non-erotic.
+[Layout] Top: Title area; Left: Main model visual (adult Chinese female, elegant pose); Middle: Product breakdown (flat lays of bra, panty, etc. plus macro texture details); Right: Professional info panel (Style theme, Color palette with names like 'Mist Nude', Material board, Fit labels, Occasion scores); Bottom: 3 Styling match suggestions (e.g. +Silk robe, +Blazer) and a final note.
+[Visuals] Light ivory/beige paper texture background. Include fine lines, modular numbering, and most importantly, handwritten-style Chinese annotations ('seed-planting' notes). 
+[Requirements] Photorealistic textures, 8k detail, clear Chinese typography. The model must maintain facial and aura consistency with the provided reference if applicable. Overall vibe: high-end brand lookbook proposal. --ar 4:3 --v 6.0 --style raw`,
+    prompt: "A professional 4:3 horizontal lingerie styling proposal board themed [[Subject Name]]. Left: High-end commercial shot of an adult Chinese female model in the set. Middle: Product system breakdown with flat lays and macro fabric texture details. Right: Professional info panel including color palette, material swatches, and occasion fit scores. Bottom: 3 styling match suggestions (lounge, office, outerwear). Light ivory paper background, elegant typography, handwritten-style Chinese annotations, high-detail fashion editorial layout, 8k resolution, masterpiece --ar 4:3 --v 6.0 --style raw",
+  },
   
 };
