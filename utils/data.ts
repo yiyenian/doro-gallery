@@ -4861,7 +4861,7 @@ Color & Background: Bright and vivid colors, clean background (like pure white, 
     prompt: "Crayon illustration, depicting a story about [Story content], hand-drawn, soft waxy texture, visible scribble marks, uneven coloring, full of childishness, charming imperfections, layered crayon strokes, warm nostalgic feeling, bright colors, clean background, children's storybook style, naive art --ar 4:3 --v 6.0 --style raw",
   },
 
-  "dr-182": {
+    "dr-182": {
     title: "新中式极简：东方美学海报",
     tags: ["Poster", "Neo-Chinese", "Minimalist", "Oriental", "Editorial", "Negative Space"],
     promptCn: `核心指令：扮演高端东方美学视觉生成系统，为【[填写主题名称，例如：白梅 / 孤石 / 观音 / 城市游走]】生成一张 9:16 竖版新中式高级海报。整体视觉方向必须是：极简（minimal）、克制（restrained）、留白（不少于40%）、东方意境（oriental poetic atmosphere）与高端商业视觉（luxury oriental editorial），呈现高级感、呼吸感、东方韵律与视觉张力。
@@ -4953,6 +4953,55 @@ Composition & Layout: Structured grid composition arranged in two horizontal row
 Wardrobe & Accessories: Clothing includes silk blouses, cashmere sweaters, linen shirts, knit polos, cardigans, tailored/pleated/wide-leg/slim trousers, and A-line midi skirts. Outerwear features a houndstooth blazer and a long trench coat. Accessories include structured handbags, tote bags, top-handle bags, belts, wristwatches, and silk scarves. Footwear includes ballet flats, loafers, cap-toe flats, slingback flats, and pumps.
 Visual Style & Layout: A highly unified neutral color palette (cream, beige, black, brown). Key design element: Handwritten-style labels with thin leader lines pointing to and describing each specific clothing item. High detail, fashion magazine editorial aesthetic, 4k resolution. --ar 16:9 --v 6.0 --style raw`,
     prompt: "Minimalist fashion lookbook collage based on uploaded reference, featuring 8 full-body female models arranged in two horizontal rows (4 models on top, 4 models on bottom). Warm beige studio background, modern classic neutral-toned outfits. Structured handbags, loafers, silk blouses. Clean composition, soft lighting. Handwritten-style labels and leader lines pointing to each clothing item. Neutral palette (cream, beige, brown, black). Fashion magazine aesthetic, highly detailed, 8k resolution --ar 16:9 --v 6.0 --style raw",
+  },
+
+    "dr-187": {
+    title: "个人穿搭风格诊断信息图",
+    tags: ["Fashion", "Infographic", "Style Analysis", "Editorial", "Personalized", "Stylist"],
+    promptCn: `核心指令：基于上传的人物照片，生成一张 9:16 竖版个人穿搭风格诊断信息图。
+身份一致性要求（核心）：AI 必须首先精准识别参考图中人物的性别、五官特征、气质、发型、面部比例与身形。画面中出现的所有人物肖像及穿搭模特图，必须与参考图中的【性别、年龄段、种族、身份】保持高度一致。严禁出现性别反转（例如参考图为女性，生成结果中出现男性），严禁换脸。
+视觉风格与真人写实质感：必须确保 100% 的真人摄影质感，严禁任何 3D CG 感、插画感、塑料感或假人模特感。画面要求皮肤纹理真实、可见毛孔与细微肤色过渡，头发质感丝丝分明。采用高级时尚杂志排版，浅米色/象牙白纸张质感背景，辅以极细的深灰色网格线分区。主色调为低饱和中性色（黑、白、米、灰、海军蓝、驼色、橄榄绿、咖啡色）。
+画面模块（必须完整呈现且无错字）：
+1. 顶部标题区：居中标题『个人穿搭风格诊断』。
+2. 风格类型栏：横排14-16个小型全身真人人物图标，标注：现代简约、经典优雅、商务通勤、休闲舒适、运动机能、城市通勤、日系休闲、韩系干净、轻熟精致、街头潮流、阿美咔叽、度假风、静奢风、浪漫风、自然风。
+3. 中部核心：左侧纵向排列8-10个核心关键词（如：干净、自然、利落、精致、现代、亲和、自信、低调）；中央为大幅真人人物半身肖像（需完美保持参考图特征，穿着推荐风格服装）；右上与右中为『最适合你的风格』与『不太适合的风格』对比模块（各5套真人图，分别标注 ✓ 与 ✗）。
+4. 下方中段：左侧展示『服装配色板』色卡（最佳色 vs 慎用色）；中间为『版型指南』5种剪影展示（比例清爽、肩线合身、腰线明确、线条利落、层次简洁）；右侧为简约、通勤、休闲等分类的基础单品平铺图。
+5. 下半部分：横向排列7-8套完整的真人全身穿搭示范方案，每套下方标注：通勤造型、日常造型、约会造型、差旅造型等简短说明。
+6. 底部模块：左侧为『风格建议』文字列表（如：低饱和度色彩更能衬托个人气质、选择合身版型、基础单品为核心）；中间为『胶囊衣橱』单品矩阵；右侧为『整体风格画像』总结。
+质量要求：极致写实的真人商业摄影质感（Ultra-photorealistic），排版精美且富有秩序感。中文文字及标签必须清晰准确、无乱码。所有人物和衣物均需呈现真实的影棚级摄影细节。`,
+    promptEn: `Core Instruction: Generate a 9:16 vertical "Personal Style Diagnosis" infographic based on the uploaded photo.
+Identity Consistency (CRITICAL): AI must accurately identify the gender, facial features, hairstyle, and aura of the reference person. All portraits throughout the infographic MUST strictly maintain the SAME gender, age, and identity. NO face-swapping, NO gender-flipping.
+Strict Real-Human Photography Quality: Ensure 100% authentic photorealistic human quality. Strictly NO 3D render, NO CG, NO anime, NO plastic skin, NO mannequin look. Must show real skin textures, visible pores, and natural hair strands. High-end fashion magazine editorial layout on ivory paper texture background with ultra-thin grid dividers. Neutral color palette.
+Modules (Must Include):
+1. Top: Title "个人穿搭风格诊断"; a row of 14-16 small real-human full-body icons (Minimalist, Classic, Business, etc.) with Chinese labels.
+2. Middle Section: Left keywords (Clean, Natural, Sharp, etc.); Center features a large, realistic half-body portrait of the subject in recommended attire; Right features "Best Match" vs. "Avoid" comparisons (5 each with check/cross icons using real human models).
+3. Lower Middle: Round swatches for "Best Palette"; 5 silhouette icons for "Fit Guide"; Tiled displays of "Style Essentials".
+4. Bottom Main: A row of 7-8 complete real-human full-body outfit demos (Work, Daily, Date, Travel, etc.) with Chinese descriptions.
+5. Footer: Bulleted "Style Advice"; "Capsule Wardrobe" grid; and "Overall Style Profile".
+Requirements: Full infographic, professional and organized. Correct Chinese characters. Ultra-photorealistic commercial photography quality for all models and garments. Masterpiece, 8k resolution. --ar 9:16 --v 6.0 --style raw`,
+    prompt: "Professional 9:16 vertical personal style diagnosis infographic, maintaining strict identity and GENDER consistency with the uploaded reference. 100% authentic photorealistic human photography, real skin textures, visible pores, high-end fashion magazine layout, ivory paper background. Modules: Style categories row with 16 real-human icons, style keywords, large central subject portrait, best match vs avoid style comparisons with real models, color palette swatches, fit guide, 8 real-human outfit demos, capsule wardrobe. Clean typography with clear Chinese text, neutral tones, ultra-photorealistic, 8k resolution, masterpiece --ar 9:16 --v 6.0 --style raw",
+  },
+
+    "dr-188": {
+    title: "时尚换装：四格全维度参考海报",
+    tags: ["Fashion", "Outfit Swap", "Reference Sheet", "Commercial", "Grid Layout", "Portrait"],
+    promptCn: `核心指令：创建一张横版 16:9 四格式时尚换装完整参考海报，适用于 AI 换装训练与商业展示。
+版面布局（从左至右）：
+① 左格 —— Character（角色原型）：原始参考角色肖像，正面标准站姿，面部五官清晰可辨，发型与肤色真实自然，纯净浅灰色棚拍背景，专业人像摄影光效，半身至全身构图。
+② 中格 —— Outfit（穿搭平铺）：完整服装套组的精致平铺展示：上衣 / 外套 / 裤装或裙装 / 鞋履 / 包袋 / 配饰（腰带、帽子、首饰等），白色或浅米色无缝背景，商业产品级打光，每件单品边缘清晰，面料材质肌理清晰可见，按穿着逻辑从上至下有序排列。
+③ 右格 —— Result（换装效果）：同一角色穿着新服装的完整上身效果图，完美匹配原始角色的体型、肤色与面部特征，服装贴合身形自然，褶皱与垂感真实，光影与左格角色原图保持完全一致，姿态自然流畅，商业大片氛围。
+④ 右侧附加格 —— Pose Reference（姿势参考区）：六宫格小图排列，展示角色多角度姿态参考，包括：正面半身特写（强调表情）、背面全身站姿（展示细节）、侧面 45° 斜角站姿、蹲坐姿势、跪姿或低角度回头姿态、角色专属标志性自然动作。
+整体视觉规格：16:9 横版超宽构图，4K Ultra HD 锐度极高。各格独立简洁棚拍背景，色调统一协调。采用三段式专业影棚布光，保持光线方向与色温高度统一。高级时尚大片美学质感（Vogue / Elle 级别）。真实还原面料纹理、皮革光泽与金属配件反光。各格底部居中标注细线无衬线英文标签。
+核心生成要求：角色面部一致性 ≥ 95%｜服装上身贴合度真实自然｜四格视觉风格高度统一｜直出可用商业级图像。`,
+    promptEn: `Core Instruction: Create a 16:9 horizontal 4-panel fashion outfit reference poster, ideal for AI outfit-swap training and commercial showcases.
+Layout (Left to Right):
+1. Left Panel - Character (Original Archetype): Original reference character portrait, standard frontal standing pose, clear facial features, natural hairstyle and skin tone. Clean light gray studio background, professional portrait lighting, mid-to-full body composition.
+2. Middle Panel - Outfit (Flat Lay): Exquisite flat lay display of the complete clothing set: top/outerwear/bottoms/shoes/bags/accessories (belts, hats, jewelry). Seamless white or beige background, commercial product-grade lighting, clear edges for each item, detailed fabric textures, arranged orderly from top to bottom.
+3. Right Panel - Result (Final Look): The same character wearing the new outfit, perfectly matching the original body shape, skin tone, and facial features. Clothing fits naturally with realistic folds and drape. Lighting and atmosphere consistent with the original character panel, natural posture, commercial high-fashion aura.
+4. Right Additional Panel - Pose Reference: A 6-grid small image array showing multi-angle pose references: frontal half-body close-up (expression focus), full-body back view, 45° profile stance, squatting/sitting, kneeling/low-angle look-back, and character-specific natural signature poses.
+Visual Specs: 16:9 horizontal ultra-wide composition, 4K Ultra HD. Independent clean studio backgrounds with unified color tones. 3-point professional studio lighting with consistent direction and color temperature. High-fashion editorial aesthetic (Vogue/Elle style). Realistic rendering of fabric textures, leather sheen, and metal reflections. Minimalist sans-serif labels centered at the bottom of each panel.
+Core Requirements: Character facial consistency ≥ 95% | Natural garment fitting | Unified 4-panel visual style | Ready-to-use commercial-grade imagery. --ar 16:9 --v 6.0 --style raw`,
+    prompt: "Professional 16:9 4-panel fashion reference sheet. Panel 1: Original character portrait, clear facial features, light gray studio background. Panel 2: Flat lay clothing set (outfit, shoes, bags) on beige background, commercial product lighting. Panel 3: Same character wearing the outfit, realistic fit and drape, high-fashion editorial style. Panel 4: 6-grid pose reference (back view, profile, squatting, dynamic movement). 4k resolution, cinematic studio lighting, Vogue editorial aesthetic, extreme detail on fabric textures, leather and metal reflections, consistent lighting across panels --ar 16:9 --v 6.0 --style raw",
   },
   
 };
