@@ -4988,20 +4988,20 @@ Requirements: Full infographic, professional and organized. Correct Chinese char
     promptCn: `核心指令：创建一张横版 16:9 四格式时尚换装完整参考海报，适用于 AI 换装训练与商业展示。
 版面布局（从左至右）：
 ① 左格 —— Character（角色原型）：原始参考角色肖像，正面标准站姿，面部五官清晰可辨，发型与肤色真实自然，纯净浅灰色棚拍背景，专业人像摄影光效，半身至全身构图。
-② 中格 —— Outfit（穿搭平铺）：完整服装套组的精致平铺展示：上衣 / 外套 / 裤装或裙装 / 鞋履 / 包袋 / 配饰（腰带、帽子、首饰等），白色或浅米色无缝背景，商业产品级打光，每件单品边缘清晰，面料材质肌理清晰可见，按穿着逻辑从上至下有序排列。
-③ 右格 —— Result（换装效果）：同一角色穿着新服装的完整上身效果图，完美匹配原始角色的体型、肤色与面部特征，服装贴合身形自然，褶皱与垂感真实，光影与左格角色原图保持完全一致，姿态自然流畅，商业大片氛围。
-④ 右侧附加格 —— Pose Reference（姿势参考区）：六宫格小图排列，展示角色多角度姿态参考，包括：正面半身特写（强调表情）、背面全身站姿（展示细节）、侧面 45° 斜角站姿、蹲坐姿势、跪姿或低角度回头姿态、角色专属标志性自然动作。
-整体视觉规格：16:9 横版超宽构图，4K Ultra HD 锐度极高。各格独立简洁棚拍背景，色调统一协调。采用三段式专业影棚布光，保持光线方向与色温高度统一。高级时尚大片美学质感（Vogue / Elle 级别）。真实还原面料纹理、皮革光泽与金属配件反光。各格底部居中标注细线无衬线英文标签。
-核心生成要求：角色面部一致性 ≥ 95%｜服装上身贴合度真实自然｜四格视觉风格高度统一｜直出可用商业级图像。`,
-    promptEn: `Core Instruction: Create a 16:9 horizontal 4-panel fashion outfit reference poster, ideal for AI outfit-swap training and commercial showcases.
+② 中格 —— Outfit（穿搭平铺）：完整服装套组的精致平铺展示：上衣 / 外套 / 裤装或裙装 / 鞋履 / 包袋 / 配饰（腰带、帽子、眼镜、首饰等），白色或浅米色无缝背景，商业产品级打光，每件单品边缘清晰，面料材质肌理清晰可见，按穿着逻辑从上至下有序排列。
+③ 右格 —— Result（换装效果）：同一角色穿着新服装的完整上身效果图。此处必须【完整穿戴并展示 ② 格中出现的所有服装与配饰】，包括但不限于帽子、眼镜、首饰或手提包。完美匹配原始角色的体型、肤色与面部特征，服装贴合身形自然，光影与左格一致，商业大片氛围。
+④ 右侧附加格 —— Pose Reference（姿势参考区）：六宫格小图排列，展示角色多角度姿态参考。注意：【所有姿态下的角色均须完整穿着 ② 格中的整套服装并佩戴全部配饰】，确保视觉逻辑的绝对连续性。
+整体视觉规格：16:9 横版超宽构图，4K Ultra HD。三段式专业影棚布光，保持光线方向与色温高度统一。高级时尚大片美学。真实还原面料纹理、皮革光泽与金属配件反光。各格底部居中标注细线无衬线英文标签。
+核心生成要求：角色面部一致性 ≥ 95%｜服装与配饰上身贴合度真实自然｜②③④格之间穿戴内容严格一致｜直出可用商业级图像。`,
+    promptEn: `Core Instruction: Create a 16:9 horizontal 4-panel fashion outfit reference poster.
 Layout (Left to Right):
-1. Left Panel - Character (Original Archetype): Original reference character portrait, standard frontal standing pose, clear facial features, natural hairstyle and skin tone. Clean light gray studio background, professional portrait lighting, mid-to-full body composition.
-2. Middle Panel - Outfit (Flat Lay): Exquisite flat lay display of the complete clothing set: top/outerwear/bottoms/shoes/bags/accessories (belts, hats, jewelry). Seamless white or beige background, commercial product-grade lighting, clear edges for each item, detailed fabric textures, arranged orderly from top to bottom.
-3. Right Panel - Result (Final Look): The same character wearing the new outfit, perfectly matching the original body shape, skin tone, and facial features. Clothing fits naturally with realistic folds and drape. Lighting and atmosphere consistent with the original character panel, natural posture, commercial high-fashion aura.
-4. Right Additional Panel - Pose Reference: A 6-grid small image array showing multi-angle pose references: frontal half-body close-up (expression focus), full-body back view, 45° profile stance, squatting/sitting, kneeling/low-angle look-back, and character-specific natural signature poses.
-Visual Specs: 16:9 horizontal ultra-wide composition, 4K Ultra HD. Independent clean studio backgrounds with unified color tones. 3-point professional studio lighting with consistent direction and color temperature. High-fashion editorial aesthetic (Vogue/Elle style). Realistic rendering of fabric textures, leather sheen, and metal reflections. Minimalist sans-serif labels centered at the bottom of each panel.
-Core Requirements: Character facial consistency ≥ 95% | Natural garment fitting | Unified 4-panel visual style | Ready-to-use commercial-grade imagery. --ar 16:9 --v 6.0 --style raw`,
-    prompt: "Professional 16:9 4-panel fashion reference sheet. Panel 1: Original character portrait, clear facial features, light gray studio background. Panel 2: Flat lay clothing set (outfit, shoes, bags) on beige background, commercial product lighting. Panel 3: Same character wearing the outfit, realistic fit and drape, high-fashion editorial style. Panel 4: 6-grid pose reference (back view, profile, squatting, dynamic movement). 4k resolution, cinematic studio lighting, Vogue editorial aesthetic, extreme detail on fabric textures, leather and metal reflections, consistent lighting across panels --ar 16:9 --v 6.0 --style raw",
+1. Left Panel - Character (Original Archetype): Original reference character portrait, clear facial features, light gray studio background.
+2. Middle Panel - Outfit (Flat Lay): Exquisite flat lay of the complete clothing set: tops, bottoms, shoes, bags, and ALL ACCESSORIES (hats, glasses, jewelry, belts). Commercial product lighting, detailed fabric textures.
+3. Right Panel - Result (Final Look): The same character wearing the new outfit. MUST COMPLETELLY WEAR AND SHOWCASE ALL ITEMS AND ACCESSORIES listed in Panel 2. Perfect body/skin/face match with Panel 1.
+4. Right Additional Panel - Pose Reference: 6-grid array of multi-angle poses. CRITICAL: Character in all 6 sub-images MUST wear the exact same full outfit and all accessories from Panel 2 for absolute visual continuity.
+Visual Specs: 16:9 ultra-wide, 4K Ultra HD. Unified cinematic studio lighting. High-fashion editorial aesthetic. Realistic rendering of leather sheen, metal reflections, and fabric weaves. Minimalist labels at the bottom.
+Core Requirements: Face consistency ≥ 95% | Natural garment & accessory fitting | Strict item consistency across panels 2, 3, and 4. --ar 16:9 --v 6.0 --style raw`,
+    prompt: "Professional 16:9 4-panel fashion reference sheet. Panel 1: Original character portrait. Panel 2: Flat lay clothing set including all accessories (hats, glasses, bags). Panel 3: Resulting outfit swap, character wearing the full set and accessories from Panel 2. Panel 4: 6-grid pose reference, character consistently wearing the full outfit and accessories in every pose. 4k resolution, cinematic studio lighting, Vogue aesthetic, extreme detail on textures, perfect visual continuity across panels --ar 16:9 --v 6.0 --style raw",
   },
 
     "dr-189": {
